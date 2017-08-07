@@ -1,0 +1,86 @@
+body {
+	background:black;
+}
+
+
+#bground1{
+	background: url(../images/img_lights.jpg);
+	background-size: 100%;
+	z-index:.1;
+	padding:40px;
+	opacity:1;
+}
+
+
+#bground2{
+	background: url(../images/img_building.jpg);
+	background-size: 100%;
+	z-index:.1;
+	padding:40px;
+	opacity:1;
+}
+
+
+#bground3{
+	background: url(../images/img_blue_skies.jpg);
+	background-size: 100%;
+	z-index:.1;
+	padding:40px;
+	opacity:1;
+}
+
+#bground4{
+	background: url(../images/img_sunset.jpg);
+	background-size: 100%;
+	z-index:.1;
+	padding:40px;
+	opacity:1;
+}
+
+#bground5{
+	background: url(../images/img_night_skies.jpg);
+	background-size: 100%;
+	z-index:.1;
+	padding:40px;
+	opacity:1;
+}
+
+#bground6{
+	background: url(../images/img_snow.jpg);
+	background-size: 100%;
+	z-index:.1;
+	padding:40px;
+	opacity:1;
+}
+
+.app_image{
+	width:150px;
+	height:150px;
+}
+
+.app_image:hover{
+	width:400px;
+	height:400px;
+}
+
+
+
+
+.init_desc{
+	color:lightblue;
+	font-size:20px;
+}
+
+.next_desc{
+	color:white;
+	font-size:20px;
+}
+
+.follow_desc{
+	color:black;
+	font-size:28px;
+}
+
+b {
+	color:#F7F744;
+}
