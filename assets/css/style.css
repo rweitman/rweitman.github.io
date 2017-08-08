@@ -1,5 +1,6 @@
 body {
 	background:black;
+	zoom:75%;
 }
 
 
@@ -53,17 +54,33 @@ body {
 	opacity:1;
 }
 
-.app_image{
-	width:150px;
-	height:150px;
+#bground7{
+	background: url(../images/img_pink_skies.jpg);
+	background-size: 100%;
+	z-index:.1;
+	padding:40px;
+	opacity:1;
+}
+
+.app_image, .app_image2, .app_image3, .app_image4{
+	width:200px;
 }
 
 .app_image:hover{
-	width:400px;
-	height:400px;
+	width:500px;
 }
 
+.app_image2:hover{
+	width:1000px;
+}
 
+.app_image3:hover{
+	width:1000px;
+}
+
+.app_image4:hover{
+	width:500px;
+}
 
 
 .init_desc{
@@ -74,6 +91,7 @@ body {
 .next_desc{
 	color:white;
 	font-size:20px;
+	text-align:left;
 }
 
 .follow_desc{
