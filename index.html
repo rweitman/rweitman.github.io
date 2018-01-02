@@ -16,16 +16,7 @@
 <div id="bground1">
 
 <div class="row">
-<!-- <div align="center">
-<button OnClick="location.href='#bground2'">Southern Methodist University</button>&nbsp;&nbsp;
-<button OnClick="location.href='#bground3'">3D Luggage</button>&nbsp;&nbsp;
-<button OnClick="location.href='#bground4'">Bandmans</button>&nbsp;&nbsp;
-<button OnClick="location.href='#bground5'">Volunteering</button>&nbsp;&nbsp;
-<button OnClick="location.href='#bground6'">Sample Projects</button>&nbsp;&nbsp;
-<button OnClick="location.href='#bground7'">Contact Info</button>&nbsp;&nbsp;
 
-</div>
-<br><br> -->
 
 
 <div class="col-md-4">
@@ -50,6 +41,7 @@
 <div class="col-md-4">
     <img src="assets/images/RW_smu_name.png" class="naming"><br><br><img src="assets/images/img_smu.jpg" class="img-rounded" alt="Me" class="pull-left" align="left" id="photo2" width="150px"></div>
 </div>
+
 </table>
 
 
@@ -61,13 +53,19 @@
         <span class='first-button'>Skillset</span>
         <span class='second-button'>Personal History</span>
            <span class='third-button' title='See Some of My Projects'>Coding Boot Camp</span>
-              <span class='fourth-button'>Khan Academy</span>
+              <span class='fourth-button' title='See Some of My Projects'>Khan Academy</span>
                     <span class='fifth-button'>Miscellaneous</span>
       </div>
     </div>
   </nav>
+
   <div class="container" align="center">
   
+<div id="intro">
+	NAVIGATE BY CHOOSING A BUTTON ABOVE!
+</div>
+		
+
    <div id="uno">
   <b><h2>List of Basic Skills</h2></b>
   <b>Microsoft Office</b> - Word, Excel, PowerPoint<br>
@@ -336,29 +334,29 @@ The objective of the game is to reach the <b>target number</b> by pressing the g
   <table>
   <div class="row">
   <div class="col-md-3">
-        <span class='first-topic'>Dinner</span>
+        <span class='first-topic'>Cabin</span>
         <span class='second-topic'>Fish Swim</span>
-           <span class='third-topic'>Cabin</span>
+           <span class='third-topic'>Dinner</span>
               <span class='fourth-topic'>Rain</span>
                     <span class='fifth-topic'>BookShelf</span>
                     <span class='sixth-topic'>Authors</span>
         <span class='seventh-topic'>Memory Tiles</span>
-           <span class='eighth-topic'>Paint Splatter</span>
+           <span class='eighth-topic'>Paint</span>
               <span class='ninth-topic'>Mountains</span>
                     <span class='tenth-topic'>Spaceship</span>
         </div>
 <div class="col-md-9">
 
 <div id="counting1">
-<h2>Dinner - Drawing with ProcessingJS</h2>
- <img src="assets/images/plate.png" width="450px">
- <br><div class="texting">
- <b>TABLE:</b> background<br>
- <b>PLATE:</b> ellipses<br>
- <b>PIZZA:</b> arcs<br>
- <b>TOPPINGS:</b> ellipses<br>
- <b>CARROTS:</b> lines with stroke weight
-
+<h2>Cabin - Made With For Loops</h2>
+ <img src="assets/images/cabin.png" width="450px">
+ <br><div class="texting"><br>
+ <b>SKY:</b> background<br>
+ <b>ROOF:</b> triangle<br>
+ <b>PANELS:</b> alternating rectangles based on an <b>if/else</b> statement using <b>%</b><br>
+ <b>DOOR:</b> rectangle<br>
+ <b>WINDOWS:</b> rectangles drawn based on a for loop<br>
+ <b>GRASS:</b> rectangles drawn based on a for loop
 
 </div>
 </div>
@@ -380,15 +378,15 @@ The objective of the game is to reach the <b>target number</b> by pressing the g
 </div>
 
 <div id="counting3">
-<h2>Cabin - Made With For Loops</h2>
- <img src="assets/images/cabin.png" width="450px">
- <br><div class="texting"><br>
- <b>SKY:</b> background<br>
- <b>ROOF:</b> triangle<br>
- <b>PANELS:</b> alternating rectangles based on an <b>if/else</b> statement using <b>%</b><br>
- <b>DOOR:</b> rectangle<br>
- <b>WINDOWS:</b> rectangles drawn based on a for loop<br>
- <b>GRASS:</b> rectangles drawn based on a for loop
+<h2>Dinner - Drawing with ProcessingJS</h2>
+ <img src="assets/images/plate.png" width="450px">
+ <br><div class="texting">
+ <b>TABLE:</b> background<br>
+ <b>PLATE:</b> ellipses<br>
+ <b>PIZZA:</b> arcs<br>
+ <b>TOPPINGS:</b> ellipses<br>
+ <b>CARROTS:</b> lines with stroke weight
+
 
 </div>
 </div>
@@ -483,8 +481,16 @@ The objective of the game is to reach the <b>target number</b> by pressing the g
 <div id="counting10">
 <h2>Floating Spaceship - Physics</h2>
  <img src="assets/images/spaceship.png" width="450px">
- <br><div class="texting">
-TO BE CONTINUED
+ <br><div class="texting"><br>
+The Spaceship is defined as a <b>Car</b> object that holds: this.position, this.velocity, this.acceleration, this.topspeed, this.xoff, this.yoff, this.r and this.accVector<br>
+<b>Car.prototype.update</b> updates the position with velocity (limited speed) and acceleration<br>
+<b>Car.prototype.applyForce</b> updates the acceleration with force<br>
+<b>Car.prototype.turnLeft</b> and <b>Car.prototype.turnRight</b> use <b>.rotate</b><br>
+<b>Car.prototype.display</b> draws the car and the head of the car is determined by <b>this.accVector.heading()</b><br>
+<b>Car.prototype.checkEdges</b> automatically transports the car to the other side of the screen when it reaches one of the edges<br>
+<b>keyPressed</b> can process key strokes: <b>LEFT</b>, <b>RIGHT</b> and the letter <b>z</b> (keyCode 90)<br>
+<b>draw</b> updates the car's position as time goes by
+
 </div>
 </div>
 
@@ -492,7 +498,73 @@ TO BE CONTINUED
 </div>
 </div>
 </table></div>
-    <img src="assets/images/github.png" id="cinco">
+
+ <div id="cinco">
+  <table>
+  <tr>
+
+  <td><br>
+    <b>CODECADEMY - Online Coding Courses</b><br>
+Courses Taken: Learn HTML, Learn CSS, Make a Website, Learn Responsive Design, Learn SASS, Introduction to Javascript, Learn AngularJS 1.X, Learn REACTJS: Part I, Learn REACTJS: Part II, Introduction to jQuery
+
+</ul>
+</td>
+<td><br>
+<img src="assets/images/code-academy.png" vertical-align="center">
+</td>
+
+</tr>
+</table>
+<table>
+<tr>
+<td>
+<br>
+<img src="assets/images/3d_luggage.png" width="250px">
+
+
+</td>
+<td>
+<div align="right"><br>
+<b>COMPREHENSIVE BUSINESS KNOWLEDGE</b><br>
+<b>3DLuggage</b> was a comprehensive business group project for a SMU Entrepreneurship class.
+<ul>
+
+<li><b>Idea:</b> Luggage folds into four directions to try to keep clothes more organized</li>
+<li><b>Forecasts:</b> Income Statements, Cash Flow Statements and Balance Sheets</li>
+<li><b>Includes:</b> Market Analysis, Business Objectives and Business Planning</li>
+</ul>
+</td>
+</div>
+</tr>
+</table>
+ <table>
+  <tr>
+
+  <td><br>
+    <b>MIT SCRATCH - GAME DESIGN</b><br>
+    <ul>
+<li><a href="https://scratch.mit.edu/projects/151099767/" target="_blank"><b><span class="inside-link">Button Clicking Exercise:</span></b></a> Easy - Click arrows to increase or decrease the number and the middle button to reset it</li>
+<li><a href="https://scratch.mit.edu/projects/151101143/" target="_blank"><b><span class="inside-link">Cheesy Puffs:</span></b></a> Basic - Use the arrow keys to navigate to the randomly placed Cheesy Puffs</li>
+<li><a href="https://scratch.mit.edu/projects/151118840/" target="_blank"><b><span class="inside-link">Cat and Mouse:</span></b></a> Moderate - Use the spacebar and the arrow keys to hit the mice with a projectile before they touch the ground or your character</li>
+</ul>
+</td>
+<td><br>
+<img src="assets/images/mit-scratch.png" vertical-align="center" width="200px">
+</td>
+
+</tr>
+</table>
+
+
+
+
+
+
+
+
+
+  </div>
+
 </div>
 
   <footer>

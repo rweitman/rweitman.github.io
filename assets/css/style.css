@@ -15,6 +15,13 @@
   opacity:1;
 }
 
+#intro {
+  background: url(../images/img_sunset.jpg);
+  background-size: 100%;
+  z-index:.1;
+  color:white;
+  padding:20px;
+}
 
 #photo {
   vertical-align: text-top;
@@ -137,9 +144,20 @@
  /*   justify-content: space-between;*/
     align-items: center;
   }
+
+     #cinco {
+  background-color: rgba(0,191,255, 0.5);
+  padding: 1em 1.25em;
+
+  color: #EFEFEF;
+/*    display: flex;*/
+  /*line-height: 25px;*/
+ /*   justify-content: space-between;*/
+    align-items: center;
+  }
   
 
-  #uno b, #dos b, #tres b, #cuatro b {
+  #uno b, #dos b, #tres b, #cuatro b, #cinco b {
     color: yellow;
   }
 
@@ -147,6 +165,9 @@
   color: yellow;
 }
 
+.inside-link {
+  color: lightgreen;
+}
 
 
 * {

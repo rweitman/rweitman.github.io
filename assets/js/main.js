@@ -5,6 +5,9 @@ $(document).ready(() => {
   const $fourthButton = $('.fourth-button');
   const $fifthButton = $('.fifth-button');
 
+  const $nav = $('nav');
+  const $intro = $('#intro');
+
   const $firstCategory = $('.first-category');
   const $secondCategory = $('.second-category');
   const $thirdCategory = $('.third-category');
@@ -66,6 +69,9 @@ $(document).ready(() => {
   let countButton = $count1;
   let countingButton = $counting1;
 
+
+
+
   // $uno.hide();
   $dos.hide(); 
   $tres.hide();
@@ -94,33 +100,35 @@ $(document).ready(() => {
         $counting10.hide();
  
 
+  $nav.on('click', () => {
+    $intro.hide(); 
+  })
+
+
+
+
   $firstButton.on('click', () => {
-   	alert("FIRST ONE!");
    	activeButton.hide();
    	activeButton = $uno;
    	activeButton.show();
   })
 
     $secondButton.on('click', () => {
-   	alert("SECOND ONE!");
    	activeButton.hide();
    	activeButton = $dos;
    	activeButton.show();
   })
       $thirdButton.on('click', () => {
-   	alert("THIRD ONE!");
    	activeButton.hide();
    	activeButton = $tres;
    	activeButton.show();
   })
         $fourthButton.on('click', () => {
-   	alert("FOURTH ONE!");
    	activeButton.hide();
    	activeButton = $cuatro;
    	activeButton.show();
   })
           $fifthButton.on('click', () => {
-   	alert("FIFTH ONE!");
    	activeButton.hide();
    	activeButton = $cinco;
    	activeButton.show();
@@ -128,64 +136,54 @@ $(document).ready(() => {
   
  
   $firstCategory.on('click', () => {
-   	alert("FIRST!");
    	countButton.hide();
    	countButton = $count1;
    	countButton.show();
   })
 
     $secondCategory.on('click', () => {
-   	alert("SECOND!");
    countButton.hide();
    	countButton = $count2;
    	countButton.show();
   })
       $thirdCategory.on('click', () => {
-   	alert("THIRD!");
 countButton.hide();
    	countButton = $count3;
    	countButton.show();
   })
         $fourthCategory.on('click', () => {
-   	alert("FOURTH ONE!");
   countButton.hide();
    	countButton = $count4;
    	countButton.show();
   })
           $fifthCategory.on('click', () => {
-   	alert("FIFTH ONE!");
   countButton.hide();
    	countButton = $count5;
    	countButton.show();
   })
   
   $sixthCategory.on('click', () => {
-   	alert("SIXTH!");
    	countButton.hide();
    	countButton = $count6;
    	countButton.show();
   })
 
     $seventhCategory.on('click', () => {
-   	alert("SEVENTH!");
    countButton.hide();
    	countButton = $count7;
    	countButton.show();
   })
       $eighthCategory.on('click', () => {
-   	alert("EIGHTH!");
 countButton.hide();
    	countButton = $count8;
    	countButton.show();
   })
         $ninthCategory.on('click', () => {
-   	alert("NINTH ONE!");
   countButton.hide();
    	countButton = $count9;
    	countButton.show();
   })
           $tenthCategory.on('click', () => {
-   	alert("TENTH ONE!");
   countButton.hide();
    	countButton = $count10;
    	countButton.show();
@@ -195,64 +193,54 @@ countButton.hide();
 
 
   $firstTopic.on('click', () => {
-    alert("one!");
     countingButton.hide();
     countingButton = $counting1;
     countingButton.show();
   })
 
     $secondTopic.on('click', () => {
-    alert("two!");
    countingButton.hide();
     countingButton = $counting2;
     countingButton.show();
   })
       $thirdTopic.on('click', () => {
-    alert("three!");
 countingButton.hide();
     countingButton = $counting3;
     countingButton.show();
   })
         $fourthTopic.on('click', () => {
-    alert("four!");
   countingButton.hide();
     countingButton = $counting4;
     countingButton.show();
   })
           $fifthTopic.on('click', () => {
-    alert("five!");
   countingButton.hide();
     countingButton = $counting5;
     countingButton.show();
   })
   
   $sixthTopic.on('click', () => {
-    alert("six!");
     countingButton.hide();
     countingButton = $counting6;
     countingButton.show();
   })
 
     $seventhTopic.on('click', () => {
-    alert("seven!");
    countingButton.hide();
     countingButton = $counting7;
     countingButton.show();
   })
       $eighthTopic.on('click', () => {
-    alert("eight!");
 countingButton.hide();
     countingButton = $counting8;
     countingButton.show();
   })
         $ninthTopic.on('click', () => {
-    alert("nine!");
   countingButton.hide();
     countingButton = $counting9;
     countingButton.show();
   })
           $tenthTopic.on('click', () => {
-    alert("ten!");
   countingButton.hide();
     countingButton = $counting10;
     countingButton.show();
