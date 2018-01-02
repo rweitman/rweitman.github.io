@@ -1,0 +1,104 @@
+body {
+	background:black;
+	zoom:75%;
+}
+
+
+#bground1{
+	background: url(../images/img_lights.jpg);
+	background-size: 100%;
+	z-index:.1;
+	padding:40px;
+	opacity:1;
+}
+
+
+#bground2{
+	background: url(../images/img_building.jpg);
+	background-size: 100%;
+	z-index:.1;
+	padding:40px;
+	opacity:1;
+}
+
+
+#bground3{
+	background: url(../images/img_blue_skies.jpg);
+	background-size: 100%;
+	z-index:.1;
+	padding:40px;
+	opacity:1;
+}
+
+#bground4{
+	background: url(../images/img_sunset.jpg);
+	background-size: 100%;
+	z-index:.1;
+	padding:40px;
+	opacity:1;
+}
+
+#bground5{
+	background: url(../images/img_night_skies.jpg);
+	background-size: 100%;
+	z-index:.1;
+	padding:40px;
+	opacity:1;
+}
+
+#bground6{
+	background: url(../images/img_snow.jpg);
+	background-size: 100%;
+	z-index:.1;
+	padding:40px;
+	opacity:1;
+}
+
+#bground7{
+	background: url(../images/img_pink_skies.jpg);
+	background-size: 100%;
+	z-index:.1;
+	padding:40px;
+	opacity:1;
+}
+
+.app_image, .app_image2, .app_image3, .app_image4{
+	width:200px;
+}
+
+.app_image:hover{
+	width:500px;
+}
+
+.app_image2:hover{
+	width:1000px;
+}
+
+.app_image3:hover{
+	width:1000px;
+}
+
+.app_image4:hover{
+	width:500px;
+}
+
+
+.init_desc{
+	color:lightblue;
+	font-size:20px;
+}
+
+.next_desc{
+	color:white;
+	font-size:20px;
+	text-align:left;
+}
+
+.follow_desc{
+	color:black;
+	font-size:28px;
+}
+
+b {
+	color:#F7F744;
+}
