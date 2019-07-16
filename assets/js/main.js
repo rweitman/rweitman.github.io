@@ -98,14 +98,6 @@ $(document).ready(() => {
       $counting8.hide();
        $counting9.hide();
         $counting10.hide();
- 
-
-  $nav.on('click', () => {
-    $intro.hide(); 
-  })
-
-
-
 
   $firstButton.on('click', () => {
    	activeButton.hide();
