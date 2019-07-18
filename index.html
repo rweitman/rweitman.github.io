@@ -604,8 +604,16 @@ rweitman@smu.edu</b></div></div>
 <script src="https://cdn.jsdelivr.net/npm/vue@latest/dist/vue.min.js"></script>
 <script type="module">
 
-import { QInput } from 'quasar'
-	
+import {
+  Quasar,
+  QInput
+} from 'quasar'
+
+Vue.use(Quasar, {
+  components: {
+    QInput
+  }
+})
     new Vue({
       el: '#uno',
       data: function () {
