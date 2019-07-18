@@ -81,7 +81,7 @@
 		   
 		   <span v-text="front"></span><br>
 		   
-		   <button class="q-btn">A</button>
+		   <button @click="message()" class="q-btn">A</button>
 		   <br><br>
 		   <button>B</button><br><br>
 		   <q-btn>C</q-btn>
@@ -616,7 +616,11 @@ rweitman@smu.edu</b></div></div>
 	  front: 'STUFF'
 	}
       },
-      methods: {}	    
+      methods: {
+      	message() {
+	 alert('xyz');	
+			
+      }	    
 	    
     });
   </script>
