@@ -4,7 +4,7 @@
 <head>
   <title>Robert Weitman - Profile</title>
   <link href="https://cdn.jsdelivr.net/npm/quasar@^1.0.3/dist/quasar.min.css" rel="stylesheet" type="text/css">	
-	
+              https://cdn.jsdelivr.net/npm/quasar@^1.0.3/dist/quasar.min.css
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet'>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">	
@@ -82,7 +82,7 @@
 		   
 		   <span v-text="front"></span><br>
 		   
-		  <q-banner>xyz</q-banner>
+		  <q-input placeholder="ABC"></q-input>
 		   
 		   <br>
 		   
@@ -603,6 +603,9 @@ rweitman@smu.edu</b></div></div>
   </footer>
 <script src="https://cdn.jsdelivr.net/npm/vue@latest/dist/vue.min.js"></script>
 <script>
+
+import { QInput } from 'quasar'
+	
     new Vue({
       el: '#uno',
       data: function () {
@@ -610,7 +613,10 @@ rweitman@smu.edu</b></div></div>
 	  front: 'YOU ARE EPIC'
 	}
       },
-      methods: {}
+      methods: {},
+      components: {
+      QInput}	    
+	    
     });
   </script>
   <script src="https://cdn.jsdelivr.net/npm/quasar@^1.0.3/dist/quasar.ie.polyfills.umd.min.js"></script>
