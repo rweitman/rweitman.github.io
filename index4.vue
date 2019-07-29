@@ -84,7 +84,7 @@
 		   <button class="q-btn" @click="message">A</button>
 		   <br><br>
 		   <button>B</button><br><br>
-		   <q-btn>C</q-btn>
+		   <q-btn>SOLVED</q-btn>
 		   
 		   
 		   <br>
