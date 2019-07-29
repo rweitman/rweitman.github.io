@@ -88,7 +88,7 @@
 		   
 		   <q-input placeholder="RED"></q-input><br><br>
 		   
-		   <q-datetime-picker type="date"></q-datetime-picker>
+		   <q-datetime-picker type="date" v-model="abc"></q-datetime-picker>
 		   
 		   
 		   <br>
@@ -615,7 +615,8 @@ rweitman@smu.edu</b></div></div>
       el: '#uno',
       data: function () {
         return {
-	  front: 'STUFF'
+	  front: 'STUFF',
+          abc: new Date()
 	}
       },
       methods: {
