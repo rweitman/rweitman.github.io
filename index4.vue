@@ -84,9 +84,9 @@
 		   
 		   <span v-text="front"></span><br>
 		   
-		   <q-btn>NEW VERSION 2</q-btn><br><br>
+		   <q-btn>NEW VERSION 3</q-btn><br><br>
 		   
-		   <q-input placeholder="RED"></q-input><br><br>
+		   <q-input placeholder=""></q-input><br><br>
 		   
 		   <q-datetime type="date" v-model="abc"></q-datetime>
 		   
