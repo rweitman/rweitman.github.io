@@ -14,21 +14,18 @@
 
   <q-btn color="primary" icon="warning" label="Notify" @click="notify" class="q-ma-md"></q-btn>
 
-  <div class="q-ma-md">
-    Running Quasar v{{ version }}
-  </div>
+  
 </div>
 <script>
 new Vue({
   el: '#q-app',
   data: function () {
     return {
-      version: Quasar.version
+      
     }
   },
   methods: {
-  	notify: function () {
-      this.$q.notify('Running on Quasar v' + this.$q.version)
+  	
     }
 	}
 })
