@@ -16,7 +16,10 @@
   <q-btn color="primary" icon="warning" label="Notify" @click="notify()" class="q-ma-md"></q-btn><br><br>
 
 	<center>	
-<q-input v-model="dating" placeholder="XYZ" style="width: 400px"></q-input>
+<q-input v-model="dating" placeholder="TEST" style="width: 400px"></q-input><br><br><br>
+		
+	<q-inline-datetime v-model="dated" type="date"></q-inline-datetime>	
+		
 	</center>
 	
 	
@@ -27,7 +30,8 @@ new Vue({
   el: '#q-app',
   data: function () {
     return {
-     dating: ""
+     dating: "",
+     dated: ""	    
     }
   },
   methods: {
