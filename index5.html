@@ -1,0 +1,33 @@
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@quasar/extras/material-icons/material-icons.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/quasar/dist/quasar.min.css">
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://cdn.jsdelivr.net/npm/quasar/dist/quasar.umd.min.js"></script>
+
+<div id="q-app">
+  <div class="q-ma-md">
+    Fork and make your own!
+    Do NOT use self-closing tags here on jsFiddle.
+  </div>
+
+  <q-btn color="primary" icon="warning" label="Notify" @click="notify" class="q-ma-md"></q-btn>
+
+  <div class="q-ma-md">
+    Running Quasar v{{ version }}
+  </div>
+</div>
+
+<script>
+new Vue({
+  el: '#q-app',
+  data: function () {
+    return {
+      version: Quasar.version
+    }
+  },
+  methods: {
+  	notify: function () {
+      this.$q.notify('Running on Quasar v' + this.$q.version)
+    }
+	}
+})
+</script>
