@@ -9,6 +9,9 @@
 <div id="q-app">
 	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 	<script src="https://cdn.jsdelivr.net/npm/quasar/dist/quasar.umd.min.js"></script>
+<q-modal v-model="opened">
+	xxxxxx
+</q-modal>	
 	
 <table>
 
@@ -18,7 +21,7 @@
 
 <div class="col-md-4" style="padding-right: 20px">
 
-    <img src="assets/images/RW_photo.png" class="img-circle" alt="Me" align="right" class="pull-left" id="photo"></div>
+    <img src="assets/images/RW_photo.png" class="img-circle" alt="Me" @click="opened = !opened" align="right" class="pull-left" id="photo"></div>
 	
 	
     <div class="col-md-4" align="left">
@@ -75,7 +78,8 @@ new Vue({
   data: function () {
     return {
      dating: "",
-     dated: ""	    
+     dated: "",
+     opened: false	
     }
   },
   methods: {
