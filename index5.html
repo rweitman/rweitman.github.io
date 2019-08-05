@@ -13,7 +13,7 @@
     Do NOT use self-closing tags here on jsFiddle.
   </div>
 
-  <q-btn color="primary" icon="warning" label="Notify" @click="alert('xyz')" class="q-ma-md"></q-btn>
+  <q-btn color="primary" icon="warning" label="Notify" @click="notify()" class="q-ma-md"></q-btn>
 
   
 </div>
@@ -22,7 +22,14 @@ new Vue({
   el: '#q-app',
   data: function () {
     return {}
-  }
+  },
+  methods: {
+	notify() {
+		alert('xyz');
+		
+	}
+  }	  
+	  
 });
 </script>
 </body>
