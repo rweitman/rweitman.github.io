@@ -13,15 +13,18 @@
     Do NOT use self-closing tags here on jsFiddle.
   </div>
 
-  <q-btn color="primary" icon="warning" label="Notify" @click="notify()" class="q-ma-md"></q-btn>
-
+  <q-btn color="primary" icon="warning" label="Notify" @click="notify()" class="q-ma-md"></q-btn><br><br>
+	
+<q-datetime v-model="dating" type="date" />
   
 </div>
 <script>
 new Vue({
   el: '#q-app',
   data: function () {
-    return {}
+    return {
+     dating: ""
+    }
   },
   methods: {
 	notify() {
