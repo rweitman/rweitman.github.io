@@ -34,7 +34,7 @@ background-color: rgb(189, 223, 247);
 	<div class="row" style="height: 15%">
 		<div class="col-2"></div>
 		<div class="col-8">
-		<span class="customFont">Robert Weitman-14</span>
+		<span class="customFont">Robert Weitman-15</span>
 		</div>
 		<div class="col-2"></div>
 		
@@ -43,7 +43,7 @@ background-color: rgb(189, 223, 247);
 	<div class="row" style="height: 70%;">
 		<div class="col-2"></div>
 		<div class="col-8" style="background:white">
-    <img src="assets/images/RW_photo.png" class="img-circle" alt="Me" id="photo" style="padding: 20px; valign:middle; height: 50%">
+    <img src="assets/images/RW_photo.png" class="img-circle" alt="Me" id="photo" @click="$refs.minimizedModal.open()" style="padding: 20px; valign:middle; height: 50%">
 		</div>
 		<div class="col-2"></div>
 	</div>
@@ -54,7 +54,15 @@ background-color: rgb(189, 223, 247);
 		
 	</div>	
 	
-	
+<q-modal ref="minimizedModal" minimized :content-css="{padding: '50px'}">
+
+      <h4>Minimized Modal</h4>
+
+      <p>This one has backdrop on small screens too.</p>
+
+      <q-btn color="red" @click="$refs.minimizedModal.close()">Close Me</q-btn>
+
+    </q-modal>
 	
 </div>
 <script>
