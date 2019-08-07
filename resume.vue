@@ -34,7 +34,7 @@ background-color: rgb(189, 223, 247);
 	<div class="row" style="height: 15%">
 		<div class="col-2"></div>
 		<div class="col-8">
-		<span class="customFont">Robert Weitman-15</span>
+		<span class="customFont">Robert Weitman-16</span>
 		</div>
 		<div class="col-2"></div>
 		
