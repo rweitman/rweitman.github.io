@@ -1,0 +1,70 @@
+<head>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@quasar/extras/material-icons/material-icons.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/quasar/dist/quasar.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<style>
+
+body {
+ background: url(assets/images/img_night_skies.jpg);	
+ background-size: 100%;}	
+	
+	
+</style>	
+	
+	
+</head>
+
+<body>	
+<div id="q-app" style="overflow-x:hidden">
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="https://cdn.jsdelivr.net/npm/quasar/dist/quasar.umd.min.js"></script>
+	
+	<div class="row" style="height: 15%">
+		<div class="col-2"></div>
+		<div class="col-8">
+		<img src="assets/images/name.png" style="height: 80%"> 
+		</div>
+		<div class="col-2"></div>
+		
+	</div>	
+	
+	<div class="row" style="height: 70%;">
+		<div class="col-2"></div>
+		
+		<div class="col-2" style="background:orange">
+			
+			<div style="height: 25%"></div>	
+			<div style="height: 50%">
+				
+    				<img src="assets/images/RW_photo.png" class="img-circle" alt="Me" id="photo" 
+				     style="margin-left: 10%; width: 80%;">
+				
+			</div>
+		<div style="height: 25%"></div>		
+		</div>	
+		
+		<div class="col-6" style="background:white"></div>
+		<div class="col-2"></div>
+	</div>
+	
+	<div class="row" style="height: 15%">
+		
+	
+		
+	</div>		
+</div>
+<script>
+
+new Vue({
+  el: '#q-app',
+  data: function () {
+    return {
+    }
+  },
+  methods: {
+
+	}	  
+	  
+});
+</script>
+</body>
