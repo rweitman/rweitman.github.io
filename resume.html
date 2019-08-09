@@ -7,20 +7,7 @@
 body {
  background: url(assets/images/img_night_skies.jpg);	
  background-size: 100%;}
-	
-.expand-transition {
-  transition: all .3s ease;
-  height: 30px;
-  padding: 10px;
-  background-color: #eee;
-  overflow: hidden;
-}
-.expand-enter, .expand-leave {
-  height: 0;
-  padding: 0 10px;
-  opacity: 0;
-}	
-	
+		
 </style>	
 	
 	
@@ -70,6 +57,10 @@ body {
  <q-carousel
 	      arrows
 	      animated
+	     infinite
+     	 	autoplay
+      		transition-prev="slide-right"
+      		transition-next="slide-left"
 	      v-model="slide"
 	      height="80%"
 	>
