@@ -6,8 +6,20 @@
 
 body {
  background: url(assets/images/img_night_skies.jpg);	
- background-size: 100%;}	
+ background-size: 100%;}
 	
+.expand-transition {
+  transition: all .3s ease;
+  height: 30px;
+  padding: 10px;
+  background-color: #eee;
+  overflow: hidden;
+}
+.expand-enter, .expand-leave {
+  height: 0;
+  padding: 0 10px;
+  opacity: 0;
+}	
 	
 </style>	
 	
@@ -61,7 +73,7 @@ body {
 	
 	<div class="row" style="height: 15%">
 		
-	
+	<div v-if="showTab" transition="expand">hello again</div>
 		
 	</div>		
 </div>
