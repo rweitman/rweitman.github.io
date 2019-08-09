@@ -56,11 +56,25 @@ body {
 		<div class="col-6" style="border-left: 0px; padding: 20px; background-color: rgba(0,191,255, 0.5);">
 			
 		<div>
-			<q-collapsible icon="explore" label="First">
-    <div>
-      Content
-    </div>
-  </q-collapsible>
+			
+		<q-btn @click="toggleShow">
+		    <span v-if="isShowing">Hide child</span>
+		    <span v-else>Show child</span>
+		  </q-btn>
+			 <app-child v-if="isShowing" class="modal">
+				    <button @click="toggleShow">
+				      Close
+				    </button>
+  			</app-child>
+	<script type="text/x-template" id="childarea">
+		  <div>
+		    <h2>Here I am!</h2>
+		    <slot></slot>
+		  </div>
+		</script>
+		const Child = {
+		  template: '#childarea'
+		};	
 		</div>
 		<div class="col-2"></div>
 	</div>
@@ -77,9 +91,16 @@ new Vue({
   el: '#q-app',
   data: function () {
     return {
+	isShowing: false	    
     }
   },
+components: {
+    appChild: Child
+  },	
   methods: {
+ toggleShow() {
+      this.isShowing = !this.isShowing;
+    }
 
 	}	  
 	  
