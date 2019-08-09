@@ -59,7 +59,7 @@ body {
 	      arrows
 	      animated
 	     infinite
-     	 	autoplay
+     	 	:autoplay = "(autoSlide ? true : false)"
       		transition-prev="slide-right"
       		transition-next="slide-left"
 	      v-model="slide"
@@ -80,7 +80,10 @@ body {
       </q-carousel-slide>	
 	</q-carousel>	
 		<br><div style="text-align:right">
-		<q-btn style="color:white">AUTOPLAY OFF</q-btn>	
+		<q-btn @click="autoSlide = !autoSlide" style="color:white">
+			<span v-if="autoSlide">Turn Autoplay Off</span>
+			<span v-if="!autoSlide">Turn Autoplay On</span>
+		</q-btn>	
 		</div>	
 		</div>	
 		
@@ -99,7 +102,8 @@ new Vue({
   data: function () {
     return {	
 	showTab: true,
-	slide: 'first'
+	slide: 'first',
+	autoSlide: true    
     }
   },
   methods: {
