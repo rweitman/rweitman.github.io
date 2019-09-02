@@ -18,14 +18,40 @@
 </body>
 <script src="//cdn.jsdelivr.net/npm/phaser@3.19.0/dist/phaser.js"></script>
 <script>
-
+const gameState = {};
+  
 const config = {
   width: 500,
   height:500,
-  backgroundColor: 0xdda0dd
+  backgroundColor: 0xdda0dd,
+  scene: { preload, create, update}
 };
 
 var game = new Phaser.Game(config);
+  
+function preload() {
+   this.load.image('codey', 'https://s3.amazonaws.com/codecademy-content/courses/learn-phaser/codey.png');
+}
+
+function create() {
+  
+  gameState.codey= this.add.sprite(300, 200, 'codey');
+  
+  gameState.cursors = this.input.keyboard.createCursorKeys();
+  
+}
+ function update() {
+   
+   if (gameState.cursors.down.isDown) {
+     
+     gameState.codey.y += 1;
+     
+   }
+   
+ }
+
+  
+  
 </script>  
   
  </html>
