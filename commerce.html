@@ -1,0 +1,198 @@
+<head>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@quasar/extras/material-icons/material-icons.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/quasar/dist/quasar.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<style>
+
+body {
+ background: url(assets/images/img_night_skies.jpg);	
+ background-size: 100%;}
+		
+</style>	
+	
+	
+</head>
+
+<body>	
+<div id="q-app" style="overflow-x:hidden">
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="https://cdn.jsdelivr.net/npm/quasar/dist/quasar.umd.min.js"></script>
+	
+	<div class="row" style="height: 15%">
+		<div class="col-2"></div>
+		<div class="col-8">
+		<img src="assets/images/name.png" style="height: 80%"> 
+		</div>
+		<div class="col-2"></div>
+		
+	</div>	
+	<div class="row" style="height: 10%">
+	<div class="col-2"></div>
+	<div class="col-8" style="background:transparent">	
+	
+	<q-btn style="color:yellow; border: 1px solid yellow; font-size: 12px; background:transparent">Profile</q-btn>
+		
+		</div>
+	<div class="col-2"></div>	
+	
+	</div> 
+	
+	<div class="row" style="height: 60%;">
+		<div class="col-2"></div>
+		
+		<div class="col-2" style="background: rgba(255,255,255,0.2);">
+			
+			<div style="height: 25%"></div>	
+			<div style="height: 50%; border-right: 0px">
+				
+    				<img src="assets/images/RW_photo.png" class="img-circle" alt="Me" id="photo" 
+				     style="margin-left: 10%; width: 80%;" @click="showTab = !showTab">
+				
+			</div>
+		<div style="height: 25%"></div>		
+		</div>	
+		
+		<div class="col-6" style="border-left: 0px; padding: 20px; background-color: rgba(0,191,255, 0.5);">
+			
+ <q-carousel
+	     style="background: transparent"
+	      arrows
+	      animated
+	     infinite
+     	 	:autoplay = "(autoSlide ? true : false)"
+      		transition-prev="slide-right"
+      		transition-next="slide-left"
+	      v-model="slide"
+	      height="80%"
+	>
+
+      <q-carousel-slide name="first" >
+
+	     <div class="row">
+		     
+		     <div class="col-6">
+		      <span style="color:yellow; font-size: 14px; font-family: 'Roboto Condensed', Helvetica, sans-serif;">SMU Coding Boot Camp</span>
+		     <br><span style="color:white; font-size: 12px">May 2017 - October 2017</span>
+			     <br>
+			     <br><br>
+			 <div style="color:yellow; font-size: 11px">
+			     HTML5, CSS3, JavaScript,<br><br> Node.js, Java, Express.js,<br><br> React.js, Database Theory, MySQL <br><br> and Command Line 
+			</div>	     
+			     
+		     
+		     </div>
+		     <div class="col-6" style="text-align: right">
+		     
+		     
+	         <span style="color:yellow; font-size: 14px; font-family: 'Roboto Condensed', Helvetica, sans-serif;">Southern Methodist University 
+			     </span><br><span style="color:white; font-size: 12px">Full Stack Web Development Program</span>
+	 <br><img src="assets/images/img_smu.jpg" class="img-rounded" alt="Me" class="pull-right" style="margin-top: 20px" align="right" id="photo2" width="150px">
+			  <br>
+			      <img src="assets/images/trilogy.png" class="img-rounded" style="margin-top: 20px" align="right">  
+			
+		     
+		     </div>
+		     
+	      </div>     
+		
+
+      </q-carousel-slide>
+
+      <q-carousel-slide name="second">
+
+	    <div class="row">
+		     
+		     <div class="col-6">
+		      <span style="color:yellow; font-size: 14px; font-family: 'Roboto Condensed', Helvetica, sans-serif;">General Business Major</span>
+		     <br><span style="color:white; font-size: 12px">Graduated December 2016</span>
+			     <br>
+			     <br><br>
+			 <div style="color:yellow; font-size: 11px">
+				 
+			Accounting, Business Communications, <br><br>Negotiations, Federal Income Tax, <br><br>Entrepreneurship and Project Management 	  
+			
+			     </div>	     
+			     
+		     
+		     </div>
+		     <div class="col-6" style="text-align: right">
+		     
+		     
+	         <span style="color:yellow; font-size: 14px; font-family: 'Roboto Condensed', Helvetica, sans-serif;">Southern Methodist University 
+			     </span><br><span style="color:white; font-size: 12px">Cox School of Business</span>
+	 <br><img src="assets/images/img_smu.jpg" class="img-rounded" alt="Me" class="pull-right" style="margin-top: 20px" align="right" id="photo2" width="150px">
+			  <br>
+			      <img src="assets/images/cox.png" class="img-rounded" style="margin-top: 20px" align="right">  
+			
+		     
+		     </div>
+		     
+	      </div>     
+	      
+      </q-carousel-slide>
+	 <q-carousel-slide name="third">
+
+	    <div class="row">
+		     
+		     <div class="col-6">
+		      <span style="color:yellow; font-size: 14px; font-family: 'Roboto Condensed', Helvetica, sans-serif;">Volunteering - Rustic Pathways</span>
+		     <br><span style="color:white; font-size: 12px">Summers 2010 and 2011</span>
+			     <br>
+			     <br><br>
+			 <div style="color:yellow; font-size: 11px">
+				 
+				 Helped build hutches for <br><br>guinea pig livestock <b>(Peru)</b><br><br><br> 
+				 Assisted in painting, building, preparing<br><br> food and teaching English <b>(Thailand)</b>
+			     </div>	     
+			     
+		     
+		     </div>
+		     <div class="col-6" style="text-align: right">
+		     
+		     
+	         <span style="color:yellow; font-size: 14px; font-family: 'Roboto Condensed', Helvetica, sans-serif;">Rustic Pathways 
+			     </span>
+			     <br><span style="color:white; font-size: 12px">Peru & Thailand</span><br><br>
+	 <img src="assets/images/img_rustic.jpg" class="img-rounded" alt="Rustic Pathways" class="pull-right" align="right" id="photo2" width="150px">
+			
+		     
+		     </div>
+		     
+	      </div>     
+	      
+      </q-carousel-slide>
+	</q-carousel>	
+		<br><div style="text-align:right">
+		<q-btn @click="autoSlide = !autoSlide" style="color:white; font-size: 11px">
+			<span v-if="autoSlide">Turn Autoplay Off</span>
+			<span v-if="!autoSlide">Turn Autoplay On</span>
+		</q-btn>	
+		</div>	
+		</div>	
+		
+		<div class="col-2"></div>
+	</div>
+	
+	<div class="row" style="height: 15%">
+		
+
+	</div>		
+</div>
+<script>
+
+new Vue({
+  el: '#q-app',
+  data: function () {
+    return {	
+	showTab: true,
+	slide: 'first',
+	autoSlide: true    
+    }
+  },
+  methods: {
+
+    }	  
+	  
+});
+</script>
+</body>
