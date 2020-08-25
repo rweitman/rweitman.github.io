@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="angularApp">
+
+<head>
+  <title>Robert Weitman - ANGULAR TEST!</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-resource.min.js"></script>
+<script>
+//THE APP
+var angularApp = angular.module('angularApp', ['ngRoute', 'ngResource']);
+
+angularApp.config(function ($routeProvider) {
+
+      $routeProvider
+
+      .when('/', {
+          templateUrl: 'city.htm',
+          controller: 'homeController'
+      })
+
+  });
+
+  angularApp.controller('homeController', ['$scope', '$resource', '$routeParams', '$log', '$sce', function($scope, $resource, $routeParams, $log, $sce) {
+
+    $scope.fishing = $resource('https://data.ny.gov/resource/tjny-fki3.json');
+
+    $scope.city = "New York";
+
+    $scope.perpage = 5;
+    $scope.beginCount = 0;
+    $scope.endCount = $scope.perpage + $scope.beginCount + 1;
+
+    $scope.range = function(count){
+      var rangers = [];
+      for (var i = 0; i < count; i++){
+        rangers.push(i+1);
+      }
+      return rangers;
+    }
+
+    $scope.chooseRange = function(per, num) {
+
+      $scope.beginCount = per * (num - 1);
+      $scope.endCount = per * num;
+
+    };
+
+
+
+
+    $scope.fishing.query().$promise.then(function(user) {
+
+          $scope.fishArray = user;
+
+          var countyList = [];
+          var nameList = [];
+          var specList = [];
+          var locList = [];
+
+          for (var x = 0; x < user.length; x++) {
+
+            countyList.push(user[x].county);
+            nameList.push(user[x].name);
+
+            var splitSpecter = user[x].fish_spec.split(" - ");
+
+            for (var s = 0; s < splitSpecter.length; s++) {
+
+              specList.push(splitSpecter[s]);
+
+            }
+
+            locList.push(user[x].location);
+          }
+
+          $scope.countyListing = [...new Set(countyList)];
+          $scope.nameListing = [...new Set(nameList)];
+          $scope.specListing = [...new Set(specList)];
+          $scope.locListing = [...new Set(locList)];
+
+
+    });
+
+
+
+    $scope.fishTrack = function(param, selection, fishing) {
+
+        var fishedArr = [];
+
+        if (param == "fish_spec") {
+
+          for (var a = 0; a < fishing.length; a++)
+          {
+
+            var splitTracker = fishing[a].fish_spec.split(" - ");
+
+            var approve = false;
+
+            for (var b = 0; b < splitTracker.length;b++){
+
+              if (splitTracker[b].toLowerCase() == selection.toLowerCase())
+              {
+
+                  approve = true;
+
+              }
+            }
+
+            if (approve)
+            {
+
+              fishedArr.push({'county': fishing[a].county, 'name': fishing[a].name,
+                  'fish_spec': fishing[a].fish_spec, 'location': fishing[a].location});
+            }
+            }
+
+        }
+        else {
+
+          for (var a = 0; a < fishing.length; a++)
+          {
+
+            if (fishing[a][param].toLowerCase() == selection.toLowerCase())
+            {
+
+              fishedArr.push({'county': fishing[a].county, 'name': fishing[a].name,
+                  'fish_spec': fishing[a].fish_spec, 'location': fishing[a].location});
+            }
+            }
+
+
+        }
+
+
+          for (var a = 0; a < fishing.length; a++)
+          {
+
+            if (fishing[a][param].toLowerCase() == selection.toLowerCase())
+            {
+
+              fishedArr.push({'county': fishing[a].county, 'name': fishing[a].name,
+                  'fish_spec': fishing[a].fish_spec, 'location': fishing[a].location});
+            }
+            }
+            $scope.beginCount = 0;
+            $scope.endCount = $scope.perpage + $scope.beginCount + 1;
+
+              $scope.fishCounty = fishedArr;
+              };
+
+        $scope.fishMap = function(coordX, coordY) {
+
+          $scope.map = $sce.trustAsResourceUrl('https://www.bing.com/maps/embed?h=400&w=500&cp=' + coordX + '~' + coordY + '&lvl=16&typ=s&sty=h&src=SHELL&FORM=MBEDV8');
+};
+
+        }]);
+
+</script>
+</head>
+<body>
+  <header>
+<nav class="navbar navbar-default">
+<div class="container">
+  <div class="navbar-header">
+    <a class="navbar-brand">AngularJS Fishing</a>
+  </div>
+
+  <ul class="nav navbar-nav navbar-right">
+    <li><a><i class="fa fa-home"></i> Home</a></li>
+  </ul>
+</div>
+</nav>
+</header>
+
+<div class="container">
+
+  <div ng-view></div>
+
+</div>
+</body>
+
+</html>

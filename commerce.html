@@ -1,0 +1,104 @@
+<head>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@quasar/extras/material-icons/material-icons.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/quasar/dist/quasar.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<style>
+
+body {
+ background: url(assets/images/img_night_skies.jpg);	
+ background-size: 100%;}
+	
+.q-field__native {
+	
+	color:yellow!important;
+	margin-left: 45px;
+	border-bottom: 2px solid yellow;
+}	
+		
+</style>	
+	
+	
+</head>
+
+<body>	
+<div id="q-app" style="overflow-x:hidden">
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="https://cdn.jsdelivr.net/npm/quasar/dist/quasar.umd.min.js"></script>
+	
+	<div class="row" style="height: 15%">
+		<div class="col-2"></div>
+		<div class="col-8">
+		<img src="assets/images/name.png" style="height: 80%"> 
+		</div>
+		<div class="col-2"></div>
+		
+	</div>	
+<!-- 	<div class="row" style="height: 10%">
+	<div class="col-2"></div>
+	<div class="col-8" style="background:transparent">	
+	
+	<q-btn style="color:yellow; border: 1px solid yellow; font-size: 12px; background:transparent">Profile</q-btn>
+		
+		</div>
+	<div class="col-2"></div>	
+	
+	</div>  -->
+	
+	<div class="row" style="height: 60%;">
+		<div class="col-2"></div>
+		
+		<div class="col-2" style="background: rgba(255,255,255,0.2);">
+			
+			<div style="height: 25%"></div>	
+			<div style="height: 50%; border-right: 0px">
+				
+    				<img src="assets/images/RW_photo.png" class="img-circle" alt="Me" id="photo" 
+				     style="margin-left: 10%; width:80%;" @click="showTab = !showTab">
+				
+			</div>
+		<div style="height: 25%"></div>		
+		</div>	
+		
+		<div class="col-6" style="border-left: 0px; padding: 20px; background-color: rgba(0,191,255, 0.5); color: yellow;">
+			
+<!-- 			<q-select filled v-model="selection" :options="selections" color="yellow" bg-color="red"></q-select>
+			 -->
+			<select style="background-color: transparent">
+  				<option value="volvo" style="background-color: blue">Volvo</option>
+  				<option value="saab" style="background-color: blue">Saab</option>
+ 				<option value="mercedes" style="background-color: blue">Mercedes</option>
+			</select><br>
+			<q-input placeholder="TEST" style="width: 200px"></q-input>
+			<br>
+			<q-btn>SUBMIT6</q-btn>
+			
+		</div>	
+		
+		<div class="col-2"></div>
+	</div>
+	
+	<div class="row" style="height: 15%">
+		
+
+	</div>		
+</div>
+<script>
+
+new Vue({
+  el: '#q-app',
+  data: function () {
+    return {	
+	showTab: true,
+	slide: 'first',
+	autoSlide: true,
+	selections: ['ONE', 'TWO', 'THREE'],
+	selection: ""
+    }
+  },
+  methods: {
+
+    }	  
+	  
+});
+</script>
+</body>

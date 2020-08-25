@@ -1,0 +1,55 @@
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <h4>Forecast for Fishing</h4>
+        <div class="form-group">
+            <h5>Counties</h5>
+            <input type="text" class="form-control" ng-model="inputCast" list="countyInput" />
+            <datalist id="countyInput">
+                 <option ng-repeat="counter in countyListing |orderBy:counter" value="{{counter}}">
+            </datalist>
+            <button class="btn btn-primary" ng-click="fishTrack('county', inputCast, fishArray)">Investigate Counties</button>
+
+            <h5>Fishing Locations</h5>
+            <input type="text" class="form-control" ng-model="locationCast" list="lakeInput" />
+            <datalist id="lakeInput">
+                 <option ng-repeat="namer in nameListing | orderBy: namer" value="{{namer}}">
+            </datalist>
+            <button class="btn btn-primary" ng-click="fishTrack('name', locationCast, fishArray)">Investigate Waters</button>
+
+            <h5>Types of Fish</h5>
+            <input type="text" class="form-control" ng-model="typeCast" list="specInput" />
+            <datalist id="specInput">
+                 <option ng-repeat="specter in specListing | orderBy: specter" value="{{specter}}">
+            </datalist>
+            <button class="btn btn-primary" ng-click="fishTrack('fish_spec', typeCast, fishArray)">Investigate Fish Species</button>
+
+        </div>
+        <div class="table-responsive">
+          <table class="table" ng-table="angleStats">
+        <thead>
+          <th>County</th>
+          <th>Body of Water</th>
+          <th>Fish Species</th>
+          <th>Map</th>
+        </thead>
+        <tbody>
+          <tr ng-repeat="angles in fishCounty" ng-show="beginCount <= fishCounty.indexOf(angles) && fishCounty.indexOf(angles) < endCount">
+            <td>{{angles.county}}</td>
+            <td>{{angles.name}}</td>
+            <td>{{angles.fish_spec}}</td>
+            <td><button class="btn btn-primary" ng-click="fishMap(angles.location.latitude, angles.location.longitude)">MAP</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <ul class="pagination">
+        <li ng-repeat="ranging in range(fishCounty.length/perpage)"><a ng-click="chooseRange(perpage, ranging)">{{ranging}}</a></li>
+      </ul>
+        </div>
+        <br />
+
+        <div>
+          <iframe width="500" height="400" frameborder="0" src="{{map}}" scrolling="no">
+        </iframe>
+      </div>
+    </div>
+</div>
