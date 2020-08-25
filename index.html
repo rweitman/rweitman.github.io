@@ -1,606 +1,1779 @@
-<!DOCTYPE html>
 <html>
-
 <head>
-  <title>Robert Weitman - Profile</title>
-  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet'>
-   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel='stylesheet' type='text/css' href='assets/css/style.css'>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@quasar/extras/material-icons/material-icons.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/quasar/dist/quasar.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel='stylesheet' type='text/css' href='assets/css/style.css'>
+
+<!-- STYLESHEETS -->
+
+
 </head>
 
 <body>
+	<div class="ground" id="backDrop" style="overflow-y:hidden; overflow-x:hidden;">
+	<div class="row hideTable" style="height: 15%">
+		<div class="col-2"></div>
+		<div class="col-5">
+				<img src="assets/images/name.png" style="height: 80%"></div>
+		<div class="col-3">
+		<img src="assets/images/contact.png" style="height: 80%; padding-top: 10%></div>
+		<div class="col-2">
+		</div>
+
+<!-- NAME AND PHONE -->
+
+
+	</div>
+
+	<div class="row hideTable" id="categoryImage">
+		<div class="col-2"></div>
+
+		<div class="col-2" style="background-color:rgba(51,51,255,0.5);">
+
+			<div style="height: 25%"></div>
+			<div style="height: 50%">
+				<img src="assets/images/RW_photo.png" class="img-circle point" onclick="openModal('COVER LETTER')" alt="Me" id="photo"
+				 style="margin-left: 10%; width: 80%;">
+			</div>
+		<div style="height: 25%"></div>
+		</div>
+
+		<!-- PICTURE/PHOTO -->
+
+		<div class="col-6 ground">
+
+			<img src="assets/images/category-image-2.png" ref="imageHeight" style="width: 100%;"
+			usemap="#mapping">
+
+<map name="mapping">
+    <area  class="point" coords="312,111,61" shape="circle" id="openModals" onclick="openModal('FREE CODE CAMP')">
+		<area  class="point" coords="498,197,68" shape="circle" onclick="openModal('CODECADEMY');">
+    <area  class="point" coords="87,307,59" shape="circle" onclick="openModal('CODING BOOT CAMP')">
+    <area  class="point" coords="85,415,174,496" shape="rect" onclick="openModal('4')">
+    <area  class="point" coords="719,163,768,141,787,70,710,65,698,120,648,141" shape="poly" onclick="openModal('GAME HISTORY')">
+    <area  class="point" coords="518,401,497,416,478,491,486,503,503,487,501,506,558,508,560,459,569,469,570,511,610,518,610,408,585,410,579,438,578,420,550,400" shape="poly" onclick="openModal('BANDMANS')">
+    <area  class="point" coords="111,201,149,177,167,151,143,165,164,125,168,85,129,65,129,108,110,151,96,101,58,127,72,167,54,161,110,201,111,201,110,201" shape="poly" onclick="openModal('BUSINESS')">
+    <area  class="point" coords="718,297,768,285,771,338,789,366,786,414,743,421,716,423,698,397,675,409,731,370,749,356,726,330" shape="poly" onclick="openModal('AHCS')">
+    <area  class="point" coords="273,521,293,506,312,478,327,482,316,556,366,482,378,537,397,531,389,550,361,558,347,534,316,577,291,570" shape="poly" onclick="openModal('UDEMY')">
+    <area  class="point" coords="217,357,220,302,248,318,269,321,288,300,306,308,322,294,344,308,407,331,419,350,365,362,336,377,334,357,282,357,270,362,264,339,245,345" shape="poly" onclick="openModal('FISHING')">
+</map>
+
+<!-- CHOOSE A CATEGORY -->
+
+		</div>
+		<div class="col-2"></div>
+	</div>
+
+
+	<div class="row hideTable" style="height: 15%"></div>
+
+	<!-- START AHCS MODAL -->
+
+
+  <div class="modal" id="advantageHCS" role="dialog" style="max-height: 80%; max-width: 60%; margin:auto; overflow-y:auto">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content" style="background-image: url('assets/images/img_night_skies.jpg'); border: 0.7px solid yellow; border-radius: 0px">
+
+				<div class="modal-header" style="padding: 3%">
+	      <table style="width: 100%">
+	        <tr>
+	          <td style="width: 95%">
+	            <span class="titleBC" style="color:yellow"><b>Advantage HCS</b></span>
+	            </td>
+	            <td>
+	              <span class="titleBC point" style="color:yellow" onclick="closeModal('AHCS')"><b>X</b></span>
+	          </td>
+	        </tr>
+	      </table>
+	      </div>
+
+
+
+     <div class="modal-body" style="padding: 0px; margin:0px; background-color: rgba(0,191,255, 0.5);">
+
+			 <table>
+				 <tr>
+					 <td style="width:30%">
+						 <img class="first-ahcs-button point" src="assets/images/ahcs_logo.jpg" style="width: 100%"><br>
+						 <img class="second-ahcs-button point" src="assets/images/phalcon-volt.png" style="width: 100%;"><br>
+						 <img class="third-ahcs-button point" src="assets/images/vuejs_logo.png" style="width: 100%;"><br>
+						 <img class="fourth-ahcs-button point" src="assets/images/quasar_logo.png" style="width: 100%"><br>
+					 </td>
+			 <td>
+
+				 <div id="first-ahcs-info">
+
+<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>ADVANTAGE HEALTHCARE SYSTEMS</strong></div>
+<div style="padding-left: 5px; padding-top:2px;">
+<img src="assets/images/ahcs_spine.jpg" width="40%" style="padding: 0px 5px 0px 0px; float:left">
+
+<a href="https://www.advantagehcs.com/" style="color:yellow" class="titleBC" target="_blank">https://www.advantagehcs.com/</a>
+<br>
+<div class="sidebar" style="color:white">	&quot;Advantage Healthcare Systems is committed to providing ethical, high-quality, and cost-effective rehabilitation to individuals with chronic pain conditions.&quot;
+</div>
+<div class="sidebar" style="display:inline-block; padding-top: 5px; color:white">
+●	Drafted pieces of computer code to be used on the company website<br>
+●	Research solutions by looking at blogs and online documentation<br>
+●	Translated old code into new coding languages: <b>Quasar, Vue.js and Phalcon Volt</b><br>
+●	Consistently used new coding languages almost daily<br>
+●	Helped provide a better interface for the people in the company to muse for their daily tasks<br>
+●	Specialized in <b>Front End Development</b><br>
+●	Used console to search for errors in the code<br>
+●	Helped bridge the Front-End Code with the Back-End Code
+</div>
+
+</div>
+</div>
+				 <div id="second-ahcs-info">
+					 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY PHALCON VOLT SKILLSET</strong></div>
+
+					 <div style="padding-left: 5px; padding-top:2px;">
+					 <img src="assets/images/phalcon-volt-logo.png" width="40%" style="padding: 0px 5px 0px 0px; float:right">
+
+					 <a href="https://docs.phalcon.io/4.0/en/volt" style="color:yellow" class="titleBC" target="_blank">https://docs.phalcon.io/4.0/en/volt</a>
+					 <br>
+					 <div class="sidebar" style="color:white">	At Advantage Healthcare Systems, I mainly used Phalcon Volt at the top of pages to store information, rather than defining everything in JavaScript
+					 </div>
+
+					 <div class="sidebar" style="display:inline-block; padding-top: 5px; color:white"><b>Main Topics</b><br>
+ ●	endfor/for/elsefor<br>
+ ●	continue/break<br>
+ ●	switch/cases<br>
+ ●	set (variables)<br>
+ ●	type()<br>
+ ●	odd/even/numeric/iterable<br>
+ ●	echo<br>
+ ●	comments<br>
+
+					 </div>
+
+					 </div>
+
+
+
+
+				 </div>
+				 <div id="third-ahcs-info">
+					 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY VUE.JS SKILLSET</strong></div>
+
+					 <div style="padding-left: 5px; padding-top:2px;">
+					 <img src="assets/images/vuejs-icon.png" width="40%" style="padding: 0px 5px 0px 0px; float:right">
+
+					 <a href="https://vuejs.org/" style="color:yellow" class="titleBC" target="_blank">https://vuejs.org/</a>
+					 <br>
+					 <div class="sidebar" style="color:white">	At Advantage Healthcare Systems, I mainly used VueJS to more easily change variables and call functions.
+						 <br><br>
+						 <b>Main Topics</b><br>v-bind:title, new Vue(), el, v-if, v-for, v-on:click, .split(), .reverse(), .join(),
+						 v-model, Vue.component, $watch, data, template, v-html, v-bind:id, v-bind (shorthand - :), v-on (shorthand - @), Date.now(), computed,
+						 v-bind:class, v-bind:style, v-else/v-else-if, v-show, push(), pop(), shift(), unshift(), splice(), sort(), reverse(),
+						 filter(), concat(), slice(), v-on:keyup, toggle, v-bind:key, import/export, $emit, v-on:input, transition classes,
+						 created, methods, Vue.extend(), const
+					 </div>
+
+
+					 </div>
+
+
+
+
+				 </div>
+				 <div id="fourth-ahcs-info">
+					 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY QUASAR SKILLSET</strong></div>
+
+					 <div style="padding-left: 5px; padding-top:2px;">
+					 <img src="assets/images/quasar.png" width="40%" style="padding: 0px 5px 0px 0px; float:right">
+
+					 <a href="https://quasar.dev/" style="color:yellow" class="titleBC" target="_blank">https://quasar.dev/</a>
+					 <br>
+					 <div class="sidebar" style="color:white">	At Advantage Healthcare Systems, I mainly used Quasar to implement useful pre-styled components
+						 <br><br>
+						 <b>Main Topics</b><br>QAvatar, QBanner, QBtn, QBtnGroup, QBtnDropdown, QCarousel, QExpansionItem, QInput, QSelect,
+						 QFile, QRadio, QCheckbox, QToggle, QBtnToggle, QOptionGroup, QSlider, QTime, QDate, QIcon, QImg, QMenu
+					 </div>
+
+
+					 </div>
+
+
+
+
+				 </div>
+
+			 </td>
+		 </tr>
+	 </table>
+
+			  </div>
+				<div class="modal-footer" style="padding: 3%">
+
+		           <span class="titleBC point" onclick="closeModal('AHCS')" style="margin-left: 60%; border: 0.2px solid yellow"><b>CLOSE</b></span>
+
+		       </div>
+      </div>
+
+    </div>
+</div>
+
+<!-- END AHCS MODAL -->
+
+<!-- START BANDMANS MODAL -->
+
+<div class="modal" id="bandMans" role="dialog" style="max-height: 80%; max-width: 60%; margin:auto; overflow-y:auto">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content" style="background-image: url('assets/images/img_night_skies.jpg'); border: 0.7px solid yellow; border-radius: 0px">
+
+			<div class="modal-header" style="padding: 3%">
+			<table style="width: 100%">
+				<tr>
+					<td style="width: 95%">
+						<span class="titleBC" style="color:yellow"><b>Bandmans Company</b></span>
+						</td>
+						<td>
+							<span class="titleBC point" style="color:yellow" onclick="closeModal('BANDMANS')"><b>X</b></span>
+					</td>
+				</tr>
+			</table>
+			</div>
+			<div class="modal-body" style="padding: 0px; margin:0px; background-color: rgba(0,191,255, 0.5);">
+
+				<table>
+					<tr>
+						<td style="width:30%">
+							<img class="first-band-button point" src="assets/images/bandmans_logo.jpg" style="width: 100%; border: 0.5px solid blue"><br>
+							<img class="second-band-button point" src="assets/images/ecwid_logo.jpg" style="width: 100%; border: 0.5px solid blue"><br>
+							<img class="third-band-button point" src="assets/images/pagespeed_logo.jpg" style="width: 100%; border: 0.5px solid blue"><br>
+							<img class="fourth-band-button point" src="assets/images/mailchimp_logo.jpg" style="width: 100%; border: 0.5px solid blue"><br>
+						</td>
+				<td>
+				 	 <div id="first-band-info">
+
+						 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>BANDMANS COMPANY</strong></div>
+ 						<div style="padding-left: 5px; padding-top:2px;">
+ 						<img src="assets/images/bandmans_pic.jpg" width="40%" style="padding: 0px 5px 0px 0px; float:right">
+
+ 						<a href="https://www.bandmans.com/" style="color:yellow" class="titleBC" target="_blank">https://www.bandmans.com/</a>
+ 						<br>
+ 						<div class="sidebar" style="color:white">	&quot;Bandmans carries a wide selection of custom marching band uniforms & accessories for sale. Color guards, marching band uniforms & more.&quot;
+ 						</div>
+ 						<div class="sidebar" style="display:inline-block; padding-top: 5px; color:white">
+
+ 						● Assign pricing, pictures, descriptions and product attributes to the website<br>
+ 						●	Upload new products and made Excel Sheets<br>
+ 						●	Oversaw uniform shipments through packing and tracking orders<br>
+ 						●	Prepare Email Blasts and Contact Potential Clients<br>
+ 						●	Work on Search Engine Optimization<br>
+						●	Using Spanish<br>
+ 						</div>
+
+ 						</div>
+
+
+					 </div>
+					 <div id="second-band-info">
+
+
+						 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>ECWID SKILLSET</strong></div>
+						 <div style="padding-left: 5px; padding-top:2px;">
+						 <img src="assets/images/ecwid_pic.jpg" width="40%" style="padding: 0px 5px 0px 0px; float:left">
+
+						 <a href="https://www.ecwid.com/" style="color:yellow" class="titleBC" target="_blank">https://www.ecwid.com/</a>
+						 <br>
+						 <div class="sidebar" style="color:white">Bandmans uses Ecwid to organize and sell products.
+							 <br><br>
+							 <b>MAIN TOPICS</b>: Product SKU#, Product Images, Product Pricing, Product Categories, Product Attributes, Product Options,
+								 Product Description
+
+						 </div>
+
+						 </div>
+
+					 </div>
+					 <div id="third-band-info">
+
+						 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>SEARCH ENGINE OPTIMIZATION SKILLSET</strong></div>
+						 <div style="padding-left: 5px; padding-top:2px;">
+						 <img src="assets/images/seo_pic.jpg" width="40%" style="padding: 0px 5px 0px 0px; float:right">
+
+						 <a href="https://www.google.com/search?q&#61;search+engine+optimization" style="color:yellow" class="titleBC" target="_blank">https://www.google.com/search?q=search+engine+optimization</a>
+						 <br>
+						 <div class="sidebar" style="color:white">At Bandmans I recently started Search Engine Optimization to increase web traffic:<br><br>
+							 I have mainly focused on Keyword SEO by increasing the use of keywords in product and category descriptions.<br><br>
+							 I also have tried to make the website more aesthetic by changing how the website is navigated.<br><br>
+							 I have used PageSpeed Insights to see the performance of our website<br>
+							 Unfortunately, there are still script issues in the backend that prevent a faster website.
+						 </div>
+
+						 </div>
+
+					 </div>
+					 <div id="fourth-band-info">
+
+						 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MAILBLAST SKILLSET</strong></div>
+						 <div style="padding-left: 5px; padding-top:2px;">
+						 <img src="assets/images/mail_pic.jpg" width="40%" style="padding: 0px 5px 0px 0px; float:right">
+
+						 <a href="https://mailchimp.com/" style="color:yellow" class="titleBC" target="_blank">https://mailchimp.com/</a>
+						 <br>
+						 <div class="sidebar" style="color:white">At Bandmans I recently started preparing email blasts to be sent out to prospective customers<br><br>
+							 ● Adding customers and their emails to the audience<br>
+							 ● Setting up the subject line and the email sending the email blast<br>
+							 ● Preparing the content of the email: images and descriptions<br>
+
+						 </div>
+
+						 </div>
+
+					 </div>
+
+
+				</td>
+			</tr>
+		</table>
+			</div>
+			<div class="modal-footer" style="padding: 3%">
+
+						 <span class="titleBC point" onclick="closeModal('BANDMANS')" style="margin-left: 60%; border: 0.2px solid yellow"><b>CLOSE</b></span>
+
+				 </div>
+		</div>
+
+	</div>
+</div>
+
+<!-- END BANDMANS MODAL -->
+
+<!-- START FREE CODE CAMP MODAL -->
+
+<div class="modal" id="fccModal" role="dialog" style="max-height: 80%; max-width: 60%; margin:auto; overflow-y:auto">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content" style="background-image: url('assets/images/img_night_skies.jpg'); border: 0.7px solid yellow; border-radius: 0px">
+
+			<div class="modal-header" style="padding: 3%">
+			<table style="width: 100%">
+				<tr>
+					<td style="width: 95%">
+						<span class="titleBC" style="color:yellow"><b>Free Code Camp</b></span>
+						</td>
+						<td>
+							<span class="titleBC point" style="color:yellow" onclick="closeModal('FREE CODE CAMP')"><b>X</b></span>
+					</td>
+				</tr>
+			</table>
+			</div>
+			<div class="modal-body" style="padding: 0px; margin:0px; background-color: rgba(0,191,255, 0.5);">
+
+			<span class='first-fcc-button sidebar' style="max-width: 100%">Responsive Web Design</span>
+			<span class='second-fcc-button sidebar' style="max-width: 100%">Javascript Algorithms and Data Structures</span>
+			<span class='third-fcc-button sidebar' style="border:0px; max-width:100%">Front End Libraries</span>
+				<table>
+					<tr>
+			<td>
+
+			 <div id="first-fcc-info" class="sidebar">
+
+
+				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>RESPONSIVE WEB DESIGN</strong></div>
+			  <div style="padding-left: 5px; padding-top:2px; color:white">
+			  <img src="assets/images/rwd_pic.jpg" width="40%" style="padding: 0px 5px 5px 0px; float:left">
+
+
+			 <b>MAIN TOPICS</b>:&emsp;●	Basic HTML and HTML5&emsp;●	Basic CSS&emsp;●	Applied Visual Design&emsp;●	Applied Accessibility
+			 &emsp;●	Responsive Web Design Principles&emsp;●	CSS Flexbox&emsp;●	CSS Grid&emsp;●	Responsive Web Design Projects<br><br>
+
+			 <b>Projects: </b><br>
+			 ●	Build a Tribute Page<br>
+			 &emsp;- Basic HTML: Images, Links and Text<br><br>
+			 ●	Build a Survey Form<br>
+			 &emsp;- Form Basics: Numbers, Dropdowns, Radio Buttons, Text Fields and Checkboxes<br><br>
+			 ●	Build a Product Landing Page<br>
+			 &emsp;- Nav Buttons, Video Embedding and @media Screen<br><br>
+			 ●	Build a Technical Documentation Page<br>
+			 &emsp;- Indexing and Layering of Lists <br><br>
+ 		 	 ●	Build a Personal Portfolio Webpage<br>
+			 &emsp;- Using IDs and Multiple Classes to Style the Page<br>
+			  </div>
+
+
+			 </div>
+
+			 <div id="second-fcc-info" class="sidebar">
+
+
+
+
+				 				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>JAVASCRIPT ALGORITHMS AND DATA STRUCTURES</strong></div>
+				 			  <div style="padding-left: 5px; padding-top:2px; color:white">
+				 			  <img src="assets/images/algorithm-pic.jpg" width="40%" style="padding: 0px 5px 5px 0px; float:left">
+
+
+				 			 <b>MAIN TOPICS</b>:&emsp;●	Basic JavaScript&emsp;●	ES6&emsp;●	Regular Expressions&emsp;●	Debugging
+				 			 &emsp;●	Basic Data Structures&emsp;●	Basic Algorithm Scripting&emsp;●	Object Oriented Programming&emsp;●	Functional Programming
+							 &emsp;●	Intermediate Algorithm Scripting&emsp;●	JavaScript Algorithms and Data Structures Projects
+							 <br><br>
+
+				 			 <b>Projects: </b><br>
+				 			 ●	Palindrome Checker<br>
+				 			 ●	Roman Numeral Converter<br>
+				 			 ●	Caesars Cipher<br>
+				 			 ●	Telephone Number Validator<br>
+				  		 ●	Cash Register<br>
+				 			  </div>
+
+			 </div>
+			 <div id="third-fcc-info" class="sidebar">
+
+
+
+				 				 				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>FRONT END LIBRARIES</strong></div>
+				 				 			  <div style="padding-left: 5px; padding-top:2px; color:white">
+				 				 			  <img src="assets/images/libraries-pic.jpg" width="40%" style="padding: 0px 5px 5px 0px; float:left">
+
+
+				 				 			 <b>MAIN TOPICS</b>:&emsp;●	Bootstrap&emsp;●	jQuery&emsp;●	Sass&emsp;●	React
+				 				 			 &emsp;●	Redux&emsp;●	React and Redux<br><br>
+
+				 				 			 <b>Projects: </b><br>
+				 				 			 ●	Build a Random Quote Machine<br>
+											 &emsp;- Math.random(), Math.floor(), document.createElement, $(document).ready(), append and innerHTML<br><br>
+				 				 			 ●	Build a Markdown Previewer<br>
+											 &emsp;- Using a Textarea Field to Print its Contents Inside an InnerHTML field<br>
+											 &emsp;- REACT: H1/H2 Headers, Links, BlockQuotes and Bold Text<br><br>
+				 				 			 ●	Build a Drum Machine<br>
+											 &emsp;- Audio Files (play and pause), event.keyCode and event.preventDefault<br><br>
+				 				 			 ●	Build a JavaScript Calculator<br>
+											 &emsp;- Separating the Process in Stages<br>
+											 &emsp;- Conducting Math with Numbers and Operations<br>
+											 &emsp;- Add Decimals, Clear the Screen, Invert the Number and Select EQUALS<br><br>
+				 				  		 ●	Build a Pomodoro Clock<br>
+											 &emsp;- Add an addtional zero if number is less than 10<br>
+											 &emsp;- Increment/Decrement Duration Times<br>
+											 &emsp;- Pause, Resume and Reset the Clock<br><br>
+				 				 			  </div>
+
+			 </div>
+
+		 </td>
+	 </tr>
+ </table>
+
+			</div>
+
+			</div>
+			<div class="modal-footer" style="padding: 3%">
+
+						 <span class="titleBC point" onclick="closeModal('FREE CODE CAMP')" style="margin-left: 60%; border: 0.2px solid yellow"><b>CLOSE</b></span>
+
+				 </div>
+		</div>
+</div>
+<!-- END FREE CODE CAMP MODAL -->
+
+
+<!-- START BUSINESS MODAL -->
+
+<div class="modal" id="busyModal" role="dialog" style="max-height: 80%; max-width: 60%; margin:auto; overflow-y:auto">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content" style="background-image: url('assets/images/img_night_skies.jpg'); border: 0.7px solid yellow; border-radius: 0px">
+
+			<div class="modal-header" style="padding: 3%">
+			<table style="width: 100%">
+				<tr>
+					<td style="width: 95%">
+						<span class="titleBC" style="color:yellow"><b>SMU Cox School of Business</b></span>
+						</td>
+						<td>
+							<span class="titleBC point" style="color:yellow" onclick="closeModal('BUSINESS')"><b>X</b></span>
+					</td>
+				</tr>
+			</table>
+			</div>
+			<div class="modal-body" style="padding: 0px; margin:0px; background-color: rgba(0,191,255, 0.5);">
+
+<div style="padding:2%;">
+
+<table class="titleBC">
+
+	<tr>
+		<td style="width:30%">
+	<img src="assets/images/img_smu.jpg" style="width: 100%;">
+</td>
+<td style="padding-left: 2%;color:white">
+	Robert has taken a variety of business courses: Accounting, Business Communications & Leadership Development, Negotiations, Federal Income Tax, Entrepreneurship, Project Management
+
+</td>
+
+</tr>
+</table><p></p>
+<table class="sidebar">
+
+	<tr>
+<td style="padding-right: 2%;color:white">
+	<b>COMPREHENSIVE BUSINESS KNOWLEDGE</b><br><br>
+	<b>3DLuggage</b> was a comprehensive business group project for a SMU Entrepreneurship class.<br><br>
+	<b>Idea:</b> Luggage folds into four directions to try to keep clothes more organized<br><br>
+	<b>Forecasts:</b> Income Statements, Cash Flow Statements and Balance Sheets<br><br>
+	<b>Includes:</b> Market Analysis, Business Objectives and Business Planning
+</td>
+<td style="width:55%">
+<img src="assets/images/3d_luggage.png" style="width: 100%;" class="rounded">
+</td>
+</tr>
+</table>
+
+</div>
+
+			</div>
+
+			<div class="modal-footer" style="padding: 3%">
+
+						 <span class="titleBC point" onclick="closeModal('BUSINESS')" style="margin-left: 60%; border: 0.2px solid yellow"><b>CLOSE</b></span>
+
+				 </div>
+		</div>
+</div>
+</div>
+
+
+<!-- END BUSINESS MODAL -->
+
+<!-- START GAME HISTORY MODAL -->
+
+
+
+<div class="modal" id="gameModal" role="dialog" style="max-height: 80%; max-width: 60%; margin:auto; overflow-y:auto">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content" style="background-image: url('assets/images/img_night_skies.jpg'); border: 0.7px solid yellow; border-radius: 0px">
+
+			<div class="modal-header" style="padding: 3%">
+			<table style="width: 100%">
+				<tr>
+					<td style="width: 95%">
+						<span class="titleBC" style="color:yellow"><b>Gaming</b></span>
+						</td>
+						<td>
+							<span class="titleBC point" style="color:yellow" onclick="closeModal('GAME HISTORY')"><b>X</b></span>
+					</td>
+				</tr>
+			</table>
+			</div>
+			<div class="modal-body" style="padding: 0px; margin:0px; background-color: rgba(0,191,255, 0.5);">
+
+<div style="padding:2%;">
+
+<table class="sidebar">
+
+	<tr>
+		<td style="width:15%">
+	<img src="assets/images/clue_finders.jpg" style="width: 100%;">
+</td>
+<td style="padding-left: 2%;color:white">
+
+	At a very early age I got interested in computer gaming. I admired how my sister
+	and her friends played computer games, specifically, the ClueFinders educational computer game series.
+	Even though I was several years before fourth and fifth grade, I challenged myself by configuring
+	the settings to be almost high school levelled. The ClueFinders games gave me a jumpstart to my education
+	and got me interested in education through gaming.
+
+</td>
+
+</tr>
+</table><p></p>
+<table class="sidebar">
+
+	<tr>
+<td style="padding-right: 2%;color:white">
+
+	<a href="https://www.runescape.com" style="color:yellow" class="sidebar" target="_blank">https://runescape.com/</a>
+	<br>
+	RuneScape is a MMORPG that I have played for a long time. Even though it can take long periods of time, I like challenging
+	myself by setting goals for myself. One of my favorite things in-game hobbies is helping people get started with the game by following
+	their character around in the game. I admire how the game has several overlapping storylines, which is interesting to me because
+	I like hearing people's perspectives. I hope to one day help design a computer game so that I can tell stories that provide insight,
+	education, creativity and fun.
+
+</td>
+<td style="width:55%">
+<img src="assets/images/runescape.jpg" style="width: 100%;">
+</td>
+</tr>
+</table>
+
+</div>
+
+			</div>
+
+			<div class="modal-footer" style="padding: 3%">
+
+						 <span class="titleBC point" onclick="closeModal('GAME HISTORY')" style="margin-left: 60%; border: 0.2px solid yellow"><b>CLOSE</b></span>
+
+				 </div>
+		</div>
+</div>
+</div>
+
+<!-- END GAME HISTORY MODAL -->
+
+<!-- START FISHING MODAL -->
+
+
+
+
+<div class="modal" id="fishModal" role="dialog" style="max-height: 80%; max-width: 60%; margin:auto; overflow-y:auto">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content" style="background-image: url('assets/images/img_night_skies.jpg'); border: 0.7px solid yellow; border-radius: 0px">
+
+			<div class="modal-header" style="padding: 3%">
+			<table style="width: 100%">
+				<tr>
+					<td style="width: 95%">
+						<span class="titleBC" style="color:yellow"><b>Activities and Awards</b></span>
+						</td>
+						<td>
+							<span class="titleBC point" style="color:yellow" onclick="closeModal('FISHING')"><b>X</b></span>
+					</td>
+				</tr>
+			</table>
+			</div>
+			<div class="modal-body" style="padding: 0px; margin:0px; background-color: rgba(0,191,255, 0.5);">
+
+<div>
+
+	<table>
+		<tr>
+			<td style="width:30%">
+				<img class="first-fish-button point" src="assets/images/awards_select.png" style="width: 100%; border: 0.5px solid yellow"><br>
+				<img class="second-fish-button point" src="assets/images/activities_select.png" style="width: 100%; border: 0.5px solid yellow"><br>
+			</td>
+
+		<td style="padding:2%;">
+			 <div id="first-fish-info">
+
+				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>AWARDS</strong></div>
 
 <table>
-<div id="bground1">
+	<tr><td style="width:40%">
+				<img src="assets/images/green_award.jpg" width="100%" style="padding: 0px 5px 0px 0px; float:left">
+			</td>
+			<td>
+				<div class="sidebar" style="display:inline-block; padding-top: 5px; color:white">
 
-<div class="row gutter-xs">
+
+					<b>VOLUNTEERING</b> - Rustic Pathways Star Alumni Award (2x) <br><br>
+					<b>SCHOLAR</b> - Honor Society and Greenhill's Board of Trustees Award <br><br>
+					<b>CODING CERTIFICATIONS</b> - Full-Stack Web Development, Responsive Web Design,
+					JavaScript Algorithms & Data Structures and Front End Libararies
 
 
+				</div>
+			</td>
+		</tr>
+	</table>
 
-<div class="col-md-4">
-    <img src="assets/images/RW_photo.png" class="img-circle" alt="Me" align="right" class="pull-left" id="photo"></div>
-    <!-- <div class="col-md-1"></div> -->
-    <div class="col-md-8" align="left">
+				</div>
 
-    <img src="assets/images/RW_name.png" class="naming"><br><br><br><div class="init_desc"><b>Robert Weitman</b> is a recent SMU college graduate with a background in e-commerce, site editing and business administration.<br><br><b>He</b> is passionate about mathematics, coding, teamwork, creativity and business.</div></div>
+			 <div id="second-fish-info">
+
+				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>ACTIVITIES</strong></div>
+
+				 <table>
+				 	<tr><td style="width:40%">
+				<img src="assets/images/fish_trophy.jpg" width="100%" style="padding: 0px 5px 0px 0px; float:left"></td>
+				<td>
+
+				<div class="titleBC" style="display:inline-block; padding-top: 5px; color:white">
+
+	Fishing, Hillel, Cross Country, Tennis, Ping Pong, Math Club, Jet Skiing, Rustic Pathways
+
+				</div>
+			</td>
+		</tr>
+	</table>
+				</div>
+
+</td>
+</tr></table>
+
+</div>
+
+			</div>
+
+			<div class="modal-footer" style="padding: 3%">
+
+						 <span class="titleBC point" onclick="closeModal('FISHING')" style="margin-left: 60%; border: 0.2px solid yellow"><b>CLOSE</b></span>
+
+				 </div>
+		</div>
 </div>
 </div>
-</table>
-<table>
-<div id="bground2">
 
-<div class="row">
-<div class="col-md-3"></div>
-  <div class="col-md-5">
 
-    <img src="assets/images/RW_cox_name.png" class="naming"><div class="next_desc"><br><b>Robert</b> has taken a variety of business courses: Accounting, Business Communications  &amp; Leadership Development, Negotiations, Federal Income Tax, Entrepreneurship, Project Management<br><br><br></div>
-    <img src="assets/images/RW_cbc_name.png" class="naming"><br><br><div class="next_desc"><b>Robert</b> graduated from an intensive 24-week long program dedicated to designing and building web applications: HTML5, CSS3, Javascript, jQuery, MongoDB, MySQL, Command Line, GitHub   </div></div><br>
 
-<div class="col-md-4">
-    <img src="assets/images/RW_smu_name.png" class="naming"><br><br><img src="assets/images/img_smu.jpg" class="img-rounded" alt="Me" class="pull-left" align="left" id="photo2" width="150px"></div>
+<!-- END FISHING MODAL -->
+
+<!-- START COVER LETTER -->
+
+
+
+
+<div class="modal" id="coverLetter" role="dialog" style="max-height: 80%; max-width: 60%; margin:auto; overflow-y:auto">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content" style="background-image: url('assets/images/img_night_skies.jpg'); border: 0.7px solid yellow; border-radius: 0px">
+
+			<div class="modal-header" style="padding: 3%">
+			<table style="width: 100%">
+				<tr>
+					<td style="width: 95%">
+						<span class="titleBC" style="color:yellow"><b>Cover Letter</b></span>
+						</td>
+						<td>
+							<span class="titleBC point" style="color:yellow" onclick="closeModal('COVER LETTER')"><b>X</b></span>
+					</td>
+				</tr>
+			</table>
+			</div>
+			<div class="modal-body" style="padding: 0px; margin:0px; background-color: rgba(0,191,255, 0.5);">
+
+<div style="padding:2%; color:white" class="sidebar" id="bolding">
+
+	<b>August 25, 2020</b><br><br>
+
+	Hello,<br><br>
+
+	Thank you for visiting my online portfolio. I hope that by reading my portfolio you can see if am a good match for your business.<br><br>
+	I specialize in coding, site editing, business and e-commerce. I studied and worked as both a coder and a business student. I am experienced with computers, ranging from project management to online gaming. I am conversational in Spanish.<br><br>
+	For the last ten years I have gradually improved my coding skillset. My proficiency with HTML and CSS has developed into my complex coding languages that involve combining research and innovation into code.
+<br><br>
+<b>More About Me:</b><br><br>
+<b>SPANISH</b> - I have spoken Spanish since 4th Grade at Greenhill. I think I have a good accent. When I dont have the vocabulary to speak to someone, I usually provide a description of the word to communicate with them.
+<br><br>
+<b>PROJECT MANAGEMENT</b> - It is to my experience that an effective start of a project is crucial to its future.
+<b>A team member</b> tells their group from the beginning that they have a connection that could prove instrumental for the success of the project.
+The connection doesnt prove to be effective but it is too late for the group to find alternatives. Setting up alternatives when starting projects
+can make a big difference. <b>A team</b> has trouble communicating because it doesnt convene to discuss the project at hand. The team assumes that
+the final product can be achieved with little communication. The final product comes out unsuccessfully and the team realizes that the project required them to
+have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to put projects in an effective direction.
+<br><br>
+<b>GIVING ADVICE</b> - I like sharing ideas with people. I try to reiterate others' ideas to help represent them in situations. I often, when playing computer games, provide help to other players.
+<br><br>
+	<b>Sincerely,</b>
+	<br>
+	<b>Robert Weitman</b>
+
+
 </div>
 
-</table>
+			</div>
+
+			<div class="modal-footer" style="padding: 3%">
+
+						 <span class="titleBC point" onclick="closeModal('COVER LETTER')" style="margin-left: 60%; border: 0.2px solid yellow"><b>CLOSE</b></span>
+
+				 </div>
+		</div>
+</div>
+</div>
 
 
-  <!-- Navigation -->
-  <nav>
-    <div class='container'>
-    <!--   <object type='image/svg+xml' data='https://s3.amazonaws.com/codecademy-content/courses/jquery/audit/images/sole-logo.svg'></object> -->
-      <div>
-        <span class='first-button'>Skillset</span>
-        <span class='second-button'>Personal History</span>
-           <span class='third-button' title='See Some of My Projects'>Coding Boot Camp</span>
-              <span class='fourth-button' title='See Some of My Projects'>Khan Academy</span>
-                    <span class='fifth-button'>Miscellaneous</span>
+
+
+
+
+<!- END COVER LETTER -->
+
+
+<!-- START UDEMY MODAL -->
+
+
+<div class="modal" id="udemyModal" role="dialog" style="max-height: 80%; max-width: 60%; margin:auto; overflow-y:auto">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content" style="background-image: url('assets/images/img_night_skies.jpg'); border: 0.7px solid yellow; border-radius: 0px">
+
+			<div class="modal-header" style="padding: 3%">
+			<table style="width: 100%">
+				<tr>
+					<td style="width: 95%">
+						<span class="titleBC" style="color:yellow"><b>Udemy</b></span>
+						</td>
+						<td>
+							<span class="titleBC point" style="color:yellow" onclick="closeModal('UDEMY')"><b>X</b></span>
+					</td>
+				</tr>
+			</table>
+			</div>
+			<div class="modal-body" style="padding: 0px; margin:0px; background-color: rgba(0,191,255, 0.5);">
+
+				<table>
+					<tr>
+
+							<td style="width:30%">
+								<img class="first-udemy-button point" src="assets/images/udemy_logo.jpg" style="width: 100%"><br>
+								<img class="second-udemy-button point" src="assets/images/angular_logo.jpg" style="width: 100%;"><br>
+								<img class="third-udemy-button point" src="assets/images/python_logo.jpg" style="width: 100%;"><br>
+								<img class="fourth-udemy-button point" src="assets/images/java_logo.jpg" style="width: 100%"><br>
+							</td>
+							<td>
+								<div id="first-udemy-info">
+
+
+									<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>UDEMY</strong></div>
+								 <div style="padding-left: 5px; padding-top:2px;">
+								 <img src="assets/images/udemy_icon.png" width="40%" style="padding: 0px 5px 0px 0px; float:right">
+
+								 <a href="https://www.udemy.com/" style="color:yellow" class="titleBC" target="_blank">https://www.udemy.com/</a>
+								 <br>
+								 <div class="sidebar" style="color:white">	&quot;Udemy is an online learning and teaching marketplace with over 150,000 courses and 24 million students. Learn programming, marketing, data science and more.&quot;
+									 <br><br>
+
+								<b>Courses: </b><br>
+								●	Learn and Understand AngularJS<br>
+								●	Learn Python Programming Masterclass<br>
+								●	Introduction to Programming with Java<br>
+
+								 </div>
+
+
+							 </div>
+
+
+								</div>
+								<div id="second-udemy-info">
+
+
+									<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>ANGULAR.JS SKILLSET</strong></div>
+								 <div style="padding-left: 5px; padding-top:2px;">
+								 <img src="assets/images/angular_pic.jpg" width="40%" style="padding: 0px 5px 0px 0px; float:left">
+
+								 <a href="https://www.udemy.com/course/learn-angularjs/" style="color:yellow" class="titleBC" target="_blank">LINK TO COURSE</a>
+								 <br>
+								 <div class="sidebar" style="color:white">	&quot;Master AngularJS and the Javascript concepts behind it, design custom directives, and build a single page application.&quot;
+									 <br><br>
+
+								<b>Main Concepts: </b><br>
+								np-app, ng-repeat, ng-src, $scope, $watch, controller, module, ng-view, config(), templateUrl
+
+								 </div>
+
+							 </div>
+
+
+								</div>
+								<div id="third-udemy-info">
+
+									<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>PYTHON SKILLSET</strong></div>
+								 <div style="padding-left: 5px; padding-top:2px;">
+								 <img src="assets/images/python_pic.jpg" width="40%" style="padding: 0px 5px 0px 0px; float:right">
+
+								 <a href="https://www.udemy.com/course/python-the-complete-python-developer-course/" style="color:yellow" class="titleBC" target="_blank">LINK TO COURSE</a>
+								 <br>
+								 <div class="sidebar" style="color:white">	&quot;Master AngularJS and the Javascript concepts behind it, design custom directives, and build a single page application.&quot;
+									 <br><br>
+
+								<b>Main Concepts: </b><br>
+										●	print()&emsp;
+										●	.slice()&emsp;
+										●	help()&emsp;
+										●	\n & \t&emsp;
+										●	.format()&emsp;
+										●	input()&emsp;
+										●	if/else/elif&emsp;
+										●	range()&emsp;
+										●	continue/break&emsp;
+										●	tuples&emsp;
+										●	lists&emsp;
+										●	mutable/immutable&emsp;
+										●	nested data&emsp;
+										●	sets&emsp;
+										●	dictionaries&emsp;
+										●	open()&emsp;
+										●	import&emsp;
+										●	tkInter&emsp;
+										●	timeit&emsp;
+										●	any/all&emsp;
+										●	generators
+								 </div>
+
+							 </div>
+								</div>
+								<div id="fourth-udemy-info">
+
+
+									<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>JAVA INTRO SKILLSET</strong></div>
+								 <div style="padding-left: 5px; padding-top:2px;">
+								 <img src="assets/images/java_pic.jpg" width="40%" style="padding: 0px 5px 0px 0px; float:left">
+
+								 <a href="https://www.udemy.com/course/introduction-to-programming-with-java/" style="color:yellow" class="titleBC" target="_blank">LINK TO COURSE</a>
+								 <br>
+								 <div class="sidebar" style="color:white">	&quot;Learn Java programming with examples, quizzes and coding exercises.&quot;
+									 <br><br>
+
+
+								<b>Main Concepts: </b><br>
+`								●	History of Java&emsp;
+								●	Running Java&emsp;
+								●	Primitive Types&emsp;
+								●	If and Switch Statements&emsp;
+								●	For and While Loops&emsp;
+								●	Methods, Arrays and Objects
+
+
+
+								 </div>
+
+							 </div>
+
+
+								</div>
+							</td>
+					</tr>
+				</table>
+
+			</div>
+			<div class="modal-footer" style="padding: 3%">
+
+						 <span class="titleBC point" onclick="closeModal('UDEMY')" style="margin-left: 60%; border: 0.2px solid yellow"><b>CLOSE</b></span>
+
+				 </div>
+		</div>
+
+		</div>
+		</div>
+
+
+
+
+<!-- END UDEMY MODAL -->
+
+
+
+
+
+
+<!-- START CODECADEMY MODAL -->
+
+<div class="modal" id="codeCademy" role="dialog" style="max-height: 80%; max-width: 60%; margin:auto; overflow-y:auto">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content" style="background-image: url('assets/images/img_night_skies.jpg'); border: 0.7px solid yellow; border-radius: 0px">
+
+			<div class="modal-header" style="padding: 3%">
+			<table style="width: 100%">
+				<tr>
+					<td style="width: 95%">
+						<span class="titleBC" style="color:yellow"><b>CodeCademy</b></span>
+						</td>
+						<td>
+							<span class="titleBC point" style="color:yellow" onclick="closeModal('CODECADEMY')"><b>X</b></span>
+					</td>
+				</tr>
+			</table>
+			</div>
+
+
+
+	 <div class="modal-body" style="padding: 0px; margin:0px; background-color: rgba(0,191,255, 0.5);">
+
+		 <table>
+			 <tr>
+				 <td>
+					 <span class='first-code-cademy sidebar'>About CodeCademy</span>
+					 <span class='second-code-cademy sidebar'>Learn SQL</span>
+					 <span class='third-code-cademy sidebar'>Learn jQuery</span>
+					 <span class='fourth-code-cademy sidebar'>Learn Responsive Design</span>
+					 <span class='fifth-code-cademy sidebar'>Learn JavaScript</span>
+					 <span class='sixth-code-cademy sidebar'>Learn HTML</span>
+					 <span class='seventh-code-cademy sidebar'>Learn C++</span>
+					 <span class='eighth-code-cademy sidebar'>Learn Command Line</span>
+					 <span class='ninth-code-cademy sidebar'>Learn Java </span>
+				 </td>
+		 <td style="padding: 5px">
+
+			 <div id="first-codecademy-info">
+
+				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>ABOUT CODECADEMY</strong></div>
+
+ 				<div style="padding-left: 5px; padding-top:2px;">
+ 				<img src="assets/images/code-academy-logo.png" width="40%" style="padding: 0px 5px 0px 0px; float:right">
+
+ 				<a href="https://www.codecademy.com/" style="color:yellow" class="titleBC" target="_blank">https://www.codecademy.com/</a>
+ 				<br>
+ 				<div class="sidebar" style="color:white"> CodeCademy provided me a variety of online courses to take, including online exercises.
+ 					<br><br>
+
+					<a href="https://www.codecademy.com/profiles/rweitman" style="color:yellow" class="titleBC" target="_blank">List of My Completed Courses</a>
+					<br><br>
+
+					●	How to Transform Tables with SQL&emsp;
+					●	Learn Git&emsp;
+					●	How to Analyze Business Metrics with SQL&emsp;
+					●	Learn the Command Line&emsp;
+					●	Learn Color Design&emsp;
+					●	Learn Statistics with Python&emsp;
+					●	Learn C++&emsp;
+					●	Learn SQL&emsp;
+
+					●	Learn Python 2&emsp;
+					●	Learn Java&emsp;
+					●	Learn PHP&emsp;
+					●	Learn Game Development with Phaser.js&emsp;
+					●	Learn Express&emsp;
+					●	Learn HTML&emsp;
+
+
+					●	Learn JavaScript&emsp;
+					●	Learn C#&emsp;
+					●	Learn Node-SQLite&emsp;
+					●	Learn React.js: Part II&emsp;
+					●	Learn React.js: Part I&emsp;
+					●	Learn AngularJS 1.X&emsp;
+
+					●	Learn Sass&emsp;
+					●	Learn Responsive Design&emsp;
+					●	How to Make a Website with NameCheap<br>
+
+
+ 				</div>
+
+
+ 				</div>
+	 			</div>
+			 <div id="second-codecademy-info">
+
+				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY LEARN SQL COURSE SKILLSET</strong></div>
+	 			<div style="padding-left: 5px; padding-top:2px;">
+	 			<img src="assets/images/learn_sql.jpg" width="40%" style="padding: 0px 5px 0px 0px; float:left">
+	 			<div class="sidebar" style="color:white">	&quot;Learn to communicate with databases using SQL, the standard data management language.&quot;
+	 			</div>
+	 			<div class="sidebar" style="display:inline-block; padding-top: 5px; color:white">
+
+				●	CREATE TABLE&emsp;●	INSERT&emsp;●	UPDATE&emsp;●	DELETE&emsp;●	SELECT&emsp;●	AS&emsp;●	DISTINCT&emsp;●	WHERE&emsp;●	LIKE&emsp;
+				●	NULL&emsp;●	AND&emsp;●	OR&emsp;●	ORDER BY&emsp;●	COUNT()&emsp;●	SUM()&emsp;●	AVG()&emsp;●	ROUND()&emsp;
+				●	MAX()&emsp;●	MIN()
+
+	 			</div>
+
+	 			</div>
+
+			 </div>
+			 <div id="third-codecademy-info">
+
+				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY LEARN JQUERY COURSE SKILLSET</strong></div>
+				<div style="padding-left: 5px; padding-top:2px;">
+				<img src="assets/images/learn_jquery.jpg" width="60%" style="padding: 0px 5px 0px 0px; float:left">
+				<div class="sidebar" style="color:white;">	&quot;Learn the basics of jQuery, a JavaScript library that allows you to easily add dynamic behavior to static web pages.&quot;
+					<br><br>
+				●	$(document).ready<br>
+				●	object variables ($)<br>
+				●	.hide()<br>
+				●	.show()<br>
+				●	.fadeIn()<br>
+				●	.fadeOut()<br>
+				●	.slideDown()<br>
+				●	.slideUp()<br>
+				●	.addClass()<br>
+				●	.removeClass()
+				</div>
+			</div>
+			 </div>
+			 <div id="fourth-codecademy-info">
+
+				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY LEARN RESPONSIVE DESIGN COURSE SKILLSET</strong></div>
+			 <div style="padding-left: 5px; padding-top:2px;">
+			 <img src="assets/images/learn_design.jpg" width="60%" style="padding: 0px 5px 0px 0px; float:right">
+			 <div class="sidebar" style="color:white">	&quot;Learn responsive design techniques, like relative sizing units and media queries, to create websites viewable on devices of all sizes.&quot;
+			 </div>
+			 <div class="sidebar" style="display:inline-block; padding-top: 5px; color:white">
+
+				<b>MAIN TOPICS</b><br>
+		 ●	@media queries<br>
+		 ●	em<br>
+		 ●	background-size: cover<br>
+		 ●	percentages
+
+			 </div>
+
+			 </div>
+
+			 </div>
+			 <div id="fifth-codecademy-info">
+
+
+				 			 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY LEARN JAVASCRIPT COURSE SKILLSET</strong></div>
+				 			 <div style="padding-left: 5px; padding-top:2px;">
+				 			 <img src="assets/images/learn_js.jpg" width="60%" style="padding: 0px 5px 0px 0px; float:right">
+				 			 <div class="sidebar" style="color:white">	&quot;Learn the JavaScript fundamentals you’ll need for front-end or back-end development.&quot;
+
+								 <br><br>
+				 				<b>BASICS:</b>&emsp;●	@media queries&emsp;● console.log&emsp;● Strings&emsp;● numbers&emsp;
+								●	booleans&emsp;●	null&emsp;●	arithmetric operators&emsp;●	.length&emsp;●	methods&emsp;
+								●	Math.random()&emsp;●	Comments&emsp;●	variables (var/let/const)&emsp;●	undefined&emsp;
+								●	assignment operators()&emsp;●	string concatenation<br><br>
+
+								<b>CONDITIONALS:</b>&emsp;●	if/else/else if&emsp;● NOT/!&emsp;● truthy/falsy&emsp;
+								● comparison operators&emsp;●	&amp;/&#124;&#124;&emsp;●	ternary operator<br><br>
+
+								<b>FUNCTIONS:</b>&emsp;●	calling functions&emsp;● parameters&emsp;● return&emsp;
+								● declaring functions&emsp;● anonymous functions<br><br>
+
+								<b>SCOPE:</b>&emsp;●	global scope&emsp;● function scope<br><br>
+
+								<b>ARRAYS:</b>&emsp;●	index&emsp;● .length&emsp;●	.push()&emsp;● .pop()<br><br>
+
+								<b>LOOPS:</b>&emsp;●	reverse loops&emsp;● while&emsp;●	break&emsp;● for<br><br>
+
+								<b>OBJECTS:</b>&emsp;●	Object Literals&emsp;● enclosed with {}&emsp;●	values assigned with :
+								&emsp;● key-value pairs separated with ,&emsp;● object.propertyName&emsp;● objectName.methodName(arguments)
+								&emsp;● this
+								<br><br>
+
+				 			 </div>
+
+				 			 </div>
+
+
+
+
+			 </div>
+			 <div id="sixth-codecademy-info">
+
+				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY LEARN HTML COURSE SKILLSET</strong></div>
+			 <div style="padding-left: 5px; padding-top:2px;">
+			 <img src="assets/images/learn_html.jpg" width="30%" style="padding: 0px 5px 0px 0px; float:left">
+			 <div class="sidebar" style="color:white">	&quot;Learn the basics of HTML5 and start building & editing web pages.&quot;
+				 <br><br>
+
+			  <b>MAIN TOPICS: </b>&emsp;●	&lt;h1&gt;-&lt;h6&gt;&emsp;●	&lt;body&gt;&emsp;●	&lt;div&gt;&emsp;●	id&emsp;●	style&emsp;●	&lt;span&gt;&emsp;
+				●	&lt;em&gt;&emsp;●	&lt;strong&gt;&emsp;
+				●	&lt;br&gt;&emsp;●	&lt;ul&gt;&emsp;●	&lt;li&gt;&emsp;●	&lt;ol&gt;&emsp;●	&lt;img&gt;&emsp;
+				●	&lt;video&gt;&emsp;●	&lt;head&gt;&emsp;●	&lt;title&gt;&emsp;●	&lt;a&gt; (href)&emsp;
+				●	&lt;target=&quot;_blank&quot;&gt;&emsp;●	&lt;head&gt;&emsp;●	&lt;title&gt;&emsp;●	&lt;&lt;a&gt; (href)&gt;&emsp;
+				●	comments&emsp;● &lt;table&gt;&emsp;● &lt;tr&gt;&emsp;● &lt;td&gt;&emsp;●	colspan&emsp;●	rowspan&emsp;
+				●	&lt;tbody&gt;&lt;thead&gt;&lt;tfoot&gt;&emsp;●	&lt;th&gt;&emsp;●	&lt;input&gt;&emsp;
+				●	&lt;label&gt;&emsp;●	checkboxes&emsp;●	radio buttons&emsp;●	text input&emsp;
+				●	&lt;select&gt;&lt;option&gt;&emsp;●	&lt;textarea&gt;&emsp;● required&emsp;
+				●	min/max (numbers)&emsp;●	minlength/maxlength(text input)
+
+			 </div>
+
+			 </div>
+
+			 </div>
+			 <div id="seventh-codecademy-info">
+
+				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY LEARN C++ COURSE SKILLSET</strong></div>
+			 <div style="padding-left: 5px; padding-top:2px;">
+			 <img src="assets/images/learn_cplusplus.jpg" width="35%" style="padding: 0px 5px 0px 0px; float:left">
+			 <div class="sidebar" style="color:white">	&quot;Learn one of the most powerful programming languages in the world and become a rockstar developer. &quot;
+				 <br><br>
+
+				<b>MAIN TOPICS: </b>&emsp;●	&#92;n&emsp;●	comments&emsp;●	int Type&emsp;●	double Type&emsp;●	char Type&emsp;
+				●	string Type&emsp;●	bool Type&emsp;●	std::cout&emsp;●	std::cin&emsp;●	switches cases and default&emsp;
+				● public vs private
+
+
+			 </div>
+
+			 </div>
+
+
+			 </div>
+			 <div id="eighth-codecademy-info">
+
+				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY LEARN COMMAND LINE COURSE SKILLSET</strong></div>
+			 <div style="padding-left: 5px; padding-top:2px;">
+			 <img src="assets/images/learn_command.jpg" width="60%" style="padding: 0px 5px 0px 0px; float:left">
+			 <div class="sidebar" style="color:white">	&quot;Discover the power of this simple yet essential text-based tool and increase your productivity as a developer.&quot;
+				 <br><br>
+
+				<b>MAIN TOPICS: </b>&emsp;●	ls&emsp;●	cd&emsp;●	mkdir&emsp;●	rm<br>
+
+			 </div>
+		 </div>
+			 </div>
+			 <div id="ninth-codecademy-info">
+
+
+				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY LEARN JAVA COURSE SKILLSET</strong></div>
+				 <div style="padding-left: 5px; padding-top:2px;">
+				 <img src="assets/images/learn_java.jpg" width="35%" style="padding: 0px 5px 0px 0px; float:right">
+				 <div class="sidebar" style="color:white">	&quot;Learn the basics of the popular Java language in this introductory course. &quot;
+				 <br><br>
+
+				 <b>MAIN TOPICS: </b>&emsp;
+				 ●	System.out.println()&emsp;
+				 ●	main()&emsp;
+				 ●	public static void main(String[] args) { }&emsp;
+				 ●	comments&emsp;
+				 ●	int/char/boolean/byte/long/short/double/float&emsp;
+				 ●	ArrayList<String> array_name = new ArrayList<String>();&emsp;
+				 ●	int[] variable = int[length]&emsp;
+				 ●	array {}&emsp;
+				 ●	.add()&emsp;
+				 ●	.remove()&emsp;
+				 ●	length&emsp;
+				 ●	concat()&emsp;
+				 ●	.equals()&emsp;
+				 ●	.indexOf()&emsp;
+				 ●	.toUpperCase()&emsp;
+				 ●	.toLowerCase()&emsp;
+				 ●	inheritance (extends)
+</div>
+</div>
+			 </div>
+		 </td>
+	 </tr>
+ </table>
+
+			</div>
+			<div class="modal-footer" style="padding: 3%">
+
+						 <span class="titleBC point" onclick="closeModal('CODECADEMY')" style="margin-left: 60%; border: 0.2px solid yellow"><b>CLOSE</b></span>
+
+				 </div>
+		</div>
+
+	</div>
+</div>
+
+
+<!-- END CODECADEMY MODAL -->
+
+<!-- START CODING BOOTCAMP MODAL -->
+
+<div class="modal" id="codingBootCamp" role="dialog" style="max-height: 80%; max-width: 60%; margin:auto; overflow-y:auto">
+
+  <!-- <button style="background-color:red; align:left" label="XXX"></button> -->
+
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content" style="background-image: url('assets/images/img_night_skies.jpg'); border: 0.7px solid yellow; border-radius: 0px">
+      <div class="modal-header" style="padding: 3%">
+      <table style="width: 100%">
+        <tr>
+          <td style="width: 95%">
+            <span class="titleBC"><b>Coding BootCamp</b></span>
+            </td>
+            <td>
+              <span class="titleBC point" onclick="closeModal('CODING BOOT CAMP')"><b>X</b></span>
+          </td>
+        </tr>
+      </table>
+      </div>
+      <div class="modal-body" style="padding: 0px; margin:0px; background-color: rgba(0,191,255, 0.5);">
+
+        <table>
+          <tr>
+            <td>
+              <span class='first-boot-camp sidebar'>Hangman</span>
+              <span class='second-boot-camp sidebar'>Eventability</span>
+              <span class='third-boot-camp sidebar'>Movie Trivia</span>
+              <span class='fourth-boot-camp sidebar'>GifTastic</span>
+              <span class='fifth-boot-camp sidebar'>Train</span>
+              <span class='sixth-boot-camp sidebar'>HP - RPG</span>
+              <span class='seventh-boot-camp sidebar'>Barcode</span>
+              <span class='eighth-boot-camp sidebar'>Crystals</span>
+              <span class='ninth-boot-camp sidebar'>Bamazon</span>
+              <span class='tenth-boot-camp sidebar'>CrystalEHR</span>
+            </td>
+            <td>
+              <div id="first-boot-info">
+                <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Hangman the Guessing Game</strong></div>
+                <img src="assets/images/hangman.png" width="100%" style="padding: 2px 5px 0px 5px">
+                <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
+                  The <b>Hangman</b> Game is about guessing letters in a random word. The player has 15 tries to succeed or fail. Wins and losses are recorded on the page.
+                  <br><br>
+                  -The game uses Basic Javascript
+                  <br>
+                  -The game uses External Stylesheets: CSS and BootStrap
+                  <br>
+                  -The possible words are in an array; the word is chosen randomly using <b>Math.random</b>
+                  <br>
+                  -Each new game resets the guesses, the target word and the guess count
+                  <br>
+                  -The game uses <b>document.onkeyup</b> to detect a key being pressed
+                  <br>
+                  -When a letter is pressed, a for loop cycles through the target word's letters to look for a match
+                  <br>
+                  -The text of the game is put on the page with: <b>document.querySelector</b>
+                  <br><br>
+                  <div style="margin-left: calc(50% - 10px)">
+                  <a href="https://github.com/rweitman/Hangman-Game" target="_blank"><img src="assets/images/github.png" style="width: 10px"></a>
+                  </div>
+                <!-- <a href="https://github.com/rweitman/Hangman-Game" target="_blank" style="margin:auto">
+                  <img src="assets/images/github.png" style="margin:auto; width: 5px; height: 5px">
+                </a> -->
+                      </div>
+              </div>
+              <div id="second-boot-info">
+								<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>eventAbility - Group Project</strong></div>
+								  <img src="assets/images/eventability.png" width="100%" style="padding: 2px 5px 0px 5px">
+                <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
+                  I was part of a group that made an interface to find <b>local events</b>.
+                  <br><br>
+                  <b>THE FORM</b>
+                  <br>
+                  -The form on the page requires various inputs: <b>Zip Code, Email, Distance, Interests  &amp; Date</b>
+                  <br>
+                  -The Distance section lets the user choose between <b>5, 10, 25 and 50</b> miles away.
+                  <br>
+                  -The Interests section lets the user pick from <b>Music, Arts, Food, Comedy, Family &amp; Outdoor</b> (multiple possible)
+                  <br>
+                  -The Calendar section spawns a <b>calendar</b> that lets the user click around to pick the date
+                  <br><br>
+                  <b>THE OUTPUT</b>
+                  <br>
+                  -The code makes use of jQuery, Moment.js, Slick Carousel, Materialize, AJAX and Firebase
+                  <br>
+                  -The code processes the data using Eventbrite <b>API</b>, Google Maps <b>API</b>  &amp; SmartyStreets <b>API</b>
+                  <br>
+                  -After being processed with jQuery, the event is placed between the div tags with the id <b>eventHolder</b>
+									<br>
+									<div style="margin-left: calc(50% - 10px)">
+                  <a href="https://github.com/rweitman/eventAbility" target="_blank"><img src="assets/images/github.png" style="width: 10px"></a>
+                  </div>
+								</div>
+              </div>
+              <div id="third-boot-info">
+								<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Movie Trivia - Multiple Choice</strong></div>
+								<img src="assets/images/movietrivia.png" width="100%" style="padding: 2px 5px 0px 5px">
+                 <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
+                  In this <b>Movie Trivia Game</b>, the user can try to answer 7 movie questions within a time limit. When the time limit runs out the answers are not posted so there is still a challenge after it expires.
+                  <br><br>
+                  The movie questions are <b>multiple-choice</b>; they use radio type buttons. For loops are used to check the questions to see if they are correct.
+                  <br><br>
+                  The <b>javascript</b> file includes: A startTimer function that formats times, Setting the target/countdown number, Starting the startTimer, Processing Results &amp;The Message After the Timer ends
+								<br><br>
+								<div style="margin-left: calc(50% - 10px)">
+								<a href="https://github.com/rweitman/MovieTrivia" target="_blank"><img src="assets/images/github.png" style="width: 10px"></a>
+              </div>
+							</div>
+							</div>
+              <div id="fourth-boot-info">
+								   <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>GifTastic - Sports</strong></div>
+								 <img src="assets/images/sports.png" width="100%" style="padding: 2px 5px 0px 5px">
+
+                <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
+                  <br>
+                  The main focus of this program is to use search terms to spawn relevant images from <b>giphy.com</b>.
+                  <br><br>
+                  The initial Search terms are <b>Soccer, Bowling, Tennis, Golf, Hockey</b> and <b>Football</b>; they are in the form of buttons.
+                  <br><br>
+                  When a different search term is selected, the <b>10 images</b> below change to fit the criteria.
+                  <br><br>
+                  A search term can be added by putting a sport name next to <b>"Add a Sport Bro"</b>
+
+                <br><br>
+								<div style="margin-left: calc(50% - 10px)">
+								 <a href="https://github.com/rweitman/GifTastic" target="_blank"><img src="assets/images/github.png" style="width: 10px"></a>
+								 </div>
+								 </div>
+              </div>
+              <div id="fifth-boot-info">
+               <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Train Scheduler</strong></div>
+                     <img src="assets/images/train.png" width="100%" style="padding: 2px 5px 0px 5px">
+                 <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
+                  Can Store: "Train Name", "Destination", "Frequency", "Next Arrival" and "Minutes Away"
+                  <br><br>
+                  Underneath the train time table another train's data can be submitted.
+                  <br><br>
+                  <b>Firebase</b> holds most of the data in this app.
+									<br><br>
+									 <div style="margin-left: calc(50% - 10px)">
+									 <a href="https://github.com/rweitman/TrainScheduler" target="_blank"><img src="assets/images/github.png" style="width: 10px"></a>
+                </div>
+								</div>
+              </div>
+              <div id="sixth-boot-info">
+								<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Harry Potter - MiniRPG</strong></div>
+								<img src="assets/images/hp-rpg.png" width="100%" style="padding: 2px 5px 0px 5px">
+                <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
+                  In this minigame you can select a main character in the Harry Potter series.
+                  <br><br>
+                  You can then begin choosing opponents.
+                  <br><br>
+                  Each opponent has different attack powers and health points so choosing matters.
+                <br><br>
+								<div style="margin-left: calc(50% - 10px)">
+                  <a href="https://github.com/rweitman/HarryPotter-RPG" target="_blank"><img src="assets/images/github.png" style="width: 10px"></a>
+                  </div>
+								</div>
+              </div>
+              <div id="seventh-boot-info">
+							<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Barcode - Group Project</strong></div>
+								<img src="assets/images/project2.png" width="100%" style="padding: 2px 5px 0px 5px">
+              <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
+								<br>
+                  <b>FEATURES:</b> handlebars, GitHub, BCrypt, HighCharts.js, Nodemailer, MySQL, Material Lite Design &amp; Barcode Scanner
+                  <br><br>
+                  <b>Step 1</b> - Enter in User Details
+                  <br>
+                  <b>Step 2</b> - Order Products
+                  <br>
+                  <b>Step 3</b> - Process Order
+                  <br>
+                  <b>Step 4</b> - Use the Barcode Scanner for Quality Control and Shipping
+                </div>
+              </div>
+              <div id="eighth-boot-info">
+								<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Crystal Collector</strong></div>
+                <img src="assets/images/crystal-collect.png" width="100%" style="padding: 2px 5px 0px 5px">
+                 <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
+                  <br>
+                  The <b>Crystals Collector</b> game involves Instructions, Crystal Collector Title, Objective (Target) Number, Win/Loss Statistics, Current Number &amp; a Game Console.
+                  <br><br>
+                  The Instructions can be shown by pressing the <b>"Show"</b> button in the top left corner of the page. The Instructions can be hidden when by pressing the <b>"Hide"</b> button.
+                  <br><br>
+                  The objective of the game is to reach the <b>target number</b> by pressing the gems without going past the target. The target number can range from 19 to 120. The gem values can range from 1 to 12.
+                <br>
+								<br>
+								<div style="margin-left: calc(50% - 10px)">
+								<a href="https://github.com/rweitman/Crystals-Collector" target="_blank"><img src="assets/images/github.png" style="width: 10px"></a>
+								</div>
+								</div>
+              </div>
+              <div id="ninth-boot-info">
+							<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Bamazon - MySQL</strong></div>
+								 <img src="assets/images/bamazon.png" width="100%" style="padding: 2px 5px 0px 5px">
+<div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
+
+                  <b>Customer</b>:<br>
+                    What would you like to buy?<br>
+                    How many units would you like to buy?<br><br>
+
+                  <b>Manager</b>:<br>
+                		View Products for Sale<br>
+                    View Low Inventory<br>
+                    Add to Inventory<br>
+                    Add New Product<br><br>
+
+                  <b>Supervisor</b>:<br>
+                    View Products By Department<br>
+                    Create a New Department
+									<br><br>
+									<div style="margin-left: calc(50% - 10px)">
+								 <a href="https://github.com/rweitman/Bamazon" target="_blank"><img src="assets/images/github.png" style="width: 10px"></a>
+								 </div>
+								 </div>
+              </div>
+              <div id="tenth-boot-info">
+								<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>CrystalEHR - Group Project</strong></div>
+                <img src="assets/images/doctor.jpg" width="100%" style="padding: 2px 5px 0px 5px">
+            <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
+                  <b>Stores Medical Information for a Multi-Faceted Interface</b>
+                  <br>
+                  <b>Dependencies</b>
+                  <ul style="margin-bottom: 0px;">
+                    <li>Axios</li>
+                    <li>BodyParser</li>
+                    <li>React</li>
+                    <li>Express</li>
+                    <li>Moment</li>
+                    <li>Babel</li>
+                    <li>Passport</li>
+                    <li>Webpack</li>
+                    <li>Mongoose</li>
+                  </ul><br><br>
+									<div style="margin-left: calc(50% - 10px)">
+							<a href="https://github.com/rweitman/CrystalEHR" target="_blank"><img src="assets/images/github.png" style="width: 10px"></a>
+								</div>
+								</div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="modal-footer" style="padding: 3%">
+
+          <span class="titleBC point" onclick="closeModal('CODING BOOT CAMP')" style="margin-left: 60%; border: 0.2px solid yellow"><b>CLOSE</b></span>
+
       </div>
     </div>
-  </nav>
-
-  <div class="container" align="center">
-  
-<div id="intro">
-	NAVIGATE BY CHOOSING A BUTTON ABOVE!
-</div>
-		
-
-   <div id="uno">
-  <b><h2>List of Basic Skills</h2></b>
-  <b>Microsoft Office</b> - Word, Excel, PowerPoint<br>
-  <b>HTML5</b> - tags, images, links, lists,  tables, ids, classes <br>
-  <b>CSS3</b> - backgrounds, fonts, coloring, sizing, borders, box-model, alignments, positioning, external, responsive, bootstrap, grid<br>
-  <b>GitHub</b> - cloning, adding, commiting, pushing<br>
-  <b>Basic Javascript</b> - variables, if/else, alerts, strings, document.stuff, console, math, prompt/confirm, arrays, for loops, while, functions, modules, do <br>
-  <b>ProcessingJS - Drawing / Animation</b> - eclipse, rect, line, fill, background, noStroke, draw fxn, strokeWeight, math, text, textSize, quad, println, mouseX, mouseY, mousePressed, mouseClicked, objects, prototype, triangle <br>
-  <b>GitHub</b> - cloning, adding, commiting, pushing<br>
-  <b>JS - Intro to Games / Visualizations</b> - scenes, buttons, translation, rotation, scaling, characters, environments<br>
-  <b>JS - Intro to Natural Simulations</b> - randomness, distributions, noise, vectors, forces, angular movement, oscillations<br>
-  <b>jQuery</b> - .getElementById, .html, .createElement, .append, .setAttribute, .attr, click fxn, mouseenter fxn, mouseleave fxn, event.currentTarget, .each, .prepend, .animate, .addClass, .empty, .css, .text, .data, .name, .val, parseInt, .hide, .show, .play, .pause, .push, .innerHTML, .toggle, .trim, .preventDefault, .getItem, .splice, .setItem <br>
-  <b>SASS</b> - mixins, @extend, % notation, &amp; selector, string interpolation <br>
-  <b>AngularJS</b> - ng-click, ng-repeat, ng-app, ng-controller, ng-src <br>
-  <b>AJAX</b> - APIs, JSON, GET request<br>
-  <b>Document Object Model</b> - DOM events, DOM access, DOM modification, DOM animation<br>
-  <b>SQL</b> - DROP DATABASE, CREATE DATABASE, INTEGER, VARCHAR, BOOLEAN, NULL, PRIMARY KEY, AUTO_INCREMENT, INSERT INTO, VALUES, UPDATE, SET, WHERE, CREATE TABLE, USE, FROM, SELECT, INNER JOIN, ORDER BY, ON, RIGHT JOIN, DEFAULT, *, DECIMAL, INT, AND, DELETE <br>
-  <b>Express.js</b> - servers, ports, bodyParser, routes, paths, .engine, .set, .get, .post, .put, .delete, .redirect<br>
-  <b>Handlebars</b> - DELETE, POST, PUT, express-handlebars, view engine <br> 
-  <b>React.js</b> - bundle.js, extends React.Component, React.createClass, ReactDOM.render, parents, children, states, props, forms, propTypes, <br>
 
   </div>
 
-  <div id="dos">
-  <table>
-  <tr>
-
-  <td><br>
-    <b>JOB EXPERIENCE - BANDMANS COMPANY</b><br>
-    <ul>
-<li>- Maintained and edited online product content for company website</li>
-<li>- Edited HTML attributes and created size charts</li>
-<li>- Prepared uniforms for packaging</li>
-<li>- Created Excel sheets to update pricing</li>
-
-</ul>
-</td>
-<td><br>
-<img src="assets/images/Bandmans.png" vertical-align="center">
-</td>
-
-</tr>
-</table>
-<table>
-<tr>
-<td>
-<br>
-<img src="assets/images/img_rustic.jpg" width="250px">
-
-
-</td>
-<td>
-<div align="right"><br>
-<b>VOLUNTEERING - RUSTIC PATHWAYS</b>
-<br><br>
-
-<b>Rustic Pathways - Peru, South America</b><br>
-Homestay program, which included helping build hutches for guinea pig livestock<br><br>
-
-<b>Rustic Pathways - Thailand, Asia</b><br>
-Homestay program, which included teaching English, helping build and paint homes, and preparing food for community members<br><br>
-
-<b>Received 2010 and 2011 Star Alumni Awards</b>
-</td>
-</div>
-</tr>
-</table>
-  </div>
-
-
-  <div id="tres">
-  <table>
-  <div class="row">
-  <div class="col-md-3">
-        <span class='first-category'>Hangman</span>
-        <span class='second-category'>Eventability</span>
-           <span class='third-category'>Movie Trivia</span>
-              <span class='fourth-category'>GifTastic</span>
-                    <span class='fifth-category'>Train</span>
-                    <span class='sixth-category'>HP - RPG</span>
-        <span class='seventh-category'>Barcode</span>
-           <span class='eighth-category'>Crystals</span>
-              <span class='ninth-category'>Bamazon</span>
-                    <span class='tenth-category'>CrystalEHR</span>
-        </div>
-<div class="col-md-9">
-<div id="count1">
-<h2>Hangman the Guessing Game</h2>
- <img src="assets/images/hangman.png" width="450px"><br>
- <br><div class="texting">The <b>Hangman</b> Game is about guessing letters in a random word. The player has 15 tries to succeed or fail. Wins and losses are recorded on the page.<br><br>
-
--The game uses Basic Javascript<br>
--The game uses External Stylesheets: CSS and BootStrap<br>
--The possible words are in an array; the word is chosen randomly using <b>Math.random</b><br>
--Each new game resets the guesses, the target word and the guess count<br>
--The game uses <b>document.onkeyup</b> to detect a key being pressed<br>
--When a letter is pressed, a for loop cycles through the target word's letters to look for a match<br>
--The text of the game is put on the page with: <b>document.querySelector</b>
-</div>
-<br>
-<a href="https://github.com/rweitman/Hangman-Game" target="_blank"><img src="assets/images/github.png"></a>
 </div>
 
+<div class="modal" id="khanAcademy" role="dialog" style="max-height: 80%; max-width: 60%; margin:auto; overflow-y:auto">
 
-<div id="count2">
-<h2>eventAbility - Group Project</h2>
- <img src="assets/images/eventability.png" width="450px">
- <br><div class="texting">I was part of a group that made an interface to find <b>local events</b>.<br><br>
+  <!-- <button style="background-color:red; align:left" label="XXX"></button> -->
 
-<b>THE FORM</b><br>
--The form on the page requires various inputs: <b>Zip Code, Email, Distance, Interests  &amp; Date</b><br>
--The Distance section lets the user choose between <b>5, 10, 25 and 50</b> miles away.<br>
--The Interests section lets the user pick from <b>Music, Arts, Food, Comedy, Family &amp; Outdoor</b> (multiple possible)<br>
--The Calendar section spawns a <b>calendar</b> that lets the user click around to pick the date<br><br>
+  <div class="modal-dialog">
 
-<b>THE OUTPUT</b><br>
--The code makes use of jQuery, Moment.js, Slick Carousel, Materialize, AJAX and Firebase<br>
--The code processes the data using Eventbrite <b>API</b>, Google Maps <b>API</b>  &amp; SmartyStreets <b>API</b><br>
--After being processed with jQuery, the event is placed between the div tags with the id <b>eventHolder</b>
-</div>
-<br>
-<a href="https://github.com/rweitman/eventAbility" target="_blank"><img src="assets/images/github.png"></a>
-</div>
-
-<div id="count3">
-<h2>Movie Trivia - Multiple Choice</h2>
- <img src="assets/images/movietrivia.png" width="450px">
- <br><div class="texting"><br>In this <b>Movie Trivia Game</b>, the user can try to answer 7 movie questions within a time limit. When the time limit runs out the answers are not posted so there is still a challenge after it expires.<br><br>
-
-The movie questions are <b>multiple-choice</b>; they use radio type buttons. For loops are used to check the questions to see if they are correct. <br><br>
-
-The <b>javascript</b> file includes: A startTimer function that formats times, Setting the target/countdown number, Starting the startTimer, Processing Results &amp;The Message After the Timer ends
-
-</div>
-<br>
-<a href="https://github.com/rweitman/MovieTrivia" target="_blank"><img src="assets/images/github.png"></a>
-</div>
-
-<div id="count4">
-<h2>GifTastic - Sports</h2>
- <img src="assets/images/sports.png" width="450px">
- <br><div class="texting"><br>The main focus of this program is to use search terms to spawn relevant images from <b>giphy.com</b>.<br><br>
-
-The initial Search terms are <b>Soccer, Bowling, Tennis, Golf, Hockey</b> and <b>Football</b>; they are in the form of buttons.<br><br>
-
-When a different search term is selected, the <b>10 images</b> below change to fit the criteria.<br><br>
-
-A search term can be added by putting a sport name next to <b>"Add a Sport Bro"</b>
-</div>
-<br>
-<a href="https://github.com/rweitman/GifTastic" target="_blank"><img src="assets/images/github.png"></a>
-</div>
-
-<div id="count5">
-<h2>Train Scheduler</h2>
- <img src="assets/images/train.png" width="450px">
- <br><div class="texting">Can Store: "Train Name", "Destination", "Frequency", "Next Arrival" and "Minutes Away"<br><br>
-
-Underneath the train time table another train's data can be submitted.<br><br>
-
-<b>Firebase</b> holds most of the data in this app.
-</div>
-<br>
-<a href="https://github.com/rweitman/TrainScheduler" target="_blank"><img src="assets/images/github.png"></a>
-</div>
-
-<div id="count6">
-<h2>Harry Potter - MiniRPG</h2>
- <img src="assets/images/hp-rpg.png" width="450px">
- <br><div class="texting">In this minigame you can select a main character in the Harry Potter series.<br><br>
-
-You can then begin choosing opponents.<br><br>
-
-Each opponent has different attack powers and health points so choosing matters.
-</div>
-<br>
-<a href="https://github.com/rweitman/HarryPotter-RPG" target="_blank"><img src="assets/images/github.png"></a>
-</div>
-
-<div id="count7">
-<h2>Barcode - Group Project</h2>
- <img src="assets/images/project2.png" width="450px">
- <br><div class="texting"><br><b>FEATURES:</b> handlebars, GitHub, BCrypt, HighCharts.js, Nodemailer, MySQL, Material Lite Design &amp; Barcode Scanner<br><br>
- <b>Step 1</b> - Enter in User Details<br>
- <b>Step 2</b> - Order Products<br>
- <b>Step 3</b> - Process Order<br>
- <b>Step 4</b> - Use the Barcode Scanner for Quality Control and Shipping
-
-</div>
-</div>
-
-<div id="count8">
-<h2>Crystal Collector</h2>
- <img src="assets/images/crystal-collect.png" width="450px">
- <br><div class="texting"><br>
-The <b>Crystals Collector</b> game involves Instructions, Crystal Collector Title, Objective (Target) Number, Win/Loss Statistics, Current Number &amp; a Game Console.
-<br><br>
-The Instructions can be shown by pressing the <b>"Show"</b> button in the top left corner of the page. The Instructions can be hidden when by pressing the <b>"Hide"</b> button.<br><br>
-
-The objective of the game is to reach the <b>target number</b> by pressing the gems without going past the target. The target number can range from 19 to 120. The gem values can range from 1 to 12.
-</div>
-<br><a href="https://github.com/rweitman/Crystals-Collector" target="_blank"><img src="assets/images/github.png"></a>
-</div>
-
-<div id="count9">
-<h2>Bamazon - MySQL</h2>
- <img src="assets/images/bamazon.png" width="450px">
- <br><div class="texting"><br>
-<b>Customer</b>: 
-<ul>
-<li>What would you like to buy?</li> 
-<li>How many units would you like to buy?</li>
-</ul>
-<b>Manager</b>:
-<ul>
-<li>View Products for Sale</li>
-<li>View Low Inventory</li>
-<li>Add to Inventory</li>
-<li>Add New Product</li>
-</ul>
-<b>Supervisor</b>:
-<ul>
-<li>View Products By Department</li>
-<li>Create a New Department</li>
-</ul>
-
-
-</div>
-<a href="https://github.com/rweitman/Bamazon" target="_blank"><img src="assets/images/github.png"></a>
-</div>
-
-<div id="count10">
-<h2>CrystalEHR - Group Project</h2>
- <img src="assets/images/doctor.jpg" width="450px">
- <br><div class="texting"><b>Stores Medical Information for a Multi-Faceted Interface</b><br><b>Dependencies</b> 
-<ul>
-<li>Axios</li>
-<li>BodyParser</li>
-<li>React</li>
-<li>Express</li>
-<li>Moment</li>
-<li>Babel</li>
-<li>Passport</li>
-<li>Webpack</li>
-<li>Mongoose</li>
-</ul>
-
-
-
-</div>
-<a href="https://github.com/rweitman/CrystalEHR" target="_blank"><img src="assets/images/github.png"></a>
-</div>
-
-
-
-
-
-
-</div>
-
-        </div>
+    <!-- Modal content-->
+    <div class="modal-content" style="background-image: url('assets/images/img_night_skies.jpg'); border: 0.7px solid yellow; border-radius: 0px">
+      <div class="modal-header" style="padding: 3%">
+      <table style="width: 100%">
+        <tr>
+          <td style="width: 95%">
+            <span class="titleBC" style="color:yellow"><b>Khan Academy</b></span>
+            </td>
+            <td>
+              <span class="titleBC point" style="color:yellow" onclick="closeModal('4')"><b>X</b></span>
+          </td>
+        </tr>
       </table>
+      </div>
+      <div class="modal-body" style="padding: 0px; margin:0px; background-color: rgba(0,191,255, 0.5);">
 
-   </div>
-  <div id="cuatro">
-  <table>
-  <div class="row">
-  <div class="col-md-3">
-        <span class='first-topic'>Cabin</span>
-        <span class='second-topic'>Fish Swim</span>
-           <span class='third-topic'>Dinner</span>
-              <span class='fourth-topic'>Rain</span>
-                    <span class='fifth-topic'>BookShelf</span>
-                    <span class='sixth-topic'>Authors</span>
-        <span class='seventh-topic'>Memory Tiles</span>
-           <span class='eighth-topic'>Paint</span>
-              <span class='ninth-topic'>Mountains</span>
-                    <span class='tenth-topic'>Spaceship</span>
-        </div>
-<div class="col-md-9">
+        <table>
+          <tr>
+            <td>
+              <span class='first-khan-academy sidebar'>Cabin</span>
+              <span class='second-khan-academy sidebar'>Fish Swim</span>
+              <span class='third-khan-academy sidebar'>Dinner</span>
+              <span class='fourth-khan-academy sidebar'>Rain</span>
+              <span class='fifth-khan-academy sidebar'>BookShelf</span>
+              <span class='sixth-khan-academy sidebar'>Authors</span>
+              <span class='seventh-khan-academy sidebar'>Memory Tiles</span>
+              <span class='eighth-khan-academy sidebar'>Paint</span>
+              <span class='ninth-khan-academy sidebar'>Mountains</span>
+              <span class='tenth-khan-academy sidebar'>Spaceship</span>
+            </td>
+            <td>
+              <div id="first-khan-info">
+                <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Cabin - Made With For Loops</strong></div>
+                <img src="assets/images/cabin.png" width="100%" style="padding: 2px 5px 0px 5px">
+                <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
+									<br>
+                  <b>SKY:</b> background
+                  <br>
+                  <b>ROOF:</b> triangle
+                  <br>
+                  <b>PANELS:</b> alternating rectangles based on an <b>if/else</b> statement using <b>%</b>
+                  <br>
+                  <b>DOOR:</b> rectangle
+                  <br>
+                  <b>WINDOWS:</b> rectangles drawn based on a for loop
+                  <br>
+                  <b>GRASS:</b> rectangles drawn based on a for loop
+								</div>
+              </div>
+              <div id="second-khan-info">
+								<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Moving Fish - Drawing Animation</strong></div>
+								  <img src="assets/images/moving-fish.png" width="100%" style="padding: 2px 5px 0px 5px">
+                <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
 
-<div id="counting1">
-<h2>Cabin - Made With For Loops</h2>
- <img src="assets/images/cabin.png" width="450px">
- <br><div class="texting"><br>
- <b>SKY:</b> background<br>
- <b>ROOF:</b> triangle<br>
- <b>PANELS:</b> alternating rectangles based on an <b>if/else</b> statement using <b>%</b><br>
- <b>DOOR:</b> rectangle<br>
- <b>WINDOWS:</b> rectangles drawn based on a for loop<br>
- <b>GRASS:</b> rectangles drawn based on a for loop
+	                  <br>
+	                  <b>PROCESSINGJS</b> -  Fish Travels from Left Side to Right Side of the Screen
+	                  <br>
+	                  <b>BODY SIZE:</b> ellipses using ... bodyX, bodyY, bodyW, bodyH
+	                  <br>
+	                  <b>DRAW</b> Function used for animation
+	                  <br>
+	                  <b>TAIL:</b> triangle
+	                  <br>
+	                  <b>EYE:</b> ellipses
+	                  <br>
+	                  <b>MOUTH:</b> line
 
-</div>
-</div>
+								</div>
+              </div>
+              <div id="third-khan-info">
+								<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Dinner - Drawing with ProcessingJS</strong></div>
+								<img src="assets/images/plate.png" width="100%" style="padding: 2px 5px 0px 5px">
+                 <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
+									 <br>
+									<b>TABLE:</b> background
+		 							<br>
+		 							<b>PLATE:</b> ellipses
+		 							<br>
+		 							<b>PIZZA:</b> arcs
+		 							<br>
+		 							<b>TOPPINGS:</b> ellipses
+		 							<br>
+		 							<b>CARROTS:</b> lines with stroke weight
+									<br><br>
+							</div>
+							</div>
+              <div id="fourth-khan-info">
+								   <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Rain - Made With Arrays</strong></div>
+								 <img src="assets/images/rain.png" width="100%" style="padding: 2px 5px 0px 5px">
 
+                <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
+									<br>
+									<b>Array Variables</b> - xPositions, yPositions, xSeeds, ySeeds, colors, speeds, seedspeeds
+									<br>
+									<b>Giant Blue Droplets</b> - a random position and a random speed are chosen for 3 droplet images
+									<br>
+									<b>MouseClicked</b> - each time the mouse is pressed, a colored droplet spawns at that position with a random speed and a random color
+									<br>
+									<b>Falling</b> -  when a droplet reaches the bottom of the screen, it spawns at the top of the page with a random x-position
 
-<div id="counting2">
-<h2>Moving Fish - Drawing Animation</h2>
- <img src="assets/images/moving-fish.png" width="450px">
- <br><div class="texting"><br>
- <b>PROCESSINGJS</b> -  Fish Travels from Left Side to Right Side of the Screen<br>
- <b>BODY SIZE:</b> ellipses using ... bodyX, bodyY, bodyW, bodyH<br>
- <b>DRAW</b> Function used for animation<br>
- <b>TAIL:</b> triangle<br>
- <b>EYE:</b> ellipses<br>
- <b>MOUTH:</b> line
+                <br><br>
+								 </div>
+              </div>
+              <div id="fifth-khan-info">
+               <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>BookShelf - Made With Arrays</strong></div>
+                     <img src="assets/images/book-shelf.png" width="100%" style="padding: 2px 5px 0px 5px">
+                 <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
+									 <br>
+                   <b>Each Book</b> - title, stars, author, color, friendly
+                   <br>
+                   <b>Drawing Rows</b> - three rows that each contain three books
+                   <br>
+                   <b>Shelves</b> - three rectangles with three different values
+                   <br>
+                   <b>Titles &amp; Authors</b> - <b>text</b> - distributes based on shelf and book number
+                   <br>
+                   <b>Friendly Blue Box</b> - <b>rectangles</b> - distibutes based on shelf and book number
+                   <br>
+                   <b>Stars</b> - <b>images</b> - distributes based on shelf and book number
+									 <br><br>
+								</div>
+              </div>
+              <div id="sixth-khan-info">
+								<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Authors - Made With SQL</strong></div>
+								<img src="assets/images/authors.png" width="100%" style="padding: 2px 5px 0px 5px">
+                <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
+									<br>
+									<b>Step 1</b> - Create the famous table
+									<br>
+									<b>Step 2</b> - Insert author names
+									<br>
+									<b>Step 3</b> - Create the books table
+									<br>
+									<b>Step 4</b> - Insert author ids and publications
+									<br>
+									<b>Step 5</b> - Spawn the famous and books table using <b>SELECT *</b>
+									<br>
+									<b>Step 6</b> - Define the categories: <b>Author, Story #1, Story #2</b>
+									<br>
+									<b>Step 7</b> - Associate <b>famous name</b> and <b>author name</b>
+									<br>
+									<b>Step 8</b> - Spawn the joint table<br><br>
 
+								</div>
+              </div>
+              <div id="seventh-khan-info">
+							<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Memory Tiles Game</strong></div>
+								<img src="assets/images/tiles.png" width="100%" style="padding: 2px 5px 0px 5px">
+              <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
+                  <br>
+                  <b>The Game</b> - Match the tile pictures with trial and error and memory
+                  <br>
+                  <b>Tile Properties</b> - this.x, this.y, this.face, this.width, this.rectOver, this.enabled
+                  <br>
+                  <b>Entering/Exiting a Tile</b> - searching boolean, tiles[i]/currentTile, .isFaceUp, .isMatch, .drawFaceDown, .isUnderMouse
+                  <br>
+                  <b>Customization</b> -  images, rows, columns
+                  <br>
+                  <b>Setting Up the Tiles</b> - make an array which has two of each random tile, splice the array and create the tiles
+                  <br>
+                  <b>Timer</b> - minutes and seconds
+                  <br>
+                  <b>mouseClicked</b> - Processing the Match
+                  <br>
+                  <b>Draw Function</b> - update Mouse Position, update the Timer, cause a delay when two tiles dont match
+									<br><br>
+								</div>
+              </div>
+              <div id="eighth-khan-info">
+								<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Paint Splatter - Normal Distribution</strong></div>
+                <img src="assets/images/paint-splat.png" width="100%" style="padding: 2px 5px 0px 5px">
+                 <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
+									 <br>
+									 <b>"Normal distribution of random numbers to generate the locations of the dots"</b>
+                   <br>
+                   The code uses <b>nextGaussian</b> to make the normal distribution
+                   <br>
+                   The dots begin at the <b>middle</b> of the page
+                   <br>
+                   The dots are made with <b>strokes</b>
+                   <br>
+                   The dots can <b>"walk"</b> to make the dots stray from the middle randomly
+                   <br>
+                   The Draw Function calls the two functions(<b>"walk"</b> and <b>"display"</b>)
+                 <br>
+								<br>
+								</div>
+              </div>
+              <div id="ninth-khan-info">
+							<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Mountain Range - Noise &amp; Random</strong></div>
+								 <img src="assets/images/mountain.png" width="100%" style="padding: 2px 5px 0px 5px">
+<div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
+	<br>
+	<b>Step 1</b> - Set up Clouds, Trees &amp; Birds <b>Objects</b> with different qualities
+	<br>
+	<b>Step 2</b> - Make Display functions based on <b>this.x</b> and <b>this.y</b>
+	<br>
+	<b>Step 3</b> - <b>Moving</b> - Clouds (Noise), Birds (Random), Trees (Random)
+	<br>
+	<b>Step 4</b> - Create <b>new</b> instances of the trees, birds and clouds
+	<br>
+	<b>Step 5</b> - Generate 100 <b>cloudcovers</b>, 10 <b>trees</b> and 50 <b>birds</b>
+	<br>
+	<b>Step 6</b> - Make four mountains using <b>noise</b>
+	<br>
+	<b>Step 7</b> - <b>Call</b> the functions<br><br>
+								 </div>
+              </div>
+              <div id="tenth-khan-info">
+								<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Floating Spaceship - Physics</strong></div>
+                <img src="assets/images/spaceship.png" width="100%" style="padding: 2px 5px 0px 5px">
+            <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
+							<br>
+							The Spaceship is defined as a <b>Car</b> object that holds: this.position, this.velocity, this.acceleration, this.topspeed, this.xoff, this.yoff, this.r and this.accVector
+							<br>
+							<b>Car.prototype.update</b> updates the position with velocity (limited speed) and acceleration
+							<br>
+							<b>Car.prototype.applyForce</b> updates the acceleration with force
+							<br>
+							<b>Car.prototype.turnLeft</b> and <b>Car.prototype.turnRight</b> use <b>.rotate</b>
+							<br>
+							<b>Car.prototype.display</b> draws the car and the head of the car is determined by <b>this.accVector.heading()</b>
+							<br>
+							<b>Car.prototype.checkEdges</b> automatically transports the car to the other side of the screen when it reaches one of the edges
+							<br>
+							<b>keyPressed</b> can process key strokes: <b>LEFT</b>, <b>RIGHT</b> and the letter <b>z</b> (keyCode 90)
+							<br>
+							<b>draw</b> updates the car's position as time goes by<br><br>
+								</div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="modal-footer" style="padding: 3%">
 
-</div>
-</div>
+          <span class="titleBC point" onclick="closeModal('4')" style="margin-left: 60%; border: 0.2px solid yellow; color:yellow"><b>CLOSE</b></span>
 
-<div id="counting3">
-<h2>Dinner - Drawing with ProcessingJS</h2>
- <img src="assets/images/plate.png" width="450px">
- <br><div class="texting">
- <b>TABLE:</b> background<br>
- <b>PLATE:</b> ellipses<br>
- <b>PIZZA:</b> arcs<br>
- <b>TOPPINGS:</b> ellipses<br>
- <b>CARROTS:</b> lines with stroke weight
-
-
-</div>
-</div>
-
-<div id="counting4">
-<h2>Rain - Made With Arrays</h2>
- <img src="assets/images/rain.png" width="450px">
- <br><div class="texting"><br>
- <b>Array Variables</b> - xPositions, yPositions, xSeeds, ySeeds, colors, speeds, seedspeeds<br>
- <b>Giant Blue Droplets</b> - a random position and a random speed are chosen for 3 droplet images<br>
- <b>MouseClicked</b> - each time the mouse is pressed, a colored droplet spawns at that position with a random speed and a random color<br>
- <b>Falling</b> -  when a droplet reaches the bottom of the screen, it spawns at the top of the page with a random x-position 
-
-</div>
-</div>
-
-<div id="counting5">
-<h2>BookShelf - Made With Arrays</h2>
- <img src="assets/images/book-shelf.png" width="450px">
- <br><div class="texting"><br>
-<b>Each Book</b> - title, stars, author, color, friendly<br>
-<b>Drawing Rows</b> - three rows that each contain three books<br>
-<b>Shelves</b> - three rectangles with three different values<br>
-<b>Titles &amp; Authors</b> - <b>text</b> - distributes based on shelf and book number<br>
-<b>Friendly Blue Box</b> - <b>rectangles</b> - distibutes based on shelf and book number<br>
-<b>Stars</b> - <b>images</b> - distributes based on shelf and book number
-</div>
-</div>
-
-
-<div id="counting6">
-<h2>Authors - Made With SQL</h2>
- <img src="assets/images/authors.png" width="450px">
- <br><div class="texting"><br>
- <b>Step 1</b> - Create the famous table<br>
- <b>Step 2</b> - Insert author names<br>
- <b>Step 3</b> - Create the books table<br>
- <b>Step 4</b> - Insert author ids and publications<br>
- <b>Step 5</b> - Spawn the famous and books table using <b>SELECT *</b><br>
- <b>Step 6</b> - Define the categories: <b>Author, Story #1, Story #2</b><br>
- <b>Step 7</b> - Associate <b>famous name</b> and <b>author name</b><br>
- <b>Step 8</b> - Spawn the joint table
-</div>
-</div>
-
-<div id="counting7">
-<h2>Memory Tiles Game</h2>
- <img src="assets/images/tiles.png" width="450px">
- <br><div class="texting"><br>
- <b>The Game</b> - Match the tile pictures with trial and error and memory<br>
- <b>Tile Properties</b> - this.x, this.y, this.face, this.width, this.rectOver, this.enabled<br>
- <b>Entering/Exiting a Tile</b> - searching boolean, tiles[i]/currentTile, .isFaceUp, .isMatch, .drawFaceDown, .isUnderMouse<br>
- <b>Customization</b> -  images, rows, columns<br>
- <b>Setting Up the Tiles</b> - make an array which has two of each random tile, splice the array and create the tiles<br>
- <b>Timer</b> - minutes and seconds<br>
-<b>mouseClicked</b> - Processing the Match<br>
-<b>Draw Function</b> - update Mouse Position, update the Timer, cause a delay when two tiles dont match
-
-</div>
-</div>
-
-
-<div id="counting8">
-<h2>Paint Splatter - Normal Distribution</h2>
- <img src="assets/images/paint-splat.png" width="450px">
- <br><div class="texting">
- <b>"Normal distribution of random numbers to generate the locations of the dots"</b><br>
- The code uses <b>nextGaussian</b> to make the normal distribution<br>
- The dots begin at the <b>middle</b> of the page<br>
- The dots are made with <b>strokes</b><br>
- The dots can <b>"walk"</b> to make the dots stray from the middle randomly<br>
- The Draw Function calls the two functions(<b>"walk"</b> and <b>"display"</b>)
-
-
-</div>
-</div>
-
-<div id="counting9">
-<h2>Mountain Range - Noise &amp; Random</h2>
- <img src="assets/images/mountain.png" width="450px">
- <br><div class="texting">
- <b>Step 1</b> - Set up Clouds, Trees &amp; Birds <b>Objects</b> with different qualities<br>
- <b>Step 2</b> - Make Display functions based on <b>this.x</b> and <b>this.y</b><br>
- <b>Step 3</b> - <b>Moving</b> - Clouds (Noise), Birds (Random), Trees (Random)<br>
- <b>Step 4</b> - Create <b>new</b> instances of the trees, birds and clouds<br>
- <b>Step 5</b> - Generate 100 <b>cloudcovers</b>, 10 <b>trees</b> and 50 <b>birds</b><br>
- <b>Step 6</b> - Make four mountains using <b>noise</b><br>
- <b>Step 7</b> - <b>Call</b> the functions 
-</div>
-</div>
-
-<div id="counting10">
-<h2>Floating Spaceship - Physics</h2>
- <img src="assets/images/spaceship.png" width="450px">
- <br><div class="texting"><br>
-The Spaceship is defined as a <b>Car</b> object that holds: this.position, this.velocity, this.acceleration, this.topspeed, this.xoff, this.yoff, this.r and this.accVector<br>
-<b>Car.prototype.update</b> updates the position with velocity (limited speed) and acceleration<br>
-<b>Car.prototype.applyForce</b> updates the acceleration with force<br>
-<b>Car.prototype.turnLeft</b> and <b>Car.prototype.turnRight</b> use <b>.rotate</b><br>
-<b>Car.prototype.display</b> draws the car and the head of the car is determined by <b>this.accVector.heading()</b><br>
-<b>Car.prototype.checkEdges</b> automatically transports the car to the other side of the screen when it reaches one of the edges<br>
-<b>keyPressed</b> can process key strokes: <b>LEFT</b>, <b>RIGHT</b> and the letter <b>z</b> (keyCode 90)<br>
-<b>draw</b> updates the car's position as time goes by
-
-</div>
-</div>
-
-
-</div>
-</div>
-</table></div>
-
- <div id="cinco">
-  <table>
-  <tr>
-
-  <td><br>
-    <b>CODECADEMY - Online Coding Courses</b><br>
-Courses Taken: Learn HTML, Learn CSS, Make a Website, Learn Responsive Design, Learn SASS, Introduction to Javascript, Learn AngularJS 1.X, Learn REACTJS: Part I, Learn REACTJS: Part II, Introduction to jQuery
-
-</ul>
-</td>
-<td><br>
-<img src="assets/images/code-academy.png" vertical-align="center">
-</td>
-
-</tr>
-</table>
-<table>
-<tr>
-<td>
-<br>
-<img src="assets/images/3d_luggage.png" width="250px">
-
-
-</td>
-<td>
-<div align="right"><br>
-<b>COMPREHENSIVE BUSINESS KNOWLEDGE</b><br>
-<b>3DLuggage</b> was a comprehensive business group project for a SMU Entrepreneurship class.
-<ul>
-
-<li><b>Idea:</b> Luggage folds into four directions to try to keep clothes more organized</li>
-<li><b>Forecasts:</b> Income Statements, Cash Flow Statements and Balance Sheets</li>
-<li><b>Includes:</b> Market Analysis, Business Objectives and Business Planning</li>
-</ul>
-</td>
-</div>
-</tr>
-</table>
- <table>
-  <tr>
-
-  <td><br>
-    <b>MIT SCRATCH - GAME DESIGN</b><br>
-    <ul>
-<li><a href="https://scratch.mit.edu/projects/151099767/" target="_blank"><b><span class="inside-link">Button Clicking Exercise:</span></b></a> Easy - Click arrows to increase or decrease the number and the middle button to reset it</li>
-<li><a href="https://scratch.mit.edu/projects/151101143/" target="_blank"><b><span class="inside-link">Cheesy Puffs:</span></b></a> Basic - Use the arrow keys to navigate to the randomly placed Cheesy Puffs</li>
-<li><a href="https://scratch.mit.edu/projects/151118840/" target="_blank"><b><span class="inside-link">Cat and Mouse:</span></b></a> Moderate - Use the spacebar and the arrow keys to hit the mice with a projectile before they touch the ground or your character</li>
-</ul>
-</td>
-<td><br>
-<img src="assets/images/mit-scratch.png" vertical-align="center" width="200px">
-</td>
-
-</tr>
-</table>
-
-
-
-
-
-
-
-
+      </div>
+    </div>
 
   </div>
 
 </div>
 
-  <footer>
-    <div class='container'>
-<table>
-<div id="bground7">
-<div class="row">
 
-<div class="col-md-2">
-<a href="https://github.com/rweitman/"><img src="assets/images/github.png"></a>
-</div>
-
-<div class="col-md-8" class="footer-size">
-<div align="center">
-<b>214-732-3042<br>
-6126 Rex Drive<br> Dallas TX, 75230<br>
-rweitman@smu.edu</b></div></div>
-
-<div class="col-md-2">
-<a href="https://www.linkedin.com/in/robertweitman/"><img src="assets/images/linkedin.png"></a></div>
 
 
 </div>
-<br><br>
-<div align="center">THANK YOU FOR READING!</div>
-</div>
-</div></table>
-    </div>
-  </footer>
+<script
+	src="https://code.jquery.com/jquery-3.2.1.min.js"
+	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	crossorigin="anonymous">
+</script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/responsive_coord.js"></script>
 
-   <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script> 
-
-  <script src='assets/js/main.js'></script> 
 </body>
-
 </html>
