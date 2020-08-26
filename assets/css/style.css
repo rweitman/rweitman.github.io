@@ -188,6 +188,12 @@
 											.sidebar {
 												font-size: 2px;
 											}
+											.medWidth {
+
+												width: 100px;
+												border: 1px solid green;
+
+											}
 
 										}
 
@@ -202,6 +208,12 @@
 	.sidebar {
 		font-size: 3px;
 	}
+	.medWidth {
+
+		width: 200px;
+		border: 1px solid orange;
+
+	}
 
 }
 
@@ -214,6 +226,12 @@
 	}
 	.sidebar {
 		font-size: 4px;
+	}
+	.medWidth {
+
+		width: 300px;
+		border: 1px solid purple;
+
 	}
 
 }
@@ -230,6 +248,13 @@
 							font-size: 5px;
 						}
 
+						.medWidth {
+
+							width: 350px;
+							border: 1px solid green;
+
+						}
+
 					}
 					@media screen and (min-width: 850px) and (max-width: 1100px) {
 
@@ -241,6 +266,12 @@
 															.sidebar {
 																font-size: 6px;
 															}
+															.medWidth {
+
+																width: 425px;
+																border: 1px solid red;
+
+															}
 
 														}
 					@media screen and (min-width: 1100px) {
@@ -251,6 +282,12 @@
 							}
 							.sidebar {
 									font-size: 8px;
+								}
+							.medWidth {
+
+									width: 500px;
+									border: 1px solid yellow;
+
 								}
 
 					}
