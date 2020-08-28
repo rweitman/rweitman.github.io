@@ -19,7 +19,7 @@
 </head>
 
 <body>
-<script>
+<!-- <script>
   $imaging = ['image1', 'image2', 'image3', 'image4', 'image5','image6'];
 
   $storage = $('#backDrop');
@@ -34,8 +34,8 @@
 
   $storage.addClass($chosenImage);
 
-  </script>
-	<div class="ground" id="backDrop" ng-app="myApp" style="overflow-x:hidden; position: absolute; top: 0; left: 0; height: 100%; width: 100%;">
+  </script> -->
+<div ng-app="myApp" style="overflow-x:hidden; position: absolute; top: 0; left: 0; height: 100%; width: 100%;">
 
 <img src="assets/images/name.png" style="margin-left: 30%; width: 20%;">
 
@@ -1782,20 +1782,6 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 
 
 $(document).ready(function(e) {
-
-	  $imaging = ['image1', 'image2', 'image3', 'image4', 'image5','image6'];
-
-		$storage = $('#backDrop');
-
-		function chance(comp) {
-			return comp[Math.floor(Math.random()*comp.length)];
-		}
-
-		$chosenImage = chance($imaging);
-
-		console.log($chosenImage);
-
-		$storage.addClass($chosenImage);
 
     $('img[usemap]').rwdImageMaps();
 });
