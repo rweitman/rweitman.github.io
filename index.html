@@ -19,25 +19,9 @@
 </head>
 
 <body>
-<!-- <script>
-  $imaging = ['image1', 'image2', 'image3', 'image4', 'image5','image6'];
+	<div class="ground" id="backDrop" ng-app="myApp" style="overflow-x:hidden; position: absolute; top: 0; left: 0; height: 100%; width: 100%;">
 
-  $storage = $('#backDrop');
-
-  function chance(comp) {
-    return comp[Math.floor(Math.random()*comp.length)];
-  }
-
-  $chosenImage = chance($imaging);
-
-  console.log($chosenImage);
-
-  $storage.addClass($chosenImage);
-
-  </script> -->
-<div ng-app="myApp" style="overflow-x:hidden; position: absolute; top: 0; left: 0; height: 100%; width: 100%;">
-
-<img src="assets/images/name.png" style="margin-left: 30%; width: 20%;">
+<img src="assets/images/name.png" style="margin-left: 30%; width: 20%;"><br>
 
 <div style="display:table;">
 
@@ -60,7 +44,7 @@
 			</div>
 			<div style="height: 10%"></div>
 			<div style="height: 50%">
-				<img src="assets/images/RW_photo.png" class="img-circle point" onclick="window.location.href='#/coverletter'" alt="Me" id="photo"
+				<img src="assets/images/RW_photo.png" class="img-circle point" href="#/coverletter" alt="Me" id="photo"
 				 style="margin-left: 10%; width: 80%;">
 			</div>
 			<div style="height: 10%"></div>
@@ -78,17 +62,17 @@
 			usemap="#mapping">
 
 <map name="mapping">
-    <area  class="point" coords="312,111,61" shape="circle" id="openModals" onclick="window.location.href='#/freecode'">
-		<area  class="point" coords="498,197,68" shape="circle" onclick="window.location.href='#/codecademy'">
-    <area  class="point" coords="87,307,59" shape="circle" onclick="window.location.href='#/bootcamp'">
-    <area  class="point" coords="85,415,174,496" shape="rect" onclick="window.location.href='#/khanacademy'">
-    <area  class="point" coords="719,163,768,141,787,70,710,65,698,120,648,141" shape="poly" onclick="window.location.href='#/gaming'">
-    <area  class="point" coords="518,401,497,416,478,491,486,503,503,487,501,506,558,508,560,459,569,469,570,511,610,518,610,408,585,410,579,438,578,420,550,400" shape="poly" onclick="window.location.href='#/bandmans'">
-    <area  class="point" coords="111,201,149,177,167,151,143,165,164,125,168,85,129,65,129,108,110,151,96,101,58,127,72,167,54,161,110,201,111,201,110,201" shape="poly" onclick="window.location.href='#/business'">
-    <area  class="point" coords="718,297,768,285,771,338,789,366,786,414,743,421,716,423,698,397,675,409,731,370,749,356,726,330" shape="poly" onclick="window.location.href='#/advantage'">
-    <area  class="point" coords="273,521,293,506,312,478,327,482,316,556,366,482,378,537,397,531,389,550,361,558,347,534,316,577,291,570" shape="poly"  onclick="window.location.href='#/udemy'">
-    <area  class="point" coords="217,357,220,302,248,318,269,321,288,300,306,308,322,294,344,308,407,331,419,350,365,362,336,377,334,357,282,357,270,362,264,339,245,345" shape="poly" onclick="window.location.href='#/fishing'">
-
+    <area  class="point" coords="312,111,61" shape="circle" href="#/freecode">
+		<area  class="point" coords="498,197,68" shape="circle" href="#/codecademy">
+    <area  class="point" coords="87,307,59" shape="circle" href="#/bootcamp">
+    <area  class="point" coords="85,415,174,496" shape="rect" href="#/khanacademy">
+    <area  class="point" coords="719,163,768,141,787,70,710,65,698,120,648,141" shape="poly" href="#/gaming">
+    <area  class="point" coords="518,401,497,416,478,491,486,503,503,487,501,506,558,508,560,459,569,469,570,511,610,518,610,408,585,410,579,438,578,420,550,400" shape="poly" href="#/bandmans">
+    <area  class="point" coords="111,201,149,177,167,151,143,165,164,125,168,85,129,65,129,108,110,151,96,101,58,127,72,167,54,161,110,201,111,201,110,201" shape="poly" href="#/business">
+    <area  class="point" coords="718,297,768,285,771,338,789,366,786,414,743,421,716,423,698,397,675,409,731,370,749,356,726,330" shape="poly" href="#/advantage">
+    <area  class="point" coords="273,521,293,506,312,478,327,482,316,556,366,482,378,537,397,531,389,550,361,558,347,534,316,577,291,570" shape="poly" href="#/udemy">
+    <area  class="point" coords="217,357,220,302,248,318,269,321,288,300,306,308,322,294,344,308,407,331,419,350,365,362,336,377,334,357,282,357,270,362,264,339,245,345" shape="poly" href="#/fishing">
+</map>
 <!-- CHOOSE A CATEGORY -->
 
 		</div>
@@ -1782,6 +1766,20 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 
 
 $(document).ready(function(e) {
+
+	  $imaging = ['image1', 'image2', 'image3', 'image4', 'image5','image6'];
+
+		$storage = $('#backDrop');
+
+		function chance(comp) {
+			return comp[Math.floor(Math.random()*comp.length)];
+		}
+
+		$chosenImage = chance($imaging);
+
+		console.log($chosenImage);
+
+		$storage.addClass($chosenImage);
 
     $('img[usemap]').rwdImageMaps();
 });
