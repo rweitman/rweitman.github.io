@@ -19,9 +19,27 @@
 </head>
 
 <body>
+<script>
+  $imaging = ['image1', 'image2', 'image3', 'image4', 'image5','image6'];
 
-	<div class="ground" id="backDrop" ng-app="myApp" style="overflow-y:hidden; overflow-x:hidden;
-display: table; position: absolute; top: 0; left: 0; height: 100%; width: 100%;">
+  $storage = $('#backDrop');
+
+  function chance(comp) {
+    return comp[Math.floor(Math.random()*comp.length)];
+  }
+
+  $chosenImage = chance($imaging);
+
+  console.log($chosenImage);
+
+  $storage.addClass($chosenImage);
+
+  </script>
+	<div class="ground" id="backDrop" ng-app="myApp" style="overflow-x:hidden; position: absolute; top: 0; left: 0; height: 100%; width: 100%;">
+
+<img src="assets/images/name.png" style="margin-left: 30%; width: 20%;">
+
+<div style="display:table;">
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"></script>
@@ -31,7 +49,7 @@ display: table; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
 
 	<script type="text/ng-template" id="main.html">
 
-	<div class="row hideTable" id="categoryImage" style="padding-top: 3%">
+	<div class="row hideTable" id="categoryImage" style="padding-top: 0.5%">
 		<div class="col-2"></div>
 
 		<div class="col-2" style="background-color:rgba(51,51,255,0.5);">
@@ -87,7 +105,7 @@ display: table; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
 
       <!-- Inner Content-->
 
-      	<div class="row" id="advantageRow" style="padding-top: 3%">
+      	<div class="row" id="advantageRow" style="padding-top: 0.5%">
 
       <div class="col-3"></div>
 
@@ -237,7 +255,7 @@ display: table; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
 
 <script type="text/ng-template" id="bandmans.html">
 
-<div class="row" id="bandmansRow" style="padding-top: 3%">
+<div class="row" id="bandmansRow" style="padding-top: 0.5%">
 <div class="col-3"></div>
   <div class="col-6" style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
        <div style="background-color: rgba(0,191,255, 0.5); border: 0.7px solid yellow; border-radius: 0px">
@@ -366,7 +384,7 @@ display: table; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
 
 <script type="text/ng-template" id="freecode.html">
 
-  <div class="row" id="freecodeRow" style="padding-top: 3%">
+  <div class="row" id="freecodeRow" style="padding-top: 0.5%">
 
         <div class="col-3"></div>
 
@@ -492,7 +510,7 @@ display: table; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
 <!-- START BUSINESS MODAL -->
 <script type="text/ng-template" id="business.html">
 
-  <div class="row" id="businessRow" style="padding-top: 3%">
+  <div class="row" id="businessRow" style="padding-top:0.5%">
 
     <div class="col-3"></div>
 
@@ -557,7 +575,7 @@ display: table; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
 
 <script type="text/ng-template" id="gaming.html">
 
-  <div class="row" id="gamingRow" style="padding-top: 3%">
+  <div class="row" id="gamingRow" style="padding-top: 0.5%">
 
     <div class="col-3"></div>
 
@@ -638,7 +656,7 @@ display: table; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
 
 <script type="text/ng-template" id="fishing.html">
 
-<div class="row" id="fishingRow" style="padding-top: 3%">
+<div class="row" id="fishingRow" style="padding-top: 0.5%">
 
     <div class="col-3"></div>
 
@@ -730,7 +748,7 @@ display: table; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
 
 <script type="text/ng-template" id="coverletter.html">
 
-  <div class="row" id="coverLetter" style="padding-top: 3%">
+  <div class="row" id="coverLetter" style="padding-top: 0.5%">
 
     <div class="col-3"></div>
 
@@ -795,7 +813,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 
 <script type="text/ng-template" id="udemy.html">
 
-  <div class="row" id="udemyModal" style="padding-top: 3%">
+  <div class="row" id="udemyModal" style="padding-top: 0.5%">
 
     <div class="col-3"></div>
 
@@ -955,7 +973,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 
 <script type="text/ng-template" id="codecademy.html">
 
-  <div class="row" id="codeCademy" style="padding-top: 3%">
+  <div class="row" id="codeCademy" style="padding-top: 0.5%">
 
     <div class="col-3"></div>
 
@@ -1243,7 +1261,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 
 <script type="text/ng-template" id="bootcamp.html">
 
-  <div class="row" id="codingBootCamp" style="padding-top: 3%">
+  <div class="row" id="codingBootCamp" style="padding-top: 0.5%">
 
     <div class="col-3"></div>
 
@@ -1503,7 +1521,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 
 <script type="text/ng-template" id="khanacademy.html">
 
-  <div class="row" id="khanAcademy" style="padding-top: 3%">
+  <div class="row" id="khanAcademy" style="padding-top: 0.5%">
 
     <div class="col-3"></div>
 
@@ -1753,7 +1771,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
        </script>
 
 
-
+</div>
 </div>
 <script
 	src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -1761,21 +1779,23 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 	crossorigin="anonymous">
 </script>
 <script>
-$imaging = ['image1', 'image2', 'image3', 'image4', 'image5','image6'];
 
-$storage = $('#backDrop');
-
-function chance(comp) {
-  return comp[Math.floor(Math.random()*comp.length)];
-}
-
-$chosenImage = chance($imaging);
-
-console.log($chosenImage);
-
-$storage.addClass($chosenImage);
 
 $(document).ready(function(e) {
+
+	  $imaging = ['image1', 'image2', 'image3', 'image4', 'image5','image6'];
+
+		$storage = $('#backDrop');
+
+		function chance(comp) {
+			return comp[Math.floor(Math.random()*comp.length)];
+		}
+
+		$chosenImage = chance($imaging);
+
+		console.log($chosenImage);
+
+		$storage.addClass($chosenImage);
 
     $('img[usemap]').rwdImageMaps();
 });
