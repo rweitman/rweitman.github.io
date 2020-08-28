@@ -6,15 +6,15 @@
 	  font-size: 12px;
 	  color: #303030; }
 
-		.modal-header, .modal-footer, h4, .close {
+		.infoHeader, .infoFooter, h4, .close {
 	     background: url(../images/img_lights.jpg);
+			 background-size: cover;
+ 		 	 background-repeat: no-repeat;
 	     color:yellow !important;
-	     text-align: center;
+			 height: 100%;
 	     font-size: 30px;
 	   }
-	   .modal-footer {
-	     background-color: green;
-	   }
+
 
 		 #codingBootCamp {
 
@@ -47,7 +47,8 @@
 		 #second-ahcs-info b,
 		 #third-ahcs-info b,
 		 #busyModal b,
-		 #coverLetter b {
+		 #coverLetter b,
+		 #businessRow b {
 
 			 color:yellow;
 		 }

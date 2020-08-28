@@ -8,16 +8,29 @@
 
 <!-- STYLESHEETS -->
 
+<script>
+  window.addEventListener('hashchange', function() {
+
+    console.log('HASH CHANGED! ' + window.location.hash);
+
+  });
+</script>
 
 </head>
 
 <body>
-	<div class="ground" id="backDrop" style="overflow-y:hidden; overflow-x:hidden;
+	<div class="ground" id="backDrop" ng-app="myApp" style="overflow-y:hidden; overflow-x:hidden;
 display: table; position: absolute; top: 0; left: 0; height: 100%; width: 100%;">
 
-<div style="display:table-cell; vertical-align:middle">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"></script>
+<script src="assets/js/angular.js"></script>
 
-	<div class="row hideTable" id="categoryImage">
+<div style="display:table-cell; vertical-align:middle;">
+
+	<script type="text/ng-template" id="main.html">
+
+	<div class="row hideTable" id="categoryImage" style="padding-top: 3%">
 		<div class="col-2"></div>
 
 		<div class="col-2" style="background-color:rgba(51,51,255,0.5);">
@@ -28,7 +41,7 @@ display: table; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
 			</div>
 			<div style="height: 10%"></div>
 			<div style="height: 50%">
-				<img src="assets/images/RW_photo.png" class="img-circle point" onclick="openModal('COVER LETTER')" alt="Me" id="photo"
+				<img src="assets/images/RW_photo.png" class="img-circle point" onclick="window.location.href='#/coverletter'" alt="Me" id="photo"
 				 style="margin-left: 10%; width: 80%;">
 			</div>
 			<div style="height: 10%"></div>
@@ -46,207 +59,209 @@ display: table; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
 			usemap="#mapping">
 
 <map name="mapping">
-    <area  class="point" coords="312,111,61" shape="circle" id="openModals" onclick="openModal('FREE CODE CAMP')">
-		<area  class="point" coords="498,197,68" shape="circle" onclick="openModal('CODECADEMY');">
-    <area  class="point" coords="87,307,59" shape="circle" onclick="openModal('CODING BOOT CAMP')">
-    <area  class="point" coords="85,415,174,496" shape="rect" onclick="openModal('4')">
-    <area  class="point" coords="719,163,768,141,787,70,710,65,698,120,648,141" shape="poly" onclick="openModal('GAME HISTORY')">
-    <area  class="point" coords="518,401,497,416,478,491,486,503,503,487,501,506,558,508,560,459,569,469,570,511,610,518,610,408,585,410,579,438,578,420,550,400" shape="poly" onclick="openModal('BANDMANS')">
-    <area  class="point" coords="111,201,149,177,167,151,143,165,164,125,168,85,129,65,129,108,110,151,96,101,58,127,72,167,54,161,110,201,111,201,110,201" shape="poly" onclick="openModal('BUSINESS')">
-    <area  class="point" coords="718,297,768,285,771,338,789,366,786,414,743,421,716,423,698,397,675,409,731,370,749,356,726,330" shape="poly" onclick="openModal('AHCS')">
-    <area  class="point" coords="273,521,293,506,312,478,327,482,316,556,366,482,378,537,397,531,389,550,361,558,347,534,316,577,291,570" shape="poly" onclick="openModal('UDEMY')">
-    <area  class="point" coords="217,357,220,302,248,318,269,321,288,300,306,308,322,294,344,308,407,331,419,350,365,362,336,377,334,357,282,357,270,362,264,339,245,345" shape="poly" onclick="openModal('FISHING')">
-</map>
+    <area  class="point" coords="312,111,61" shape="circle" id="openModals" onclick="window.location.href='#/freecode'">
+		<area  class="point" coords="498,197,68" shape="circle" onclick="window.location.href='#/codecademy'">
+    <area  class="point" coords="87,307,59" shape="circle" onclick="window.location.href='#/bootcamp'">
+    <area  class="point" coords="85,415,174,496" shape="rect" onclick="window.location.href='#/khanacademy'">
+    <area  class="point" coords="719,163,768,141,787,70,710,65,698,120,648,141" shape="poly" onclick="window.location.href='#/gaming'">
+    <area  class="point" coords="518,401,497,416,478,491,486,503,503,487,501,506,558,508,560,459,569,469,570,511,610,518,610,408,585,410,579,438,578,420,550,400" shape="poly" onclick="window.location.href='#/bandmans'">
+    <area  class="point" coords="111,201,149,177,167,151,143,165,164,125,168,85,129,65,129,108,110,151,96,101,58,127,72,167,54,161,110,201,111,201,110,201" shape="poly" onclick="window.location.href='#/business'">
+    <area  class="point" coords="718,297,768,285,771,338,789,366,786,414,743,421,716,423,698,397,675,409,731,370,749,356,726,330" shape="poly" onclick="window.location.href='#/advantage'">
+    <area  class="point" coords="273,521,293,506,312,478,327,482,316,556,366,482,378,537,397,531,389,550,361,558,347,534,316,577,291,570" shape="poly"  onclick="window.location.href='#/udemy'">
+    <area  class="point" coords="217,357,220,302,248,318,269,321,288,300,306,308,322,294,344,308,407,331,419,350,365,362,336,377,334,357,282,357,270,362,264,339,245,345" shape="poly" onclick="window.location.href='#/fishing'">
 
 <!-- CHOOSE A CATEGORY -->
 
 		</div>
 		<div class="col-2"></div>
 	</div>
+
+</script>
+
 </div>
 	<!-- START AHCS MODAL -->
 
-
-  <div class="modal" id="advantageHCS" role="dialog" style="max-height: 80%; max-width: 60%; margin:auto; overflow-y:auto">
-    <div class="modal-dialog">
-
-      <!-- Modal content-->
-      <div class="modal-content" style="background-image: url('assets/images/img_night_skies.jpg'); border: 0.7px solid yellow; border-radius: 0px">
-
-				<div class="modal-header" style="padding: 3%">
-	      <table style="width: 100%">
-	        <tr>
-	          <td style="width: 95%">
-	            <span class="titleBC" style="color:yellow"><b>Advantage HCS</b></span>
-	            </td>
-	            <td>
-	              <span class="titleBC point" style="color:yellow" onclick="closeModal('AHCS')"><b>X</b></span>
-	          </td>
-	        </tr>
-	      </table>
-	      </div>
+<script type="text/ng-template" id="advantage.html">
 
 
+      <!-- Inner Content-->
 
-     <div class="modal-body" style="padding: 0px; margin:0px; background-color: rgba(0,191,255, 0.5);">
+      	<div class="row" id="advantageRow" style="padding-top: 3%">
 
-			 <table>
-				 <tr>
-					 <td style="width:30%">
-						 <img class="first-ahcs-button point" src="assets/images/ahcs_logo.jpg" style="width: 100%"><br>
-						 <img class="second-ahcs-button point" src="assets/images/phalcon-volt.png" style="width: 100%;"><br>
-						 <img class="third-ahcs-button point" src="assets/images/vuejs_logo.png" style="width: 100%;"><br>
-						 <img class="fourth-ahcs-button point" src="assets/images/quasar_logo.png" style="width: 100%"><br>
-					 </td>
-			 <td>
+      <div class="col-3"></div>
 
-				 <div id="first-ahcs-info">
+      <div class="col-6" style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
+      <div style="background-color: rgba(0,191,255, 0.5);" border: 0.7px solid yellow; border-radius: 0px">
 
-<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>ADVANTAGE HEALTHCARE SYSTEMS</strong></div>
-<div style="padding-left: 5px; padding-top:2px;">
-<img src="assets/images/ahcs_spine.jpg" width="40%" style="padding: 0px 5px 0px 0px; float:left">
 
-<a href="https://www.advantagehcs.com/" style="color:yellow" class="titleBC" target="_blank">https://www.advantagehcs.com/</a>
-<br>
-<div class="sidebar" style="color:white">	&quot;Advantage Healthcare Systems is committed to providing ethical, high-quality, and cost-effective rehabilitation to individuals with chronic pain conditions.&quot;
+        <table style="width: 100%;" class="infoHeader">
+          <tr>
+            <td>
+              <p class="titleBC" style="float:left; color:yellow; padding: 3% 1% 0% 3%"><b>Advantage HCS</b></p>
+                <p class="titleBC point" style="float:right; color:yellow; padding: 3% 3% 0% 1%" onclick="closeModal()"><b>X</b></p>
+            </td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <td style="width:30%" ng-init="ahcs = 1">
+              <img class="first-ahcs-button point" ng-click="ahcs = 1" src="assets/images/ahcs_logo.jpg" style="width: 100%"><br>
+              <img class="second-ahcs-button point" ng-click="ahcs = 2" src="assets/images/phalcon-volt.png" style="width: 100%;"><br>
+              <img class="third-ahcs-button point" ng-click="ahcs = 3" src="assets/images/vuejs_logo.png" style="width: 100%;"><br>
+              <img class="fourth-ahcs-button point" ng-click="ahcs = 4" src="assets/images/quasar_logo.png" style="width: 100%"><br>
+            </td>
+            <td style="width:70%">
+<!-- BEGIN AHCS INSIDE -->
+              <div id="first-ahcs-info" ng-show="ahcs == 1">
+
+             <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>ADVANTAGE HEALTHCARE SYSTEMS</strong></div>
+             <div style="padding-left: 5px; padding-top:2px;">
+             <img src="assets/images/ahcs_spine.jpg" width="40%" style="padding: 0px 5px 0px 0px; float:left">
+
+             <a href="https://www.advantagehcs.com/" style="color:yellow" class="titleBC" target="_blank">https://www.advantagehcs.com/</a>
+             <br>
+             <div class="sidebar" style="color:white">	&quot;Advantage Healthcare Systems is committed to providing ethical, high-quality, and cost-effective rehabilitation to individuals with chronic pain conditions.&quot;
+             </div>
+             <div class="sidebar" style="display:inline-block; padding-top: 5px; color:white">
+             ●	Drafted pieces of computer code to be used on the company website<br>
+             ●	Research solutions by looking at blogs and online documentation<br>
+             ●	Translated old code into new coding languages: <b>Quasar, Vue.js and Phalcon Volt</b><br>
+             ●	Consistently used new coding languages almost daily<br>
+             ●	Helped provide a better interface for the people in the company to muse for their daily tasks<br>
+             ●	Specialized in <b>Front End Development</b><br>
+             ●	Used console to search for errors in the code<br>
+             ●	Helped bridge the Front-End Code with the Back-End Code
+             </div>
+
+             </div>
+             </div>
+             <div id="second-ahcs-info"  ng-show="ahcs == 2">
+               <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY PHALCON VOLT SKILLSET</strong></div>
+
+               <div style="padding-left: 5px; padding-top:2px;">
+               <img src="assets/images/phalcon-volt-logo.png" width="40%" style="padding: 0px 5px 0px 0px; float:right">
+
+               <a href="https://docs.phalcon.io/4.0/en/volt" style="color:yellow" class="titleBC" target="_blank">https://docs.phalcon.io/4.0/en/volt</a>
+               <br>
+               <div class="sidebar" style="color:white">	At Advantage Healthcare Systems, I mainly used Phalcon Volt at the top of pages to store information, rather than defining everything in JavaScript
+               </div>
+
+               <div class="sidebar" style="display:inline-block; padding-top: 5px; color:white"><b>Main Topics</b><br>
+      ●	endfor/for/elsefor<br>
+      ●	continue/break<br>
+      ●	switch/cases<br>
+      ●	set (variables)<br>
+      ●	type()<br>
+      ●	odd/even/numeric/iterable<br>
+      ●	echo<br>
+      ●	comments<br>
+
+               </div>
+
+               </div>
+
+
+
+
+             </div>
+             <div id="third-ahcs-info" ng-show="ahcs == 3">
+               <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY VUE.JS SKILLSET</strong></div>
+
+               <div style="padding-left: 5px; padding-top:2px;">
+               <img src="assets/images/vuejs-icon.png" width="40%" style="padding: 0px 5px 0px 0px; float:right">
+
+               <a href="https://vuejs.org/" style="color:yellow" class="titleBC" target="_blank">https://vuejs.org/</a>
+               <br>
+               <div class="sidebar" style="color:white">	At Advantage Healthcare Systems, I mainly used VueJS to more easily change variables and call functions.
+                 <br><br>
+                 <b>Main Topics</b><br>v-bind:title, new Vue(), el, v-if, v-for, v-on:click, .split(), .reverse(), .join(),
+                 v-model, Vue.component, $watch, data, template, v-html, v-bind:id, v-bind (shorthand - :), v-on (shorthand - @), Date.now(), computed,
+                 v-bind:class, v-bind:style, v-else/v-else-if, v-show, push(), pop(), shift(), unshift(), splice(), sort(), reverse(),
+                 filter(), concat(), slice(), v-on:keyup, toggle, v-bind:key, import/export, $emit, v-on:input, transition classes,
+                 created, methods, Vue.extend(), const
+               </div>
+
+
+               </div>
+
+
+
+
+             </div>
+             <div id="fourth-ahcs-info" ng-show="ahcs == 4">
+              <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY QUASAR SKILLSET</strong></div>
+
+              <div style="padding-left: 5px; padding-top:2px;">
+              <img src="assets/images/quasar.png" width="40%" style="padding: 0px 5px 0px 0px; float:right">
+
+              <a href="https://quasar.dev/" style="color:yellow" class="titleBC" target="_blank">https://quasar.dev/</a>
+              <br>
+              <div class="sidebar" style="color:white">	At Advantage Healthcare Systems, I mainly used Quasar to implement useful pre-styled components
+                <br><br>
+                <b>Main Topics</b><br>QAvatar, QBanner, QBtn, QBtnGroup, QBtnDropdown, QCarousel, QExpansionItem, QInput, QSelect,
+                QFile, QRadio, QCheckbox, QToggle, QBtnToggle, QOptionGroup, QSlider, QTime, QDate, QIcon, QImg, QMenu
+              </div>
+
+
+              </div>
+
+
+
+
+            </div>
+
+
+            </td>
+
+      </tr>
+
+    </table><br>
+    <table style="width: 100%" class="infoFooter">
+      <tr>
+          <td>
+         <p class="titleBC point" onclick="closeModal()" style="float:right; margin-top: 2%; margin-right: 15%; border: 0.2px solid yellow"><b>CLOSE</b></p>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+      <div class="col-3"></div>
 </div>
-<div class="sidebar" style="display:inline-block; padding-top: 5px; color:white">
-●	Drafted pieces of computer code to be used on the company website<br>
-●	Research solutions by looking at blogs and online documentation<br>
-●	Translated old code into new coding languages: <b>Quasar, Vue.js and Phalcon Volt</b><br>
-●	Consistently used new coding languages almost daily<br>
-●	Helped provide a better interface for the people in the company to muse for their daily tasks<br>
-●	Specialized in <b>Front End Development</b><br>
-●	Used console to search for errors in the code<br>
-●	Helped bridge the Front-End Code with the Back-End Code
 </div>
-
-</div>
-</div>
-				 <div id="second-ahcs-info">
-					 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY PHALCON VOLT SKILLSET</strong></div>
-
-					 <div style="padding-left: 5px; padding-top:2px;">
-					 <img src="assets/images/phalcon-volt-logo.png" width="40%" style="padding: 0px 5px 0px 0px; float:right">
-
-					 <a href="https://docs.phalcon.io/4.0/en/volt" style="color:yellow" class="titleBC" target="_blank">https://docs.phalcon.io/4.0/en/volt</a>
-					 <br>
-					 <div class="sidebar" style="color:white">	At Advantage Healthcare Systems, I mainly used Phalcon Volt at the top of pages to store information, rather than defining everything in JavaScript
-					 </div>
-
-					 <div class="sidebar" style="display:inline-block; padding-top: 5px; color:white"><b>Main Topics</b><br>
- ●	endfor/for/elsefor<br>
- ●	continue/break<br>
- ●	switch/cases<br>
- ●	set (variables)<br>
- ●	type()<br>
- ●	odd/even/numeric/iterable<br>
- ●	echo<br>
- ●	comments<br>
-
-					 </div>
-
-					 </div>
-
-
-
-
-				 </div>
-				 <div id="third-ahcs-info">
-					 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY VUE.JS SKILLSET</strong></div>
-
-					 <div style="padding-left: 5px; padding-top:2px;">
-					 <img src="assets/images/vuejs-icon.png" width="40%" style="padding: 0px 5px 0px 0px; float:right">
-
-					 <a href="https://vuejs.org/" style="color:yellow" class="titleBC" target="_blank">https://vuejs.org/</a>
-					 <br>
-					 <div class="sidebar" style="color:white">	At Advantage Healthcare Systems, I mainly used VueJS to more easily change variables and call functions.
-						 <br><br>
-						 <b>Main Topics</b><br>v-bind:title, new Vue(), el, v-if, v-for, v-on:click, .split(), .reverse(), .join(),
-						 v-model, Vue.component, $watch, data, template, v-html, v-bind:id, v-bind (shorthand - :), v-on (shorthand - @), Date.now(), computed,
-						 v-bind:class, v-bind:style, v-else/v-else-if, v-show, push(), pop(), shift(), unshift(), splice(), sort(), reverse(),
-						 filter(), concat(), slice(), v-on:keyup, toggle, v-bind:key, import/export, $emit, v-on:input, transition classes,
-						 created, methods, Vue.extend(), const
-					 </div>
-
-
-					 </div>
-
-
-
-
-				 </div>
-				 <div id="fourth-ahcs-info">
-					 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY QUASAR SKILLSET</strong></div>
-
-					 <div style="padding-left: 5px; padding-top:2px;">
-					 <img src="assets/images/quasar.png" width="40%" style="padding: 0px 5px 0px 0px; float:right">
-
-					 <a href="https://quasar.dev/" style="color:yellow" class="titleBC" target="_blank">https://quasar.dev/</a>
-					 <br>
-					 <div class="sidebar" style="color:white">	At Advantage Healthcare Systems, I mainly used Quasar to implement useful pre-styled components
-						 <br><br>
-						 <b>Main Topics</b><br>QAvatar, QBanner, QBtn, QBtnGroup, QBtnDropdown, QCarousel, QExpansionItem, QInput, QSelect,
-						 QFile, QRadio, QCheckbox, QToggle, QBtnToggle, QOptionGroup, QSlider, QTime, QDate, QIcon, QImg, QMenu
-					 </div>
-
-
-					 </div>
-
-
-
-
-				 </div>
-
-			 </td>
-		 </tr>
-	 </table>
-
-			  </div>
-				<div class="modal-footer" style="padding: 3%">
-
-		           <span class="titleBC point" onclick="closeModal('AHCS')" style="margin-left: 60%; border: 0.2px solid yellow"><b>CLOSE</b></span>
-
-		       </div>
-      </div>
-
-    </div>
-</div>
+</script>
 
 <!-- END AHCS MODAL -->
 
 <!-- START BANDMANS MODAL -->
 
-<div class="modal" id="bandMans" role="dialog" style="max-height: 80%; max-width: 60%; margin:auto; overflow-y:auto">
-	<div class="modal-dialog">
+<script type="text/ng-template" id="bandmans.html">
 
-		<!-- Modal content-->
-		<div class="modal-content" style="background-image: url('assets/images/img_night_skies.jpg'); border: 0.7px solid yellow; border-radius: 0px">
+<div class="row" id="bandmansRow" style="padding-top: 3%">
+<div class="col-3"></div>
+  <div class="col-6" style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
+       <div style="background-color: rgba(0,191,255, 0.5); border: 0.7px solid yellow; border-radius: 0px">
 
-			<div class="modal-header" style="padding: 3%">
-			<table style="width: 100%">
-				<tr>
-					<td style="width: 95%">
-						<span class="titleBC" style="color:yellow"><b>Bandmans Company</b></span>
-						</td>
-						<td>
-							<span class="titleBC point" style="color:yellow" onclick="closeModal('BANDMANS')"><b>X</b></span>
-					</td>
-				</tr>
-			</table>
-			</div>
-			<div class="modal-body" style="padding: 0px; margin:0px; background-color: rgba(0,191,255, 0.5);">
+         <table style="width: 100%;" class="infoHeader">
+                   <tr>
+                     <td>
+                       <p class="titleBC" style="float:left; color:yellow; padding: 3% 1% 0% 3%"><b>Bandmans Company</b></p>
+                         <p class="titleBC point" style="float:right; color:yellow; padding: 3% 3% 0% 1%" onclick="closeModal()"><b>X</b></p>
+                     </td>
+                   </tr>
+                 </table>
+                 <table>
+                          <tr>
+                            <td style="width:30%" ng-init="bands = 1">
 
-				<table>
-					<tr>
-						<td style="width:30%">
-							<img class="first-band-button point" src="assets/images/bandmans_logo.jpg" style="width: 100%; border: 0.5px solid blue"><br>
-							<img class="second-band-button point" src="assets/images/ecwid_logo.jpg" style="width: 100%; border: 0.5px solid blue"><br>
-							<img class="third-band-button point" src="assets/images/pagespeed_logo.jpg" style="width: 100%; border: 0.5px solid blue"><br>
-							<img class="fourth-band-button point" src="assets/images/mailchimp_logo.jpg" style="width: 100%; border: 0.5px solid blue"><br>
-						</td>
-				<td>
-				 	 <div id="first-band-info">
+                              <img class="first-band-button point" ng-click="bands = 1" src="assets/images/bandmans_logo.jpg" style="width: 100%; border: 0.5px solid blue"><br>
+                              <img class="second-band-button point" ng-click="bands = 2" src="assets/images/ecwid_logo.jpg" style="width: 100%; border: 0.5px solid blue"><br>
+                              <img class="third-band-button point" ng-click="bands = 3" src="assets/images/pagespeed_logo.jpg" style="width: 100%; border: 0.5px solid blue"><br>
+                              <img class="fourth-band-button point" ng-click="bands = 4" src="assets/images/mailchimp_logo.jpg" style="width: 100%; border: 0.5px solid blue"><br>
+                            </td>
+                        <td style="width: 70%">
+
+
+				 	 <div id="first-band-info" ng-show="bands == 1">
 
 						 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>BANDMANS COMPANY</strong></div>
  						<div style="padding-left: 5px; padding-top:2px;">
@@ -270,7 +285,7 @@ display: table; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
 
 
 					 </div>
-					 <div id="second-band-info">
+					 <div id="second-band-info" ng-show="bands == 2">
 
 
 						 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>ECWID SKILLSET</strong></div>
@@ -289,7 +304,7 @@ display: table; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
 						 </div>
 
 					 </div>
-					 <div id="third-band-info">
+					 <div id="third-band-info" ng-show="bands == 3">
 
 						 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>SEARCH ENGINE OPTIMIZATION SKILLSET</strong></div>
 						 <div style="padding-left: 5px; padding-top:2px;">
@@ -307,7 +322,7 @@ display: table; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
 						 </div>
 
 					 </div>
-					 <div id="fourth-band-info">
+					 <div id="fourth-band-info" ng-show="bands == 4">
 
 						 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MAILBLAST SKILLSET</strong></div>
 						 <div style="padding-left: 5px; padding-top:2px;">
@@ -330,49 +345,51 @@ display: table; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
 				</td>
 			</tr>
 		</table>
-			</div>
-			<div class="modal-footer" style="padding: 3%">
+    <br>
+    <table style="width: 100%" class="infoFooter">
+      <tr>
+          <td>
+         <p class="titleBC point" onclick="closeModal()" style="float:right; margin-top: 2%; margin-right: 15%; border: 0.2px solid yellow"><b>CLOSE</b></p>
+        </td>
+      </tr>
+    </table>
+  </div>
 
-						 <span class="titleBC point" onclick="closeModal('BANDMANS')" style="margin-left: 60%; border: 0.2px solid yellow"><b>CLOSE</b></span>
-
-				 </div>
-		</div>
-
-	</div>
+      <div class="col-3"></div>
 </div>
+</div>
+</script>
 
 <!-- END BANDMANS MODAL -->
-
 <!-- START FREE CODE CAMP MODAL -->
 
-<div class="modal" id="fccModal" role="dialog" style="max-height: 80%; max-width: 60%; margin:auto; overflow-y:auto">
-	<div class="modal-dialog">
+<script type="text/ng-template" id="freecode.html">
 
-		<!-- Modal content-->
-		<div class="modal-content" style="background-image: url('assets/images/img_night_skies.jpg'); border: 0.7px solid yellow; border-radius: 0px">
+  <div class="row" id="freecodeRow" style="padding-top: 3%">
 
-			<div class="modal-header" style="padding: 3%">
-			<table style="width: 100%">
-				<tr>
-					<td style="width: 95%">
-						<span class="titleBC" style="color:yellow"><b>Free Code Camp</b></span>
-						</td>
-						<td>
-							<span class="titleBC point" style="color:yellow" onclick="closeModal('FREE CODE CAMP')"><b>X</b></span>
-					</td>
-				</tr>
-			</table>
-			</div>
-			<div class="modal-body" style="padding: 0px; margin:0px; background-color: rgba(0,191,255, 0.5);">
+        <div class="col-3"></div>
 
-			<span class='first-fcc-button sidebar' style="max-width: 100%">Responsive Web Design</span>
-			<span class='second-fcc-button sidebar' style="max-width: 100%">Javascript Algorithms and Data Structures</span>
-			<span class='third-fcc-button sidebar' style="border:0px; max-width:100%">Front End Libraries</span>
-				<table>
-					<tr>
-			<td>
+        <div class="col-6" style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
+        <div style="background-color: rgba(0,191,255, 0.5);" border: 0.7px solid yellow; border-radius: 0px">
 
-			 <div id="first-fcc-info" class="sidebar">
+          <table style="width: 100%;" class="infoHeader">
+                    <tr>
+                      <td>
+                        <p class="titleBC" style="float:left; color:yellow; padding: 3% 1% 0% 3%"><b>Free Code Camp</b></p>
+                          <p class="titleBC point" style="float:right; color:yellow; padding: 3% 3% 0% 1%" onclick="closeModal()"><b>X</b></p>
+                      </td>
+                    </tr>
+                  </table>
+                  <table>
+                           <tr>
+                             <td style="width: 30%" ng-init="fcc = 1" id="fccModal">
+                              <span class='first-fcc-button sidebar' ng-click="fcc = 1" style="width: 100%">Responsive Web Design</span>
+                              <span class='second-fcc-button sidebar' ng-click="fcc = 2" style="width: 100%">Javascript Algorithms and Data Structures</span>
+                              <span class='third-fcc-button sidebar' ng-click="fcc = 3" style="width: 100%">Front End Libraries</span>
+                            </td>
+                         <td style="width: 70%">
+
+			 <div id="first-fcc-info" class="sidebar" ng-show="fcc == 1">
 
 
 				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>RESPONSIVE WEB DESIGN</strong></div>
@@ -399,12 +416,9 @@ display: table; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
 
 			 </div>
 
-			 <div id="second-fcc-info" class="sidebar">
+			 <div id="second-fcc-info" class="sidebar" ng-show="fcc == 2">
 
-
-
-
-				 				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>JAVASCRIPT ALGORITHMS AND DATA STRUCTURES</strong></div>
+         <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>JAVASCRIPT ALGORITHMS AND DATA STRUCTURES</strong></div>
 				 			  <div style="padding-left: 5px; padding-top:2px; color:white">
 				 			  <img src="assets/images/algorithm-pic.jpg" width="40%" style="padding: 0px 5px 5px 0px; float:left">
 
@@ -423,7 +437,7 @@ display: table; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
 				 			  </div>
 
 			 </div>
-			 <div id="third-fcc-info" class="sidebar">
+			 <div id="third-fcc-info" class="sidebar" ng-show="fcc == 3">
 
 
 
@@ -458,41 +472,40 @@ display: table; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
 		 </td>
 	 </tr>
  </table>
-
-			</div>
-
-			</div>
-			<div class="modal-footer" style="padding: 3%">
-
-						 <span class="titleBC point" onclick="closeModal('FREE CODE CAMP')" style="margin-left: 60%; border: 0.2px solid yellow"><b>CLOSE</b></span>
-
-				 </div>
-		</div>
+ <br>
+ <table style="width: 100%" class="infoFooter">
+   <tr>
+       <td>
+      <p class="titleBC point" onclick="closeModal()" style="float:right; margin-top: 2%; margin-right: 15%; border: 0.2px solid yellow"><b>CLOSE</b></p>
+     </td>
+   </tr>
+ </table>
 </div>
+
+   <div class="col-3"></div>
+</div>
+</div>
+</script>
 <!-- END FREE CODE CAMP MODAL -->
 
-
 <!-- START BUSINESS MODAL -->
+<script type="text/ng-template" id="business.html">
 
-<div class="modal" id="busyModal" role="dialog" style="max-height: 80%; max-width: 60%; margin:auto; overflow-y:auto">
-	<div class="modal-dialog">
+  <div class="row" id="businessRow" style="padding-top: 3%">
 
-		<!-- Modal content-->
-		<div class="modal-content" style="background-image: url('assets/images/img_night_skies.jpg'); border: 0.7px solid yellow; border-radius: 0px">
+    <div class="col-3"></div>
 
-			<div class="modal-header" style="padding: 3%">
-			<table style="width: 100%">
-				<tr>
-					<td style="width: 95%">
-						<span class="titleBC" style="color:yellow"><b>SMU Cox School of Business</b></span>
-						</td>
-						<td>
-							<span class="titleBC point" style="color:yellow" onclick="closeModal('BUSINESS')"><b>X</b></span>
-					</td>
-				</tr>
-			</table>
-			</div>
-			<div class="modal-body" style="padding: 0px; margin:0px; background-color: rgba(0,191,255, 0.5);">
+    <div class="col-6" style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
+     <div style="background-color: rgba(0,191,255, 0.5);" border: 0.7px solid yellow; border-radius: 0px">
+
+       <table style="width: 100%;" class="infoHeader">
+             <tr>
+               <td>
+                 <p class="titleBC" style="float:left; color:yellow; padding: 3% 1% 0% 3%"><b>SMU Cox School of Business</b></p>
+                   <p class="titleBC point" style="float:right; color:yellow; padding: 3% 3% 0% 1%" onclick="closeModal()"><b>X</b></p>
+               </td>
+             </tr>
+           </table>
 
 <div style="padding:2%;">
 
@@ -523,197 +536,189 @@ display: table; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
 <img src="assets/images/3d_luggage.png" style="width: 100%;" class="rounded">
 </td>
 </tr>
+</table></div>
+<table style="width: 100%" class="infoFooter">
+  <tr>
+      <td>
+     <p class="titleBC point" onclick="closeModal()" style="float:right; margin-top: 2%; margin-right: 15%; border: 0.2px solid yellow"><b>CLOSE</b></p>
+    </td>
+  </tr>
 </table>
 
 </div>
-
-			</div>
-
-			<div class="modal-footer" style="padding: 3%">
-
-						 <span class="titleBC point" onclick="closeModal('BUSINESS')" style="margin-left: 60%; border: 0.2px solid yellow"><b>CLOSE</b></span>
-
-				 </div>
-		</div>
+		</div><div class="col-3"></div>
 </div>
-</div>
-
+</script>
 
 <!-- END BUSINESS MODAL -->
 
 <!-- START GAME HISTORY MODAL -->
 
+<script type="text/ng-template" id="gaming.html">
+
+  <div class="row" id="gamingRow" style="padding-top: 3%">
+
+    <div class="col-3"></div>
+
+    <div class="col-6" style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
+     <div style="background-color: rgba(0,191,255, 0.5);" border: 0.7px solid yellow; border-radius: 0px">
 
 
-<div class="modal" id="gameModal" role="dialog" style="max-height: 80%; max-width: 60%; margin:auto; overflow-y:auto">
-	<div class="modal-dialog">
+       <table style="width: 100%;" class="infoHeader">
+             <tr>
+               <td>
+                 <p class="titleBC" style="float:left; color:yellow; padding: 3% 1% 0% 3%"><b>Gaming</b></p>
+                   <p class="titleBC point" style="float:right; color:yellow; padding: 3% 3% 0% 1%" onclick="closeModal()"><b>X</b></p>
+               </td>
+             </tr>
+           </table>
 
-		<!-- Modal content-->
-		<div class="modal-content" style="background-image: url('assets/images/img_night_skies.jpg'); border: 0.7px solid yellow; border-radius: 0px">
 
-			<div class="modal-header" style="padding: 3%">
-			<table style="width: 100%">
-				<tr>
-					<td style="width: 95%">
-						<span class="titleBC" style="color:yellow"><b>Gaming</b></span>
-						</td>
-						<td>
-							<span class="titleBC point" style="color:yellow" onclick="closeModal('GAME HISTORY')"><b>X</b></span>
-					</td>
-				</tr>
-			</table>
-			</div>
-			<div class="modal-body" style="padding: 0px; margin:0px; background-color: rgba(0,191,255, 0.5);">
 
-<div style="padding:2%;">
+           <div style="padding:2%;">
 
-<table class="sidebar">
 
-	<tr>
-		<td style="width:15%">
-	<img src="assets/images/clue_finders.jpg" style="width: 100%;">
-</td>
-<td style="padding-left: 2%;color:white">
+             <table class="sidebar">
 
-	At a very early age I got interested in computer gaming. I admired how my sister
-	and her friends played computer games, specifically, the ClueFinders educational computer game series.
-	Even though I was several years before fourth and fifth grade, I challenged myself by configuring
-	the settings to be almost high school levelled. The ClueFinders games gave me a jumpstart to my education
-	and got me interested in education through gaming.
+             	<tr>
+             		<td style="width:15%">
+             	<img src="assets/images/clue_finders.jpg" style="width: 100%;">
+             </td>
+             <td style="padding-left: 2%;color:white">
 
-</td>
+             	At a very early age I got interested in computer gaming. I admired how my sister
+             	and her friends played computer games, specifically, the ClueFinders educational computer game series.
+             	Even though I was several years before fourth and fifth grade, I challenged myself by configuring
+             	the settings to be almost high school levelled. The ClueFinders games gave me a jumpstart to my education
+             	and got me interested in education through gaming.
 
-</tr>
-</table><p></p>
-<table class="sidebar">
+             </td>
 
-	<tr>
-<td style="padding-right: 2%;color:white">
+             </tr>
+             </table><p></p>
+             <table class="sidebar">
 
-	<a href="https://www.runescape.com" style="color:yellow" class="sidebar" target="_blank">https://runescape.com/</a>
-	<br>
-	RuneScape is a MMORPG that I have played for a long time. Even though it can take long periods of time, I like challenging
-	myself by setting goals for myself. One of my favorite things in-game hobbies is helping people get started with the game by following
-	their character around in the game. I admire how the game has several overlapping storylines, which is interesting to me because
-	I like hearing people's perspectives. I hope to one day help design a computer game so that I can tell stories that provide insight,
-	education, creativity and fun.
+             	<tr>
+             <td style="padding-right: 2%;color:white">
 
-</td>
-<td style="width:55%">
-<img src="assets/images/runescape.jpg" style="width: 100%;">
-</td>
-</tr>
-</table>
+             	<a href="https://www.runescape.com" style="color:yellow" class="sidebar" target="_blank">https://runescape.com/</a>
+             	<br>
+             	RuneScape is a MMORPG that I have played for a long time. Even though it can take long periods of time, I like challenging
+             	myself by setting goals for myself. One of my favorite things in-game hobbies is helping people get started with the game by following
+             	their character around in the game. I admire how the game has several overlapping storylines, which is interesting to me because
+             	I like hearing people's perspectives. I hope to one day help design a computer game so that I can tell stories that provide insight,
+             	education, creativity and fun.
 
-</div>
+             </td>
+             <td style="width:55%">
+             <img src="assets/images/runescape.jpg" style="width: 100%;">
+             </td>
+             </tr>
+             </table>
+      </div>
+      <table style="width: 100%" class="infoFooter">
+        <tr>
+            <td>
+           <p class="titleBC point" onclick="closeModal()" style="float:right; margin-top: 2%; margin-right: 15%; border: 0.2px solid yellow"><b>CLOSE</b></p>
+          </td>
+        </tr>
+      </table>
 
-			</div>
 
-			<div class="modal-footer" style="padding: 3%">
+      </div>
+    </div><div class="col-3"></div>
+      </div>
+      </script>
 
-						 <span class="titleBC point" onclick="closeModal('GAME HISTORY')" style="margin-left: 60%; border: 0.2px solid yellow"><b>CLOSE</b></span>
-
-				 </div>
-		</div>
-</div>
-</div>
 
 <!-- END GAME HISTORY MODAL -->
 
 <!-- START FISHING MODAL -->
 
+<script type="text/ng-template" id="fishing.html">
+
+<div class="row" id="fishingRow" style="padding-top: 3%">
+
+    <div class="col-3"></div>
+
+    <div class="col-6" style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
+    <div style="background-color: rgba(0,191,255, 0.5);" border: 0.7px solid yellow; border-radius: 0px">
+
+      <table style="width: 100%;" class="infoHeader">
+         <tr>
+           <td>
+             <p class="titleBC" style="float:left; color:yellow; padding: 3% 1% 0% 3%"><b>Activities and Awards</b></p>
+               <p class="titleBC point" style="float:right; color:yellow; padding: 3% 3% 0% 1%" onclick="closeModal()"><b>X</b></p>
+           </td>
+         </tr>
+       </table>
+       <table>
+                <tr>
+                  <td style="width:30%" ng-init="fish = 1">
+
+                    <img class="first-fish-button point" ng-click="fish = 1" src="assets/images/awards_select.png" style="width: 100%; border: 0.5px solid yellow"><br>
+                    <img class="second-fish-button point" ng-click="fish = 2" src="assets/images/activities_select.png" style="width: 100%; border: 0.5px solid yellow"><br>
+                  </td>
+                <td style="padding: 2%">
+
+                  <div id="first-fish-info" ng-show="fish == 1">
+
+           				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>AWARDS</strong></div>
+
+                  <table>
+                  <tr><td style="width:40%">
+                  <img src="assets/images/green_award.jpg" width="100%" style="padding: 0px 5px 0px 0px; float:left">
+                  </td>
+                  <td>
+                  <div class="sidebar" style="display:inline-block; padding-top: 5px; color:white">
 
 
-
-<div class="modal" id="fishModal" role="dialog" style="max-height: 80%; max-width: 60%; margin:auto; overflow-y:auto">
-	<div class="modal-dialog">
-
-		<!-- Modal content-->
-		<div class="modal-content" style="background-image: url('assets/images/img_night_skies.jpg'); border: 0.7px solid yellow; border-radius: 0px">
-
-			<div class="modal-header" style="padding: 3%">
-			<table style="width: 100%">
-				<tr>
-					<td style="width: 95%">
-						<span class="titleBC" style="color:yellow"><b>Activities and Awards</b></span>
-						</td>
-						<td>
-							<span class="titleBC point" style="color:yellow" onclick="closeModal('FISHING')"><b>X</b></span>
-					</td>
-				</tr>
-			</table>
-			</div>
-			<div class="modal-body" style="padding: 0px; margin:0px; background-color: rgba(0,191,255, 0.5);">
-
-<div>
-
-	<table>
-		<tr>
-			<td style="width:30%">
-				<img class="first-fish-button point" src="assets/images/awards_select.png" style="width: 100%; border: 0.5px solid yellow"><br>
-				<img class="second-fish-button point" src="assets/images/activities_select.png" style="width: 100%; border: 0.5px solid yellow"><br>
-			</td>
-
-		<td style="padding:2%;">
-			 <div id="first-fish-info">
-
-				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>AWARDS</strong></div>
-
-<table>
-	<tr><td style="width:40%">
-				<img src="assets/images/green_award.jpg" width="100%" style="padding: 0px 5px 0px 0px; float:left">
-			</td>
-			<td>
-				<div class="sidebar" style="display:inline-block; padding-top: 5px; color:white">
+                    <b>VOLUNTEERING</b> - Rustic Pathways Star Alumni Award (2x) <br><br>
+                    <b>SCHOLAR</b> - Honor Society and Greenhill's Board of Trustees Award <br><br>
+                    <b>CODING CERTIFICATIONS</b> - Full-Stack Web Development, Responsive Web Design,
+                    JavaScript Algorithms & Data Structures and Front End Libararies
 
 
-					<b>VOLUNTEERING</b> - Rustic Pathways Star Alumni Award (2x) <br><br>
-					<b>SCHOLAR</b> - Honor Society and Greenhill's Board of Trustees Award <br><br>
-					<b>CODING CERTIFICATIONS</b> - Full-Stack Web Development, Responsive Web Design,
-					JavaScript Algorithms & Data Structures and Front End Libararies
+                  </div>
+                  </td>
+                  </tr>
+                  </table>
 
+                  </div>
+                  <div id="second-fish-info" ng-show="fish == 2">
 
-				</div>
-			</td>
-		</tr>
-	</table>
+                    <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>ACTIVITIES</strong></div>
 
-				</div>
+                    <table>
+                     <tr><td style="width:40%">
+                   <img src="assets/images/fish_trophy.jpg" width="100%" style="padding: 0px 5px 0px 0px; float:left"></td>
+                   <td>
 
-			 <div id="second-fish-info">
+                   <div class="titleBC" style="display:inline-block; padding-top: 5px; color:white">
 
-				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>ACTIVITIES</strong></div>
+                  Fishing, Hillel, Cross Country, Tennis, Ping Pong, Math Club, Jet Skiing, Rustic Pathways
 
-				 <table>
-				 	<tr><td style="width:40%">
-				<img src="assets/images/fish_trophy.jpg" width="100%" style="padding: 0px 5px 0px 0px; float:left"></td>
-				<td>
-
-				<div class="titleBC" style="display:inline-block; padding-top: 5px; color:white">
-
-	Fishing, Hillel, Cross Country, Tennis, Ping Pong, Math Club, Jet Skiing, Rustic Pathways
-
-				</div>
-			</td>
-		</tr>
-	</table>
-				</div>
+                   </div>
+                  </td>
+                  </tr>
+                  </table>
+                   </div>
 
 </td>
-</tr></table>
+</tr></table><table style="width: 100%" class="infoFooter">
+  <tr>
+      <td>
+     <p class="titleBC point" onclick="closeModal()" style="float:right; margin-top: 2%; margin-right: 15%; border: 0.2px solid yellow"><b>CLOSE</b></p>
+    </td>
+  </tr>
+</table>
 
 </div>
 
 			</div>
-
-			<div class="modal-footer" style="padding: 3%">
-
-						 <span class="titleBC point" onclick="closeModal('FISHING')" style="margin-left: 60%; border: 0.2px solid yellow"><b>CLOSE</b></span>
-
-				 </div>
-		</div>
-</div>
-</div>
+  <div class="col-3"></div>
+    </div>
+    </script>
 
 
 
@@ -722,27 +727,24 @@ display: table; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
 <!-- START COVER LETTER -->
 
 
+<script type="text/ng-template" id="coverletter.html">
+
+  <div class="row" id="coverLetter" style="padding-top: 3%">
+
+    <div class="col-3"></div>
+
+    <div class="col-6" style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
+     <div style="background-color: rgba(0,191,255, 0.5);" border: 0.7px solid yellow; border-radius: 0px">
 
 
-<div class="modal" id="coverLetter" role="dialog" style="max-height: 80%; max-width: 60%; margin:auto; overflow-y:auto">
-	<div class="modal-dialog">
-
-		<!-- Modal content-->
-		<div class="modal-content" style="background-image: url('assets/images/img_night_skies.jpg'); border: 0.7px solid yellow; border-radius: 0px">
-
-			<div class="modal-header" style="padding: 3%">
-			<table style="width: 100%">
-				<tr>
-					<td style="width: 95%">
-						<span class="titleBC" style="color:yellow"><b>Cover Letter</b></span>
-						</td>
-						<td>
-							<span class="titleBC point" style="color:yellow" onclick="closeModal('COVER LETTER')"><b>X</b></span>
-					</td>
-				</tr>
-			</table>
-			</div>
-			<div class="modal-body" style="padding: 0px; margin:0px; background-color: rgba(0,191,255, 0.5);">
+       <table style="width: 100%;" class="infoHeader">
+             <tr>
+               <td>
+                 <p class="titleBC" style="float:left; color:yellow; padding: 3% 1% 0% 3%"><b>Cover Letter</b></p>
+                   <p class="titleBC point" style="float:right; color:yellow; padding: 3% 3% 0% 1%" onclick="closeModal()"><b>X</b></p>
+               </td>
+             </tr>
+           </table>
 
 <div style="padding:2%; color:white" class="sidebar" id="bolding">
 
@@ -772,60 +774,52 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 
 
 </div>
-
-			</div>
-
-			<div class="modal-footer" style="padding: 3%">
-
-						 <span class="titleBC point" onclick="closeModal('COVER LETTER')" style="margin-left: 60%; border: 0.2px solid yellow"><b>CLOSE</b></span>
-
-				 </div>
+<table style="width: 100%" class="infoFooter">
+  <tr>
+      <td>
+     <p class="titleBC point" onclick="closeModal()" style="float:right; margin-top: 2%; margin-right: 15%; border: 0.2px solid yellow"><b>CLOSE</b></p>
+    </td>
+  </tr>
+</table>
+</div>
 		</div>
 </div>
-</div>
+</script>
 
 
-
-
-
-
-<!- END COVER LETTER -->
+<!-- END COVER LETTER -->
 
 
 <!-- START UDEMY MODAL -->
 
+<script type="text/ng-template" id="udemy.html">
 
-<div class="modal" id="udemyModal" role="dialog" style="max-height: 80%; max-width: 60%; margin:auto; overflow-y:auto">
-	<div class="modal-dialog">
+  <div class="row" id="udemyModal" style="padding-top: 3%">
 
-		<!-- Modal content-->
-		<div class="modal-content" style="background-image: url('assets/images/img_night_skies.jpg'); border: 0.7px solid yellow; border-radius: 0px">
+    <div class="col-3"></div>
 
-			<div class="modal-header" style="padding: 3%">
-			<table style="width: 100%">
-				<tr>
-					<td style="width: 95%">
-						<span class="titleBC" style="color:yellow"><b>Udemy</b></span>
-						</td>
-						<td>
-							<span class="titleBC point" style="color:yellow" onclick="closeModal('UDEMY')"><b>X</b></span>
-					</td>
-				</tr>
-			</table>
-			</div>
-			<div class="modal-body" style="padding: 0px; margin:0px; background-color: rgba(0,191,255, 0.5);">
+    <div class="col-6" style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
+     <div style="background-color: rgba(0,191,255, 0.5);" border: 0.7px solid yellow; border-radius: 0px">
 
-				<table>
-					<tr>
-
-							<td style="width:30%">
-								<img class="first-udemy-button point" src="assets/images/udemy_logo.jpg" style="width: 100%"><br>
-								<img class="second-udemy-button point" src="assets/images/angular_logo.jpg" style="width: 100%;"><br>
-								<img class="third-udemy-button point" src="assets/images/python_logo.jpg" style="width: 100%;"><br>
-								<img class="fourth-udemy-button point" src="assets/images/java_logo.jpg" style="width: 100%"><br>
+       <table style="width: 100%;" class="infoHeader">
+             <tr>
+               <td>
+                 <p class="titleBC" style="float:left; color:yellow; padding: 3% 1% 0% 3%"><b>Udemy</b></p>
+                   <p class="titleBC point" style="float:right; color:yellow; padding: 3% 3% 0% 1%" onclick="closeModal()"><b>X</b></p>
+               </td>
+             </tr>
+           </table>
+           <table>
+                    <tr>
+							<td style="width:30%" ng-init="udemy = 1">
+								<img class="first-udemy-button point" ng-click="udemy = 1" src="assets/images/udemy_logo.jpg" style="width: 100%"><br>
+								<img class="second-udemy-button point" ng-click="udemy = 2" src="assets/images/angular_logo.jpg" style="width: 100%;"><br>
+								<img class="third-udemy-button point" ng-click="udemy = 3" src="assets/images/python_logo.jpg" style="width: 100%;"><br>
+								<img class="fourth-udemy-button point" ng-click="udemy = 4" src="assets/images/java_logo.jpg" style="width: 100%"><br>
 							</td>
+
 							<td>
-								<div id="first-udemy-info">
+								<div id="first-udemy-info" ng-show="udemy == 1">
 
 
 									<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>UDEMY</strong></div>
@@ -849,7 +843,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 
 
 								</div>
-								<div id="second-udemy-info">
+								<div id="second-udemy-info" ng-show="udemy == 2">
 
 
 									<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>ANGULAR.JS SKILLSET</strong></div>
@@ -870,7 +864,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 
 
 								</div>
-								<div id="third-udemy-info">
+								<div id="third-udemy-info" ng-show="udemy == 3">
 
 									<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>PYTHON SKILLSET</strong></div>
 								 <div style="padding-left: 5px; padding-top:2px;">
@@ -907,7 +901,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 
 							 </div>
 								</div>
-								<div id="fourth-udemy-info">
+								<div id="fourth-udemy-info" ng-show="udemy == 4">
 
 
 									<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>JAVA INTRO SKILLSET</strong></div>
@@ -938,70 +932,61 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 								</div>
 							</td>
 					</tr>
-				</table>
-
-			</div>
-			<div class="modal-footer" style="padding: 3%">
-
-						 <span class="titleBC point" onclick="closeModal('UDEMY')" style="margin-left: 60%; border: 0.2px solid yellow"><b>CLOSE</b></span>
-
-				 </div>
-		</div>
-
-		</div>
-		</div>
+				</table><br>
+        <table style="width: 100%" class="infoFooter">
+          <tr>
+              <td>
+             <p class="titleBC point" onclick="closeModal()" style="float:right; margin-top: 2%; margin-right: 15%; border: 0.2px solid yellow"><b>CLOSE</b></p>
+            </td>
+          </tr>
+        </table>
+        </div>
+        		</div>
+        </div>
+        </script>
 
 
 
 
 <!-- END UDEMY MODAL -->
 
-
-
-
-
-
 <!-- START CODECADEMY MODAL -->
 
-<div class="modal" id="codeCademy" role="dialog" style="max-height: 80%; max-width: 60%; margin:auto; overflow-y:auto">
-	<div class="modal-dialog">
+<script type="text/ng-template" id="codecademy.html">
 
-		<!-- Modal content-->
-		<div class="modal-content" style="background-image: url('assets/images/img_night_skies.jpg'); border: 0.7px solid yellow; border-radius: 0px">
+  <div class="row" id="codeCademy" style="padding-top: 3%">
 
-			<div class="modal-header" style="padding: 3%">
-			<table style="width: 100%">
-				<tr>
-					<td style="width: 95%">
-						<span class="titleBC" style="color:yellow"><b>CodeCademy</b></span>
-						</td>
-						<td>
-							<span class="titleBC point" style="color:yellow" onclick="closeModal('CODECADEMY')"><b>X</b></span>
-					</td>
-				</tr>
-			</table>
-			</div>
+    <div class="col-3"></div>
+
+    <div class="col-6" style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
+     <div style="background-color: rgba(0,191,255, 0.5);" border: 0.7px solid yellow; border-radius: 0px">
 
 
+       <table style="width: 100%;" class="infoHeader">
+             <tr>
+               <td>
+                 <p class="titleBC" style="float:left; color:yellow; padding: 3% 1% 0% 3%"><b>CodeCademy</b></p>
+                   <p class="titleBC point" style="float:right; color:yellow; padding: 3% 3% 0% 1%" onclick="closeModal()"><b>X</b></p>
+               </td>
+             </tr>
+           </table>
+           <table>
+                    <tr>
+                      <td style="width: 30%" ng-init="coder = 1">
 
-	 <div class="modal-body" style="padding: 0px; margin:0px; background-color: rgba(0,191,255, 0.5);">
+                      <span class='first-code-cademy sidebar' ng-click="coder = 1" style="width: 100%">About CodeCademy</span>
+             					 <span class='second-code-cademy sidebar' ng-click="coder = 2" style="width: 100%">Learn SQL</span>
+             					 <span class='third-code-cademy sidebar' ng-click="coder = 3" style="width: 100%">Learn jQuery</span>
+             					 <span class='fourth-code-cademy sidebar'  ng-click="coder = 4" style="width: 100%">Learn Responsive Design</span>
+             					 <span class='fifth-code-cademy sidebar'  ng-click="coder = 5" style="width: 100%">Learn JavaScript</span>
+             					 <span class='sixth-code-cademy sidebar'  ng-click="coder = 6" style="width: 100%">Learn HTML</span>
+             					 <span class='seventh-code-cademy sidebar' ng-click="coder = 7" style="width: 100%">Learn C++</span>
+             					 <span class='eighth-code-cademy sidebar' ng-click="coder = 8" style="width: 100%">Learn Command Line</span>
+             					 <span class='ninth-code-cademy sidebar' ng-click="coder = 9" style="width: 100%">Learn Java </span>
+                     </td>
+                  <td style="width: 70%">
 
-		 <table>
-			 <tr>
-				 <td>
-					 <span class='first-code-cademy sidebar'>About CodeCademy</span>
-					 <span class='second-code-cademy sidebar'>Learn SQL</span>
-					 <span class='third-code-cademy sidebar'>Learn jQuery</span>
-					 <span class='fourth-code-cademy sidebar'>Learn Responsive Design</span>
-					 <span class='fifth-code-cademy sidebar'>Learn JavaScript</span>
-					 <span class='sixth-code-cademy sidebar'>Learn HTML</span>
-					 <span class='seventh-code-cademy sidebar'>Learn C++</span>
-					 <span class='eighth-code-cademy sidebar'>Learn Command Line</span>
-					 <span class='ninth-code-cademy sidebar'>Learn Java </span>
-				 </td>
-		 <td style="padding: 5px">
-
-			 <div id="first-codecademy-info">
+			 <div id="first-codecademy-info" ng-show="coder == 1">
 
 				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>ABOUT CODECADEMY</strong></div>
 
@@ -1050,7 +1035,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 
  				</div>
 	 			</div>
-			 <div id="second-codecademy-info">
+			 <div id="second-codecademy-info" ng-show="coder == 2">
 
 				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY LEARN SQL COURSE SKILLSET</strong></div>
 	 			<div style="padding-left: 5px; padding-top:2px;">
@@ -1068,7 +1053,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 	 			</div>
 
 			 </div>
-			 <div id="third-codecademy-info">
+			 <div id="third-codecademy-info" ng-show="coder == 3">
 
 				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY LEARN JQUERY COURSE SKILLSET</strong></div>
 				<div style="padding-left: 5px; padding-top:2px;">
@@ -1088,7 +1073,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 				</div>
 			</div>
 			 </div>
-			 <div id="fourth-codecademy-info">
+			 <div id="fourth-codecademy-info" ng-show="coder == 4">
 
 				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY LEARN RESPONSIVE DESIGN COURSE SKILLSET</strong></div>
 			 <div style="padding-left: 5px; padding-top:2px;">
@@ -1108,7 +1093,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 			 </div>
 
 			 </div>
-			 <div id="fifth-codecademy-info">
+			 <div id="fifth-codecademy-info" ng-show="coder == 5">
 
 
 				 			 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY LEARN JAVASCRIPT COURSE SKILLSET</strong></div>
@@ -1147,7 +1132,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 
 
 			 </div>
-			 <div id="sixth-codecademy-info">
+			 <div id="sixth-codecademy-info" ng-show="coder == 6">
 
 				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY LEARN HTML COURSE SKILLSET</strong></div>
 			 <div style="padding-left: 5px; padding-top:2px;">
@@ -1171,7 +1156,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 			 </div>
 
 			 </div>
-			 <div id="seventh-codecademy-info">
+			 <div id="seventh-codecademy-info" ng-show="coder == 7">
 
 				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY LEARN C++ COURSE SKILLSET</strong></div>
 			 <div style="padding-left: 5px; padding-top:2px;">
@@ -1190,7 +1175,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 
 
 			 </div>
-			 <div id="eighth-codecademy-info">
+			 <div id="eighth-codecademy-info" ng-show="coder == 8">
 
 				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY LEARN COMMAND LINE COURSE SKILLSET</strong></div>
 			 <div style="padding-left: 5px; padding-top:2px;">
@@ -1203,7 +1188,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 			 </div>
 		 </div>
 			 </div>
-			 <div id="ninth-codecademy-info">
+			 <div id="ninth-codecademy-info" ng-show="coder == 9">
 
 
 				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY LEARN JAVA COURSE SKILLSET</strong></div>
@@ -1236,61 +1221,59 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 		 </td>
 	 </tr>
  </table>
+ <br>
+ <table style="width: 100%" class="infoFooter">
+   <tr>
+       <td>
+      <p class="titleBC point" onclick="closeModal()" style="float:right; margin-top: 2%; margin-right: 15%; border: 0.2px solid yellow"><b>CLOSE</b></p>
+     </td>
+   </tr>
+ </table>
 
-			</div>
-			<div class="modal-footer" style="padding: 3%">
-
-						 <span class="titleBC point" onclick="closeModal('CODECADEMY')" style="margin-left: 60%; border: 0.2px solid yellow"><b>CLOSE</b></span>
-
-				 </div>
 		</div>
 
 	</div>
 </div>
-
+</script>
 
 <!-- END CODECADEMY MODAL -->
 
 <!-- START CODING BOOTCAMP MODAL -->
 
-<div class="modal" id="codingBootCamp" role="dialog" style="max-height: 80%; max-width: 60%; margin:auto; overflow-y:auto">
+<script type="text/ng-template" id="bootcamp.html">
 
-  <!-- <button style="background-color:red; align:left" label="XXX"></button> -->
+  <div class="row" id="codingBootCamp" style="padding-top: 3%">
 
-  <div class="modal-dialog">
+    <div class="col-3"></div>
 
-    <!-- Modal content-->
-    <div class="modal-content" style="background-image: url('assets/images/img_night_skies.jpg'); border: 0.7px solid yellow; border-radius: 0px">
-      <div class="modal-header" style="padding: 3%">
-      <table style="width: 100%">
-        <tr>
-          <td style="width: 95%">
-            <span class="titleBC"><b>Coding BootCamp</b></span>
-            </td>
-            <td>
-              <span class="titleBC point" onclick="closeModal('CODING BOOT CAMP')"><b>X</b></span>
-          </td>
-        </tr>
-      </table>
-      </div>
-      <div class="modal-body" style="padding: 0px; margin:0px; background-color: rgba(0,191,255, 0.5);">
+    <div class="col-6" style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
+     <div style="background-color: rgba(0,191,255, 0.5);" border: 0.7px solid yellow; border-radius: 0px">
 
-        <table>
-          <tr>
-            <td>
-              <span class='first-boot-camp sidebar'>Hangman</span>
-              <span class='second-boot-camp sidebar'>Eventability</span>
-              <span class='third-boot-camp sidebar'>Movie Trivia</span>
-              <span class='fourth-boot-camp sidebar'>GifTastic</span>
-              <span class='fifth-boot-camp sidebar'>Train</span>
-              <span class='sixth-boot-camp sidebar'>HP - RPG</span>
-              <span class='seventh-boot-camp sidebar'>Barcode</span>
-              <span class='eighth-boot-camp sidebar'>Crystals</span>
-              <span class='ninth-boot-camp sidebar'>Bamazon</span>
-              <span class='tenth-boot-camp sidebar'>CrystalEHR</span>
-            </td>
-            <td>
-              <div id="first-boot-info">
+
+       <table style="width: 100%;" class="infoHeader">
+             <tr>
+               <td>
+                 <p class="titleBC" style="float:left; color:yellow; padding: 3% 1% 0% 3%"><b>Coding BootCamp</b></p>
+                   <p class="titleBC point" style="float:right; color:yellow; padding: 3% 3% 0% 1%" onclick="closeModal()"><b>X</b></p>
+               </td>
+             </tr>
+           </table>
+           <table>
+                    <tr>
+                      <td style="width: 30%" ng-init="boot = 1">
+
+                        <span class='first-boot-camp sidebar' ng-click="boot = 1" style="width: 100%">Hangman</span>
+                        <span class='second-boot-camp sidebar' ng-click="boot = 2" style="width: 100%">Eventability</span>
+                        <span class='third-boot-camp sidebar' ng-click="boot = 3" style="width: 100%">Movie Trivia</span>
+                        <span class='fourth-boot-camp sidebar' ng-click="boot = 4" style="width: 100%">GifTastic</span>
+                        <span class='fifth-boot-camp sidebar' ng-click="boot = 5" style="width: 100%">Train</span>
+                        <span class='sixth-boot-camp sidebar' ng-click="boot = 6" style="width: 100%">HP - RPG</span>
+                        <span class='seventh-boot-camp sidebar' ng-click="boot = 7" style="width: 100%">Barcode</span>
+                        <span class='eighth-boot-camp sidebar' ng-click="boot = 8" style="width: 100%">Crystals</span>
+                        <span class='ninth-boot-camp sidebar' ng-click="boot = 9" style="width: 100%">Bamazon</span>
+                        <span class='tenth-boot-camp sidebar' ng-click="boot = 10" style="width: 100%">CrystalEHR</span> </td>
+                  <td style="width: 70%">
+              <div id="first-boot-info" ng-show="boot == 1">
                 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Hangman the Guessing Game</strong></div>
                 <img src="assets/images/hangman.png" width="100%" style="padding: 2px 5px 0px 5px">
                 <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
@@ -1318,7 +1301,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
                 </a> -->
                       </div>
               </div>
-              <div id="second-boot-info">
+              <div id="second-boot-info" ng-show="boot == 2">
 								<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>eventAbility - Group Project</strong></div>
 								  <img src="assets/images/eventability.png" width="100%" style="padding: 2px 5px 0px 5px">
                 <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
@@ -1347,7 +1330,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
                   </div>
 								</div>
               </div>
-              <div id="third-boot-info">
+              <div id="third-boot-info" ng-show="boot == 3">
 								<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Movie Trivia - Multiple Choice</strong></div>
 								<img src="assets/images/movietrivia.png" width="100%" style="padding: 2px 5px 0px 5px">
                  <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
@@ -1362,7 +1345,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
               </div>
 							</div>
 							</div>
-              <div id="fourth-boot-info">
+              <div id="fourth-boot-info" ng-show="boot == 4">
 								   <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>GifTastic - Sports</strong></div>
 								 <img src="assets/images/sports.png" width="100%" style="padding: 2px 5px 0px 5px">
 
@@ -1382,7 +1365,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 								 </div>
 								 </div>
               </div>
-              <div id="fifth-boot-info">
+              <div id="fifth-boot-info" ng-show="boot == 5">
                <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Train Scheduler</strong></div>
                      <img src="assets/images/train.png" width="100%" style="padding: 2px 5px 0px 5px">
                  <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
@@ -1397,7 +1380,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
                 </div>
 								</div>
               </div>
-              <div id="sixth-boot-info">
+              <div id="sixth-boot-info" ng-show="boot == 6">
 								<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Harry Potter - MiniRPG</strong></div>
 								<img src="assets/images/hp-rpg.png" width="100%" style="padding: 2px 5px 0px 5px">
                 <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
@@ -1412,7 +1395,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
                   </div>
 								</div>
               </div>
-              <div id="seventh-boot-info">
+              <div id="seventh-boot-info" ng-show="boot == 7">
 							<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Barcode - Group Project</strong></div>
 								<img src="assets/images/project2.png" width="100%" style="padding: 2px 5px 0px 5px">
               <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
@@ -1428,7 +1411,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
                   <b>Step 4</b> - Use the Barcode Scanner for Quality Control and Shipping
                 </div>
               </div>
-              <div id="eighth-boot-info">
+              <div id="eighth-boot-info" ng-show="boot == 8">
 								<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Crystal Collector</strong></div>
                 <img src="assets/images/crystal-collect.png" width="100%" style="padding: 2px 5px 0px 5px">
                  <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
@@ -1445,7 +1428,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 								</div>
 								</div>
               </div>
-              <div id="ninth-boot-info">
+              <div id="ninth-boot-info" ng-show="boot == 9">
 							<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Bamazon - MySQL</strong></div>
 								 <img src="assets/images/bamazon.png" width="100%" style="padding: 2px 5px 0px 5px">
 <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
@@ -1469,7 +1452,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 								 </div>
 								 </div>
               </div>
-              <div id="tenth-boot-info">
+              <div id="tenth-boot-info" ng-show="boot == 10">
 								<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>CrystalEHR - Group Project</strong></div>
                 <img src="assets/images/doctor.jpg" width="100%" style="padding: 2px 5px 0px 5px">
             <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
@@ -1495,56 +1478,63 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
             </td>
           </tr>
         </table>
-      </div>
-      <div class="modal-footer" style="padding: 3%">
-
-          <span class="titleBC point" onclick="closeModal('CODING BOOT CAMP')" style="margin-left: 60%; border: 0.2px solid yellow"><b>CLOSE</b></span>
-
-      </div>
-    </div>
-
-  </div>
-
-</div>
-
-<div class="modal" id="khanAcademy" role="dialog" style="max-height: 80%; max-width: 60%; margin:auto; overflow-y:auto">
-
-  <!-- <button style="background-color:red; align:left" label="XXX"></button> -->
-
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content" style="background-image: url('assets/images/img_night_skies.jpg'); border: 0.7px solid yellow; border-radius: 0px">
-      <div class="modal-header" style="padding: 3%">
-      <table style="width: 100%">
-        <tr>
-          <td style="width: 95%">
-            <span class="titleBC" style="color:yellow"><b>Khan Academy</b></span>
-            </td>
-            <td>
-              <span class="titleBC point" style="color:yellow" onclick="closeModal('4')"><b>X</b></span>
-          </td>
-        </tr>
-      </table>
-      </div>
-      <div class="modal-body" style="padding: 0px; margin:0px; background-color: rgba(0,191,255, 0.5);">
-
-        <table>
+        <br>
+        <table style="width: 100%" class="infoFooter">
           <tr>
-            <td>
-              <span class='first-khan-academy sidebar'>Cabin</span>
-              <span class='second-khan-academy sidebar'>Fish Swim</span>
-              <span class='third-khan-academy sidebar'>Dinner</span>
-              <span class='fourth-khan-academy sidebar'>Rain</span>
-              <span class='fifth-khan-academy sidebar'>BookShelf</span>
-              <span class='sixth-khan-academy sidebar'>Authors</span>
-              <span class='seventh-khan-academy sidebar'>Memory Tiles</span>
-              <span class='eighth-khan-academy sidebar'>Paint</span>
-              <span class='ninth-khan-academy sidebar'>Mountains</span>
-              <span class='tenth-khan-academy sidebar'>Spaceship</span>
+              <td>
+             <p class="titleBC point" onclick="closeModal()" style="float:right; margin-top: 2%; margin-right: 15%; border: 0.2px solid yellow"><b>CLOSE</b></p>
             </td>
-            <td>
-              <div id="first-khan-info">
+          </tr>
+        </table>
+
+       		</div>
+
+       	</div>
+       </div>
+       </script>
+
+<!-- END CODING BOOTCAMP -->
+
+<div ng-view></div>
+
+<!-- START KHAN ACADEMY -->
+
+
+<script type="text/ng-template" id="khanacademy.html">
+
+  <div class="row" id="khanAcademy" style="padding-top: 3%">
+
+    <div class="col-3"></div>
+
+    <div class="col-6" style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
+     <div style="background-color: rgba(0,191,255, 0.5);" border: 0.7px solid yellow; border-radius: 0px">
+
+
+       <table style="width: 100%;" class="infoHeader">
+             <tr>
+               <td>
+                 <p class="titleBC" style="float:left; color:yellow; padding: 3% 1% 0% 3%"><b>Khan Academy</b></p>
+                   <p class="titleBC point" style="float:right; color:yellow; padding: 3% 3% 0% 1%" onclick="closeModal()"><b>X</b></p>
+               </td>
+             </tr>
+           </table>
+           <table>
+                    <tr>
+                      <td style="width: 30%" ng-init="khan = 1">
+
+                        <span class='first-khan-academy sidebar' ng-click="khan = 1" style="width: 100%">Cabin</span>
+                        <span class='second-khan-academy sidebar' ng-click="khan = 2" style="width: 100%">Fish Swim</span>
+                        <span class='third-khan-academy sidebar' ng-click="khan = 3" style="width: 100%">Dinner</span>
+                        <span class='fourth-khan-academy sidebar' ng-click="khan = 4" style="width: 100%">Rain</span>
+                        <span class='fifth-khan-academy sidebar' ng-click="khan = 5" style="width: 100%">BookShelf</span>
+                        <span class='sixth-khan-academy sidebar' ng-click="khan = 6" style="width: 100%">Authors</span>
+                        <span class='seventh-khan-academy sidebar' ng-click="khan = 7" style="width: 100%">Memory Tiles</span>
+                        <span class='eighth-khan-academy sidebar' ng-click="khan = 8" style="width: 100%">Paint</span>
+                        <span class='ninth-khan-academy sidebar' ng-click="khan = 9" style="width: 100%">Mountains</span>
+                        <span class='tenth-khan-academy sidebar' ng-click="khan = 10" style="width: 100%">Spaceship</span>
+</td>
+  <td style="width: 70%">
+              <div id="first-khan-info" ng-show="khan == 1">
                 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Cabin - Made With For Loops</strong></div>
                 <img src="assets/images/cabin.png" width="100%" style="padding: 2px 5px 0px 5px">
                 <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
@@ -1562,7 +1552,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
                   <b>GRASS:</b> rectangles drawn based on a for loop
 								</div>
               </div>
-              <div id="second-khan-info">
+              <div id="second-khan-info" ng-show="khan == 2">
 								<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Moving Fish - Drawing Animation</strong></div>
 								  <img src="assets/images/moving-fish.png" width="100%" style="padding: 2px 5px 0px 5px">
                 <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
@@ -1582,7 +1572,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 
 								</div>
               </div>
-              <div id="third-khan-info">
+              <div id="third-khan-info" ng-show="khan == 3">
 								<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Dinner - Drawing with ProcessingJS</strong></div>
 								<img src="assets/images/plate.png" width="100%" style="padding: 2px 5px 0px 5px">
                  <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
@@ -1599,7 +1589,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 									<br><br>
 							</div>
 							</div>
-              <div id="fourth-khan-info">
+              <div id="fourth-khan-info" ng-show="khan == 4">
 								   <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Rain - Made With Arrays</strong></div>
 								 <img src="assets/images/rain.png" width="100%" style="padding: 2px 5px 0px 5px">
 
@@ -1616,7 +1606,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
                 <br><br>
 								 </div>
               </div>
-              <div id="fifth-khan-info">
+              <div id="fifth-khan-info" ng-show="khan == 5">
                <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>BookShelf - Made With Arrays</strong></div>
                      <img src="assets/images/book-shelf.png" width="100%" style="padding: 2px 5px 0px 5px">
                  <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
@@ -1635,7 +1625,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 									 <br><br>
 								</div>
               </div>
-              <div id="sixth-khan-info">
+              <div id="sixth-khan-info" ng-show="khan == 6">
 								<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Authors - Made With SQL</strong></div>
 								<img src="assets/images/authors.png" width="100%" style="padding: 2px 5px 0px 5px">
                 <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
@@ -1658,7 +1648,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 
 								</div>
               </div>
-              <div id="seventh-khan-info">
+              <div id="seventh-khan-info" ng-show="khan == 7">
 							<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Memory Tiles Game</strong></div>
 								<img src="assets/images/tiles.png" width="100%" style="padding: 2px 5px 0px 5px">
               <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
@@ -1681,7 +1671,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 									<br><br>
 								</div>
               </div>
-              <div id="eighth-khan-info">
+              <div id="eighth-khan-info" ng-show="khan == 8">
 								<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Paint Splatter - Normal Distribution</strong></div>
                 <img src="assets/images/paint-splat.png" width="100%" style="padding: 2px 5px 0px 5px">
                  <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
@@ -1701,7 +1691,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 								<br>
 								</div>
               </div>
-              <div id="ninth-khan-info">
+              <div id="ninth-khan-info" ng-show="khan == 9">
 							<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Mountain Range - Noise &amp; Random</strong></div>
 								 <img src="assets/images/mountain.png" width="100%" style="padding: 2px 5px 0px 5px">
 <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
@@ -1721,7 +1711,7 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 	<b>Step 7</b> - <b>Call</b> the functions<br><br>
 								 </div>
               </div>
-              <div id="tenth-khan-info">
+              <div id="tenth-khan-info" ng-show="khan == 10">
 								<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Floating Spaceship - Physics</strong></div>
                 <img src="assets/images/spaceship.png" width="100%" style="padding: 2px 5px 0px 5px">
             <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
@@ -1746,18 +1736,20 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
             </td>
           </tr>
         </table>
-      </div>
-      <div class="modal-footer" style="padding: 3%">
+        <br>
+        <table style="width: 100%" class="infoFooter">
+          <tr>
+              <td>
+             <p class="titleBC point" onclick="closeModal()" style="float:right; margin-top: 2%; margin-right: 15%; border: 0.2px solid yellow"><b>CLOSE</b></p>
+            </td>
+          </tr>
+        </table>
 
-          <span class="titleBC point" onclick="closeModal('4')" style="margin-left: 60%; border: 0.2px solid yellow; color:yellow"><b>CLOSE</b></span>
+          </div>
 
-      </div>
-    </div>
-
-  </div>
-
-</div>
-
+        </div>
+       </div>
+       </script>
 
 
 
@@ -1767,7 +1759,39 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 	crossorigin="anonymous">
 </script>
-<script src="assets/js/main.js"></script>
+<script>
+
+function closeModal() {
+
+  window.location.href='#/';
+  $('img[usemap]').rwdImageMaps();
+}
+
+$(document).ready(function(e) {
+
+//PREPARATION
+
+	  $imaging = ['image1', 'image2', 'image3', 'image4', 'image5','image6'];
+
+		$storage = $('#backDrop');
+
+		function chance(comp) {
+			return comp[Math.floor(Math.random()*comp.length)];
+		}
+
+		$chosenImage = chance($imaging);
+
+		console.log($chosenImage);
+
+		$storage.addClass($chosenImage);
+
+    $('img[usemap]').rwdImageMaps();
+});
+
+</script>
+
+
+
 <script src="assets/js/responsive_coord.js"></script>
 
 </body>
