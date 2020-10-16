@@ -234,6 +234,11 @@
 						margin-bottom: 2%;
 					}
 
+					.menuWidth {
+
+						width: 90%;
+					}
+
 
 	.infoHeader, .infoFooter, h4, .close {
 		 background: url(../images/img_lights.jpg);
@@ -291,10 +296,6 @@
 		font-size: 2px;
 	}
 
-	.menuWidth {
-
-		width: 90%;
-	}
 }
 
 		@media screen and (min-width: 250px) and (max-width: 400px) {
@@ -341,11 +342,6 @@
 
 
 											}
-											.menuWidth {
-
-												width: 90%;
-											}
-
 
 											.margins {
 
@@ -405,10 +401,6 @@
 		margin-left: 10%;
 		margin-right: 10%;
 	}
-	.menuWidth {
-
-		width: 80%;
-	}
 }
 
 @media screen and (min-width: 550px) and (max-width: 700px) {
@@ -458,10 +450,6 @@
 
 		margin-left: 25%;
 		margin-right: 25%;
-	}
-	.menuWidth {
-
-		width: 65%;
 	}
 
 }
@@ -516,10 +504,6 @@
 			 			 margin-left: 25%;
 			 			 margin-right: 25%;
 			 		 }
-					 .menuWidth {
-
-						 width: 50%;
-					 }
 
 					}
 
@@ -573,10 +557,7 @@
 																margin-right: 25%;
 															}
 
-															.menuWidth {
 
-																width: 50%;
-															}
 														}
 
 
@@ -629,10 +610,6 @@
 					 			 margin-right: 25%;
 					 		 }
 
-							 .menuWidth {
-
-								 width: 50%;
-							 }
 
 					}
 
@@ -670,10 +647,7 @@
 					font-size: 14px;
 				}
 
-				.menuWidth {
 
-					width: 50%;
-				}
 			}
 
 			@media screen and (min-width: 1350px) and (max-width: 1650px) {
@@ -709,10 +683,7 @@
 					font-size: 14px;
 				}
 
-				.menuWidth {
 
-					width: 50%;
-				}
 			}
 
 			@media screen and (min-width: 1650px) and (max-width: 1750px) {
@@ -748,10 +719,7 @@
 					font-size: 14px;
 				}
 
-				.menuWidth {
 
-					width: 50%;
-				}
 			}
 
 
@@ -781,10 +749,6 @@
 		{
 			color:yellow;
 			font-size: 20px;
-		}
-		.menuWidth {
-
-			width: 50%;
 		}
 
 		}
@@ -822,10 +786,7 @@
 					color:yellow;
 					font-size: 14px;
 				}
-				.menuWidth {
 
-					width: 50%;
-				}
 
 			}
 
