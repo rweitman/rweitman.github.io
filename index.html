@@ -1,6 +1,6 @@
 <html>
 <head>
-<!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@quasar/extras/material-icons/material-icons.css"> -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@quasar/extras/material-icons/material-icons.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/quasar/dist/quasar.min.css">
 <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -14,12 +14,13 @@
     console.log('HASH CHANGED! ' + window.location.hash);
 
   });
+
 </script>
 
 </head>
 
 <body>
-	<div class="ground" id="backDrop" ng-app="myApp" style="display:table; overflow-x:hidden; position: absolute; top: 0; left: 0; height: 100%; width: 100%;">
+	<div class="ground" id="backDrop" ng-app="myApp" style="overflow-x:hidden; position: absolute; top: 0; left: 0; height: 100%;width: 100%;">
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"></script>
@@ -29,7 +30,25 @@
 
 	<script type="text/ng-template" id="main.html">
 
-	<div class="row hideTable" id="categoryImage" style="padding-top: 0.5%">
+
+    <div ng-show="type == 'phone'" class="menuWidth" style="color:red; margin:auto">
+
+<img src="assets/images/mobile_picture.jpg" onclick="location.href='#/coverletter'" class="point" alt="Robert Weitman" style="width: 100%"><p></p>
+<img src="assets/images/mobile_cbc.jpg" onclick="location.href='#/bootcamp'" class="point" alt="Coding BootCamp" style="width: 100%"><br>
+<img src="assets/images/mobile_cox.jpg" onclick="location.href='#/business'" class="point" alt="SMU Cox School of Business" style="width: 100%"><br>
+<img src="assets/images/mobile_fish.jpg" onclick="location.href='#/fishing'" class="point" alt="Activities & Awards" style="width: 100%"><br>
+<img src="assets/images/mobile_cc.jpg" onclick="location.href='#/codecademy'" class="point" alt="CodeCademy" style="width: 100%"><br>
+<img src="assets/images/mobile_band.jpg" onclick="location.href='#/bandmans'" class="point" alt="Bandmans Company" style="width: 100%"><br>
+<img src="assets/images/mobile_advantage.jpg" onclick="location.href='#/advantage'" class="point" alt="Advantage Healthcare Systems" style="width: 100%"><br>
+<img src="assets/images/mobile_udemy.jpg" onclick="location.href='#/udemy'" class="point" alt="Udemy" style="width: 100%"><br>
+<img src="assets/images/mobile_gaming.jpg" onclick="location.href='#/gaming'" class="point" alt="Gaming" style="width: 100%"><br>
+<img src="assets/images/mobile_fcc.jpg" onclick="location.href='#/freecode'" class="point" alt="Free Code Camp" style="width: 100%"><br>
+<img src="assets/images/mobile_khan.jpg" onclick="location.href='#/khanacademy'" class="point" alt="Khan Academy" style="width: 100%"><br>
+    </div>
+
+
+
+	<div class="row hideTable" ng-show="type=='computer'" id="categoryImage" style="padding-top: 0.5%">
 		<div class="col-2"></div>
 
 		<div class="col-2" style="background-color:rgba(51,51,255,0.5);">
@@ -40,7 +59,7 @@
 			</div>
 			<div style="height: 10%"></div>
 			<div style="height: 50%">
-				<img src="assets/images/RW_photo.jpg" class="img-circle point" href="#/coverletter" alt="Me" id="photo"
+				<img src="assets/images/RW_photo.jpg" class="img-circle point" onclick="location.href='#/coverletter'" alt="Me" id="photo"
 				 style="margin-left: 10%; width: 80%;">
 			</div>
 			<div style="height: 10%"></div>
@@ -80,48 +99,54 @@
 </div>
 	<!-- START AHCS MODAL -->
 
+
+
+
 <script type="text/ng-template" id="advantage.html">
 
 
       <!-- Inner Content-->
 
-      	<div class="row" id="advantageRow" style="padding-top: 0.5%">
+      <div id="advantageRow" ng-class="{'menuWidth': !deviceWide, 'fifty': deviceWide}" style="color:red; margin:auto">
 
-      <div class="col-3"></div>
-
-      <div class="col-6" style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
-      <div style="background-color: rgba(0,191,255, 0.5);" border: 0.7px solid yellow; border-radius: 0px">
+      <div style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
+   <div style="background-color: rgba(0,191,255, 0.5);" border: 0.7px solid yellow; border-radius: 0px">
 
 
-        <table style="width: 100%;" class="infoHeader">
-          <tr>
-            <td>
-              <p class="titleBC" style="float:left; color:yellow; padding: 3% 1% 0% 3%"><b>Advantage HCS</b></p>
-                <p class="titleBC point" style="float:right; color:yellow; padding: 3% 3% 0% 1%" onclick="closeModal()"><b>X</b></p>
-            </td>
-          </tr>
-        </table>
-        <table>
-          <tr>
-            <td style="width:30%" ng-init="ahcs = 1">
+     <table style="width: 100%;" class="infoHeader">
+        <tr>
+          <td>
+            <div style="float:left; padding: 3% 1% 0% 3%;" ng-class="{'headerFooterFont': !deviceWide, 'compTitleFont': deviceWide}"><b>Advantage HCS</b></div>
+            <div ng-class="{'headerFooterFont point': !deviceWide, 'compTitleFont point': deviceWide}" style="float:right; padding: 3% 3% 1% 3%;" onclick="closeModal()"><b>X</b></div>
+          </td>
+        </tr>
+      </table>
+        <table style="width: 100%">
+          <tr ng-init="ahcs = 1">
+            <td style="width:30%" ng-show="deviceWide">
               <img class="first-ahcs-button point" ng-click="ahcs = 1" src="assets/images/ahcs_logo.jpg" style="width: 100%"><br>
               <img class="second-ahcs-button point" ng-click="ahcs = 2" src="assets/images/phalcon-volt.png" style="width: 100%;"><br>
               <img class="third-ahcs-button point" ng-click="ahcs = 3" src="assets/images/vuejs_logo.png" style="width: 100%;"><br>
               <img class="fourth-ahcs-button point" ng-click="ahcs = 4" src="assets/images/quasar_logo.png" style="width: 100%"><br>
             </td>
-            <td style="width:70%">
+            <td>
 <!-- BEGIN AHCS INSIDE -->
+   <div style="padding: 2% 2% 1% 2%">
+<p ng-show="!deviceWide">
+<img class="point" ng-click="ahcs = 1" src="assets/images/ahcs_logo.jpg" style="width: 25%;" /><img class="point" ng-click="ahcs = 2" src="assets/images/phalcon-volt.png" style="width: 25%;"/><img class="point" ng-click="ahcs = 3" src="assets/images/vuejs_logo.png" style="width: 25%;" /><img class="point" ng-click="ahcs = 4" src="assets/images/quasar_logo.png" style="width: 25%;" />
+</p>
+
               <div id="first-ahcs-info" ng-show="ahcs == 1">
 
-             <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>ADVANTAGE HEALTHCARE SYSTEMS</strong></div>
-             <div style="padding-left: 5px; padding-top:2px;">
-             <img src="assets/images/ahcs_spine.jpg" width="40%" style="padding: 0px 5px 0px 0px; float:left">
+             <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">ADVANTAGE HEALTHCARE SYSTEMS</span></strong><br>
+             <img src="assets/images/ahcs_spine.jpg" style="min-width: 30%; max-width: 50%" ng-class="{'img-responsive': !deviceWide, 'floatLeft img-responsive': deviceWide}">
 
-             <a href="https://www.advantagehcs.com/" style="color:yellow" class="titleBC" target="_blank">https://www.advantagehcs.com/</a>
-             <br>
-             <div class="sidebar" style="color:white">	&quot;Advantage Healthcare Systems is committed to providing ethical, high-quality, and cost-effective rehabilitation to individuals with chronic pain conditions.&quot;
+            <a href="https://www.advantagehcs.com/" ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" target="_blank"><u>www.advantagehcs.com</u></a>
+              <p style="margin:0px 0px 2% 0px;"></p>
+             <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="color:white">	&quot;<b>Advantage Healthcare Systems</b> is committed to providing ethical, high-quality, and cost-effective rehabilitation to individuals with chronic pain conditions.&quot;
              </div>
-             <div class="sidebar" style="display:inline-block; padding-top: 5px; color:white">
+               <p style="margin:0px 0px 2% 0px;"></p>
+             <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
              ●	Drafted pieces of computer code to be used on the company website<br>
              ●	Research solutions by looking at blogs and online documentation<br>
              ●	Translated old code into new coding languages: <b>Quasar, Vue.js and Phalcon Volt</b><br>
@@ -133,144 +158,153 @@
              </div>
 
              </div>
-             </div>
              <div id="second-ahcs-info"  ng-show="ahcs == 2">
-               <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY PHALCON VOLT SKILLSET</strong></div>
 
-               <div style="padding-left: 5px; padding-top:2px;">
-               <img src="assets/images/phalcon-volt-logo.png" width="40%" style="padding: 0px 5px 0px 0px; float:right">
+                 <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">MY PHALCON VOLT SKILLSET</span></strong><br>
 
-               <a href="https://docs.phalcon.io/4.0/en/volt" style="color:yellow" class="titleBC" target="_blank">https://docs.phalcon.io/4.0/en/volt</a>
-               <br>
-               <div class="sidebar" style="color:white">	At Advantage Healthcare Systems, I mainly used Phalcon Volt at the top of pages to store information, rather than defining everything in JavaScript
+                   <img src="assets/images/phalcon-volt-logo.png" style="min-width: 30%; max-width: 50%" ng-class="{'img-responsive': !deviceWide, 'floatRight img-responsive': deviceWide}">
+
+              <a href="https://docs.phalcon.io/4.0/en/volt" ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" target="_blank"><u>https://docs.phalcon.io/4.0/en/volt</u></a>
+
+               <p style="margin:0px 0px 2% 0px;"></p>
+
+               <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="color:white">At Advantage Healthcare Systems, I mainly used Phalcon Volt at the top of pages to store information, rather than defining everything in JavaScript
+               </div>
+               <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:inline-block; padding-top: 5px; color:white">
+   <p style="margin:0px 0px 2% 0px;"></p>
+                          <b>Main Topics</b><br>
+                          ●	endfor/for/elsefor<br>
+                          ●	continue/break<br>
+                          ●	switch/cases<br>
+                          ●	set (variables)<br>
+                          ●	type()<br>
+                          ●	odd/even/numeric/iterable<br>
+                          ●	echo<br>
+                          ●	comments<br>
+                           </div>
+
                </div>
 
-               <div class="sidebar" style="display:inline-block; padding-top: 5px; color:white"><b>Main Topics</b><br>
-      ●	endfor/for/elsefor<br>
-      ●	continue/break<br>
-      ●	switch/cases<br>
-      ●	set (variables)<br>
-      ●	type()<br>
-      ●	odd/even/numeric/iterable<br>
-      ●	echo<br>
-      ●	comments<br>
-
-               </div>
-
-               </div>
-
-
-
-
-             </div>
              <div id="third-ahcs-info" ng-show="ahcs == 3">
-               <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY VUE.JS SKILLSET</strong></div>
 
-               <div style="padding-left: 5px; padding-top:2px;">
-               <img src="assets/images/vuejs-icon.png" width="40%" style="padding: 0px 5px 0px 0px; float:right">
+               <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">MY VUE.JS SKILLSET</span></strong><br>
 
-               <a href="https://vuejs.org/" style="color:yellow" class="titleBC" target="_blank">https://vuejs.org/</a>
-               <br>
-               <div class="sidebar" style="color:white">	At Advantage Healthcare Systems, I mainly used VueJS to more easily change variables and call functions.
-                 <br><br>
-                 <b>Main Topics</b><br>v-bind:title, new Vue(), el, v-if, v-for, v-on:click, .split(), .reverse(), .join(),
-                 v-model, Vue.component, $watch, data, template, v-html, v-bind:id, v-bind (shorthand - :), v-on (shorthand - @), Date.now(), computed,
-                 v-bind:class, v-bind:style, v-else/v-else-if, v-show, push(), pop(), shift(), unshift(), splice(), sort(), reverse(),
-                 filter(), concat(), slice(), v-on:keyup, toggle, v-bind:key, import/export, $emit, v-on:input, transition classes,
-                 created, methods, Vue.extend(), const
+               <img src="assets/images/vuejs-icon.png" style="min-width: 30%; max-width: 50%" ng-class="{'img-responsive': !deviceWide, 'floatLeft img-responsive': deviceWide}">
+
+                <a href="https://vuejs.org/" ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" target="_blank"><u>https://vuejs.org/</u></a>
+
+                  <p style="margin:0px 0px 2% 0px;"></p>
+
+
+                  <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="color:white">	At <b>Advantage Healthcare Systems</b>, I mainly used VueJS to more easily change variables and call functions.
                </div>
 
-
-               </div>
-
-
+               <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
+   <p style="margin:0px 0px 2% 0px;"></p>
+                          <b>Main Topics</b><br>v-bind:title, new Vue(), el, v-if, v-for, v-on:click, .split(), .reverse(), .join(),
+                          v-model, Vue.component, $watch, data, template, v-html, v-bind:id, v-bind (shorthand - :), v-on (shorthand - @), Date.now(), computed,
+                          v-bind:class, v-bind:style, v-else/v-else-if, v-show, push(), pop(), shift(), unshift(), splice(), sort(), reverse(),
+                          filter(), concat(), slice(), v-on:keyup, toggle, v-bind:key, import/export, $emit, v-on:input, transition classes,
+                          created, methods, Vue.extend(), const
+                           </div>
 
 
              </div>
              <div id="fourth-ahcs-info" ng-show="ahcs == 4">
-              <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY QUASAR SKILLSET</strong></div>
 
-              <div style="padding-left: 5px; padding-top:2px;">
-              <img src="assets/images/quasar.png" width="40%" style="padding: 0px 5px 0px 0px; float:right">
+               <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">MY QUASAR SKILLSET</span></strong><br>
 
-              <a href="https://quasar.dev/" style="color:yellow" class="titleBC" target="_blank">https://quasar.dev/</a>
-              <br>
-              <div class="sidebar" style="color:white">	At Advantage Healthcare Systems, I mainly used Quasar to implement useful pre-styled components
-                <br><br>
-                <b>Main Topics</b><br>QAvatar, QBanner, QBtn, QBtnGroup, QBtnDropdown, QCarousel, QExpansionItem, QInput, QSelect,
-                QFile, QRadio, QCheckbox, QToggle, QBtnToggle, QOptionGroup, QSlider, QTime, QDate, QIcon, QImg, QMenu
-              </div>
+               <img src="assets/images/quasar.png" style="min-width: 30%; max-width: 50%" ng-class="{'img-responsive': !deviceWide, 'floatLeft img-responsive': deviceWide}">
 
+               <a href="https://quasar.dev/" ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" target="_blank"><u>https://quasar.dev/</u></a>
+                 <p style="margin:0px 0px 2% 0px;"></p>
 
-              </div>
-
-
-
+                 <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="color:white">	At <b>Advantage Healthcare Systems</b>, I mainly used Quasar to implement useful pre-styled components
+             </div>
+                   <p style="margin:0px 0px 2% 0px;"></p>
+                   <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
+                   <b>Main Topics</b><br>QAvatar, QBanner, QBtn, QBtnGroup, QBtnDropdown, QCarousel, QExpansionItem, QInput, QSelect,
+                   QFile, QRadio, QCheckbox, QToggle, QBtnToggle, QOptionGroup, QSlider, QTime, QDate, QIcon, QImg, QMenu
+                    </div>
+                  </div>
 
             </div>
-
 
             </td>
 
       </tr>
 
-    </table><br>
-    <table style="width: 100%" class="infoFooter">
-      <tr>
-          <td>
-         <p class="titleBC point" onclick="closeModal()" style="float:right; margin-top: 2%; margin-right: 15%; border: 0.2px solid yellow"><b>CLOSE</b></p>
-        </td>
-      </tr>
     </table>
+
+    <table style="width: 100%;" class="infoHeader">
+       <tr>
+         <td>
+           <p ng-class="{'headerFooterFont point': !deviceWide, 'compTitleFont point': deviceWide}" style="float:right; margin: 3% 15% 1% 3%; border: 0.2px solid yellow" onclick="closeModal()"><b>CLOSE</b></p>
+
+         </td>
+       </tr>
+     </table>
+
   </div>
 
-      <div class="col-3"></div>
+
+
+
 </div>
 </div>
 </script>
 
 <!-- END AHCS MODAL -->
 
+
 <!-- START BANDMANS MODAL -->
 
 <script type="text/ng-template" id="bandmans.html">
 
-<div class="row" id="bandmansRow" style="padding-top: 0.5%">
-<div class="col-3"></div>
-  <div class="col-6" style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
-       <div style="background-color: rgba(0,191,255, 0.5); border: 0.7px solid yellow; border-radius: 0px">
 
-         <table style="width: 100%;" class="infoHeader">
-                   <tr>
-                     <td>
-                       <p class="titleBC" style="float:left; color:yellow; padding: 3% 1% 0% 3%"><b>Bandmans Company</b></p>
-                         <p class="titleBC point" style="float:right; color:yellow; padding: 3% 3% 0% 1%" onclick="closeModal()"><b>X</b></p>
-                     </td>
-                   </tr>
-                 </table>
-                 <table>
-                          <tr>
-                            <td style="width:30%" ng-init="bands = 1">
+    <div id="bandmansRow" ng-class="{'menuWidth': !deviceWide, 'fifty': deviceWide}" style="color:red; margin:auto">
 
-                              <img class="first-band-button point" ng-click="bands = 1" src="assets/images/bandmans_logo.jpg" style="width: 100%; border: 0.5px solid blue"><br>
-                              <img class="second-band-button point" ng-click="bands = 2" src="assets/images/ecwid_logo.jpg" style="width: 100%; border: 0.5px solid blue"><br>
-                              <img class="third-band-button point" ng-click="bands = 3" src="assets/images/pagespeed_logo.jpg" style="width: 100%; border: 0.5px solid blue"><br>
-                              <img class="fourth-band-button point" ng-click="bands = 4" src="assets/images/mailchimp_logo.jpg" style="width: 100%; border: 0.5px solid blue"><br>
-                            </td>
-                        <td style="width: 70%">
+       <div style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
+          <div style="background-color: rgba(0,191,255, 0.5);" border: 0.7px solid yellow; border-radius: 0px">
 
+            <table style="width: 100%;" class="infoHeader">
+                    <tr>
+                      <td>
+                        <div style="float:left; padding: 3% 1% 0% 3%;" ng-class="{'headerFooterFont': !deviceWide, 'compTitleFont': deviceWide}"><b>Bandmans Company</b></div>
+                        <div ng-class="{'headerFooterFont point': !deviceWide, 'compTitleFont point': deviceWide}" style="float:right; padding: 3% 3% 1% 3%;" onclick="closeModal()"><b>X</b></div>
+                      </td>
+                    </tr>
+                  </table>
+                  <table style="width: 100%">
+                    <tr ng-init="bands = 1">
+                      <td style="width:30%" ng-show="deviceWide">
+              <img class="first-band-button point imageBorder" ng-click="bands = 1" src="assets/images/bandmans_logo.jpg" style="width: 100%"><br>
+              <img class="second-band-button point imageBorder" ng-click="bands = 2" src="assets/images/ecwid_logo.jpg" style="width: 100%;"><br>
+              <img class="third-band-button point imageBorder" ng-click="bands = 3" src="assets/images/pagespeed_logo.jpg" style="width: 100%;"><br>
+              <img class="fourth-band-button point imageBorder" ng-click="bands = 4" src="assets/images/mailchimp_logo.jpg" style="width: 100%">
+            </td>
+            <td>
+              <div style="padding: 2% 2% 1% 2%">
+              <p ng-show="!deviceWide">
+<img class="point imageBorder" ng-click="bands = 1" src="assets/images/bandmans_logo.jpg" style="width: 25%;" /><img class="point imageBorder" ng-click="bands = 2" src="assets/images/ecwid_logo.jpg" style="width: 25%;"/><img class="point imageBorder" ng-click="bands = 3" src="assets/images/pagespeed_logo.jpg" style="width: 25%;" /><img class="point imageBorder" ng-click="bands = 4" src="assets/images/mailchimp_logo.jpg" style="width: 25%;" />
+</p>
 
 				 	 <div id="first-band-info" ng-show="bands == 1">
 
-						 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>BANDMANS COMPANY</strong></div>
- 						<div style="padding-left: 5px; padding-top:2px;">
- 						<img src="assets/images/bandmans_pic.jpg" width="40%" style="padding: 0px 5px 0px 0px; float:right">
 
- 						<a href="https://www.bandmans.com/" style="color:yellow" class="titleBC" target="_blank">https://www.bandmans.com/</a>
- 						<br>
- 						<div class="sidebar" style="color:white">	&quot;Bandmans carries a wide selection of custom marching band uniforms & accessories for sale. Color guards, marching band uniforms & more.&quot;
+             <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">BANDMANS COMPANY</span></strong><br>
+             <img src="assets/images/bandmans_pic.jpg" style="min-width: 30%; max-width: 50%" ng-class="{'img-responsive': !deviceWide, 'floatLeft img-responsive': deviceWide}">
+
+              <a href="https://www.bandmans.com/" ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" target="_blank"><u>www.bandmans.com</u></a>
+
+              <p style="margin:0px 0px 2% 0px;"></p>
+
+              <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="color:white">
+                &quot;Bandmans carries a wide selection of custom marching band uniforms & accessories for sale. Color guards, marching band uniforms & more.&quot;
  						</div>
- 						<div class="sidebar" style="display:inline-block; padding-top: 5px; color:white">
+            <p style="margin:0px 0px 2% 0px;"></p>
+
+            <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
 
  						● Assign pricing, pictures, descriptions and product attributes to the website<br>
  						●	Upload new products and made Excel Sheets<br>
@@ -281,20 +315,24 @@
  						</div>
 
  						</div>
-
-
-					 </div>
 					 <div id="second-band-info" ng-show="bands == 2">
 
+             <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">ECWID SKILLSET</span></strong><br>
 
-						 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>ECWID SKILLSET</strong></div>
-						 <div style="padding-left: 5px; padding-top:2px;">
-						 <img src="assets/images/ecwid_pic.jpg" width="40%" style="padding: 0px 5px 0px 0px; float:left">
+             <img src="assets/images/ecwid_pic.jpg" style="min-width: 30%; max-width: 50%" ng-class="{'img-responsive': !deviceWide, 'floatLeft img-responsive': deviceWide}">
 
-						 <a href="https://www.ecwid.com/" style="color:yellow" class="titleBC" target="_blank">https://www.ecwid.com/</a>
-						 <br>
-						 <div class="sidebar" style="color:white">Bandmans uses Ecwid to organize and sell products.
-							 <br><br>
+             <a href="https://www.ecwid.com/" ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" target="_blank"><u>https://www.ecwid.com/</u></a>
+
+             <p style="margin:0px 0px 2% 0px;"></p>
+
+             <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="color:white">	Bandmans uses Ecwid to organize and sell products.
+                </div>
+
+                <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
+
+
+            <p style="margin:0px 0px 2% 0px;"></p>
+
 							 <b>MAIN TOPICS</b>: Product SKU#, Product Images, Product Pricing, Product Categories, Product Attributes, Product Options,
 								 Product Description
 
@@ -302,59 +340,64 @@
 
 						 </div>
 
-					 </div>
 					 <div id="third-band-info" ng-show="bands == 3">
 
-						 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>SEARCH ENGINE OPTIMIZATION SKILLSET</strong></div>
-						 <div style="padding-left: 5px; padding-top:2px;">
-						 <img src="assets/images/seo_pic.jpg" width="40%" style="padding: 0px 5px 0px 0px; float:right">
+             <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">SEARCH ENGINE OPTIMIZATION SKILLSET</span></strong><br>
 
-						 <a href="https://www.google.com/search?q&#61;search+engine+optimization" style="color:yellow" class="titleBC" target="_blank">https://www.google.com/search?q=search+engine+optimization</a>
-						 <br>
-						 <div class="sidebar" style="color:white">At Bandmans I recently started Search Engine Optimization to increase web traffic:<br><br>
-							 I have mainly focused on Keyword SEO by increasing the use of keywords in product and category descriptions.<br><br>
-							 I also have tried to make the website more aesthetic by changing how the website is navigated.<br><br>
-							 I have used PageSpeed Insights to see the performance of our website<br>
-							 Unfortunately, there are still script issues in the backend that prevent a faster website.
-						 </div>
+             <img src="assets/images/seo_pic.jpg" style="min-width: 30%; max-width: 50%" ng-class="{'img-responsive': !deviceWide, 'floatRight img-responsive': deviceWide}">
 
-						 </div>
+             <a href="https://www.google.com/" ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" target="_blank"><u>https://www.google.com/</u></a>
 
+            <p style="margin:0px 0px 2% 0px;"></p>
+
+            <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
+
+                At Bandmans I recently started Search Engine Optimization to increase web traffic:<br><br>
+                I have mainly focused on Keyword SEO by increasing the use of keywords in product and category descriptions.<br><br>
+                I also have tried to make the website more aesthetic by changing how the website is navigated.<br><br>
+                I have used PageSpeed Insights to see the performance of our website<br>
+                Unfortunately, there are still script issues in the backend that prevent a faster website.
+
+              </div>
 					 </div>
 					 <div id="fourth-band-info" ng-show="bands == 4">
 
-						 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MAILBLAST SKILLSET</strong></div>
-						 <div style="padding-left: 5px; padding-top:2px;">
-						 <img src="assets/images/mail_pic.jpg" width="40%" style="padding: 0px 5px 0px 0px; float:right">
+             <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">MAILBLAST SKILLSET</span></strong><br>
 
-						 <a href="https://mailchimp.com/" style="color:yellow" class="titleBC" target="_blank">https://mailchimp.com/</a>
-						 <br>
-						 <div class="sidebar" style="color:white">At Bandmans I recently started preparing email blasts to be sent out to prospective customers<br><br>
-							 ● Adding customers and their emails to the audience<br>
-							 ● Setting up the subject line and the email sending the email blast<br>
-							 ● Preparing the content of the email: images and descriptions<br>
 
-						 </div>
+             <img src="assets/images/mail_pic.jpg" style="min-width: 30%; max-width: 50%" ng-class="{'img-responsive': !deviceWide, 'floatRight img-responsive': deviceWide}">
+
+             <a href="https://mailchimp.com/" ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" target="_blank"><u>https://mailchimp.com/</u></a>
+
+             <p style="margin:0px 0px 2% 0px;"></p>
+
+             <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
+
+                At Bandmans I recently started preparing email blasts to be sent out to prospective customers<br><br>
+                ● Adding customers and their emails to the audience<br>
+                ● Setting up the subject line and the email sending the email blast<br>
+                ● Preparing the content of the email: images and descriptions<br>
+
+
+               </div>
 
 						 </div>
 
 					 </div>
-
 
 				</td>
 			</tr>
 		</table>
-    <br>
-    <table style="width: 100%" class="infoFooter">
+    <table style="width: 100%;" class="infoHeader">
       <tr>
-          <td>
-         <p class="titleBC point" onclick="closeModal()" style="float:right; margin-top: 2%; margin-right: 15%; border: 0.2px solid yellow"><b>CLOSE</b></p>
+        <td>
+          <p ng-class="{'headerFooterFont point': !deviceWide, 'compTitleFont point': deviceWide}" style="float:right; margin: 3% 15% 1% 3%; border: 0.2px solid yellow" onclick="closeModal()"><b>CLOSE</b></p>
+
         </td>
       </tr>
     </table>
   </div>
 
-      <div class="col-3"></div>
 </div>
 </div>
 </script>
@@ -363,38 +406,44 @@
 <!-- START FREE CODE CAMP MODAL -->
 
 <script type="text/ng-template" id="freecode.html">
+  <div id="freecodeRow" ng-class="{'menuWidth': !deviceWide, 'fifty': deviceWide}" style="color:red; margin:auto">
 
-  <div class="row" id="freecodeRow" style="padding-top: 0.5%">
+        <div style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
+         <div style="background-color: rgba(0,191,255, 0.5);" border: 0.7px solid yellow; border-radius: 0px">
 
-        <div class="col-3"></div>
+           <table style="width: 100%;" class="infoHeader">
+            <tr>
+              <td>
+                <div style="float:left; padding: 3% 1% 0% 3%;" ng-class="{'headerFooterFont': !deviceWide, 'compTitleFont': deviceWide}"><b>Free Code Camp</b></div>
+                <div ng-class="{'headerFooterFont point': !deviceWide, 'compTitleFont point': deviceWide}" style="float:right; padding: 3% 3% 1% 3%;" onclick="closeModal()"><b>X</b></div>
+              </td>
+            </tr>
+          </table>
+          <table style="width: 100%">
+           <tr ng-init="fcc = 1" id="fccModal">
+             <td style="width: 30%" ng-show="deviceWide">
 
-        <div class="col-6" style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
-        <div style="background-color: rgba(0,191,255, 0.5);" border: 0.7px solid yellow; border-radius: 0px">
+               <span class='first-fcc-button compMainFont' ng-click="fcc = 1" style="width: 100%">Responsive Web Design</span>
+              <span class='second-fcc-button compMainFont' ng-click="fcc = 2" style="width: 100%">Javascript Algorithms and Data Structures</span>
+              <span class='third-fcc-button compMainFont' ng-click="fcc = 3" style="width: 100%">Front End Libraries</span>
+            </td>
+<td>
 
-          <table style="width: 100%;" class="infoHeader">
-                    <tr>
-                      <td>
-                        <p class="titleBC" style="float:left; color:yellow; padding: 3% 1% 0% 3%"><b>Free Code Camp</b></p>
-                          <p class="titleBC point" style="float:right; color:yellow; padding: 3% 3% 0% 1%" onclick="closeModal()"><b>X</b></p>
-                      </td>
-                    </tr>
-                  </table>
-                  <table>
-                           <tr>
-                             <td style="width: 30%" ng-init="fcc = 1" id="fccModal">
-                              <span class='first-fcc-button sidebar' ng-click="fcc = 1" style="width: 100%">Responsive Web Design</span>
-                              <span class='second-fcc-button sidebar' ng-click="fcc = 2" style="width: 100%">Javascript Algorithms and Data Structures</span>
-                              <span class='third-fcc-button sidebar' ng-click="fcc = 3" style="width: 100%">Front End Libraries</span>
-                            </td>
-                         <td style="width: 70%">
+   <div style="padding: 2% 2% 1% 2%">
 
-			 <div id="first-fcc-info" class="sidebar" ng-show="fcc == 1">
+          <p ng-show="!deviceWide">
+            <span class='first-fcc-button compMainFont' ng-click="fcc = 1" style="width: 100%">Responsive Web Design</span>
+            <span class='second-fcc-button compMainFont' ng-click="fcc = 2" style="width: 100%">Javascript Algorithms and Data Structures</span>
+            <span class='third-fcc-button compMainFont' ng-click="fcc = 3" style="width: 100%">Front End Libraries</span>
+          </p>
 
+			 <div id="first-fcc-info" ng-show="fcc == 1">
 
-				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>RESPONSIVE WEB DESIGN</strong></div>
-			  <div style="padding-left: 5px; padding-top:2px; color:white">
-			  <img src="assets/images/rwd_pic.jpg" width="40%" style="padding: 0px 5px 5px 0px; float:left">
+         <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">RESPONSIVE WEB DESIGN</span></strong><br>
 
+         <img src="assets/images/rwd_pic.jpg" ng-class="{'fullWidth': !deviceWide, 'floatLeft partialWidth': deviceWide}">
+
+         <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
 
 			 <b>MAIN TOPICS</b>:&emsp;●	Basic HTML and HTML5&emsp;●	Basic CSS&emsp;●	Applied Visual Design&emsp;●	Applied Accessibility
 			 &emsp;●	Responsive Web Design Principles&emsp;●	CSS Flexbox&emsp;●	CSS Grid&emsp;●	Responsive Web Design Projects<br><br>
@@ -415,11 +464,13 @@
 
 			 </div>
 
-			 <div id="second-fcc-info" class="sidebar" ng-show="fcc == 2">
+			 <div id="second-fcc-info" ng-show="fcc == 2">
 
-         <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>JAVASCRIPT ALGORITHMS AND DATA STRUCTURES</strong></div>
-				 			  <div style="padding-left: 5px; padding-top:2px; color:white">
-				 			  <img src="assets/images/algorithm-pic.jpg" width="40%" style="padding: 0px 5px 5px 0px; float:left">
+         <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">JAVASCRIPT ALGORITHMS AND DATA STRUCTURES</span></strong><br>
+
+         <img src="assets/images/algorithm-pic.jpg" ng-class="{'fullWidth': !deviceWide, 'floatLeft partialWidth': deviceWide}">
+
+         <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
 
 
 				 			 <b>MAIN TOPICS</b>:&emsp;●	Basic JavaScript&emsp;●	ES6&emsp;●	Regular Expressions&emsp;●	Debugging
@@ -436,13 +487,13 @@
 				 			  </div>
 
 			 </div>
-			 <div id="third-fcc-info" class="sidebar" ng-show="fcc == 3">
+			 <div id="third-fcc-info" ng-show="fcc == 3">
 
+         <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">FRONT END LIBRARIES</span></strong><br>
 
+         <img src="assets/images/libraries-pic.jpg" ng-class="{'fullWidth': !deviceWide, 'floatLeft partialWidth': deviceWide}">
 
-				 				 				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>FRONT END LIBRARIES</strong></div>
-				 				 			  <div style="padding-left: 5px; padding-top:2px; color:white">
-				 				 			  <img src="assets/images/libraries-pic.jpg" width="40%" style="padding: 0px 5px 5px 0px; float:left">
+         <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
 
 
 				 				 			 <b>MAIN TOPICS</b>:&emsp;●	Bootstrap&emsp;●	jQuery&emsp;●	Sass&emsp;●	React
@@ -471,17 +522,17 @@
 		 </td>
 	 </tr>
  </table>
- <br>
- <table style="width: 100%" class="infoFooter">
-   <tr>
-       <td>
-      <p class="titleBC point" onclick="closeModal()" style="float:right; margin-top: 2%; margin-right: 15%; border: 0.2px solid yellow"><b>CLOSE</b></p>
-     </td>
-   </tr>
- </table>
+ <table style="width: 100%;" class="infoHeader">
+    <tr>
+      <td>
+        <p ng-class="{'headerFooterFont point': !deviceWide, 'compTitleFont point': deviceWide}" style="float:right; margin: 3% 15% 1% 3%; border: 0.2px solid yellow" onclick="closeModal()"><b>CLOSE</b></p>
+
+      </td>
+    </tr>
+  </table>
 </div>
 
-   <div class="col-3"></div>
+</div>
 </div>
 </div>
 </script>
@@ -490,62 +541,67 @@
 <!-- START BUSINESS MODAL -->
 <script type="text/ng-template" id="business.html">
 
-  <div class="row" id="businessRow" style="padding-top:0.5%">
+  <div id="businessRow" ng-class="{'menuWidth': !deviceWide, 'fifty': deviceWide}" style="color:red; margin:auto">
 
-    <div class="col-3"></div>
+          <div style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
+                   <div style="background-color: rgba(0,191,255, 0.5);" border: 0.7px solid yellow; border-radius: 0px">
 
-    <div class="col-6" style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
-     <div style="background-color: rgba(0,191,255, 0.5);" border: 0.7px solid yellow; border-radius: 0px">
 
-       <table style="width: 100%;" class="infoHeader">
-             <tr>
-               <td>
-                 <p class="titleBC" style="float:left; color:yellow; padding: 3% 1% 0% 3%"><b>SMU Cox School of Business</b></p>
-                   <p class="titleBC point" style="float:right; color:yellow; padding: 3% 3% 0% 1%" onclick="closeModal()"><b>X</b></p>
-               </td>
-             </tr>
-           </table>
+         <table style="width: 100%;" class="infoHeader">
+           <tr>
+             <td>
+               <div style="float:left; padding: 3% 1% 0% 3%;" ng-class="{'headerFooterFont': !deviceWide, 'compTitleFont': deviceWide}"><b>SMU Cox School of Business</b></div>
+               <div ng-class="{'headerFooterFont point': !deviceWide, 'compTitleFont point': deviceWide}" style="float:right; padding: 3% 3% 1% 3%;" onclick="closeModal()"><b>X</b></div>
+             </td>
+           </tr>
+         </table>
+         <table style="width: 100%">
+                 <tr>
+            <td>
+          <div style="padding: 2% 2% 1% 2%">
 
-<div style="padding:2%;">
+            <img src="assets/images/3d_luggage.png" ng-class="{'fullWidth': !deviceWide, 'floatRight partialWidth': deviceWide}">
 
-<table class="titleBC">
+            <p style="margin:0px 0px 2% 0px;"></p>
 
-	<tr>
-		<td style="width:30%">
-	<img src="assets/images/img_smu.jpg" style="width: 100%;">
-</td>
-<td style="padding-left: 2%;color:white">
+             <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
+
+  	<b>COMPREHENSIVE BUSINESS KNOWLEDGE</b><br><br>
+  	<b>3DLuggage</b> was a comprehensive business group project for a SMU Entrepreneurship class.<br><br>
+  	<b>Idea:</b> Luggage folds into four directions to try to keep clothes more organized<br><br>
+  	<b>Forecasts:</b> Income Statements, Cash Flow Statements and Balance Sheets<br><br>
+  	<b>Includes:</b> Market Analysis, Business Objectives and Business Planning
+  </div>
+
+  <p style="margin:0px 0px 2% 0px;"></p>
+
+
+    <img src="assets/images/img_smu.jpg" ng-class="{'fullWidth': !deviceWide, 'floatLeft partialWidth': deviceWide}">
+
+                <p style="margin:0px 0px 2% 0px;"></p>
+
+        <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
+
+<b>GENERAL BUSINESS</b><br><br>
 	Robert has taken a variety of business courses: Accounting, Business Communications & Leadership Development, Negotiations, Federal Income Tax, Entrepreneurship, Project Management
-
-</td>
-
-</tr>
-</table><p></p>
-<table class="sidebar">
-
-	<tr>
-<td style="padding-right: 2%;color:white">
-	<b>COMPREHENSIVE BUSINESS KNOWLEDGE</b><br><br>
-	<b>3DLuggage</b> was a comprehensive business group project for a SMU Entrepreneurship class.<br><br>
-	<b>Idea:</b> Luggage folds into four directions to try to keep clothes more organized<br><br>
-	<b>Forecasts:</b> Income Statements, Cash Flow Statements and Balance Sheets<br><br>
-	<b>Includes:</b> Market Analysis, Business Objectives and Business Planning
-</td>
-<td style="width:55%">
-<img src="assets/images/3d_luggage.png" style="width: 100%;" class="rounded">
-</td>
-</tr>
-</table></div>
-<table style="width: 100%" class="infoFooter">
-  <tr>
-      <td>
-     <p class="titleBC point" onclick="closeModal()" style="float:right; margin-top: 2%; margin-right: 15%; border: 0.2px solid yellow"><b>CLOSE</b></p>
-    </td>
-  </tr>
-</table>
+</div>
 
 </div>
-		</div><div class="col-3"></div>
+
+</td>
+</tr>
+</table>
+<table style="width: 100%;" class="infoHeader">
+            <tr>
+              <td>
+                <p ng-class="{'headerFooterFont point': !deviceWide, 'compTitleFont point': deviceWide}" style="float:right; margin: 3% 15% 1% 3%; border: 0.2px solid yellow" onclick="closeModal()"><b>CLOSE</b></p>
+
+              </td>
+            </tr>
+          </table>
+
+</div>
+</div>
 </div>
 </script>
 
@@ -555,78 +611,74 @@
 
 <script type="text/ng-template" id="gaming.html">
 
-  <div class="row" id="gamingRow" style="padding-top: 0.5%">
 
-    <div class="col-3"></div>
+  <div id="gamingRow" ng-class="{'menuWidth': !deviceWide, 'fifty': deviceWide}" style="color:red; margin:auto">
 
-    <div class="col-6" style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
-     <div style="background-color: rgba(0,191,255, 0.5);" border: 0.7px solid yellow; border-radius: 0px">
+  <div style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
+           <div style="background-color: rgba(0,191,255, 0.5);" border: 0.7px solid yellow; border-radius: 0px">
 
-
-       <table style="width: 100%;" class="infoHeader">
-             <tr>
-               <td>
-                 <p class="titleBC" style="float:left; color:yellow; padding: 3% 1% 0% 3%"><b>Gaming</b></p>
-                   <p class="titleBC point" style="float:right; color:yellow; padding: 3% 3% 0% 1%" onclick="closeModal()"><b>X</b></p>
-               </td>
-             </tr>
-           </table>
-
-
-
-           <div style="padding:2%;">
+             <table style="width: 100%;" class="infoHeader">
+                       <tr>
+                         <td>
+                           <div style="float:left; padding: 3% 1% 0% 3%;" ng-class="{'headerFooterFont': !deviceWide, 'compTitleFont': deviceWide}"><b>Gaming</b></div>
+                           <div ng-class="{'headerFooterFont point': !deviceWide, 'compTitleFont point': deviceWide}" style="float:right; padding: 3% 3% 1% 3%;" onclick="closeModal()"><b>X</b></div>
+                         </td>
+                       </tr>
+                     </table>
+                     <table style="width: 100%">
+                         <tr>
+                    <td>
+                  <div style="padding: 2% 2% 1% 2%">
 
 
-             <table class="sidebar">
 
-             	<tr>
-             		<td style="width:15%">
-             	<img src="assets/images/clue_finders.jpg" style="width: 100%;">
-             </td>
-             <td style="padding-left: 2%;color:white">
+                      <img src="assets/images/runescape.jpg" ng-class="{'fullWidth': !deviceWide, 'floatLeft partialWidth': deviceWide}">
 
+
+                                    <p style="margin:0px 0px 2% 0px;"></p>
+
+                                 <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
+                                     <a href="https://runescape.com/" ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" target="_blank"><u>https://runescape.com/</u></a>
+                                 	<br>
+                                 	RuneScape is a MMORPG that I have played for a long time. Even though it can take long periods of time, I like challenging
+                                 	myself by setting goals for myself. One of my favorite things in-game hobbies is helping people get started with the game by following
+                                 	their character around in the game. I admire how the game has several overlapping storylines, which is interesting to me because
+                                 	I like hearing people's perspectives. I hope to one day help design a computer game so that I can tell stories that provide insight,
+                                 	education, creativity and fun.
+                                </div>
+                                <p style="margin:0px 0px 2% 0px;"></p>
+
+
+                    <img src="assets/images/clue_finders.jpg" ng-class="{'fullWidth': !deviceWide, 'floatRight lessWidth': deviceWide}">
+
+                    <p style="margin:0px 0px 2% 0px;"></p>
+
+                     <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white;>
+
+              <b style="color:yellow">ClueFinders Games</b><br>
              	At a very early age I got interested in computer gaming. I admired how my sister
              	and her friends played computer games, specifically, the ClueFinders educational computer game series.
              	Even though I was several years before fourth and fifth grade, I challenged myself by configuring
              	the settings to be almost high school levelled. The ClueFinders games gave me a jumpstart to my education
              	and got me interested in education through gaming.
-
-             </td>
-
-             </tr>
-             </table><p></p>
-             <table class="sidebar">
-
-             	<tr>
-             <td style="padding-right: 2%;color:white">
-
-             	<a href="https://www.runescape.com" style="color:yellow" class="sidebar" target="_blank">https://runescape.com/</a>
-             	<br>
-             	RuneScape is a MMORPG that I have played for a long time. Even though it can take long periods of time, I like challenging
-             	myself by setting goals for myself. One of my favorite things in-game hobbies is helping people get started with the game by following
-             	their character around in the game. I admire how the game has several overlapping storylines, which is interesting to me because
-             	I like hearing people's perspectives. I hope to one day help design a computer game so that I can tell stories that provide insight,
-             	education, creativity and fun.
-
-             </td>
-             <td style="width:55%">
-             <img src="assets/images/runescape.jpg" style="width: 100%;">
-             </td>
-             </tr>
-             </table>
+            </div>
       </div>
-      <table style="width: 100%" class="infoFooter">
-        <tr>
-            <td>
-           <p class="titleBC point" onclick="closeModal()" style="float:right; margin-top: 2%; margin-right: 15%; border: 0.2px solid yellow"><b>CLOSE</b></p>
-          </td>
-        </tr>
-      </table>
+    </td>
+</tr>
+</table>
+<table style="width: 100%;" class="infoHeader">
+            <tr>
+              <td>
+                <p ng-class="{'headerFooterFont point': !deviceWide, 'compTitleFont point': deviceWide}" style="float:right; margin: 3% 15% 1% 3%; border: 0.2px solid yellow" onclick="closeModal()"><b>CLOSE</b></p>
+
+              </td>
+            </tr>
+          </table>
 
 
       </div>
-    </div><div class="col-3"></div>
       </div>
+    </div>
       </script>
 
 
@@ -636,87 +688,88 @@
 
 <script type="text/ng-template" id="fishing.html">
 
-<div class="row" id="fishingRow" style="padding-top: 0.5%">
 
-    <div class="col-3"></div>
 
-    <div class="col-6" style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
-    <div style="background-color: rgba(0,191,255, 0.5);" border: 0.7px solid yellow; border-radius: 0px">
+    <div id="fishingRow" ng-class="{'menuWidth': !deviceWide, 'fifty': deviceWide}" style="color:red; margin:auto">
 
-      <table style="width: 100%;" class="infoHeader">
-         <tr>
-           <td>
-             <p class="titleBC" style="float:left; color:yellow; padding: 3% 1% 0% 3%"><b>Activities and Awards</b></p>
-               <p class="titleBC point" style="float:right; color:yellow; padding: 3% 3% 0% 1%" onclick="closeModal()"><b>X</b></p>
-           </td>
-         </tr>
-       </table>
-       <table>
-                <tr>
-                  <td style="width:30%" ng-init="fish = 1">
+    <div style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
+          <div style="background-color: rgba(0,191,255, 0.5);" border: 0.7px solid yellow; border-radius: 0px">
 
-                    <img class="first-fish-button point" ng-click="fish = 1" src="assets/images/awards_select.png" style="width: 100%; border: 0.5px solid yellow"><br>
-                    <img class="second-fish-button point" ng-click="fish = 2" src="assets/images/activities_select.png" style="width: 100%; border: 0.5px solid yellow"><br>
-                  </td>
-                <td style="padding: 2%">
+            <table style="width: 100%;" class="infoHeader">
+                        <tr>
+                          <td>
+                            <div style="float:left; padding: 3% 1% 0% 3%;" ng-class="{'headerFooterFont': !deviceWide, 'compTitleFont': deviceWide}"><b>Activities and Awards</b></div>
+                            <div ng-class="{'headerFooterFont point': !deviceWide, 'compTitleFont point': deviceWide}" style="float:right; padding: 3% 3% 1% 3%;" onclick="closeModal()"><b>X</b></div>
+                          </td>
+                        </tr>
+                      </table>
+
+                      <table style="width: 100%">
+                        <tr ng-init="fish = 1">
+
+                          <td style="width: 30%" ng-show="deviceWide">
+
+                            <img class="first-fish-button point" ng-click="fish = 1" src="assets/images/awards_select.png" style="width: 100%; border: 0.5px solid yellow"><br>
+                            <img class="second-fish-button point" ng-click="fish = 2" src="assets/images/activities_select.png" style="width: 100%; border: 0.5px solid yellow"><br>
+                          </td>
+                          <td>
+
+                       <div style="padding: 2% 2% 1% 2%">
+
+                         <p ng-show="!deviceWide">
+<img class="point" ng-click="fish = 1" src="assets/images/awards_select.png" style="width: 50%; border: 0.5px solid yellow" /><img class="point" ng-click="fish = 2" src="assets/images/activities_select.png" style="width: 50%;  border: 0.5px solid yellow"/>
+</p>
 
                   <div id="first-fish-info" ng-show="fish == 1">
 
-           				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>AWARDS</strong></div>
 
-                  <table>
-                  <tr><td style="width:40%">
-                  <img src="assets/images/green_award.jpg" width="100%" style="padding: 0px 5px 0px 0px; float:left">
-                  </td>
-                  <td>
-                  <div class="sidebar" style="display:inline-block; padding-top: 5px; color:white">
+          <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">AWARDS</span></strong><br>
 
+          <img src="assets/images/green_award.jpg" class="floatLeft partialWidth">
+
+           <p style="margin:0px 0px 2% 0px;"></p>
+
+           <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
 
                     <b>VOLUNTEERING</b> - Rustic Pathways Star Alumni Award (2x) <br><br>
                     <b>SCHOLAR</b> - Honor Society and Greenhill's Board of Trustees Award <br><br>
                     <b>CODING CERTIFICATIONS</b> - Full-Stack Web Development, Responsive Web Design,
                     JavaScript Algorithms & Data Structures and Front End Libararies
 
-
                   </div>
-                  </td>
-                  </tr>
-                  </table>
 
                   </div>
                   <div id="second-fish-info" ng-show="fish == 2">
 
-                    <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>ACTIVITIES</strong></div>
+                    <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">ACTIVITIES</span></strong><br>
 
-                    <table>
-                     <tr><td style="width:40%">
-                   <img src="assets/images/fish_trophy.jpg" width="100%" style="padding: 0px 5px 0px 0px; float:left"></td>
-                   <td>
+                    <img src="assets/images/fish_trophy.jpg" class="floatLeft partialWidth">
 
-                   <div class="titleBC" style="display:inline-block; padding-top: 5px; color:white">
+                    <p style="margin:0px 0px 2% 0px;"></p>
 
-                  Fishing, Hillel, Cross Country, Tennis, Ping Pong, Math Club, Jet Skiing, Rustic Pathways
+                  <div ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}" style="display:block; padding-top: 5px; text-align:center; color:white">
+
+                  Fishing<br> Hillel<br> Cross Country<br> Tennis<br> Ping Pong<br> Math Club<br> Jet Skiing<br> Rustic Pathways
 
                    </div>
+                 </div>
                   </td>
                   </tr>
                   </table>
-                   </div>
+ <table style="width: 100%;" class="infoHeader">
+            <tr>
+              <td>
+                <p ng-class="{'headerFooterFont point': !deviceWide, 'compTitleFont point': deviceWide}" style="float:right; margin: 3% 15% 1% 3%; border: 0.2px solid yellow" onclick="closeModal()"><b>CLOSE</b></p>
 
-</td>
-</tr></table><table style="width: 100%" class="infoFooter">
-  <tr>
-      <td>
-     <p class="titleBC point" onclick="closeModal()" style="float:right; margin-top: 2%; margin-right: 15%; border: 0.2px solid yellow"><b>CLOSE</b></p>
-    </td>
-  </tr>
-</table>
+              </td>
+            </tr>
+          </table>
 
 </div>
 
 			</div>
-  <div class="col-3"></div>
     </div>
+  </div>
     </script>
 
 
@@ -728,26 +781,26 @@
 
 <script type="text/ng-template" id="coverletter.html">
 
-  <div class="row" id="coverLetter" style="padding-top: 0.5%">
+  <div id="coverLetter" ng-class="{'menuWidth': !deviceWide, 'fifty': deviceWide}" style="color:red; margin:auto">
 
-    <div class="col-3"></div>
+               <div style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
+                        <div style="background-color: rgba(0,191,255, 0.5);" border: 0.7px solid yellow; border-radius: 0px">
 
-    <div class="col-6" style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
-     <div style="background-color: rgba(0,191,255, 0.5);" border: 0.7px solid yellow; border-radius: 0px">
+                          <table style="width: 100%;" class="infoHeader">
+                                     <tr>
+                                       <td>
+                                         <div style="float:left; padding: 3% 1% 0% 3%;" ng-class="{'headerFooterFont': !deviceWide, 'compTitleFont': deviceWide}"><b>Cover Letter</b></div>
+                                         <div ng-class="{'headerFooterFont point': !deviceWide, 'compTitleFont point': deviceWide}" style="float:right; padding: 3% 3% 1% 3%;" onclick="closeModal()"><b>X</b></div>
+                                       </td>
+                                     </tr>
+                                   </table>
 
-
-       <table style="width: 100%;" class="infoHeader">
-             <tr>
-               <td>
-                 <p class="titleBC" style="float:left; color:yellow; padding: 3% 1% 0% 3%"><b>Cover Letter</b></p>
-                   <p class="titleBC point" style="float:right; color:yellow; padding: 3% 3% 0% 1%" onclick="closeModal()"><b>X</b></p>
-               </td>
-             </tr>
-           </table>
-
-<div style="padding:2%; color:white" class="sidebar" id="bolding">
-
-	<b>August 25, 2020</b><br><br>
+                                   <table style="width: 100%">
+                                                 <tr>
+                                            <td>
+                                          <div style="padding: 2% 2% 1% 2%">
+<div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
+	<b>October 16, 2020</b><br><br>
 
 	Hello,<br><br>
 
@@ -773,15 +826,20 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 
 
 </div>
-<table style="width: 100%" class="infoFooter">
-  <tr>
-      <td>
-     <p class="titleBC point" onclick="closeModal()" style="float:right; margin-top: 2%; margin-right: 15%; border: 0.2px solid yellow"><b>CLOSE</b></p>
-    </td>
-  </tr>
+</td>
+</tr>
 </table>
+<table style="width: 100%;" class="infoHeader">
+            <tr>
+              <td>
+                <p ng-class="{'headerFooterFont point': !deviceWide, 'compTitleFont point': deviceWide}" style="float:right; margin: 3% 15% 1% 3%; border: 0.2px solid yellow" onclick="closeModal()"><b>CLOSE</b></p>
+
+              </td>
+            </tr>
+          </table>
 </div>
 		</div>
+  </div>
 </div>
 </script>
 
@@ -793,43 +851,52 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 
 <script type="text/ng-template" id="udemy.html">
 
-  <div class="row" id="udemyModal" style="padding-top: 0.5%">
+  <div id="udemyModal" ng-class="{'menuWidth': !deviceWide, 'fifty': deviceWide}" style="color:red; margin:auto">
 
-    <div class="col-3"></div>
-
-    <div class="col-6" style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
+    <div style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
      <div style="background-color: rgba(0,191,255, 0.5);" border: 0.7px solid yellow; border-radius: 0px">
 
+
        <table style="width: 100%;" class="infoHeader">
-             <tr>
-               <td>
-                 <p class="titleBC" style="float:left; color:yellow; padding: 3% 1% 0% 3%"><b>Udemy</b></p>
-                   <p class="titleBC point" style="float:right; color:yellow; padding: 3% 3% 0% 1%" onclick="closeModal()"><b>X</b></p>
-               </td>
-             </tr>
-           </table>
-           <table>
-                    <tr>
-							<td style="width:30%" ng-init="udemy = 1">
-								<img class="first-udemy-button point" ng-click="udemy = 1" src="assets/images/udemy_logo.jpg" style="width: 100%"><br>
-								<img class="second-udemy-button point" ng-click="udemy = 2" src="assets/images/angular_logo.jpg" style="width: 100%;"><br>
-								<img class="third-udemy-button point" ng-click="udemy = 3" src="assets/images/python_logo.jpg" style="width: 100%;"><br>
-								<img class="fourth-udemy-button point" ng-click="udemy = 4" src="assets/images/java_logo.jpg" style="width: 100%"><br>
-							</td>
+        <tr>
+          <td>
+            <div style="float:left; padding: 3% 1% 0% 3%;" ng-class="{'headerFooterFont': !deviceWide, 'compTitleFont': deviceWide}"><b>Udemy</b></div>
+            <div ng-class="{'headerFooterFont point': !deviceWide, 'compTitleFont point': deviceWide}" style="float:right; padding: 3% 3% 1% 3%;" onclick="closeModal()"><b>X</b></div>
+          </td>
+        </tr>
+      </table>
+      <table style="width: 100%">
+          <tr ng-init="udemy = 1">
+            <td style="width:30%" ng-show="deviceWide">
+              <img class="first-udemy-button point" ng-click="udemy = 1" src="assets/images/udemy_logo.jpg" style="width: 100%"><br>
+              <img class="second-udemy-button point" ng-click="udemy = 2" src="assets/images/angular_logo.jpg" style="width: 100%;"><br>
+              <img class="third-udemy-button point" ng-click="udemy = 3" src="assets/images/python_logo.jpg" style="width: 100%;"><br>
+              <img class="fourth-udemy-button point" ng-click="udemy = 4" src="assets/images/java_logo.jpg" style="width: 100%"><br>
+            </td>
 
 							<td>
+
+                 <div style="padding: 2% 2% 1% 2%">
+
+                   <p ng-show="!deviceWide">
+   <img class="point" ng-click="udemy = 1" src="assets/images/udemy_logo.jpg" style="width: 25%;" /><img class="point" ng-click="udemy = 2" src="assets/images/angular_logo.jpg" style="width: 25%;"/><img class="point" ng-click="udemy = 3" src="assets/images/python_logo.jpg" style="width: 25%;" /><img class="point" ng-click="udemy = 4" src="assets/images/java_logo.jpg" style="width: 25%;" />
+   </p>
+
 								<div id="first-udemy-info" ng-show="udemy == 1">
 
+                  <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">UDEMY</span></strong><br>
 
-									<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>UDEMY</strong></div>
-								 <div style="padding-left: 5px; padding-top:2px;">
-								 <img src="assets/images/udemy_icon.png" width="40%" style="padding: 0px 5px 0px 0px; float:right">
+                  <img src="assets/images/udemy_icon.png" style="min-width: 30%; max-width: 50%" ng-class="{'img-responsive': !deviceWide, 'floatRight img-responsive': deviceWide}">
 
-								 <a href="https://www.udemy.com/" style="color:yellow" class="titleBC" target="_blank">https://www.udemy.com/</a>
-								 <br>
-								 <div class="sidebar" style="color:white">	&quot;Udemy is an online learning and teaching marketplace with over 150,000 courses and 24 million students. Learn programming, marketing, data science and more.&quot;
-									 <br><br>
+                  <a href="https://www.udemy.com/" ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" target="_blank"><u>https://www.udemy.com/</u></a>
 
+                  <p style="margin:0px 0px 2% 0px;"></p>
+
+                   <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="color:white">	&quot;Udemy is an online learning and teaching marketplace with over 150,000 courses and 24 million students. Learn programming, marketing, data science and more.&quot;
+
+                  <p style="margin:0px 0px 2% 0px;"></p>
+
+                  <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
 								<b>Courses: </b><br>
 								●	Learn and Understand AngularJS<br>
 								●	Learn Python Programming Masterclass<br>
@@ -845,17 +912,23 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 								<div id="second-udemy-info" ng-show="udemy == 2">
 
 
-									<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>ANGULAR.JS SKILLSET</strong></div>
-								 <div style="padding-left: 5px; padding-top:2px;">
-								 <img src="assets/images/angular_pic.jpg" width="40%" style="padding: 0px 5px 0px 0px; float:left">
+                  <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">ANGULAR.JS SKILLSET</span></strong><br>
 
-								 <a href="https://www.udemy.com/course/learn-angularjs/" style="color:yellow" class="titleBC" target="_blank">LINK TO COURSE</a>
-								 <br>
-								 <div class="sidebar" style="color:white">	&quot;Master AngularJS and the Javascript concepts behind it, design custom directives, and build a single page application.&quot;
-									 <br><br>
+                  <img src="assets/images/angular_pic.jpg" style="min-width: 30%; max-width: 50%" ng-class="{'img-responsive': !deviceWide, 'floatLeft img-responsive': deviceWide}">
+
+                  <a href="https://www.udemy.com/course/learn-angularjs/" ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" target="_blank"><u>LINK TO COURSE</u></a>
+
+                   <p style="margin:0px 0px 2% 0px;"></p>
+
+
+                   <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="color:white">	&quot;Master AngularJS and the Javascript concepts behind it, design custom directives, and build a single page application.&quot;
+
+                     <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:inline-block; padding-top: 5px; color:white">
+      <p style="margin:0px 0px 5% 0px;"></p>
+
 
 								<b>Main Concepts: </b><br>
-								np-app, ng-repeat, ng-src, $scope, $watch, controller, module, ng-view, config(), templateUrl
+								np-app,&emsp; ng-repeat,&emsp; ng-src,&emsp; $scope,&emsp; $watch,&emsp; controller,&emsp; module,&emsp; ng-view,&emsp; config(),&emsp; templateUrl
 
 								 </div>
 
@@ -865,14 +938,20 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 								</div>
 								<div id="third-udemy-info" ng-show="udemy == 3">
 
-									<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>PYTHON SKILLSET</strong></div>
-								 <div style="padding-left: 5px; padding-top:2px;">
-								 <img src="assets/images/python_pic.jpg" width="40%" style="padding: 0px 5px 0px 0px; float:right">
+                  <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">PYTHON SKILLSET</span></strong><br>
 
-								 <a href="https://www.udemy.com/course/python-the-complete-python-developer-course/" style="color:yellow" class="titleBC" target="_blank">LINK TO COURSE</a>
-								 <br>
-								 <div class="sidebar" style="color:white">	&quot;Master AngularJS and the Javascript concepts behind it, design custom directives, and build a single page application.&quot;
-									 <br><br>
+                  <img src="assets/images/python_pic.jpg" style="min-width: 30%; max-width: 50%" ng-class="{'img-responsive': !deviceWide, 'floatRight img-responsive': deviceWide}">
+
+                  <a href="https://www.udemy.com/course/python-the-complete-python-developer-course/" ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" target="_blank"><u>LINK TO COURSE</u></a>
+
+                  <p style="margin:0px 0px 2% 0px;"></p>
+
+
+               <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="color:white">	&quot;This Python For Beginners Course Teaches You The Python Language Fast.&quot;
+               </div>
+
+               <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
+ <p style="margin:0px 0px 2% 0px;"></p>
 
 								<b>Main Concepts: </b><br>
 										●	print()&emsp;
@@ -899,19 +978,20 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 								 </div>
 
 							 </div>
-								</div>
 								<div id="fourth-udemy-info" ng-show="udemy == 4">
 
+                  <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">JAVA INTRO SKILLSET</span></strong><br>
 
-									<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>JAVA INTRO SKILLSET</strong></div>
-								 <div style="padding-left: 5px; padding-top:2px;">
-								 <img src="assets/images/java_pic.jpg" width="40%" style="padding: 0px 5px 0px 0px; float:left">
+                   <img src="assets/images/java_pic.jpg" style="min-width: 30%; max-width: 50%" ng-class="{'img-responsive': !deviceWide, 'floatLeft img-responsive': deviceWide}">
 
-								 <a href="https://www.udemy.com/course/introduction-to-programming-with-java/" style="color:yellow" class="titleBC" target="_blank">LINK TO COURSE</a>
-								 <br>
-								 <div class="sidebar" style="color:white">	&quot;Learn Java programming with examples, quizzes and coding exercises.&quot;
-									 <br><br>
+                    <a href="https://www.udemy.com/course/introduction-to-programming-with-java/" ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" target="_blank"><u>LINK TO COURSE</u></a>
 
+                    <p style="margin:0px 0px 2% 0px;"></p>
+
+                    <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="color:white">	&quot;Learn Java programming with examples, quizzes and coding exercises.&quot;
+
+                   <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:inline-block; padding-top: 5px; color:white">
+    <p style="margin:0px 0px 5% 0px;"></p>
 
 								<b>Main Concepts: </b><br>
 `								●	History of Java&emsp;
@@ -921,8 +1001,6 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 								●	For and While Loops&emsp;
 								●	Methods, Arrays and Objects
 
-
-
 								 </div>
 
 							 </div>
@@ -931,17 +1009,19 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 								</div>
 							</td>
 					</tr>
-				</table><br>
-        <table style="width: 100%" class="infoFooter">
-          <tr>
-              <td>
-             <p class="titleBC point" onclick="closeModal()" style="float:right; margin-top: 2%; margin-right: 15%; border: 0.2px solid yellow"><b>CLOSE</b></p>
-            </td>
-          </tr>
-        </table>
+				</table>
+        <table style="width: 100%;" class="infoHeader">
+         <tr>
+           <td>
+             <p ng-class="{'headerFooterFont point': !deviceWide, 'compTitleFont point': deviceWide}" style="float:right; margin: 3% 15% 1% 3%; border: 0.2px solid yellow" onclick="closeModal()"><b>CLOSE</b></p>
+
+           </td>
+         </tr>
+       </table>
         </div>
         		</div>
         </div>
+      </div>
         </script>
 
 
@@ -952,134 +1032,168 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 <!-- START CODECADEMY MODAL -->
 
 <script type="text/ng-template" id="codecademy.html">
+  <div id="codeCademy" ng-class="{'menuWidth': !deviceWide, 'fifty': deviceWide}" style="color:red; margin:auto">
 
-  <div class="row" id="codeCademy" style="padding-top: 0.5%">
-
-    <div class="col-3"></div>
-
-    <div class="col-6" style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
-     <div style="background-color: rgba(0,191,255, 0.5);" border: 0.7px solid yellow; border-radius: 0px">
+    <div style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
+         <div style="background-color: rgba(0,191,255, 0.5);" border: 0.7px solid yellow; border-radius: 0px">
 
 
-       <table style="width: 100%;" class="infoHeader">
-             <tr>
-               <td>
-                 <p class="titleBC" style="float:left; color:yellow; padding: 3% 1% 0% 3%"><b>CodeCademy</b></p>
-                   <p class="titleBC point" style="float:right; color:yellow; padding: 3% 3% 0% 1%" onclick="closeModal()"><b>X</b></p>
-               </td>
-             </tr>
-           </table>
-           <table>
-                    <tr>
-                      <td style="width: 30%" ng-init="coder = 1">
+           <table style="width: 100%;" class="infoHeader">
+            <tr>
+              <td>
+                <div style="float:left; padding: 3% 1% 0% 3%;" ng-class="{'headerFooterFont': !deviceWide, 'compTitleFont': deviceWide}"><b>CodeCademy</b></div>
+                <div ng-class="{'headerFooterFont point': !deviceWide, 'compTitleFont point': deviceWide}" style="float:right; padding: 3% 3% 1% 3%;" onclick="closeModal()"><b>X</b></div>
+              </td>
+            </tr>
+          </table>
+          <table style="width: 100%">
+           <tr ng-init="coder = 1">
+             <td style="width: 30%" ng-show="deviceWide">
 
-                      <span class='first-code-cademy sidebar' ng-click="coder = 1" style="width: 100%">About CodeCademy</span>
-             					 <span class='second-code-cademy sidebar' ng-click="coder = 2" style="width: 100%">Learn SQL</span>
-             					 <span class='third-code-cademy sidebar' ng-click="coder = 3" style="width: 100%">Learn jQuery</span>
-             					 <span class='fourth-code-cademy sidebar'  ng-click="coder = 4" style="width: 100%">Learn Responsive Design</span>
-             					 <span class='fifth-code-cademy sidebar'  ng-click="coder = 5" style="width: 100%">Learn JavaScript</span>
-             					 <span class='sixth-code-cademy sidebar'  ng-click="coder = 6" style="width: 100%">Learn HTML</span>
-             					 <span class='seventh-code-cademy sidebar' ng-click="coder = 7" style="width: 100%">Learn C++</span>
-             					 <span class='eighth-code-cademy sidebar' ng-click="coder = 8" style="width: 100%">Learn Command Line</span>
-             					 <span class='ninth-code-cademy sidebar' ng-click="coder = 9" style="width: 100%">Learn Java </span>
-                     </td>
-                  <td style="width: 70%">
+               <span class='first-code-cademy compMainFont' ng-click="coder = 1" style="width: 100%">About CodeCademy</span>
+               <span class='second-code-cademy compMainFont' ng-click="coder = 2" style="width: 100%">Learn SQL</span>
+               <span class='third-code-cademy compMainFont' ng-click="coder = 3" style="width: 100%">Learn jQuery</span>
+               <span class='fourth-code-cademy compMainFont' ng-click="coder = 4" style="width: 100%">Learn Responsive Design</span>
+               <span class='fifth-code-cademy compMainFont' ng-click="coder = 5" style="width: 100%">Learn JavaScript</span>
+               <span class='sixth-code-cademy compMainFont' ng-click="coder = 6" style="width: 100%">Learn HTML</span>
+               <span class='seventh-code-cademy compMainFont' ng-click="coder = 7" style="width: 100%">Learn C++</span>
+               <span class='eighth-code-cademy compMainFont' ng-click="coder = 8" style="width: 100%">Learn Command Line</span>
+               <span class='ninth-code-cademy compMainFont' ng-click="coder = 9" style="width: 100%">Learn Java</span>
+              </td>
+              <td>
+
+
+   <div style="padding: 2% 2% 1% 2%">
+
+
+              <p ng-show="!deviceWide">
+
+                <span class='first-code-cademy compMainFont' ng-click="coder = 1" style="width: calc(100%/3); display:inline-block">About</span><span class='second-code-cademy compMainFont' ng-click="coder = 2" style="width: calc(100%/3); display:inline-block">SQL</span><span class='third-code-cademy compMainFont' ng-click="coder = 3" style="width: calc(100%/3); display:inline-block">jQuery</span>
+                <span class='fourth-code-cademy compMainFont' ng-click="coder = 4" style="width: calc(100%/3); display:inline-block">Responsive</span><span class='fifth-code-cademy compMainFont' ng-click="coder = 5" style="width: calc(100%/3); display:inline-block">JavaScript</span><span class='sixth-code-cademy compMainFont' ng-click="coder = 6" style="width: calc(100%/3); display:inline-block">HTML</span>
+                <span class='seventh-code-cademy compMainFont' ng-click="coder = 7" style="width: calc(100%/3); display:inline-block">C++</span><span class='eighth-code-cademy compMainFont' ng-click="coder = 8" style="width: calc(100%/3); display:inline-block">Command</span><span class='ninth-code-cademy compMainFont' ng-click="coder = 9" style="width: calc(100%/3); display:inline-block">Java</span>
+              </p>
+
 
 			 <div id="first-codecademy-info" ng-show="coder == 1">
 
-				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>ABOUT CODECADEMY</strong></div>
 
- 				<div style="padding-left: 5px; padding-top:2px;">
- 				<img src="assets/images/code-academy-logo.png" width="40%" style="padding: 0px 5px 0px 0px; float:right">
+          <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">ABOUT CODECADEMY</span></strong><br>
 
- 				<a href="https://www.codecademy.com/" style="color:yellow" class="titleBC" target="_blank">https://www.codecademy.com/</a>
- 				<br>
- 				<div class="sidebar" style="color:white"> CodeCademy provided me a variety of online courses to take, including online exercises.
- 					<br><br>
+          <img src="assets/images/code-academy-logo.png" ng-class="{'fullWidth': !deviceWide, 'floatRight partialWidth': deviceWide}">
 
-					<a href="https://www.codecademy.com/profiles/rweitman" style="color:yellow" class="titleBC" target="_blank">List of My Completed Courses</a>
-					<br><br>
-
-					●	How to Transform Tables with SQL&emsp;
-					●	Learn Git&emsp;
-					●	How to Analyze Business Metrics with SQL&emsp;
-					●	Learn the Command Line&emsp;
-					●	Learn Color Design&emsp;
-					●	Learn Statistics with Python&emsp;
-					●	Learn C++&emsp;
-					●	Learn SQL&emsp;
-
-					●	Learn Python 2&emsp;
-					●	Learn Java&emsp;
-					●	Learn PHP&emsp;
-					●	Learn Game Development with Phaser.js&emsp;
-					●	Learn Express&emsp;
-					●	Learn HTML&emsp;
+               <a href="https://www.codecademy.com" ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" target="_blank"><u>https://www.codecademy.com</u></a>
 
 
-					●	Learn JavaScript&emsp;
-					●	Learn C#&emsp;
-					●	Learn Node-SQLite&emsp;
-					●	Learn React.js: Part II&emsp;
-					●	Learn React.js: Part I&emsp;
-					●	Learn AngularJS 1.X&emsp;
+               <p style="margin:0px 0px 2% 0px;"></p>
 
-					●	Learn Sass&emsp;
-					●	Learn Responsive Design&emsp;
-					●	How to Make a Website with NameCheap<br>
+               <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
+                 CodeCademy provided me a variety of online courses to take, including online exercises.
+              </div>
 
+               <p style="margin:0px 0px 2% 0px;"></p>
+
+               <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
+
+         					<a href="https://www.codecademy.com/profiles/rweitman" style="color:yellow" target="_blank">List of My Completed Courses</a>
+         					<br><br>
+
+         					●	How to Transform Tables with SQL&emsp;
+         					●	Learn Git&emsp;
+         					●	How to Analyze Business Metrics with SQL&emsp;
+         					●	Learn the Command Line&emsp;
+         					●	Learn Color Design&emsp;
+         					●	Learn Statistics with Python&emsp;
+         					●	Learn C++&emsp;
+         					●	Learn SQL&emsp;
+
+         					●	Learn Python 2&emsp;
+         					●	Learn Java&emsp;
+         					●	Learn PHP&emsp;
+         					●	Learn Game Development with Phaser.js&emsp;
+         					●	Learn Express&emsp;
+         					●	Learn HTML&emsp;
+
+
+         					●	Learn JavaScript&emsp;
+         					●	Learn C#&emsp;
+         					●	Learn Node-SQLite&emsp;
+         					●	Learn React.js: Part II&emsp;
+         					●	Learn React.js: Part I&emsp;
+         					●	Learn AngularJS 1.X&emsp;
+
+         					●	Learn Sass&emsp;
+         					●	Learn Responsive Design&emsp;
+         					●	How to Make a Website with NameCheap<br>
+
+               </div>
 
  				</div>
 
-
- 				</div>
-	 			</div>
 			 <div id="second-codecademy-info" ng-show="coder == 2">
 
-				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY LEARN SQL COURSE SKILLSET</strong></div>
-	 			<div style="padding-left: 5px; padding-top:2px;">
-	 			<img src="assets/images/learn_sql.jpg" width="40%" style="padding: 0px 5px 0px 0px; float:left">
-	 			<div class="sidebar" style="color:white">	&quot;Learn to communicate with databases using SQL, the standard data management language.&quot;
-	 			</div>
-	 			<div class="sidebar" style="display:inline-block; padding-top: 5px; color:white">
 
-				●	CREATE TABLE&emsp;●	INSERT&emsp;●	UPDATE&emsp;●	DELETE&emsp;●	SELECT&emsp;●	AS&emsp;●	DISTINCT&emsp;●	WHERE&emsp;●	LIKE&emsp;
-				●	NULL&emsp;●	AND&emsp;●	OR&emsp;●	ORDER BY&emsp;●	COUNT()&emsp;●	SUM()&emsp;●	AVG()&emsp;●	ROUND()&emsp;
-				●	MAX()&emsp;●	MIN()
+          <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">MY LEARN SQL COURSE SKILLSET</span></strong><br>
 
-	 			</div>
+
+          <img src="assets/images/learn_sql.jpg"  ng-class="{'fullWidth': !deviceWide, 'floatRight partialWidth': deviceWide}">
+
+
+          <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="color:white">
+            &quot;Learn to communicate with databases using SQL, the standard data management language.&quot;
+          </div>
+
+          <p style="margin:0px 0px 2% 0px;"></p>
+
+           <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
+
+             ●	CREATE TABLE&emsp;●	INSERT&emsp;●	UPDATE&emsp;●	DELETE&emsp;●	SELECT&emsp;●	AS&emsp;●	DISTINCT&emsp;●	WHERE&emsp;●	LIKE&emsp;
+             ●	NULL&emsp;●	AND&emsp;●	OR&emsp;●	ORDER BY&emsp;●	COUNT()&emsp;●	SUM()&emsp;●	AVG()&emsp;●	ROUND()&emsp;
+             ●	MAX()&emsp;●	MIN()
 
 	 			</div>
 
 			 </div>
 			 <div id="third-codecademy-info" ng-show="coder == 3">
 
-				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY LEARN JQUERY COURSE SKILLSET</strong></div>
-				<div style="padding-left: 5px; padding-top:2px;">
-				<img src="assets/images/learn_jquery.jpg" width="60%" style="padding: 0px 5px 0px 0px; float:left">
-				<div class="sidebar" style="color:white;">	&quot;Learn the basics of jQuery, a JavaScript library that allows you to easily add dynamic behavior to static web pages.&quot;
-					<br><br>
-				●	$(document).ready<br>
-				●	object variables ($)<br>
-				●	.hide()<br>
-				●	.show()<br>
-				●	.fadeIn()<br>
-				●	.fadeOut()<br>
-				●	.slideDown()<br>
-				●	.slideUp()<br>
-				●	.addClass()<br>
+          <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">MY LEARN JQUERY COURSE SKILLSET</span></strong><br>
+
+
+          <img src="assets/images/learn_jquery.jpg" ng-class="{'fullWidth': !deviceWide, 'floatLeft partialWidth': deviceWide}">
+
+          <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="color:white">
+            &quot;Learn the basics of jQuery, a JavaScript library that allows you to easily add dynamic behavior to static web pages.&quot;
+          </div>
+
+          <p style="margin:0px 0px 2% 0px;"></p>
+
+
+          <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
+				●	$(document).ready&emsp;
+				●	object variables ($)&emsp;
+				●	.hide()&emsp;
+				●	.show()&emsp;
+				●	.fadeIn()&emsp;
+				●	.fadeOut()&emsp;
+				●	.slideDown()&emsp;
+				●	.slideUp()&emsp;
+				●	.addClass()&emsp;
 				●	.removeClass()
 				</div>
 			</div>
-			 </div>
 			 <div id="fourth-codecademy-info" ng-show="coder == 4">
 
-				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY LEARN RESPONSIVE DESIGN COURSE SKILLSET</strong></div>
-			 <div style="padding-left: 5px; padding-top:2px;">
-			 <img src="assets/images/learn_design.jpg" width="60%" style="padding: 0px 5px 0px 0px; float:right">
-			 <div class="sidebar" style="color:white">	&quot;Learn responsive design techniques, like relative sizing units and media queries, to create websites viewable on devices of all sizes.&quot;
-			 </div>
-			 <div class="sidebar" style="display:inline-block; padding-top: 5px; color:white">
+
+          <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">MY LEARN RESPONSIVE DESIGN COURSE SKILLSET</span></strong><br>
+
+            <img src="assets/images/learn_design.jpg"  ng-class="{'fullWidth': !deviceWide, 'floatRight partialWidth': deviceWide}">
+
+
+            <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="color:white">
+	&quot;Learn responsive design techniques, like relative sizing units and media queries, to create websites viewable on devices of all sizes.&quot;
+ 						</div>
+
+            <p style="margin:0px 0px 2% 0px;"></p>
+            <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:inline-block; padding-top: 5px; color:white">
 
 				<b>MAIN TOPICS</b><br>
 		 ●	@media queries<br>
@@ -1091,16 +1205,21 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 
 			 </div>
 
-			 </div>
 			 <div id="fifth-codecademy-info" ng-show="coder == 5">
 
 
-				 			 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY LEARN JAVASCRIPT COURSE SKILLSET</strong></div>
-				 			 <div style="padding-left: 5px; padding-top:2px;">
-				 			 <img src="assets/images/learn_js.jpg" width="60%" style="padding: 0px 5px 0px 0px; float:right">
-				 			 <div class="sidebar" style="color:white">	&quot;Learn the JavaScript fundamentals you’ll need for front-end or back-end development.&quot;
+         <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">MY LEARN JAVASCRIPT COURSE SKILLSET</span></strong><br>
 
-								 <br><br>
+           <img src="assets/images/learn_js.jpg"  ng-class="{'fullWidth': !deviceWide, 'floatLeft partialWidth': deviceWide}">
+
+           <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="color:white">
+                &quot;Learn the JavaScript fundamentals you’ll need for front-end or back-end development.&quot;
+           </div>
+
+           <p style="margin:0px 0px 2% 0px;"></p>
+
+            <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
+
 				 				<b>BASICS:</b>&emsp;●	@media queries&emsp;● console.log&emsp;● Strings&emsp;● numbers&emsp;
 								●	booleans&emsp;●	null&emsp;●	arithmetric operators&emsp;●	.length&emsp;●	methods&emsp;
 								●	Math.random()&emsp;●	Comments&emsp;●	variables (var/let/const)&emsp;●	undefined&emsp;
@@ -1126,24 +1245,27 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 				 			 </div>
 
 				 			 </div>
-
-
-
-
-			 </div>
 			 <div id="sixth-codecademy-info" ng-show="coder == 6">
 
-				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY LEARN HTML COURSE SKILLSET</strong></div>
-			 <div style="padding-left: 5px; padding-top:2px;">
-			 <img src="assets/images/learn_html.jpg" width="30%" style="padding: 0px 5px 0px 0px; float:left">
-			 <div class="sidebar" style="color:white">	&quot;Learn the basics of HTML5 and start building & editing web pages.&quot;
-				 <br><br>
+
+         <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">MY LEARN HTML COURSE SKILLSET</span></strong><br>
+
+
+         <img src="assets/images/learn_html.jpg"  ng-class="{'fullWidth': !deviceWide, 'floatLeft partialWidth': deviceWide}">
+         <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="color:white">
+           	&quot;Learn the basics of HTML5 and start building & editing web pages.&quot;
+         </div>
+
+         <p style="margin:0px 0px 2% 0px;"></p>
+
+
+         <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
 
 			  <b>MAIN TOPICS: </b>&emsp;●	&lt;h1&gt;-&lt;h6&gt;&emsp;●	&lt;body&gt;&emsp;●	&lt;div&gt;&emsp;●	id&emsp;●	style&emsp;●	&lt;span&gt;&emsp;
 				●	&lt;em&gt;&emsp;●	&lt;strong&gt;&emsp;
 				●	&lt;br&gt;&emsp;●	&lt;ul&gt;&emsp;●	&lt;li&gt;&emsp;●	&lt;ol&gt;&emsp;●	&lt;img&gt;&emsp;
-				●	&lt;video&gt;&emsp;●	&lt;head&gt;&emsp;●	&lt;title&gt;&emsp;●	&lt;a&gt; (href)&emsp;
-				●	&lt;target=&quot;_blank&quot;&gt;&emsp;●	&lt;head&gt;&emsp;●	&lt;title&gt;&emsp;●	&lt;&lt;a&gt; (href)&gt;&emsp;
+				●	&lt;video&gt;&emsp;●	&lt;head&gt;&emsp;●	&lt;title&gt;&emsp;●	&lt;a&gt; (href);&emsp;
+				●	&lt;target=&quot;_blank&quot;&gt;&emsp;●	&lt;head&gt;&emsp;●	&lt;title&gt;&emsp;
 				●	comments&emsp;● &lt;table&gt;&emsp;● &lt;tr&gt;&emsp;● &lt;td&gt;&emsp;●	colspan&emsp;●	rowspan&emsp;
 				●	&lt;tbody&gt;&lt;thead&gt;&lt;tfoot&gt;&emsp;●	&lt;th&gt;&emsp;●	&lt;input&gt;&emsp;
 				●	&lt;label&gt;&emsp;●	checkboxes&emsp;●	radio buttons&emsp;●	text input&emsp;
@@ -1153,15 +1275,20 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 			 </div>
 
 			 </div>
-
-			 </div>
 			 <div id="seventh-codecademy-info" ng-show="coder == 7">
 
-				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY LEARN C++ COURSE SKILLSET</strong></div>
-			 <div style="padding-left: 5px; padding-top:2px;">
-			 <img src="assets/images/learn_cplusplus.jpg" width="35%" style="padding: 0px 5px 0px 0px; float:left">
-			 <div class="sidebar" style="color:white">	&quot;Learn one of the most powerful programming languages in the world and become a rockstar developer. &quot;
-				 <br><br>
+                  <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">MY LEARN C++ COURSE SKILLSET</span></strong><br>
+
+
+                  <img src="assets/images/learn_cplusplus.jpg"  ng-class="{'fullWidth': !deviceWide, 'floatLeft partialWidth': deviceWide}">
+
+                  <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="color:white">
+                     &quot;Learn one of the most powerful programming languages in the world and become a rockstar developer. &quot;
+                  </div>
+
+                  <p style="margin:0px 0px 2% 0px;"></p>
+
+           <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
 
 				<b>MAIN TOPICS: </b>&emsp;●	&#92;n&emsp;●	comments&emsp;●	int Type&emsp;●	double Type&emsp;●	char Type&emsp;
 				●	string Type&emsp;●	bool Type&emsp;●	std::cout&emsp;●	std::cin&emsp;●	switches cases and default&emsp;
@@ -1171,37 +1298,47 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 			 </div>
 
 			 </div>
-
-
-			 </div>
 			 <div id="eighth-codecademy-info" ng-show="coder == 8">
 
-				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY LEARN COMMAND LINE COURSE SKILLSET</strong></div>
-			 <div style="padding-left: 5px; padding-top:2px;">
-			 <img src="assets/images/learn_command.jpg" width="60%" style="padding: 0px 5px 0px 0px; float:left">
-			 <div class="sidebar" style="color:white">	&quot;Discover the power of this simple yet essential text-based tool and increase your productivity as a developer.&quot;
-				 <br><br>
+         <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">MY LEARN COMMAND LINE COURSE SKILLSET</span></strong><br>
+
+
+         <img src="assets/images/learn_command.jpg" ng-class="{'fullWidth': !deviceWide, 'floatLeft partialWidth': deviceWide}">
+
+         <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="color:white">
+              &quot;Discover the power of this simple yet essential text-based tool and increase your productivity as a developer.&quot;
+         </div>
+
+         <p style="margin:0px 0px 2% 0px;"></p>
+
+         <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:inline-block; padding-top: 5px; color:white">
+
 
 				<b>MAIN TOPICS: </b>&emsp;●	ls&emsp;●	cd&emsp;●	mkdir&emsp;●	rm<br>
 
 			 </div>
 		 </div>
-			 </div>
 			 <div id="ninth-codecademy-info" ng-show="coder == 9">
 
 
-				 <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>MY LEARN JAVA COURSE SKILLSET</strong></div>
-				 <div style="padding-left: 5px; padding-top:2px;">
-				 <img src="assets/images/learn_java.jpg" width="35%" style="padding: 0px 5px 0px 0px; float:right">
-				 <div class="sidebar" style="color:white">	&quot;Learn the basics of the popular Java language in this introductory course. &quot;
-				 <br><br>
+          <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">MY LEARN JAVA COURSE SKILLSET</span></strong><br>
+
+          <img src="assets/images/learn_java.jpg"  ng-class="{'fullWidth': !deviceWide, 'floatRight partialWidth': deviceWide}">
+
+
+          <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="color:white">
+          &quot;Learn the basics of the popular Java language in this introductory course. &quot;
+               </div>
+
+               <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
+        <p style="margin:0px 0px 2% 0px;"></p>
 
 				 <b>MAIN TOPICS: </b>&emsp;
 				 ●	System.out.println()&emsp;
 				 ●	main()&emsp;
 				 ●	public static void main(String[] args) { }&emsp;
 				 ●	comments&emsp;
-				 ●	int/char/boolean/byte/long/short/double/float&emsp;
+				 ●	int / char / boolean / byte / long / short / double / float&emsp;
 				 ●	ArrayList<String> array_name = new ArrayList<String>();&emsp;
 				 ●	int[] variable = int[length]&emsp;
 				 ●	array {}&emsp;
@@ -1216,66 +1353,86 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 				 ●	inheritance (extends)
 </div>
 </div>
-			 </div>
 		 </td>
 	 </tr>
  </table>
- <br>
- <table style="width: 100%" class="infoFooter">
-   <tr>
-       <td>
-      <p class="titleBC point" onclick="closeModal()" style="float:right; margin-top: 2%; margin-right: 15%; border: 0.2px solid yellow"><b>CLOSE</b></p>
-     </td>
-   </tr>
- </table>
+ <table style="width: 100%;" class="infoHeader">
+            <tr>
+              <td>
+                <p ng-class="{'headerFooterFont point': !deviceWide, 'compTitleFont point': deviceWide}" style="float:right; margin: 3% 15% 1% 3%; border: 0.2px solid yellow" onclick="closeModal()"><b>CLOSE</b></p>
+
+              </td>
+            </tr>
+          </table>
 
 		</div>
 
 	</div>
 </div>
+</div>
 </script>
 
 <!-- END CODECADEMY MODAL -->
+
+<div ng-view></div>
+
 
 <!-- START CODING BOOTCAMP MODAL -->
 
 <script type="text/ng-template" id="bootcamp.html">
 
-  <div class="row" id="codingBootCamp" style="padding-top: 0.5%">
+  <div id="codingBootCamp" ng-class="{'menuWidth': !deviceWide, 'fifty': deviceWide}" style="color:red; margin:auto">
 
-    <div class="col-3"></div>
+    <div style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
+      <div style="background-color: rgba(0,191,255, 0.5);" border: 0.7px solid yellow; border-radius: 0px">
 
-    <div class="col-6" style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
-     <div style="background-color: rgba(0,191,255, 0.5);" border: 0.7px solid yellow; border-radius: 0px">
+        <table style="width: 100%;" class="infoHeader">
+        <tr>
+          <td>
+            <div style="float:left; padding: 3% 1% 0% 3%;" ng-class="{'headerFooterFont': !deviceWide, 'compTitleFont': deviceWide}"><b>Coding BootCamp</b></div>
+            <div ng-class="{'headerFooterFont point': !deviceWide, 'compTitleFont point': deviceWide}" style="float:right; padding: 3% 3% 1% 3%;" onclick="closeModal()"><b>X</b></div>
+          </td>
+        </tr>
+      </table>
+      <table style="width: 100%">
+                 <tr ng-init="boot = 1">
 
+                      <td style="width: 20%" ng-show="deviceWide">
 
-       <table style="width: 100%;" class="infoHeader">
-             <tr>
-               <td>
-                 <p class="titleBC" style="float:left; color:yellow; padding: 3% 1% 0% 3%"><b>Coding BootCamp</b></p>
-                   <p class="titleBC point" style="float:right; color:yellow; padding: 3% 3% 0% 1%" onclick="closeModal()"><b>X</b></p>
-               </td>
-             </tr>
-           </table>
-           <table>
-                    <tr>
-                      <td style="width: 30%" ng-init="boot = 1">
+                        <span class='first-boot-camp compMainFont' ng-click="boot = 1" style="width: 100%">Hangman</span>
+                        <span class='second-boot-camp compMainFont' ng-click="boot = 2" style="width: 100%">Eventability</span>
+                        <span class='third-boot-camp compMainFont' ng-click="boot = 3" style="width: 100%">Movie Trivia</span>
+                        <span class='fourth-boot-camp compMainFont' ng-click="boot = 4" style="width: 100%">GifTastic</span>
+                        <span class='fifth-boot-camp compMainFont' ng-click="boot = 5" style="width: 100%">Train</span>
+                        <span class='sixth-boot-camp compMainFont' ng-click="boot = 6" style="width: 100%">HP - RPG</span>
+                        <span class='seventh-boot-camp compMainFont' ng-click="boot = 7" style="width: 100%">Barcode</span>
+                        <span class='eighth-boot-camp compMainFont' ng-click="boot = 8" style="width: 100%">Crystal Collector</span>
+                        <span class='ninth-boot-camp compMainFont' ng-click="boot = 9" style="width: 100%">Bamazon</span>
+                        <span class='tenth-boot-camp compMainFont' ng-click="boot = 10" style="width: 100%">CrystalEHR</span> </td>
 
-                        <span class='first-boot-camp sidebar' ng-click="boot = 1" style="width: 100%">Hangman</span>
-                        <span class='second-boot-camp sidebar' ng-click="boot = 2" style="width: 100%">Eventability</span>
-                        <span class='third-boot-camp sidebar' ng-click="boot = 3" style="width: 100%">Movie Trivia</span>
-                        <span class='fourth-boot-camp sidebar' ng-click="boot = 4" style="width: 100%">GifTastic</span>
-                        <span class='fifth-boot-camp sidebar' ng-click="boot = 5" style="width: 100%">Train</span>
-                        <span class='sixth-boot-camp sidebar' ng-click="boot = 6" style="width: 100%">HP - RPG</span>
-                        <span class='seventh-boot-camp sidebar' ng-click="boot = 7" style="width: 100%">Barcode</span>
-                        <span class='eighth-boot-camp sidebar' ng-click="boot = 8" style="width: 100%">Crystals</span>
-                        <span class='ninth-boot-camp sidebar' ng-click="boot = 9" style="width: 100%">Bamazon</span>
-                        <span class='tenth-boot-camp sidebar' ng-click="boot = 10" style="width: 100%">CrystalEHR</span> </td>
-                  <td style="width: 70%">
+                        <td>
+
+   <div style="padding: 2% 2% 1% 2%">
+
+     <p ng-show="!deviceWide">
+
+       <span class='first-boot-camp compMainFont' ng-click="boot = 1" style="width:25%; display:inline-block">Hangman</span><span class='second-boot-camp compMainFont' ng-click="boot = 2" style="width:25%; display:inline-block">Events</span><span class='third-boot-camp compMainFont' ng-click="boot = 3" style="width:25%; display:inline-block">Movies</span><span class='fourth-boot-camp compMainFont' ng-click="boot = 4" style="width:25%; display:inline-block">GifTastic</span>
+       <span class='fifth-boot-camp compMainFont' ng-click="boot = 5" style="width:25%; display:inline-block">Train</span><span class='sixth-boot-camp compMainFont' ng-click="boot = 6" style="width:25%; display:inline-block">HP-RPG</span><span class='seventh-boot-camp compMainFont' ng-click="boot = 7" style="width:25%; display:inline-block">Barcode</span><span class='eighth-boot-camp compMainFont' ng-click="boot = 8" style="width:25%; display:inline-block">Collect</span>
+       <span class='ninth-boot-camp compMainFont' ng-click="boot = 9" style="width:25%; display:inline-block">Bamazon</span><span class='tenth-boot-camp compMainFont' ng-click="boot = 10" style="width:25%; display:inline-block">Crystal</span>
+
+     </p>
+
               <div id="first-boot-info" ng-show="boot == 1">
-                <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Hangman the Guessing Game</strong></div>
-                <img src="assets/images/hangman.png" width="100%" style="padding: 2px 5px 0px 5px">
-                <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
+
+                <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">Hangman the Guessing Game</span></strong><br>
+
+                  <img src="assets/images/hangman.png" style="width: 100%">
+
+                    <p style="margin:0px 0px 2% 0px;"></p>
+
+
+                <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
+
                   The <b>Hangman</b> Game is about guessing letters in a random word. The player has 15 tries to succeed or fail. Wins and losses are recorded on the page.
                   <br><br>
                   -The game uses Basic Javascript
@@ -1293,17 +1450,26 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
                   -The text of the game is put on the page with: <b>document.querySelector</b>
                   <br><br>
                   <div style="margin-left: calc(50% - 10px)">
-                  <a href="https://github.com/rweitman/Hangman-Game" target="_blank"><img src="assets/images/github.png" style="width: 10px"></a>
+                  <a href="https://github.com/rweitman/Hangman-Game" target="_blank"><img src="assets/images/github.png" style="width: 4em"></a>
                   </div>
-                <!-- <a href="https://github.com/rweitman/Hangman-Game" target="_blank" style="margin:auto">
-                  <img src="assets/images/github.png" style="margin:auto; width: 5px; height: 5px">
-                </a> -->
+
                       </div>
+
+
+
               </div>
               <div id="second-boot-info" ng-show="boot == 2">
-								<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>eventAbility - Group Project</strong></div>
-								  <img src="assets/images/eventability.png" width="100%" style="padding: 2px 5px 0px 5px">
-                <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
+
+                <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">eventAbility - Group Project</span></strong><br>
+
+
+                <img src="assets/images/eventability.png" style="width: 100%">
+
+
+                <p style="margin:0px 0px 2% 0px;"></p>
+
+
+                <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
                   I was part of a group that made an interface to find <b>local events</b>.
                   <br><br>
                   <b>THE FORM</b>
@@ -1323,33 +1489,43 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
                   -The code processes the data using Eventbrite <b>API</b>, Google Maps <b>API</b>  &amp; SmartyStreets <b>API</b>
                   <br>
                   -After being processed with jQuery, the event is placed between the div tags with the id <b>eventHolder</b>
-									<br>
-									<div style="margin-left: calc(50% - 10px)">
-                  <a href="https://github.com/rweitman/eventAbility" target="_blank"><img src="assets/images/github.png" style="width: 10px"></a>
+                  <br><br>
+                  <div style="margin-left: calc(50% - 10px)">
+                  <a href="https://github.com/rweitman/eventAbility" target="_blank"><img src="assets/images/github.png" style="width: 4em"></a>
                   </div>
 								</div>
               </div>
               <div id="third-boot-info" ng-show="boot == 3">
-								<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Movie Trivia - Multiple Choice</strong></div>
-								<img src="assets/images/movietrivia.png" width="100%" style="padding: 2px 5px 0px 5px">
-                 <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
+
+<strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">Movie Trivia - Multiple Choice</span></strong><br>
+
+<img src="assets/images/movietrivia.png" style="width: 100%">
+
+        <p style="margin:0px 0px 2% 0px;"></p>
+
+                <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
+
                   In this <b>Movie Trivia Game</b>, the user can try to answer 7 movie questions within a time limit. When the time limit runs out the answers are not posted so there is still a challenge after it expires.
                   <br><br>
                   The movie questions are <b>multiple-choice</b>; they use radio type buttons. For loops are used to check the questions to see if they are correct.
                   <br><br>
                   The <b>javascript</b> file includes: A startTimer function that formats times, Setting the target/countdown number, Starting the startTimer, Processing Results &amp;The Message After the Timer ends
 								<br><br>
-								<div style="margin-left: calc(50% - 10px)">
-								<a href="https://github.com/rweitman/MovieTrivia" target="_blank"><img src="assets/images/github.png" style="width: 10px"></a>
-              </div>
+                <div style="margin-left: calc(50% - 10px)">
+                 <a href="https://github.com/rweitman/MovieTrivia" target="_blank"><img src="assets/images/github.png" style="width: 4em"></a>
+                 </div>
 							</div>
 							</div>
               <div id="fourth-boot-info" ng-show="boot == 4">
-								   <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>GifTastic - Sports</strong></div>
-								 <img src="assets/images/sports.png" width="100%" style="padding: 2px 5px 0px 5px">
 
-                <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
-                  <br>
+
+                <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">GifTastic - Sports</span></strong><br>
+
+                <img src="assets/images/sports.png" style="width: 100%">
+
+                <p style="margin:0px 0px 2% 0px;"></p>
+
+                <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
                   The main focus of this program is to use search terms to spawn relevant images from <b>giphy.com</b>.
                   <br><br>
                   The initial Search terms are <b>Soccer, Bowling, Tennis, Golf, Hockey</b> and <b>Football</b>; they are in the form of buttons.
@@ -1357,48 +1533,70 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
                   When a different search term is selected, the <b>10 images</b> below change to fit the criteria.
                   <br><br>
                   A search term can be added by putting a sport name next to <b>"Add a Sport Bro"</b>
+                  <br><br>
 
-                <br><br>
-								<div style="margin-left: calc(50% - 10px)">
-								 <a href="https://github.com/rweitman/GifTastic" target="_blank"><img src="assets/images/github.png" style="width: 10px"></a>
+                  <div style="margin-left: calc(50% - 10px)">
+                                   <a href="https://github.com/rweitman/GifTastic" target="_blank"><img src="assets/images/github.png" style="width: 4em"></a>
+                                   </div>
+
 								 </div>
-								 </div>
+
               </div>
               <div id="fifth-boot-info" ng-show="boot == 5">
-               <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Train Scheduler</strong></div>
-                     <img src="assets/images/train.png" width="100%" style="padding: 2px 5px 0px 5px">
-                 <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
+
+               <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">Train Scheduler</span></strong><br>
+
+
+                <img src="assets/images/train.png" style="width: 100%">
+                <p style="margin:0px 0px 2% 0px;"></p>
+
+                <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
                   Can Store: "Train Name", "Destination", "Frequency", "Next Arrival" and "Minutes Away"
                   <br><br>
                   Underneath the train time table another train's data can be submitted.
                   <br><br>
                   <b>Firebase</b> holds most of the data in this app.
 									<br><br>
-									 <div style="margin-left: calc(50% - 10px)">
-									 <a href="https://github.com/rweitman/TrainScheduler" target="_blank"><img src="assets/images/github.png" style="width: 10px"></a>
-                </div>
+                  <div style="margin-left: calc(50% - 10px)">
+                  <a href="https://github.com/rweitman/TrainScheduler" target="_blank"><img src="assets/images/github.png" style="width: 4em"></a>
+                  </div>
 								</div>
               </div>
               <div id="sixth-boot-info" ng-show="boot == 6">
-								<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Harry Potter - MiniRPG</strong></div>
-								<img src="assets/images/hp-rpg.png" width="100%" style="padding: 2px 5px 0px 5px">
-                <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
+
+                <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">Harry Potter - MiniRPG</span></strong><br>
+
+                <img src="assets/images/hp-rpg.png" style="width: 100%">
+
+                  <p style="margin:0px 0px 2% 0px;"></p>
+
+
+                <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
+
                   In this minigame you can select a main character in the Harry Potter series.
                   <br><br>
                   You can then begin choosing opponents.
                   <br><br>
                   Each opponent has different attack powers and health points so choosing matters.
                 <br><br>
-								<div style="margin-left: calc(50% - 10px)">
-                  <a href="https://github.com/rweitman/HarryPotter-RPG" target="_blank"><img src="assets/images/github.png" style="width: 10px"></a>
+                <div style="margin-left: calc(50% - 10px)">
+                  <a href="https://github.com/rweitman/HarryPotter-RPG" target="_blank"><img src="assets/images/github.png" style="width: 4em"></a>
                   </div>
 								</div>
+
               </div>
               <div id="seventh-boot-info" ng-show="boot == 7">
-							<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Barcode - Group Project</strong></div>
-								<img src="assets/images/project2.png" width="100%" style="padding: 2px 5px 0px 5px">
-              <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
-								<br>
+
+              <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">Barcode - Group Project</span></strong><br>
+
+              <img src="assets/images/project2.png" style="width: 100%">
+
+
+              <p style="margin:0px 0px 2% 0px;"></p>
+
+
+               <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
+
                   <b>FEATURES:</b> handlebars, GitHub, BCrypt, HighCharts.js, Nodemailer, MySQL, Material Lite Design &amp; Barcode Scanner
                   <br><br>
                   <b>Step 1</b> - Enter in User Details
@@ -1409,12 +1607,20 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
                   <br>
                   <b>Step 4</b> - Use the Barcode Scanner for Quality Control and Shipping
                 </div>
+
+
+
               </div>
               <div id="eighth-boot-info" ng-show="boot == 8">
-								<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Crystal Collector</strong></div>
-                <img src="assets/images/crystal-collect.png" width="100%" style="padding: 2px 5px 0px 5px">
-                 <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
-                  <br>
+
+                 <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">Crystal Collector</span></strong><br>
+
+                 <img src="assets/images/crystal-collect.png" style="width: 100%">
+
+                 <p style="margin:0px 0px 2% 0px;"></p>
+
+                 <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
+
                   The <b>Crystals Collector</b> game involves Instructions, Crystal Collector Title, Objective (Target) Number, Win/Loss Statistics, Current Number &amp; a Game Console.
                   <br><br>
                   The Instructions can be shown by pressing the <b>"Show"</b> button in the top left corner of the page. The Instructions can be hidden when by pressing the <b>"Hide"</b> button.
@@ -1422,15 +1628,22 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
                   The objective of the game is to reach the <b>target number</b> by pressing the gems without going past the target. The target number can range from 19 to 120. The gem values can range from 1 to 12.
                 <br>
 								<br>
-								<div style="margin-left: calc(50% - 10px)">
-								<a href="https://github.com/rweitman/Crystals-Collector" target="_blank"><img src="assets/images/github.png" style="width: 10px"></a>
-								</div>
+                <div style="margin-left: calc(50% - 10px)">
+                  <a href="https://github.com/rweitman/Crystals-Collector" target="_blank"><img src="assets/images/github.png" style="width: 4em"></a>
+                  </div>
 								</div>
               </div>
               <div id="ninth-boot-info" ng-show="boot == 9">
-							<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Bamazon - MySQL</strong></div>
-								 <img src="assets/images/bamazon.png" width="100%" style="padding: 2px 5px 0px 5px">
-<div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
+
+
+                 <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">Bamazon - MySQL</span></strong><br>
+
+
+                 <img src="assets/images/bamazon.png" style="width: 100%">
+
+                 <p style="margin:0px 0px 2% 0px;"></p>
+
+                 <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
 
                   <b>Customer</b>:<br>
                     What would you like to buy?<br>
@@ -1446,15 +1659,23 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
                     View Products By Department<br>
                     Create a New Department
 									<br><br>
-									<div style="margin-left: calc(50% - 10px)">
-								 <a href="https://github.com/rweitman/Bamazon" target="_blank"><img src="assets/images/github.png" style="width: 10px"></a>
-								 </div>
+
+                  <div style="margin-left: calc(50% - 10px)">
+                 <a href="https://github.com/rweitman/Bamazon" target="_blank"><img src="assets/images/github.png" style="width: 4em"></a>
+                 </div>
 								 </div>
               </div>
               <div id="tenth-boot-info" ng-show="boot == 10">
-								<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>CrystalEHR - Group Project</strong></div>
-                <img src="assets/images/doctor.jpg" width="100%" style="padding: 2px 5px 0px 5px">
-            <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
+
+
+                <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">CrystalEHR - Group Project</span></strong><br>
+
+                  <img src="assets/images/doctor.jpg" style="width: 100%">
+
+                   <p style="margin:0px 0px 2% 0px;"></p>
+
+
+                     <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
                   <b>Stores Medical Information for a Multi-Faceted Interface</b>
                   <br>
                   <b>Dependencies</b>
@@ -1469,22 +1690,23 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
                     <li>Webpack</li>
                     <li>Mongoose</li>
                   </ul><br><br>
-									<div style="margin-left: calc(50% - 10px)">
-							<a href="https://github.com/rweitman/CrystalEHR" target="_blank"><img src="assets/images/github.png" style="width: 10px"></a>
-								</div>
+                  <div style="margin-left: calc(50% - 10px)">
+                  <a href="https://github.com/rweitman/CrystalEHR" target="_blank"><img src="assets/images/github.png" style="width: 4em"></a>
+                  </div>
 								</div>
               </div>
+            </div>
             </td>
           </tr>
         </table>
-        <br>
-        <table style="width: 100%" class="infoFooter">
-          <tr>
-              <td>
-             <p class="titleBC point" onclick="closeModal()" style="float:right; margin-top: 2%; margin-right: 15%; border: 0.2px solid yellow"><b>CLOSE</b></p>
-            </td>
-          </tr>
-        </table>
+        <table style="width: 100%;" class="infoHeader">
+           <tr>
+             <td>
+               <p ng-class="{'headerFooterFont point': !deviceWide, 'compTitleFont point': deviceWide}" style="float:right; margin: 3% 15% 1% 3%; border: 0.2px solid yellow" onclick="closeModal()"><b>CLOSE</b></p>
+
+             </td>
+           </tr>
+         </table>
 
        		</div>
 
@@ -1494,260 +1716,322 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 
 <!-- END CODING BOOTCAMP -->
 
-<div ng-view></div>
-
 <!-- START KHAN ACADEMY -->
 
 
 <script type="text/ng-template" id="khanacademy.html">
 
-  <div class="row" id="khanAcademy" style="padding-top: 0.5%">
 
-    <div class="col-3"></div>
-
-    <div class="col-6" style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
-     <div style="background-color: rgba(0,191,255, 0.5);" border: 0.7px solid yellow; border-radius: 0px">
+  <div id="khanAcademy" ng-class="{'menuWidth': !deviceWide, 'fifty': deviceWide}" style="color:red; margin:auto">
 
 
-       <table style="width: 100%;" class="infoHeader">
-             <tr>
-               <td>
-                 <p class="titleBC" style="float:left; color:yellow; padding: 3% 1% 0% 3%"><b>Khan Academy</b></p>
-                   <p class="titleBC point" style="float:right; color:yellow; padding: 3% 3% 0% 1%" onclick="closeModal()"><b>X</b></p>
-               </td>
-             </tr>
-           </table>
-           <table>
-                    <tr>
-                      <td style="width: 30%" ng-init="khan = 1">
+    <div style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
+   <div style="background-color: rgba(0,191,255, 0.5);" border: 0.7px solid yellow; border-radius: 0px">
 
-                        <span class='first-khan-academy sidebar' ng-click="khan = 1" style="width: 100%">Cabin</span>
-                        <span class='second-khan-academy sidebar' ng-click="khan = 2" style="width: 100%">Fish Swim</span>
-                        <span class='third-khan-academy sidebar' ng-click="khan = 3" style="width: 100%">Dinner</span>
-                        <span class='fourth-khan-academy sidebar' ng-click="khan = 4" style="width: 100%">Rain</span>
-                        <span class='fifth-khan-academy sidebar' ng-click="khan = 5" style="width: 100%">BookShelf</span>
-                        <span class='sixth-khan-academy sidebar' ng-click="khan = 6" style="width: 100%">Authors</span>
-                        <span class='seventh-khan-academy sidebar' ng-click="khan = 7" style="width: 100%">Memory Tiles</span>
-                        <span class='eighth-khan-academy sidebar' ng-click="khan = 8" style="width: 100%">Paint</span>
-                        <span class='ninth-khan-academy sidebar' ng-click="khan = 9" style="width: 100%">Mountains</span>
-                        <span class='tenth-khan-academy sidebar' ng-click="khan = 10" style="width: 100%">Spaceship</span>
-</td>
-  <td style="width: 70%">
+
+     <table style="width: 100%;" class="infoHeader">
+        <tr>
+          <td>
+            <div style="float:left; padding: 3% 1% 0% 3%;" ng-class="{'headerFooterFont': !deviceWide, 'compTitleFont': deviceWide}"><b>Khan Academy</b></div>
+            <div ng-class="{'headerFooterFont point': !deviceWide, 'compTitleFont point': deviceWide}" style="float:right; padding: 3% 3% 1% 3%;" onclick="closeModal()"><b>X</b></div>
+          </td>
+        </tr>
+      </table>
+
+           <table style="width: 100%">
+                    <tr ng-init="khan = 1">
+
+                      <td style="width:20%" ng-show="deviceWide">
+                        <span class='first-khan-academy compMainFont' ng-click="khan = 1" style="width: 100%">Cabin</span>
+                        <span class='second-khan-academy compMainFont' ng-click="khan = 2" style="width: 100%">Fish</span>
+                        <span class='third-khan-academy compMainFont' ng-click="khan = 3" style="width: 100%">Dinner</span>
+                        <span class='fourth-khan-academy compMainFont' ng-click="khan = 4" style="width: 100%">Rain</span>
+                        <span class='fifth-khan-academy compMainFont' ng-click="khan = 5" style="width: 100%">Books</span>
+                        <span class='sixth-khan-academy compMainFont' ng-click="khan = 6" style="width: 100%">Authors</span>
+                        <span class='seventh-khan-academy compMainFont' ng-click="khan = 7" style="width: 100%">Memory</span>
+                        <span class='eighth-khan-academy compMainFont' ng-click="khan = 8" style="width: 100%">Paint</span>
+                        <span class='ninth-khan-academy compMainFont' ng-click="khan = 9" style="width: 100%">Mountain</span>
+                        <span class='tenth-khan-academy compMainFont' ng-click="khan = 10" style="width: 100%">Space</span>
+           </td>
+
+  <td>
+
+    <div style="padding: 2% 2% 1% 2%">
+
+      <p ng-show="!deviceWide">
+
+        <span class='first-khan-academy compMainFont' ng-click="khan = 1" style="width:25%; display:inline-block">Cabin</span><span class='second-khan-academy compMainFont' ng-click="khan = 2" style="width:25%; display:inline-block">Fish</span><span class='third-khan-academy compMainFont' ng-click="khan = 3" style="width:25%; display:inline-block">Dinner</span><span class='fourth-khan-academy compMainFont' ng-click="khan = 4" style="width:25%; display:inline-block">Rain</span>
+        <span class='fifth-khan-academy compMainFont' ng-click="khan = 5" style="width:25%; display:inline-block">Books</span><span class='sixth-khan-academy compMainFont' ng-click="khan = 6" style="width:25%; display:inline-block">Authors</span><span class='seventh-khan-academy compMainFont' ng-click="khan = 7" style="width:25%; display:inline-block">Memory</span><span class='eighth-khan-academy compMainFont' ng-click="khan = 8" style="width:25%; display:inline-block">Paint</span>
+        <span class='ninth-khan-academy compMainFont' ng-click="khan = 9" style="width:25%; display:inline-block">Mountain</span><span class='tenth-khan-academy compMainFont' ng-click="khan = 10" style="width:25%; display:inline-block">Space</span>
+
+
+</p>
+
+
               <div id="first-khan-info" ng-show="khan == 1">
-                <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Cabin - Made With For Loops</strong></div>
-                <img src="assets/images/cabin.png" width="100%" style="padding: 2px 5px 0px 5px">
-                <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
-									<br>
+
+                 <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">Cabin - Made With For Loops</span></strong><br>
+
+                <img src="assets/images/cabin.png" style="width: 100%">
+
+                <p style="margin:0px 0px 2% 0px;"></p>
+
+                <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
                   <b>SKY:</b> background
-                  <br>
+                  <br><br>
                   <b>ROOF:</b> triangle
-                  <br>
+                  <br><br>
                   <b>PANELS:</b> alternating rectangles based on an <b>if/else</b> statement using <b>%</b>
-                  <br>
+                  <br><br>
                   <b>DOOR:</b> rectangle
-                  <br>
+                  <br><br>
                   <b>WINDOWS:</b> rectangles drawn based on a for loop
-                  <br>
+                  <br><br>
                   <b>GRASS:</b> rectangles drawn based on a for loop
-								</div>
+           </div>
+
               </div>
               <div id="second-khan-info" ng-show="khan == 2">
-								<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Moving Fish - Drawing Animation</strong></div>
-								  <img src="assets/images/moving-fish.png" width="100%" style="padding: 2px 5px 0px 5px">
-                <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
 
-	                  <br>
+                 <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">Moving Fish - Drawing Animation</span></strong><br>
+
+                 <img src="assets/images/moving-fish.png" style="width: 100%">
+
+                 <p style="margin:0px 0px 2% 0px;"></p>
+
+                 <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
 	                  <b>PROCESSINGJS</b> -  Fish Travels from Left Side to Right Side of the Screen
-	                  <br>
+	                  <br><br>
 	                  <b>BODY SIZE:</b> ellipses using ... bodyX, bodyY, bodyW, bodyH
-	                  <br>
+	                  <br><br>
 	                  <b>DRAW</b> Function used for animation
-	                  <br>
+	                  <br><br>
 	                  <b>TAIL:</b> triangle
-	                  <br>
+	                  <br><br>
 	                  <b>EYE:</b> ellipses
-	                  <br>
+	                  <br><br>
 	                  <b>MOUTH:</b> line
 
 								</div>
               </div>
               <div id="third-khan-info" ng-show="khan == 3">
-								<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Dinner - Drawing with ProcessingJS</strong></div>
-								<img src="assets/images/plate.png" width="100%" style="padding: 2px 5px 0px 5px">
-                 <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
-									 <br>
+
+<strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">Dinner - Drawing with ProcessingJS</span></strong><br>
+
+<img src="assets/images/plate.png" style="width: 100%">
+
+<p style="margin:0px 0px 2% 0px;"></p>
+
+<div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
+
 									<b>TABLE:</b> background
-		 							<br>
+		 							<br><br>
 		 							<b>PLATE:</b> ellipses
-		 							<br>
+		 							<br><br>
 		 							<b>PIZZA:</b> arcs
-		 							<br>
+		 							<br><br>
 		 							<b>TOPPINGS:</b> ellipses
-		 							<br>
+		 							<br><br>
 		 							<b>CARROTS:</b> lines with stroke weight
-									<br><br>
 							</div>
+
 							</div>
               <div id="fourth-khan-info" ng-show="khan == 4">
-								   <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Rain - Made With Arrays</strong></div>
-								 <img src="assets/images/rain.png" width="100%" style="padding: 2px 5px 0px 5px">
 
-                <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
-									<br>
+                <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">Rain - Made With Arrays</span></strong><br>
+
+                  <img src="assets/images/rain.png" style="width: 100%">
+
+                   <p style="margin:0px 0px 2% 0px;"></p>
+
+
+                <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
+
 									<b>Array Variables</b> - xPositions, yPositions, xSeeds, ySeeds, colors, speeds, seedspeeds
-									<br>
+									<br><br>
 									<b>Giant Blue Droplets</b> - a random position and a random speed are chosen for 3 droplet images
-									<br>
+									<br><br>
 									<b>MouseClicked</b> - each time the mouse is pressed, a colored droplet spawns at that position with a random speed and a random color
-									<br>
+									<br><br>
 									<b>Falling</b> -  when a droplet reaches the bottom of the screen, it spawns at the top of the page with a random x-position
-
-                <br><br>
 								 </div>
+
               </div>
               <div id="fifth-khan-info" ng-show="khan == 5">
-               <div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>BookShelf - Made With Arrays</strong></div>
-                     <img src="assets/images/book-shelf.png" width="100%" style="padding: 2px 5px 0px 5px">
-                 <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
-									 <br>
+
+              <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">BookShelf - Made With Arrays</span></strong><br>
+
+               <img src="assets/images/book-shelf.png" style="width: 100%">
+
+               <p style="margin:0px 0px 2% 0px;"></p>
+
+
+               <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
+
                    <b>Each Book</b> - title, stars, author, color, friendly
-                   <br>
+                   <br><br>
                    <b>Drawing Rows</b> - three rows that each contain three books
-                   <br>
+                   <br><br>
                    <b>Shelves</b> - three rectangles with three different values
-                   <br>
+                   <br><br>
                    <b>Titles &amp; Authors</b> - <b>text</b> - distributes based on shelf and book number
-                   <br>
+                   <br><br>
                    <b>Friendly Blue Box</b> - <b>rectangles</b> - distibutes based on shelf and book number
-                   <br>
+                   <br><br>
                    <b>Stars</b> - <b>images</b> - distributes based on shelf and book number
-									 <br><br>
 								</div>
+
               </div>
               <div id="sixth-khan-info" ng-show="khan == 6">
-								<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Authors - Made With SQL</strong></div>
-								<img src="assets/images/authors.png" width="100%" style="padding: 2px 5px 0px 5px">
-                <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
-									<br>
+
+               <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">Authors - Made With SQL</span></strong><br>
+
+               <img src="assets/images/authors.png" style="width: 100%">
+
+               <p style="margin:0px 0px 2% 0px;"></p>
+
+               <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
+
 									<b>Step 1</b> - Create the famous table
-									<br>
+									<br><br>
 									<b>Step 2</b> - Insert author names
-									<br>
+									<br><br>
 									<b>Step 3</b> - Create the books table
-									<br>
+									<br><br>
 									<b>Step 4</b> - Insert author ids and publications
-									<br>
+									<br><br>
 									<b>Step 5</b> - Spawn the famous and books table using <b>SELECT *</b>
-									<br>
+									<br><br>
 									<b>Step 6</b> - Define the categories: <b>Author, Story #1, Story #2</b>
-									<br>
+									<br><br>
 									<b>Step 7</b> - Associate <b>famous name</b> and <b>author name</b>
-									<br>
+									<br><br>
 									<b>Step 8</b> - Spawn the joint table<br><br>
 
 								</div>
               </div>
               <div id="seventh-khan-info" ng-show="khan == 7">
-							<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Memory Tiles Game</strong></div>
-								<img src="assets/images/tiles.png" width="100%" style="padding: 2px 5px 0px 5px">
-              <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
-                  <br>
+
+              <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">Memory Tiles Game</span></strong><br>
+
+              <img src="assets/images/tiles.png" style="width: 100%">
+
+              <p style="margin:0px 0px 2% 0px;"></p>
+
+              <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
+
                   <b>The Game</b> - Match the tile pictures with trial and error and memory
-                  <br>
+                  <br><br>
                   <b>Tile Properties</b> - this.x, this.y, this.face, this.width, this.rectOver, this.enabled
-                  <br>
+                  <br><br>
                   <b>Entering/Exiting a Tile</b> - searching boolean, tiles[i]/currentTile, .isFaceUp, .isMatch, .drawFaceDown, .isUnderMouse
-                  <br>
+                  <br><br>
                   <b>Customization</b> -  images, rows, columns
-                  <br>
+                  <br><br>
                   <b>Setting Up the Tiles</b> - make an array which has two of each random tile, splice the array and create the tiles
-                  <br>
+                  <br><br>
                   <b>Timer</b> - minutes and seconds
-                  <br>
+                  <br><br>
                   <b>mouseClicked</b> - Processing the Match
-                  <br>
+                  <br><br>
                   <b>Draw Function</b> - update Mouse Position, update the Timer, cause a delay when two tiles dont match
-									<br><br>
 								</div>
               </div>
               <div id="eighth-khan-info" ng-show="khan == 8">
-								<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Paint Splatter - Normal Distribution</strong></div>
-                <img src="assets/images/paint-splat.png" width="100%" style="padding: 2px 5px 0px 5px">
-                 <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
-									 <br>
+
+                <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">Paint Splatter - Normal Distribution</span></strong><br>
+
+
+                 <img src="assets/images/paint-splat.png" style="width: 100%">
+
+                 <p style="margin:0px 0px 2% 0px;"></p>
+
+                 <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
+
 									 <b>"Normal distribution of random numbers to generate the locations of the dots"</b>
-                   <br>
+                   <br><br>
                    The code uses <b>nextGaussian</b> to make the normal distribution
-                   <br>
+                   <br><br>
                    The dots begin at the <b>middle</b> of the page
-                   <br>
+                   <br><br>
                    The dots are made with <b>strokes</b>
-                   <br>
+                   <br><br>
                    The dots can <b>"walk"</b> to make the dots stray from the middle randomly
-                   <br>
+                   <br><br>
                    The Draw Function calls the two functions(<b>"walk"</b> and <b>"display"</b>)
-                 <br>
-								<br>
 								</div>
+
               </div>
               <div id="ninth-khan-info" ng-show="khan == 9">
-							<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Mountain Range - Noise &amp; Random</strong></div>
-								 <img src="assets/images/mountain.png" width="100%" style="padding: 2px 5px 0px 5px">
-<div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
-	<br>
+
+              <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">Mountain Range - Noise &amp; Random</span></strong><br>
+
+              <img src="assets/images/mountain.png" style="width: 100%">
+
+               <p style="margin:0px 0px 2% 0px;"></p>
+
+               <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
+
 	<b>Step 1</b> - Set up Clouds, Trees &amp; Birds <b>Objects</b> with different qualities
-	<br>
+	<br><br>
 	<b>Step 2</b> - Make Display functions based on <b>this.x</b> and <b>this.y</b>
-	<br>
+	<br><br>
 	<b>Step 3</b> - <b>Moving</b> - Clouds (Noise), Birds (Random), Trees (Random)
-	<br>
+	<br><br>
 	<b>Step 4</b> - Create <b>new</b> instances of the trees, birds and clouds
-	<br>
+	<br><br>
 	<b>Step 5</b> - Generate 100 <b>cloudcovers</b>, 10 <b>trees</b> and 50 <b>birds</b>
-	<br>
+	<br><br>
 	<b>Step 6</b> - Make four mountains using <b>noise</b>
-	<br>
+	<br><br>
 	<b>Step 7</b> - <b>Call</b> the functions<br><br>
 								 </div>
               </div>
               <div id="tenth-khan-info" ng-show="khan == 10">
-								<div style="color:yellow; padding: 2px 2px 1px 5px" class="titleBC"><strong>Floating Spaceship - Physics</strong></div>
-                <img src="assets/images/spaceship.png" width="100%" style="padding: 2px 5px 0px 5px">
-            <div class="texting sidebar" style="color:white; padding: 5px 5px 2px 5px">
-							<br>
+
+                  <strong><span ng-class="{'subjectTitleFont': !deviceWide, 'compTitleFont': deviceWide}">Floating Spaceship - Physics</span></strong><br>
+
+
+                  <img src="assets/images/spaceship.png" style="width: 100%">
+
+                 <p style="margin:0px 0px 2% 0px;"></p>
+
+                <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
+
 							The Spaceship is defined as a <b>Car</b> object that holds: this.position, this.velocity, this.acceleration, this.topspeed, this.xoff, this.yoff, this.r and this.accVector
-							<br>
+							<br><br>
 							<b>Car.prototype.update</b> updates the position with velocity (limited speed) and acceleration
-							<br>
+							<br><br>
 							<b>Car.prototype.applyForce</b> updates the acceleration with force
-							<br>
+							<br><br>
 							<b>Car.prototype.turnLeft</b> and <b>Car.prototype.turnRight</b> use <b>.rotate</b>
-							<br>
+							<br><br>
 							<b>Car.prototype.display</b> draws the car and the head of the car is determined by <b>this.accVector.heading()</b>
-							<br>
+							<br><br>
 							<b>Car.prototype.checkEdges</b> automatically transports the car to the other side of the screen when it reaches one of the edges
-							<br>
+							<br><br>
 							<b>keyPressed</b> can process key strokes: <b>LEFT</b>, <b>RIGHT</b> and the letter <b>z</b> (keyCode 90)
-							<br>
-							<b>draw</b> updates the car's position as time goes by<br><br>
+							<br><br>
+							<b>draw</b> updates the car's position as time goes by
 								</div>
               </div>
             </td>
           </tr>
         </table>
-        <br>
-        <table style="width: 100%" class="infoFooter">
-          <tr>
-              <td>
-             <p class="titleBC point" onclick="closeModal()" style="float:right; margin-top: 2%; margin-right: 15%; border: 0.2px solid yellow"><b>CLOSE</b></p>
-            </td>
-          </tr>
-        </table>
+        <table style="width: 100%;" class="infoHeader">
+         <tr>
+           <td>
+             <p ng-class="{'headerFooterFont point': !deviceWide, 'compTitleFont point': deviceWide}" style="float:right; margin: 3% 15% 1% 3%; border: 0.2px solid yellow" onclick="closeModal()"><b>CLOSE</b></p>
+
+           </td>
+         </tr>
+       </table>
 
           </div>
 
         </div>
        </div>
+     </div>
        </script>
 
 
@@ -1762,30 +2046,34 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 
 $(document).ready(function(e) {
 
-	  $imaging = ['image1', 'image2', 'image3', 'image4', 'image5','image6'];
 
-		$storage = $('#backDrop');
+  $imaging = ['image1', 'image2', 'image3', 'image4', 'image5','image6'];
 
-		function chance(comp) {
-			return comp[Math.floor(Math.random()*comp.length)];
-		}
+  $storage = $('#backDrop');
 
-		$chosenImage = chance($imaging);
+  function chance(comp) {
+    return comp[Math.floor(Math.random()*comp.length)];
+  }
 
-		console.log($chosenImage);
+  $chosenImage = chance($imaging);
 
-		$storage.addClass($chosenImage);
+  console.log($chosenImage);
 
-    $('img[usemap]').rwdImageMaps();
+  $storage.addClass($chosenImage);
+
+  $('img[usemap]').rwdImageMaps();
+
+  window.location.href='#/';
+
 });
 
 
 function closeModal() {
-
   window.location.href='#/';
   $('img[usemap]').rwdImageMaps();
-}
 
+
+}
 </script>
 
 

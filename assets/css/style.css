@@ -2,18 +2,11 @@
 	body{
 	  font-family: 'Roboto Condensed', Helvetica, sans-serif;
 		background: url('../images/img_night_skies.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
 	  /* text-align: left; */
 	  font-size: 12px;
 	  color: #303030; }
-
-		.infoHeader, .infoFooter, h4, .close {
-	     background: url(../images/img_lights.jpg);
-			 background-size: cover;
- 		 	 background-repeat: no-repeat;
-	     color:yellow !important;
-			 height: 5%;
-	     font-size: 30px;
-	   }
 
 
 		 #codingBootCamp {
@@ -22,11 +15,42 @@
 
 		 }
 
+
+		 .imageBorder {
+
+			 border-top: 1px solid red;
+			 border-right: 1px solid red;
+
+		 }
+
 		 .invisible {
 
 			 visibility: hidden;
 
 		 }
+
+		 .fullWidth {
+
+			 width: 100%;
+		 }
+
+		 .partialWidth {
+
+			 min-width: 30%;
+			 max-width: 50%
+		 }
+		 .lessWidth {
+
+			min-width: 10%;
+			max-width: 25%
+		}
+
+		.fifty {
+
+			width: 50%;
+
+		}
+
 
 		 #codingBootCamp::-webkit-scrollbar {
 		   width: auto;               /* width of the entire scrollbar */
@@ -46,10 +70,20 @@
 		 #first-ahcs-info b,
 		 #second-ahcs-info b,
 		 #third-ahcs-info b,
+		 #fourth-ahcs-info b,
 		 #busyModal b,
 		 #coverLetter b,
-		 #businessRow b {
-
+		 #businessRow b,
+		 #first-khan-info b,
+		 #second-khan-info b,
+		 #third-khan-info b,
+		 #fourth-khan-info b,
+		 #fifth-khan-info b,
+		 #sixth-khan-info b,
+		 #seventh-khan-info b,
+		 #eighth-khan-info b,
+		 #ninth-khan-info b,
+		 #tenth-khan-info b {
 			 color:yellow;
 		 }
 
@@ -77,8 +111,7 @@
 	 	      -moz-user-select: none;
 	 	      -ms-user-select: none;
 	 	      user-select: none;
-	 	      cursor: pointer;
-	 	      max-width: 150px; }
+	 	      cursor: pointer; }
 
 					#khanAcademy .first-khan-academy,
 		 	    #khanAcademy .second-khan-academy,
@@ -103,7 +136,7 @@
 		 	      -ms-user-select: none;
 		 	      user-select: none;
 		 	      cursor: pointer;
-		 	      max-width: 150px; }
+					 }
 
 						#codeCademy .first-code-cademy,
 			 	    #codeCademy .second-code-cademy,
@@ -128,8 +161,7 @@
 			 	      -moz-user-select: none;
 			 	      -ms-user-select: none;
 			 	      user-select: none;
-			 	      cursor: pointer;
-			 	      max-width: 150px; }
+			 	      cursor: pointer; }
 
 
 
@@ -169,7 +201,17 @@
 					}
 
 
+					.displayHide {
 
+						display:none;
+
+					}
+
+					.displayShow {
+
+						display:block;
+
+					}
 
 
 					.point:hover {
@@ -178,11 +220,114 @@
 
 					}
 
+					.floatLeft {
+
+						float: left;
+						margin-right: 2%;
+						margin-bottom: 2%;
+					}
+
+					.floatRight {
+
+						float: right;
+						margin-left: 2%;
+						margin-bottom: 2%;
+					}
+
+
+	.infoHeader, .infoFooter, h4, .close {
+		 background: url(../images/img_lights.jpg);
+		 background-size: cover;
+		 background-repeat: no-repeat;
+		 color:yellow !important;
+	 }
 
 	@media screen and (max-width: 400px) {
 
-											.titleBC {
+		.infoHeader, .infoFooter, h4, .close {
 
+			font-size: 6px;
+
+		}
+
+}
+@media screen and (min-width: 400px) {
+
+	.infoHeader, .infoFooter, h4, .close {
+
+		font-size: 22px;
+
+	}
+
+}
+
+
+	@media screen and (max-width: 250px) {
+
+		.headerFooterFont {
+
+			color:yellow;
+			font-size: 4px;
+
+		}
+
+		.subjectTitleFont {
+
+			color:yellow;
+			font-size: 3px;
+
+		}
+
+		.compTitleFont {
+
+			color:yellow;
+			font-size: 2px;
+
+		}
+
+		.compMainFont
+{
+		color:yellow;
+		font-size: 2px;
+	}
+
+	.menuWidth {
+
+		width: 90%;
+	}
+}
+
+		@media screen and (min-width: 250px) and (max-width: 400px) {
+
+											.headerFooterFont {
+
+												color:yellow;
+												font-size: 7px;
+
+											}
+
+											.subjectTitleFont {
+
+												color:yellow;
+												font-size: 6px;
+
+											}
+
+											.compTitleFont {
+
+												color:yellow;
+												font-size: 4px;
+
+											}
+
+											.compMainFont
+										{
+											color:yellow;
+											font-size: 2px;
+										}
+
+											.titleBC {
+											  color:yellow;
 												font-size: 3px;
 
 											}
@@ -194,15 +339,55 @@
 												width: 100px;
 												border: 1px solid green;
 
+
 											}
+											.menuWidth {
+
+												width: 90%;
+											}
+
+
+											.margins {
+
+								 			 margin-left: 10%;
+								 			 margin-right: 10%;
+								 		 }
 
 										}
 
 
 @media screen and (min-width: 400px) and (max-width: 550px) {
 
-	.titleBC {
+	.headerFooterFont {
 
+		color:yellow;
+		font-size: 9px;
+
+	}
+
+	.subjectTitleFont {
+
+		color:yellow;
+		font-size: 8px;
+
+	}
+
+	.compTitleFont {
+
+		color:yellow;
+		font-size: 6px;
+
+	}
+
+	.compMainFont
+{
+	color:yellow;
+	font-size: 4px;
+}
+
+
+	.titleBC {
+	  color:yellow;
 		font-size: 6px;
 
 	}
@@ -215,13 +400,48 @@
 		border: 1px solid orange;
 
 	}
+	.margins {
 
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+	.menuWidth {
+
+		width: 80%;
+	}
 }
 
 @media screen and (min-width: 550px) and (max-width: 700px) {
 
-	.titleBC {
+	.headerFooterFont {
 
+		color:yellow;
+		font-size: 12px;
+
+	}
+
+	.subjectTitleFont {
+
+		color:yellow;
+		font-size: 10px;
+
+	}
+
+	.compTitleFont {
+
+		color:yellow;
+		font-size: 8px;
+
+	}
+
+	.compMainFont
+{
+	color:yellow;
+	font-size: 6px;
+}
+
+	.titleBC {
+		color:yellow;
 		font-size: 8px;
 
 	}
@@ -234,13 +454,49 @@
 		border: 1px solid purple;
 
 	}
+	.margins {
+
+		margin-left: 25%;
+		margin-right: 25%;
+	}
+	.menuWidth {
+
+		width: 65%;
+	}
 
 }
 
-@media screen and (min-width: 700px) and (max-width: 850px) {
+@media screen and (min-width: 700px) and (max-width: 900px) {
+
+	.headerFooterFont {
+
+		color:yellow;
+		font-size: 15px;
+
+	}
+
+	.subjectTitleFont {
+
+		color:yellow;
+		font-size: 13px;
+
+	}
+
+	.compTitleFont {
+
+		color:yellow;
+		font-size: 10px;
+
+	}
+
+	.compMainFont
+{
+	color:yellow;
+	font-size: 8px;
+}
 
 						.titleBC {
-
+							color:yellow;
 							font-size: 10px;
 
 						}
@@ -255,12 +511,50 @@
 							border: 1px solid green;
 
 						}
+						.margins {
+
+			 			 margin-left: 25%;
+			 			 margin-right: 25%;
+			 		 }
+					 .menuWidth {
+
+						 width: 50%;
+					 }
 
 					}
-					@media screen and (min-width: 850px) and (max-width: 1100px) {
+
+					@media screen and (min-width: 900px) and (max-width: 1100px) {
+
+						.headerFooterFont {
+
+							color:yellow;
+							font-size: 18px;
+
+						}
+
+						.subjectTitleFont {
+
+							color:yellow;
+							font-size: 16px;
+
+						}
+
+						.compTitleFont {
+
+							color:yellow;
+							font-size: 14px;
+
+						}
+
+						.compMainFont
+					{
+						color:yellow;
+						font-size: 10px;
+					}
+
 
 															.titleBC {
-
+																color:yellow;
 																font-size: 12px;
 
 															}
@@ -273,12 +567,51 @@
 																border: 1px solid red;
 
 															}
+															.margins {
 
+																margin-left: 25%;
+																margin-right: 25%;
+															}
+
+															.menuWidth {
+
+																width: 50%;
+															}
 														}
-					@media screen and (min-width: 1100px) {
+
+
+	@media screen and (min-width: 1100px) and (max-width: 1250px) {
+
+						.headerFooterFont {
+
+							color:yellow;
+							font-size: 20px;
+
+						}
+
+						.subjectTitleFont {
+
+							color:yellow;
+							font-size: 17px;
+
+						}
+
+						.compTitleFont {
+
+							color:yellow;
+							font-size: 13px;
+
+						}
+
+						.compMainFont
+					{
+						color:yellow;
+						font-size: 11px;
+					}
+
 
 							.titleBC {
-
+								color:yellow;
 								font-size: 14px;
 							}
 							.sidebar {
@@ -290,9 +623,211 @@
 									border: 1px solid yellow;
 
 								}
+								.margins {
+
+					 			 margin-left: 25%;
+					 			 margin-right: 25%;
+					 		 }
+
+							 .menuWidth {
+
+								 width: 50%;
+							 }
 
 					}
 
+			@media screen and (min-width: 1250px) and (max-width: 1350px) {
+
+				.headerFooterFont {
+
+					color:yellow;
+					font-size: 25px;
+
+				}
+
+				.subjectTitleFont {
+
+					color:yellow;
+					font-size: 22px;
+
+				}
+
+				.compTitleFont {
+
+					color:yellow;
+					font-size: 19px;
+
+				}
+
+				.compMainFont
+			{
+				color:yellow;
+				font-size: 12px;
+			}
+
+				.titleBC {
+					color:yellow;
+					font-size: 14px;
+				}
+
+				.menuWidth {
+
+					width: 50%;
+				}
+			}
+
+			@media screen and (min-width: 1350px) and (max-width: 1650px) {
+
+				.headerFooterFont {
+
+					color:yellow;
+					font-size: 30px;
+
+				}
+				.subjectTitleFont {
+
+					color:yellow;
+					font-size: 25px;
+
+				}
+
+				.compTitleFont {
+
+					color:yellow;
+					font-size: 22px;
+
+				}
+
+				.compMainFont
+			{
+				color:yellow;
+				font-size: 14px;
+			}
+
+				.titleBC {
+					color:yellow;
+					font-size: 14px;
+				}
+
+				.menuWidth {
+
+					width: 50%;
+				}
+			}
+
+			@media screen and (min-width: 1650px) and (max-width: 1750px) {
+
+				.headerFooterFont {
+
+					color:yellow;
+					font-size: 40px;
+
+				}
+				.subjectTitleFont {
+
+					color:yellow;
+					font-size: 35px;
+
+				}
+
+				.compTitleFont {
+
+					color:yellow;
+					font-size: 25px;
+
+				}
+
+				.compMainFont
+			{
+				color:yellow;
+				font-size: 18px;
+			}
+
+				.titleBC {
+					color:yellow;
+					font-size: 14px;
+				}
+
+				.menuWidth {
+
+					width: 50%;
+				}
+			}
+
+
+		@media screen and (min-width: 1750px) and (max-width: 2670px) {
+
+			.headerFooterFont {
+
+				color:yellow;
+				font-size: 40px;
+
+			}
+			.subjectTitleFont {
+
+				color:yellow;
+				font-size: 35px;
+
+			}
+
+			.compTitleFont {
+
+				color:yellow;
+				font-size: 27px;
+
+			}
+
+			.compMainFont
+		{
+			color:yellow;
+			font-size: 20px;
+		}
+		.menuWidth {
+
+			width: 50%;
+		}
+
+		}
+
+
+			@media screen and (min-width: 2670px) {
+
+				.headerFooterFont {
+
+					color:yellow;
+					font-size: 50px;
+
+				}
+				.subjectTitleFont {
+
+					color:yellow;
+					font-size: 45px;
+
+				}
+
+				.compTitleFont {
+
+					color:yellow;
+					font-size: 40px;
+
+				}
+
+				.compMainFont
+			{
+				color:yellow;
+				font-size: 35px;
+			}
+
+				.titleBC {
+					color:yellow;
+					font-size: 14px;
+				}
+				.menuWidth {
+
+					width: 50%;
+				}
+
+			}
 
 .customFont {
 font-family: Verdana,Geneva,sans-serif;

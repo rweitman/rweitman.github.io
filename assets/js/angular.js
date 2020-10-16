@@ -12,6 +12,12 @@ myApp.config(function ($routeProvider) {
     controller: 'mainController'
 
   })
+  .when('/menu/:menu', {
+
+    templateUrl: 'main.html',
+    controller: 'menuController'
+
+  })
   .when('/advantage', {
 
     templateUrl: 'advantage.html',
@@ -85,65 +91,177 @@ myApp.config(function ($routeProvider) {
 
 myApp.controller('mainController', ['$scope', '$log', function($scope, $log){
 
+$scope.statement = window.outerWidth;
 
+if ($scope.statement <= 600) {
+
+  $scope.type = "phone";
+  $log.log($scope.type);
+}
+else {
+
+  $scope.type = "computer";
+  $log.log($scope.type);
+}
 
 }]);
 
-
 myApp.controller('advantageController', ['$scope', '$log', function($scope, $log){
 
+  $scope.statement = window.outerWidth;
+
+  if ($scope.statement <= 600) {
+
+    $scope.deviceWide = false;
+  }
+  else {
+
+    $scope.deviceWide = true;
+  }
 
 
 }]);
 
 myApp.controller('bandmansController', ['$scope', '$log', function($scope, $log){
 
+  $scope.statement = window.outerWidth;
+
+  if ($scope.statement <= 600) {
+
+    $scope.deviceWide = false;
+  }
+  else {
+
+    $scope.deviceWide = true;
+  }
 
 
 }]);
 
 myApp.controller('freecodeController', ['$scope', '$log', function($scope, $log){
 
+  $scope.statement = window.outerWidth;
 
+  if ($scope.statement <= 600) {
+
+    $scope.deviceWide = false;
+  }
+  else {
+
+    $scope.deviceWide = true;
+  }
 
 }]);
 myApp.controller('businessController', ['$scope', '$log', function($scope, $log){
 
+  $scope.statement = window.outerWidth;
 
+  if ($scope.statement <= 600) {
+
+    $scope.deviceWide = false;
+  }
+  else {
+
+    $scope.deviceWide = true;
+  }
 
 }]);
 myApp.controller('gamingController', ['$scope', '$log', function($scope, $log){
 
+  $scope.statement = window.outerWidth;
 
+  if ($scope.statement <= 600) {
+
+    $scope.deviceWide = false;
+  }
+  else {
+
+    $scope.deviceWide = true;
+  }
 
 }]);
 myApp.controller('fishingController', ['$scope', '$log', function($scope, $log){
 
+  $scope.statement = window.outerWidth;
 
+  if ($scope.statement <= 600) {
+
+    $scope.deviceWide = false;
+  }
+  else {
+
+    $scope.deviceWide = true;
+  }
 
 }]);
 myApp.controller('coverletterController', ['$scope', '$log', function($scope, $log){
 
+  $scope.statement = window.outerWidth;
 
+  if ($scope.statement <= 600) {
+
+    $scope.deviceWide = false;
+  }
+  else {
+
+    $scope.deviceWide = true;
+  }
 
 }]);
 myApp.controller('udemyController', ['$scope', '$log', function($scope, $log){
 
+  $scope.statement = window.outerWidth;
 
+  if ($scope.statement <= 600) {
+
+    $scope.deviceWide = false;
+  }
+  else {
+
+    $scope.deviceWide = true;
+  }
 
 }]);
 myApp.controller('codecademyController', ['$scope', '$log', function($scope, $log){
 
+  $scope.statement = window.outerWidth;
 
+  if ($scope.statement <= 600) {
+
+    $scope.deviceWide = false;
+  }
+  else {
+
+    $scope.deviceWide = true;
+  }
 
 }]);
 myApp.controller('bootcampController', ['$scope', '$log', function($scope, $log){
 
+  $scope.statement = window.outerWidth;
 
+  if ($scope.statement <= 600) {
+
+    $scope.deviceWide = false;
+  }
+  else {
+
+    $scope.deviceWide = true;
+  }
 
 }]);
 myApp.controller('khanacademyController', ['$scope', '$log', function($scope, $log){
 
+  $scope.statement = window.outerWidth;
+
+  if ($scope.statement <= 600) {
+
+    $scope.deviceWide = false;
+  }
+  else {
+
+    $scope.deviceWide = true;
+  }
 
 
 }]);
