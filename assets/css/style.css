@@ -236,7 +236,7 @@
 
 					.menuWidth {
 
-						width: 90%;
+						width: 100%;
 					}
 
 
@@ -272,14 +272,14 @@
 		.headerFooterFont {
 
 			color:yellow;
-			font-size: 4px;
+			font-size: 7px;
 
 		}
 
 		.subjectTitleFont {
 
 			color:yellow;
-			font-size: 3px;
+			font-size: 6px;
 
 		}
 
@@ -303,14 +303,14 @@
 											.headerFooterFont {
 
 												color:yellow;
-												font-size: 7px;
+												font-size: 9px;
 
 											}
 
 											.subjectTitleFont {
 
 												color:yellow;
-												font-size: 6px;
+												font-size: 8px;
 
 											}
 
@@ -357,14 +357,14 @@
 	.headerFooterFont {
 
 		color:yellow;
-		font-size: 9px;
+		font-size: 11px;
 
 	}
 
 	.subjectTitleFont {
 
 		color:yellow;
-		font-size: 8px;
+		font-size: 10px;
 
 	}
 
@@ -408,14 +408,14 @@
 	.headerFooterFont {
 
 		color:yellow;
-		font-size: 12px;
+		font-size: 15px;
 
 	}
 
 	.subjectTitleFont {
 
 		color:yellow;
-		font-size: 10px;
+		font-size: 12px;
 
 	}
 
@@ -459,14 +459,14 @@
 	.headerFooterFont {
 
 		color:yellow;
-		font-size: 15px;
+		font-size: 18px;
 
 	}
 
 	.subjectTitleFont {
 
 		color:yellow;
-		font-size: 13px;
+		font-size: 15px;
 
 	}
 
@@ -512,14 +512,14 @@
 						.headerFooterFont {
 
 							color:yellow;
-							font-size: 18px;
+							font-size: 22px;
 
 						}
 
 						.subjectTitleFont {
 
 							color:yellow;
-							font-size: 16px;
+							font-size: 20px;
 
 						}
 
@@ -566,14 +566,14 @@
 						.headerFooterFont {
 
 							color:yellow;
-							font-size: 20px;
+							font-size: 25px;
 
 						}
 
 						.subjectTitleFont {
 
 							color:yellow;
-							font-size: 17px;
+							font-size: 22px;
 
 						}
 
@@ -618,14 +618,14 @@
 				.headerFooterFont {
 
 					color:yellow;
-					font-size: 25px;
+					font-size: 30px;
 
 				}
 
 				.subjectTitleFont {
 
 					color:yellow;
-					font-size: 22px;
+					font-size: 26px;
 
 				}
 
@@ -655,13 +655,13 @@
 				.headerFooterFont {
 
 					color:yellow;
-					font-size: 30px;
+					font-size: 40px;
 
 				}
 				.subjectTitleFont {
 
 					color:yellow;
-					font-size: 25px;
+					font-size: 30px;
 
 				}
 
@@ -691,13 +691,13 @@
 				.headerFooterFont {
 
 					color:yellow;
-					font-size: 40px;
+					font-size: 50px;
 
 				}
 				.subjectTitleFont {
 
 					color:yellow;
-					font-size: 35px;
+					font-size: 40px;
 
 				}
 
@@ -728,13 +728,13 @@
 			.headerFooterFont {
 
 				color:yellow;
-				font-size: 40px;
+				font-size: 55px;
 
 			}
 			.subjectTitleFont {
 
 				color:yellow;
-				font-size: 35px;
+				font-size: 45px;
 
 			}
 
@@ -759,7 +759,7 @@
 				.headerFooterFont {
 
 					color:yellow;
-					font-size: 50px;
+					font-size: 55px;
 
 				}
 				.subjectTitleFont {
