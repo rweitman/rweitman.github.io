@@ -7,7 +7,12 @@
 <link rel='stylesheet' type='text/css' href='assets/css/style.css'>
 
 <!-- STYLESHEETS -->
-
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous">
+</script>
+<script src="assets/js/responsive_coord.js"></script>
 <script>
   window.addEventListener('hashchange', function() {
 
@@ -15,23 +20,49 @@
 
   });
 
-</script>
 
+  $( document ).ready(function() {
+
+    $imaging = ['image1', 'image2', 'image3', 'image4', 'image5','image6'];
+
+    $storage = $('#backDrop');
+
+    function chance(comp) {
+      return comp[Math.floor(Math.random()*comp.length)];
+    }
+
+    $chosenImage = chance($imaging);
+
+    console.log($chosenImage);
+
+    $storage.addClass($chosenImage);
+
+    $('img[usemap]').rwdImageMaps();
+
+});
+
+
+  function closeModal() {
+    window.location.href='#/';
+    $('img[usemap]').rwdImageMaps();
+
+  }
+  </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"></script>
+  <script src="assets/js/angular.js"></script>
 </head>
 
 <body>
-	<div class="ground" id="backDrop" ng-app="myApp" style="overflow-x:hidden; position: absolute; top: 0; left: 0; height: 100%;width: 100%;">
+	<div class="ground" id="backDrop" ng-app="myApp">
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"></script>
-<script src="assets/js/angular.js"></script>
-
-<div style="display:table-cell; vertical-align:middle;">
+  <div ng-view></div>
 
 	<script type="text/ng-template" id="main.html">
 
 
-    <div ng-show="type == 'phone'" class="menuWidth" style="color:red; margin:auto">
+    <div ng-if="type == 'phone'" class="menuWidth">
 
 <img src="assets/images/mobile_picture.jpg" onclick="location.href='#/coverletter'" class="point" alt="Robert Weitman" style="width: 100%"><p></p>
 <img src="assets/images/mobile_cbc.jpg" onclick="location.href='#/bootcamp'" class="point" alt="Coding BootCamp" style="width: 100%"><br>
@@ -48,7 +79,7 @@
 
 
 
-	<div class="row hideTable" ng-show="type=='computer'" id="categoryImage" style="padding-top: 0.5%">
+	<div class="row" ng-if="type=='computer'" id="categoryImage" style="padding-top: 0.5%; width: 100%">
 		<div class="col-2"></div>
 
 		<div class="col-2" style="background-color:rgba(51,51,255,0.5);">
@@ -71,7 +102,7 @@
 
 		<!-- PICTURE/PHOTO -->
 
-		<div class="col-6 ground">
+		<div class="col-6">
 
 			<img src="assets/images/category-image-2.jpg" ref="imageHeight" style="width: 100%;"
 			usemap="#mapping">
@@ -95,12 +126,7 @@
 	</div>
 
 </script>
-
-</div>
 	<!-- START AHCS MODAL -->
-
-
-
 
 <script type="text/ng-template" id="advantage.html">
 
@@ -1374,8 +1400,6 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 
 <!-- END CODECADEMY MODAL -->
 
-<div ng-view></div>
-
 
 <!-- START CODING BOOTCAMP MODAL -->
 
@@ -2036,49 +2060,6 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 
 
 </div>
-<script
-	src="https://code.jquery.com/jquery-3.2.1.min.js"
-	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-	crossorigin="anonymous">
-</script>
-<script>
-
-
-$(document).ready(function(e) {
-
-
-  $imaging = ['image1', 'image2', 'image3', 'image4', 'image5','image6'];
-
-  $storage = $('#backDrop');
-
-  function chance(comp) {
-    return comp[Math.floor(Math.random()*comp.length)];
-  }
-
-  $chosenImage = chance($imaging);
-
-  console.log($chosenImage);
-
-  $storage.addClass($chosenImage);
-
-  $('img[usemap]').rwdImageMaps();
-
-  window.location.href='#/';
-
-});
-
-
-function closeModal() {
-  window.location.href='#/';
-  $('img[usemap]').rwdImageMaps();
-
-
-}
-</script>
-
-
-
-<script src="assets/js/responsive_coord.js"></script>
 
 </body>
 </html>
