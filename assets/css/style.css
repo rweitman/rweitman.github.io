@@ -1,9 +1,6 @@
 
 	body{
 	  font-family: 'Roboto Condensed', Helvetica, sans-serif;
-		background: url('../images/img_night_skies.jpg');
-		background-repeat: no-repeat;
-		background-size: cover;
 	  /* text-align: left; */
 	  font-size: 12px;
 	  color: #303030; }
@@ -268,7 +265,7 @@
 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 300px) {
 
 	.menuWidth {
 
@@ -277,6 +274,19 @@
 	}
 
 }
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+
+
+	.menuWidth {
+
+		margin:auto;
+		width: 80%;
+
+	}
+
+}
+
 @media screen and (min-width: 600px) {
 
 .menuWidth {
@@ -295,14 +305,14 @@
 		.headerFooterFont {
 
 			color:yellow;
-			font-size: 7px;
+			font-size: 4px;
 
 		}
 
 		.subjectTitleFont {
 
 			color:yellow;
-			font-size: 6px;
+			font-size: 3px;
 
 		}
 
@@ -326,14 +336,14 @@
 											.headerFooterFont {
 
 												color:yellow;
-												font-size: 9px;
+												font-size: 7px;
 
 											}
 
 											.subjectTitleFont {
 
 												color:yellow;
-												font-size: 8px;
+												font-size: 6px;
 
 											}
 
@@ -380,14 +390,14 @@
 	.headerFooterFont {
 
 		color:yellow;
-		font-size: 11px;
+		font-size: 9px;
 
 	}
 
 	.subjectTitleFont {
 
 		color:yellow;
-		font-size: 10px;
+		font-size: 8px;
 
 	}
 
@@ -431,14 +441,14 @@
 	.headerFooterFont {
 
 		color:yellow;
-		font-size: 15px;
+		font-size: 12px;
 
 	}
 
 	.subjectTitleFont {
 
 		color:yellow;
-		font-size: 12px;
+		font-size: 10px;
 
 	}
 
@@ -482,14 +492,14 @@
 	.headerFooterFont {
 
 		color:yellow;
-		font-size: 18px;
+		font-size: 15px;
 
 	}
 
 	.subjectTitleFont {
 
 		color:yellow;
-		font-size: 15px;
+		font-size: 13px;
 
 	}
 
@@ -535,14 +545,14 @@
 						.headerFooterFont {
 
 							color:yellow;
-							font-size: 22px;
+							font-size: 18px;
 
 						}
 
 						.subjectTitleFont {
 
 							color:yellow;
-							font-size: 20px;
+							font-size: 16px;
 
 						}
 
@@ -589,14 +599,14 @@
 						.headerFooterFont {
 
 							color:yellow;
-							font-size: 25px;
+							font-size: 20px;
 
 						}
 
 						.subjectTitleFont {
 
 							color:yellow;
-							font-size: 22px;
+							font-size: 17px;
 
 						}
 
@@ -641,14 +651,14 @@
 				.headerFooterFont {
 
 					color:yellow;
-					font-size: 30px;
+					font-size: 25px;
 
 				}
 
 				.subjectTitleFont {
 
 					color:yellow;
-					font-size: 26px;
+					font-size: 22px;
 
 				}
 
@@ -678,13 +688,13 @@
 				.headerFooterFont {
 
 					color:yellow;
-					font-size: 40px;
+					font-size: 30px;
 
 				}
 				.subjectTitleFont {
 
 					color:yellow;
-					font-size: 30px;
+					font-size: 25px;
 
 				}
 
@@ -714,13 +724,13 @@
 				.headerFooterFont {
 
 					color:yellow;
-					font-size: 50px;
+					font-size: 40px;
 
 				}
 				.subjectTitleFont {
 
 					color:yellow;
-					font-size: 40px;
+					font-size: 35px;
 
 				}
 
@@ -751,13 +761,13 @@
 			.headerFooterFont {
 
 				color:yellow;
-				font-size: 55px;
+				font-size: 40px;
 
 			}
 			.subjectTitleFont {
 
 				color:yellow;
-				font-size: 45px;
+				font-size: 35px;
 
 			}
 
@@ -782,7 +792,7 @@
 				.headerFooterFont {
 
 					color:yellow;
-					font-size: 55px;
+					font-size: 50px;
 
 				}
 				.subjectTitleFont {

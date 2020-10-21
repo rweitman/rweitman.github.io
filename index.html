@@ -1,3 +1,4 @@
+
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@quasar/extras/material-icons/material-icons.css">
@@ -20,42 +21,16 @@
 
   });
 
-
-  $( document ).ready(function() {
-
-    $imaging = ['image1', 'image2', 'image3', 'image4', 'image5','image6'];
-
-    $storage = $('#backDrop');
-
-    function chance(comp) {
-      return comp[Math.floor(Math.random()*comp.length)];
-    }
-
-    $chosenImage = chance($imaging);
-
-    console.log($chosenImage);
-
-    $storage.addClass($chosenImage);
-
-    $('img[usemap]').rwdImageMaps();
-
-});
-
-
-  function closeModal() {
-    window.location.href='#/';
-    $('img[usemap]').rwdImageMaps();
-
-  }
   </script>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"></script>
-  <script src="assets/js/angular.js"></script>
 </head>
 
 <body>
 	<div class="ground" id="backDrop" ng-app="myApp">
+
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"></script>
+      <script src="assets/js/angular.js"></script>
+
 
   <div ng-view></div>
 
@@ -2060,6 +2035,35 @@ have weekly meetings to plan the project. <b>Speaking up</b> can be crucial to p
 
 
 </div>
+<script>
+  $( document ).ready(function() {
+
+      $imaging = ['image1', 'image2', 'image3', 'image4', 'image5','image6'];
+
+      $storage = $('#backDrop');
+
+      function chance(comp) {
+        return comp[Math.floor(Math.random()*comp.length)];
+      }
+
+      $chosenImage = chance($imaging);
+
+      console.log($chosenImage);
+
+      $storage.addClass($chosenImage);
+
+      $('img[usemap]').rwdImageMaps();
+
+  });
+
+
+    function closeModal() {
+      window.location.href='#/';
+      $('img[usemap]').rwdImageMaps();
+
+    }
+
+</script>
 
 </body>
 </html>
