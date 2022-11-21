@@ -48,7 +48,6 @@
 <img src="assets/images/mobile_band.jpg" onclick="location.href='#/bandmans'" class="point" alt="Bandmans Company" style="width: 100%"><br>
 <img src="assets/images/mobile_advantage.jpg" onclick="location.href='#/advantage'" class="point" alt="Advantage Healthcare Systems" style="width: 100%"><br>
 <img src="assets/images/mobile_udemy.jpg" onclick="location.href='#/udemy'" class="point" alt="Udemy" style="width: 100%"><br>
-<img src="assets/images/mobile_gaming.jpg" onclick="location.href='#/gaming'" class="point" alt="Gaming" style="width: 100%"><br>
 <img src="assets/images/mobile_fcc.jpg" onclick="location.href='#/freecode'" class="point" alt="Free Code Camp" style="width: 100%"><br>
 <img src="assets/images/mobile_khan.jpg" onclick="location.href='#/khanacademy'" class="point" alt="Khan Academy" style="width: 100%"><br>
     </div>
@@ -88,7 +87,6 @@
 		<area  class="point" coords="498,197,68" shape="circle" href="#/codecademy">
     <area  class="point" coords="87,307,59" shape="circle" href="#/bootcamp">
     <area  class="point" coords="85,415,174,496" shape="rect" href="#/khanacademy">
-    <area  class="point" coords="719,163,768,141,787,70,710,65,698,120,648,141" shape="poly" href="#/gaming">
     <area  class="point" coords="518,401,497,416,478,491,486,503,503,487,501,506,558,508,560,459,569,469,570,511,610,518,610,408,585,410,579,438,578,420,550,400" shape="poly" href="#/bandmans">
     <area  class="point" coords="111,201,149,177,167,151,143,165,164,125,168,85,129,65,129,108,110,151,96,101,58,127,72,167,54,161,110,201,111,201,110,201" shape="poly" href="#/business">
     <area  class="point" coords="718,297,768,285,771,338,789,366,786,414,743,421,716,423,698,397,675,409,731,370,749,356,726,330" shape="poly" href="#/advantage">
@@ -609,83 +607,6 @@
 
 <!-- END BUSINESS MODAL -->
 
-<!-- START GAME HISTORY MODAL -->
-
-<script type="text/ng-template" id="gaming.html">
-
-
-  <div id="gamingRow" ng-class="{'menuWidth': !deviceWide, 'fifty': deviceWide}" style="color:red; margin:auto">
-
-  <div style="background-image: url('assets/images/img_night_skies.jpg'); background-size: cover; background-repeat:no-repeat, no-repeat;">
-           <div style="background-color: rgba(0,191,255, 0.5);" border: 0.7px solid yellow; border-radius: 0px">
-
-             <table style="width: 100%;" class="infoHeader">
-                       <tr>
-                         <td>
-                           <div style="float:left; padding: 3% 1% 0% 3%;" ng-class="{'headerFooterFont': !deviceWide, 'compTitleFont': deviceWide}"><b>Gaming</b></div>
-                           <div ng-class="{'headerFooterFont point': !deviceWide, 'compTitleFont point': deviceWide}" style="float:right; padding: 3% 3% 1% 3%;" onclick="closeModal()"><b>X</b></div>
-                         </td>
-                       </tr>
-                     </table>
-                     <table style="width: 100%">
-                         <tr>
-                    <td>
-                  <div style="padding: 2% 2% 1% 2%">
-
-
-
-                      <img src="assets/images/runescape.jpg" ng-class="{'fullWidth': !deviceWide, 'floatLeft partialWidth': deviceWide}">
-
-
-                                    <p style="margin:0px 0px 2% 0px;"></p>
-
-                                 <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white">
-                                     <a href="https://runescape.com/" ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" target="_blank"><u>https://runescape.com/</u></a>
-                                 	<br>
-                                 	RuneScape is a MMORPG that I have played for a long time. Even though it can take long periods of time, I like challenging
-                                 	myself by setting goals for myself. One of my favorite things in-game hobbies is helping people get started with the game by following
-                                 	their character around in the game. I admire how the game has several overlapping storylines, which is interesting to me because
-                                 	I like hearing people's perspectives. I hope to one day help design a computer game so that I can tell stories that provide insight,
-                                 	education, creativity and fun.
-                                </div>
-                                <p style="margin:0px 0px 2% 0px;"></p>
-
-
-                    <img src="assets/images/clue_finders.jpg" ng-class="{'fullWidth': !deviceWide, 'floatRight lessWidth': deviceWide}">
-
-                    <p style="margin:0px 0px 2% 0px;"></p>
-
-                     <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; padding-top: 5px; color:white;>
-
-              <b style="color:yellow">ClueFinders Games</b><br>
-             	At a very early age I got interested in computer gaming. I admired how my sister
-             	and her friends played computer games, specifically, the ClueFinders educational computer game series.
-             	Even though I was several years before fourth and fifth grade, I challenged myself by configuring
-             	the settings to be almost high school levelled. The ClueFinders games gave me a jumpstart to my education
-             	and got me interested in education through gaming.
-            </div>
-      </div>
-    </td>
-</tr>
-</table>
-<table style="width: 100%;" class="infoHeader">
-            <tr>
-              <td>
-                <p ng-class="{'headerFooterFont point': !deviceWide, 'compTitleFont point': deviceWide}" style="float:right; margin: 3% 15% 1% 3%; border: 0.2px solid yellow" onclick="closeModal()"><b>CLOSE</b></p>
-
-              </td>
-            </tr>
-          </table>
-
-
-      </div>
-      </div>
-    </div>
-      </script>
-
-
-<!-- END GAME HISTORY MODAL -->
-
 <!-- START FISHING MODAL -->
 
 <script type="text/ng-template" id="fishing.html">
@@ -802,16 +723,15 @@
                                             <td>
                                           <div style="padding: 2% 2% 1% 2%">
 <div ng-class="{'subjectTitleFont': !deviceWide, 'compMainFont': deviceWide}" style="display:block; color:white">
-	<b>February 18, 2022</b><br><br>
+	<b>November 21, 2022</b><br><br>
 
 	Hello,<br><br>
 
-	Thank you for visiting my online portfolio. I hope that by reading my portfolio you can see if am a good match for your business.<br><br>
-	I have a passion for Education, Coding and Game Design. I specialize in coding, site editing, business and e-commerce. I studied and worked as both a coder and a business student. I am experienced with computers, ranging from project management to online gaming. I am conversational in Spanish.<br><br>
-	For the last ten years I have gradually improved my coding skillset. My proficiency with HTML and CSS has developed into my complex coding languages that involve combining research and innovation into code.
+	Thank you for visiting my online portfolio. I hope that by reading my portfolio you can see if am a good match for your business.<br><br>I specialize in coding, site editing, business and e-commerce. I studied and worked as both a coder and a business student. I am conversational in Spanish.<br><br>
+	For the last ten years I have improved my coding skillset. My proficiency with HTML and CSS has developed into my complex coding languages that involve combining research and innovation into code.
 <br><br>
 I earned a Bachelor of Science degree from <b>Southern Methodist University</b>. Following graduation, I continued to develop
-my computer skills by earning a certificate in <b>Full Stack Web Development</b> and working as an <b>UI Developer</b> for Advantage Healthcare Systems.<br><br>
+my computer skills by earning a certificate in <b>Full Stack Web Development</b> and working as an <b>UI Developer</b> for Advantage Healthcare Systems. I have improved my knowledge base with a vast number of skills, ranging from Critical Thinking to Team Leadership.<br><br>
 I have experience developing creative solutions to help others address their problems. My creativity allows me to have a different perspective on a variety of topics. Furthermore, with my academic background, I understand the requirements of being a good
 programmer and communicator.
 <br><br>
